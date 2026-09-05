@@ -165,7 +165,7 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-/site
+# (not used here: /site holds this project's Quarto source pages, tracked intentionally)
 
 # mypy
 .mypy_cache/
@@ -216,3 +216,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Quarto
+.quarto/
+site/.quarto/
+
+# macOS
+.DS_Store
+
+# Raw / intermediate data (kept out of version control; folder structure preserved via .gitkeep)
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
