@@ -3,7 +3,7 @@ project:
   output-dir: ../docs
 
 website:
-  title: "AI & the Job Market"
+  title: "AI and Tech Hiring"
   navbar:
     left:
       - text: "Home"
@@ -35,8 +35,6 @@ website:
 
 format:
   html:
-    theme:
-      - cosmo
-      - styles.css
+    theme: [cosmo, styles.css]
     toc: true
-    toc-location: right
+    toc-depth: 3
