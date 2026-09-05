@@ -1,0 +1,61 @@
+[project]
+name = "ai-job-market-impact"
+version = "0.1.0"
+description = "Measuring the impact of generative AI on tech hiring, 2019-2026"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+
+dependencies = [
+    # core data handling
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "scipy>=1.13",
+    # machine learning (course baseline: clustering, PCA, NB, DT, SVM, LR, NN)
+    "scikit-learn>=1.5",
+    # visualization
+    "matplotlib>=3.9",
+    "seaborn>=0.13",
+    "plotly>=5.22",
+    # data acquisition
+    "requests>=2.32",
+    "python-dotenv>=1.0",
+    # notebooks
+    "jupyter>=1.1",
+    "ipykernel>=6.29",
+]
+
+[project.optional-dependencies]
+
+# Text features and dimensionality reduction.
+# NOTE: sentence-transformers pulls in PyTorch (~2 GB).
+text = [
+    "nltk>=3.9",
+    "sentence-transformers>=3.0",
+    "umap-learn>=0.5",
+]
+
+# Gradient boosting and model interpretability (Module 4+).
+boost = [
+    "xgboost>=2.1",
+    "lightgbm>=4.5",
+    "shap>=0.46",
+]
+
+# Transformer fine-tuning (Module 5).
+# Only install if running locally instead of Colab.
+deep = [
+    "torch>=2.4",
+    "transformers>=4.44",
+    "datasets>=3.0",
+    "accelerate>=0.34",
+    "evaluate>=0.4",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.6",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
