@@ -1,113 +1,302 @@
 /*-- scss:rules --*/
 
-/* Font pairing: Lora (serif headings) + Source Sans 3 (sans body) */
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
+/* ============================================================
+   AI Job Market Impact — site theme
+   Visual reference: statistical bulletins and economic
+   research notes. Index-line motif on section headings.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
 
 :root {
-  --font-serif: "Lora", Georgia, "Times New Roman", serif;
-  --font-sans: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --paper:      #FBFBF9;
+  --ink:        #17202A;
+  --ink-soft:   #55606C;
+  --rule:       #DCE0E3;
+  --rule-soft:  #EDEFF1;
+  --accent:     #8C6D1F;   /* muted ochre — index-line marker */
+  --accent-dim: #EFE7D2;
 
-  --color-bg: #faf9f6;
-  --color-text: #262524;
-  --color-muted: #6e6a65;
-  --color-border: #e2ded7;
-  --color-accent: #3d5a80;
+  --measure: 68ch;
+  --serif: "Newsreader", Georgia, serif;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
 }
+
+/* ---------- base ---------- */
 
 body {
-  font-family: var(--font-sans);
-  color: var(--color-text);
-  background-color: var(--color-bg);
-  line-height: 1.7;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  color: var(--color-text);
-  line-height: 1.3;
-  margin-top: 2.2em;
-  margin-bottom: 0.6em;
+main {
+  max-width: var(--measure);
 }
 
-h1.title {
-  margin-top: 0.4em;
-}
-
-p {
-  margin-bottom: 1.25em;
-}
-
-/* Constrain the reading measure without disturbing the TOC/sidebar grid columns */
-#quarto-document-content {
-  max-width: 70ch;
-  margin-left: auto;
-  margin-right: auto;
+p, li {
+  color: var(--ink);
 }
 
 a {
-  color: var(--color-accent);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
+  color: var(--ink);
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
 }
 
 a:hover {
-  border-bottom-color: var(--color-accent);
+  color: var(--accent);
 }
+
+/* ---------- headings ---------- */
+
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+h1.title {
+  font-size: 2.6rem;
+  line-height: 1.15;
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+}
+
+/* Section headings sit on a baseline, like a chart axis,
+   with a short tick at the origin. */
+h2 {
+  font-size: 1.6rem;
+  margin-top: 3.2rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+  position: relative;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 34px;
+  height: 3px;
+  background: var(--accent);
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 2.2rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- navbar ---------- */
 
 .navbar {
-  font-family: var(--font-sans);
+  background: var(--ink) !important;
+  border-bottom: 3px solid var(--accent);
+  padding: 0.5rem 0;
 }
 
-.navbar-title {
-  font-family: var(--font-serif);
-  font-weight: 700;
+.navbar-brand {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
-blockquote {
-  border-left: 3px solid var(--color-accent);
-  padding-left: 1em;
-  color: var(--color-muted);
-  font-style: italic;
+.navbar .nav-link {
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.82) !important;
 }
 
-/* Figure captions: smaller, muted, italic */
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #fff !important;
+}
+
+.dropdown-menu {
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  box-shadow: none;
+  background: var(--paper);
+}
+
+.dropdown-item {
+  font-size: 0.92rem;
+  color: var(--ink);
+}
+
+.dropdown-item:hover {
+  background: var(--accent-dim);
+  color: var(--ink);
+}
+
+/* ---------- figures ---------- */
+
+figure {
+  margin: 2.4rem 0;
+}
+
+figure img,
+.figure img,
+main img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--rule-soft);
+  border-radius: 2px;
+  background: #fff;
+}
+
 figcaption,
 .figure-caption {
-  font-family: var(--font-sans);
-  font-size: 0.85em;
-  font-style: italic;
-  color: var(--color-muted);
-  text-align: center;
-  margin-top: 0.5em;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin-top: 0.7rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--accent);
 }
 
-/* Thumbnails that link out to a full-size image: wrap <img> in
-   <a class="thumb" href="figures/full.png"><img src="figures/thumbs/small.png" ...></a> */
-a.thumb {
-  display: inline-block;
-  border-bottom: none;
+/* Thumbnails that link to full-size versions */
+.thumb img {
+  max-width: 320px;
+  transition: opacity 0.15s ease;
 }
 
-a.thumb img {
-  max-width: 220px;
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  transition: opacity 0.15s ease, border-color 0.15s ease;
-  cursor: zoom-in;
-}
-
-a.thumb:hover img {
+.thumb:hover img {
   opacity: 0.85;
-  border-color: var(--color-accent);
 }
 
-code, pre {
-  font-size: 0.9em;
+/* ---------- tables ---------- */
+
+table {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  width: 100%;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid var(--color-border);
-  margin: 2.5em 0;
+thead th {
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 2px solid var(--ink);
+  padding: 0.5rem 0.7rem;
+}
+
+tbody td {
+  border-bottom: 1px solid var(--rule-soft);
+  padding: 0.45rem 0.7rem;
+}
+
+tbody tr:hover {
+  background: var(--accent-dim);
+}
+
+/* Numeric columns read better right-aligned */
+td.num, th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- code ---------- */
+
+code {
+  font-size: 0.87em;
+  background: var(--rule-soft);
+  padding: 0.12em 0.35em;
+  border-radius: 2px;
+  color: var(--ink);
+}
+
+pre {
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: #fff;
+  padding: 1rem;
+  font-size: 0.85rem;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ---------- table of contents ---------- */
+
+#TOC, .sidebar {
+  font-family: var(--sans);
+  font-size: 0.87rem;
+}
+
+#TOC a, .sidebar a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+#TOC a:hover,
+#TOC a.active,
+.sidebar a:hover {
+  color: var(--accent);
+}
+
+/* ---------- blockquote ---------- */
+
+blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1.2rem;
+  margin-left: 0;
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- footer ---------- */
+
+.nav-footer {
+  border-top: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 0.83rem;
+  color: var(--ink-soft);
+  background: var(--paper);
+  margin-top: 4rem;
+}
+
+/* ---------- accessibility & responsive ---------- */
+
+a:focus-visible,
+.nav-link:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body { font-size: 16px; }
+  h1.title { font-size: 2rem; }
+  h2 { font-size: 1.35rem; margin-top: 2.4rem; }
+  .thumb img { max-width: 100%; }
 }

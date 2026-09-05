@@ -1,4 +1,5 @@
 ---
-title: "Home"
+title: "Was It AI, or Was It Interest Rates?"
+subtitle: "Separating generative AI from the rate shock and post-pandemic correction in tech hiring, 2019-2026"
 toc: false
 ---
