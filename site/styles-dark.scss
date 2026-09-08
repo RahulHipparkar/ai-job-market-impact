@@ -1,0 +1,343 @@
+/*-- scss:defaults --*/
+
+// type
+$font-family-sans-serif: "IBM Plex Sans", system-ui, sans-serif;
+$headings-font-family:   "Newsreader", Georgia, serif;
+$headings-font-weight:   600;
+$font-size-base:         1.0625rem;
+$line-height-base:       1.65;
+$h1-font-size:           1.75rem;
+$h2-font-size:           1.25rem;
+$h3-font-size:           1.0625rem;
+$h4-font-size:           1.0625rem;
+
+// colour
+$body-bg:      #2E2E31;
+$body-color:   #F0F0EE;
+$link-color:   #8B87F0;
+$border-color: #4A4A4E;
+$code-bg:      #38383B;
+
+/*-- scss:rules --*/
+
+// Google Fonts import goes HERE, at the top of the rules block
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+$surface:   #38383B;
+$panel-bg:  #38383B;
+$muted:     #9A9A9F;
+$muted-2:   #7E7E84;
+$ink-2:     #D4D4D1;
+$accent:    #8B87F0;
+$accent-bg: #3A3A55;
+$accent-dk: #BCB9FB;
+
+// ---------- base ----------
+
+#quarto-document-content {
+  max-width: 68ch;
+}
+
+// ---------- navbar (site header bar) ----------
+
+.navbar {
+  background: $panel-bg !important;
+  border-bottom: 1px solid $border-color;
+  padding: 11px 0;
+}
+
+.navbar-container.container-fluid {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 15px;
+}
+
+.navbar-brand-container.mx-auto {
+  margin: 0 !important;
+}
+
+.navbar-title {
+  font-family: $headings-font-family;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: $body-color;
+}
+
+.navbar-title::after {
+  content: "Generative AI and tech hiring";
+  display: inline-block;
+  margin-left: 9px;
+  font-family: $font-family-sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: $muted;
+}
+
+.quarto-navbar-tools.tools-end {
+  margin-left: auto;
+}
+
+.quarto-navbar-tools .quarto-color-scheme-toggle {
+  color: $muted;
+  font-size: 1rem;
+}
+
+// Quarto's default toggle is a switch-pill icon; swap it for a
+// moon/sun pair from the bootstrap-icons font already bundled.
+.quarto-color-scheme-toggle .bi::before {
+  width: auto;
+  height: auto;
+  background-image: none !important;
+  font-family: "bootstrap-icons" !important;
+}
+
+.quarto-color-scheme-toggle:not(.alternate) .bi::before {
+  content: "\f494"; // moon-fill — light mode, click to go dark
+}
+
+.quarto-color-scheme-toggle.alternate .bi::before {
+  content: "\f5a1"; // sun-fill — dark mode, click to go light
+}
+
+// ---------- sidebar ----------
+
+.sidebar-item-section > .sidebar-item-container > .sidebar-link {
+  color: $muted-2;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  padding-left: 8px;
+}
+
+.sidebar-item:not(.sidebar-item-section) > .sidebar-item-container > .sidebar-link {
+  color: $ink-2;
+  font-size: 0.8125rem;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.sidebar-link:hover {
+  background-color: rgba($accent-bg, 0.6);
+  color: $accent;
+}
+
+.sidebar-link.active {
+  color: $accent-dk;
+  background-color: $accent-bg;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+// ---------- breadcrumb ----------
+
+.quarto-title-breadcrumbs .breadcrumb,
+.quarto-page-breadcrumbs .breadcrumb {
+  background: none;
+  --bs-breadcrumb-bg: transparent;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.quarto-title-breadcrumbs .breadcrumb-item,
+.quarto-title-breadcrumbs .breadcrumb-item a,
+.quarto-page-breadcrumbs .breadcrumb-item,
+.quarto-page-breadcrumbs .breadcrumb-item a {
+  color: $muted-2;
+  font-size: 0.85rem;
+}
+
+// ---------- headings ----------
+
+h1.title {
+  border-top: none;
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  color: $muted;
+  margin-bottom: 1.25rem;
+}
+
+h2 {
+  border-top: 1px solid $border-color;
+  padding-top: 0.9rem;
+  margin-top: 2.6rem;
+}
+
+h3 {
+  border: none;
+  color: $muted;
+}
+
+// ---------- table of contents (right rail) ----------
+
+#TOC {
+  font-size: 0.9rem;
+}
+
+// "On this page" — Quarto's toc-title still falls back to this
+// even when set to "" in _quarto.yml, so hide the element instead.
+#toc-title {
+  display: none;
+}
+
+.sidebar nav[role="doc-toc"] > ul a,
+#TOC a {
+  color: $muted;
+  border-left: 1px solid $border-color;
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a.active,
+.sidebar nav[role="doc-toc"] ul > li > ul > li > a.active,
+#TOC a.active {
+  color: $accent !important;
+  font-weight: 500;
+  border-left: 1px solid $border-color !important;
+}
+
+// ---------- figures ----------
+
+figcaption,
+.figure-caption {
+  font-size: 0.9rem;
+  color: $muted;
+  border-left: 2px solid $accent;
+  border-radius: 0;
+  padding-left: 10px;
+}
+
+main img {
+  border: 1px solid $border-color;
+  border-radius: 6px;
+}
+
+.thumb img {
+  max-width: 320px;
+}
+
+// ---------- tables ----------
+
+table {
+  font-size: 0.9375rem;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+thead th {
+  text-align: left;
+  font-weight: 600;
+  color: $ink-2;
+  border-bottom: 2px solid $body-color;
+  padding: 0.5rem 0.6rem;
+}
+
+tbody td {
+  border-bottom: 1px solid $border-color;
+  padding: 0.45rem 0.6rem;
+}
+
+tbody tr:hover {
+  background: $surface;
+}
+
+td.num, th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+// ---------- run-summary component ----------
+// ::: {.run-summary} ... metrics table ... links line ... :::
+
+.run-summary {
+  background: $surface;
+  border: 1px solid $border-color;
+  border-left: 3px solid $accent;
+  border-radius: 5px;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+}
+
+.run-summary table {
+  margin: 0 0 8px;
+  border: none;
+}
+
+.run-summary thead th {
+  border: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: $muted;
+  padding: 0 20px 4px 0;
+}
+
+.run-summary tbody td {
+  border: none;
+  font-size: 1.1875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $body-color;
+  padding: 0 20px 0 0;
+}
+
+.run-summary tbody tr:hover {
+  background: none;
+}
+
+.run-summary p {
+  margin: 0;
+  padding-top: 8px;
+  border-top: 1px solid $border-color;
+  font-size: 0.8125rem;
+  color: $muted;
+}
+
+.run-summary p a {
+  color: $accent;
+  font-size: 0.8125rem;
+}
+
+// ---------- blockquote ----------
+
+blockquote {
+  border-left: 2px solid $accent;
+  padding-left: 1rem;
+  margin-left: 0;
+  color: $muted;
+  font-style: italic;
+}
+
+// ---------- accessibility & responsive ----------
+
+a:focus-visible,
+.sidebar-link:focus-visible {
+  outline: 2px solid $accent;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-title::after {
+    display: none;
+  }
+}
+
+// ---------- dark-mode figure card ----------
+// Matplotlib PNGs are generated on white and can't follow the
+// theme — give them a pale card so they read as intentional.
+
+main img {
+  background: #FFFFFF;
+  padding: 8px;
+  border-radius: 6px;
+}

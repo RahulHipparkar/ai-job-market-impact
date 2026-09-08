@@ -3,38 +3,40 @@ project:
   output-dir: ../docs
 
 website:
-  title: "AI and Tech Hiring"
-  navbar:
-    left:
-      - text: "Home"
-        href: index.qmd
-      - text: "Introduction"
-        href: introduction.qmd
-      - text: "DataPrep_EDA"
-        href: dataprep_eda.qmd
-      - text: "Methods"
-        menu:
-          - text: "Clustering"
-            href: clustering.qmd
-          - text: "PCA"
-            href: pca.qmd
-          - text: "NaiveBayes"
-            href: naivebayes.qmd
-          - text: "DecTrees"
-            href: dectrees.qmd
-          - text: "SVMs"
-            href: svm.qmd
-          - text: "Regression"
-            href: regression.qmd
-          - text: "NN"
-            href: nn.qmd
-      - text: "Conclusions"
-        href: conclusions.qmd
-      - text: "About Me"
-        href: about.qmd
+  title: "AI job market impact"
+  description: "Generative AI and tech hiring, 2019-2026"
+  search: true
+  navbar: {}
+  sidebar:
+    style: floating
+    contents:
+      - section: "Overview"
+        contents:
+          - text: "Home"
+            href: index.qmd
+          - introduction.qmd
+          - dataprep_eda.qmd
+      - section: "Unsupervised"
+        contents:
+          - clustering.qmd
+          - pca.qmd
+      - section: "Supervised"
+        contents:
+          - naivebayes.qmd
+          - dectrees.qmd
+          - svm.qmd
+          - regression.qmd
+          - nn.qmd
+      - section: "Closing"
+        contents:
+          - conclusions.qmd
+          - about.qmd
 
 format:
   html:
-    theme: [cosmo, styles.css]
+    theme:
+      light: [cosmo, styles.scss]
+      dark: [darkly, styles-dark.scss]
     toc: true
+    toc-location: right
     toc-depth: 3
