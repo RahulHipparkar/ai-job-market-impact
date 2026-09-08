@@ -4,167 +4,263 @@
     "href": "pca.html#data",
     "title": "PCA",
     "section": "Data",
-    "text": "Data"
+    "text": "Data",
+    "crumbs": [
+      "Unsupervised",
+      "PCA"
+    ]
   },
   {
     "objectID": "pca.html#code",
     "href": "pca.html#code",
     "title": "PCA",
     "section": "Code",
-    "text": "Code"
+    "text": "Code",
+    "crumbs": [
+      "Unsupervised",
+      "PCA"
+    ]
   },
   {
     "objectID": "pca.html#results",
     "href": "pca.html#results",
     "title": "PCA",
     "section": "Results",
-    "text": "Results"
+    "text": "Results",
+    "crumbs": [
+      "Unsupervised",
+      "PCA"
+    ]
   },
   {
     "objectID": "regression.html#data",
     "href": "regression.html#data",
     "title": "Regression",
     "section": "Data",
-    "text": "Data"
+    "text": "Data",
+    "crumbs": [
+      "Supervised",
+      "Regression"
+    ]
   },
   {
     "objectID": "regression.html#code",
     "href": "regression.html#code",
     "title": "Regression",
     "section": "Code",
-    "text": "Code"
+    "text": "Code",
+    "crumbs": [
+      "Supervised",
+      "Regression"
+    ]
   },
   {
     "objectID": "regression.html#results",
     "href": "regression.html#results",
     "title": "Regression",
     "section": "Results",
-    "text": "Results"
+    "text": "Results",
+    "crumbs": [
+      "Supervised",
+      "Regression"
+    ]
   },
   {
     "objectID": "nn.html#data",
     "href": "nn.html#data",
     "title": "NN",
     "section": "Data",
-    "text": "Data"
+    "text": "Data",
+    "crumbs": [
+      "Supervised",
+      "NN"
+    ]
   },
   {
     "objectID": "nn.html#code",
     "href": "nn.html#code",
     "title": "NN",
     "section": "Code",
-    "text": "Code"
+    "text": "Code",
+    "crumbs": [
+      "Supervised",
+      "NN"
+    ]
   },
   {
     "objectID": "nn.html#results",
     "href": "nn.html#results",
     "title": "NN",
     "section": "Results",
-    "text": "Results"
+    "text": "Results",
+    "crumbs": [
+      "Supervised",
+      "NN"
+    ]
   },
   {
     "objectID": "naivebayes.html#data",
     "href": "naivebayes.html#data",
     "title": "NaiveBayes",
     "section": "Data",
-    "text": "Data"
+    "text": "Data",
+    "crumbs": [
+      "Supervised",
+      "NaiveBayes"
+    ]
   },
   {
     "objectID": "naivebayes.html#code",
     "href": "naivebayes.html#code",
     "title": "NaiveBayes",
     "section": "Code",
-    "text": "Code"
+    "text": "Code",
+    "crumbs": [
+      "Supervised",
+      "NaiveBayes"
+    ]
   },
   {
     "objectID": "naivebayes.html#results",
     "href": "naivebayes.html#results",
     "title": "NaiveBayes",
     "section": "Results",
-    "text": "Results"
+    "text": "Results",
+    "crumbs": [
+      "Supervised",
+      "NaiveBayes"
+    ]
   },
   {
     "objectID": "clustering.html#data",
     "href": "clustering.html#data",
     "title": "Clustering",
     "section": "Data",
-    "text": "Data"
+    "text": "Data",
+    "crumbs": [
+      "Unsupervised",
+      "Clustering"
+    ]
   },
   {
     "objectID": "clustering.html#code",
     "href": "clustering.html#code",
     "title": "Clustering",
     "section": "Code",
-    "text": "Code"
+    "text": "Code",
+    "crumbs": [
+      "Unsupervised",
+      "Clustering"
+    ]
   },
   {
     "objectID": "clustering.html#results",
     "href": "clustering.html#results",
     "title": "Clustering",
     "section": "Results",
-    "text": "Results"
+    "text": "Results",
+    "crumbs": [
+      "Unsupervised",
+      "Clustering"
+    ]
   },
   {
     "objectID": "svm.html#data",
     "href": "svm.html#data",
     "title": "SVMs",
     "section": "Data",
-    "text": "Data"
+    "text": "Data",
+    "crumbs": [
+      "Supervised",
+      "SVMs"
+    ]
   },
   {
     "objectID": "svm.html#code",
     "href": "svm.html#code",
     "title": "SVMs",
     "section": "Code",
-    "text": "Code"
+    "text": "Code",
+    "crumbs": [
+      "Supervised",
+      "SVMs"
+    ]
   },
   {
     "objectID": "svm.html#results",
     "href": "svm.html#results",
     "title": "SVMs",
     "section": "Results",
-    "text": "Results"
+    "text": "Results",
+    "crumbs": [
+      "Supervised",
+      "SVMs"
+    ]
   },
   {
     "objectID": "dectrees.html#data",
     "href": "dectrees.html#data",
     "title": "DecTrees",
     "section": "Data",
-    "text": "Data"
+    "text": "Data",
+    "crumbs": [
+      "Supervised",
+      "DecTrees"
+    ]
   },
   {
     "objectID": "dectrees.html#code",
     "href": "dectrees.html#code",
     "title": "DecTrees",
     "section": "Code",
-    "text": "Code"
+    "text": "Code",
+    "crumbs": [
+      "Supervised",
+      "DecTrees"
+    ]
   },
   {
     "objectID": "dectrees.html#results",
     "href": "dectrees.html#results",
     "title": "DecTrees",
     "section": "Results",
-    "text": "Results"
+    "text": "Results",
+    "crumbs": [
+      "Supervised",
+      "DecTrees"
+    ]
   },
   {
     "objectID": "dataprep_eda.html#raw-data",
     "href": "dataprep_eda.html#raw-data",
     "title": "DataPrep_EDA",
     "section": "Raw Data",
-    "text": "Raw Data"
+    "text": "Raw Data",
+    "crumbs": [
+      "Overview",
+      "DataPrep_EDA"
+    ]
   },
   {
     "objectID": "dataprep_eda.html#cleaning",
     "href": "dataprep_eda.html#cleaning",
     "title": "DataPrep_EDA",
     "section": "Cleaning",
-    "text": "Cleaning"
+    "text": "Cleaning",
+    "crumbs": [
+      "Overview",
+      "DataPrep_EDA"
+    ]
   },
   {
     "objectID": "dataprep_eda.html#exploratory-visualizations",
     "href": "dataprep_eda.html#exploratory-visualizations",
     "title": "DataPrep_EDA",
     "section": "Exploratory Visualizations",
-    "text": "Exploratory Visualizations"
+    "text": "Exploratory Visualizations",
+    "crumbs": [
+      "Overview",
+      "DataPrep_EDA"
+    ]
   }
 ]
