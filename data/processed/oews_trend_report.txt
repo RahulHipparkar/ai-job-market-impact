@@ -1,0 +1,41 @@
+=== load (7 files) ===
+  national_M2019_dl.xlsx: 1329 rows, 31 columns: ['area', 'area_title', 'area_type', 'naics', 'naics_title', 'i_group', 'own_code', 'occ_code', 'occ_title', 'o_group', 'tot_emp', 'emp_prse', 'jobs_1000', 'loc_quotient', 'pct_total', 'h_mean', 'a_mean', 'mean_prse', 'h_pct10', 'h_pct25', 'h_median', 'h_pct75', 'h_pct90', 'a_pct10', 'a_pct25', 'a_median', 'a_pct75', 'a_pct90', 'annual', 'hourly', 'year']
+  national_M2020_dl.xlsx: 1329 rows, 32 columns: ['area', 'area_title', 'area_type', 'prim_state', 'naics', 'naics_title', 'i_group', 'own_code', 'occ_code', 'occ_title', 'o_group', 'tot_emp', 'emp_prse', 'jobs_1000', 'loc_quotient', 'pct_total', 'h_mean', 'a_mean', 'mean_prse', 'h_pct10', 'h_pct25', 'h_median', 'h_pct75', 'h_pct90', 'a_pct10', 'a_pct25', 'a_median', 'a_pct75', 'a_pct90', 'annual', 'hourly', 'year']
+  national_M2021_dl.xlsx: 1403 rows, 33 columns: ['area', 'area_title', 'area_type', 'prim_state', 'naics', 'naics_title', 'i_group', 'own_code', 'occ_code', 'occ_title', 'o_group', 'tot_emp', 'emp_prse', 'jobs_1000', 'loc_quotient', 'pct_total', 'pct_rpt', 'h_mean', 'a_mean', 'mean_prse', 'h_pct10', 'h_pct25', 'h_median', 'h_pct75', 'h_pct90', 'a_pct10', 'a_pct25', 'a_median', 'a_pct75', 'a_pct90', 'annual', 'hourly', 'year']
+  national_M2022_dl.xlsx: 1402 rows, 33 columns: ['area', 'area_title', 'area_type', 'prim_state', 'naics', 'naics_title', 'i_group', 'own_code', 'occ_code', 'occ_title', 'o_group', 'tot_emp', 'emp_prse', 'jobs_1000', 'loc_quotient', 'pct_total', 'pct_rpt', 'h_mean', 'a_mean', 'mean_prse', 'h_pct10', 'h_pct25', 'h_median', 'h_pct75', 'h_pct90', 'a_pct10', 'a_pct25', 'a_median', 'a_pct75', 'a_pct90', 'annual', 'hourly', 'year']
+  national_M2023_dl.xlsx: 1403 rows, 33 columns: ['area', 'area_title', 'area_type', 'prim_state', 'naics', 'naics_title', 'i_group', 'own_code', 'occ_code', 'occ_title', 'o_group', 'tot_emp', 'emp_prse', 'jobs_1000', 'loc_quotient', 'pct_total', 'pct_rpt', 'h_mean', 'a_mean', 'mean_prse', 'h_pct10', 'h_pct25', 'h_median', 'h_pct75', 'h_pct90', 'a_pct10', 'a_pct25', 'a_median', 'a_pct75', 'a_pct90', 'annual', 'hourly', 'year']
+  national_M2024_dl.xlsx: 1403 rows, 33 columns: ['area', 'area_title', 'area_type', 'prim_state', 'naics', 'naics_title', 'i_group', 'own_code', 'occ_code', 'occ_title', 'o_group', 'tot_emp', 'emp_prse', 'jobs_1000', 'loc_quotient', 'pct_total', 'pct_rpt', 'h_mean', 'a_mean', 'mean_prse', 'h_pct10', 'h_pct25', 'h_median', 'h_pct75', 'h_pct90', 'a_pct10', 'a_pct25', 'a_median', 'a_pct75', 'a_pct90', 'annual', 'hourly', 'year']
+  national_M2025_dl.xlsx: 1401 rows, 33 columns: ['area', 'area_title', 'area_type', 'prim_state', 'naics', 'naics_title', 'i_group', 'own_code', 'occ_code', 'occ_title', 'o_group', 'tot_emp', 'emp_prse', 'jobs_1000', 'loc_quotient', 'pct_total', 'pct_rpt', 'h_mean', 'a_mean', 'mean_prse', 'h_pct10', 'h_pct25', 'h_median', 'h_pct75', 'h_pct90', 'a_pct10', 'a_pct25', 'a_median', 'a_pct75', 'a_pct90', 'annual', 'hourly', 'year']
+row counts per year: 2019=1329, 2020=1329, 2021=1403, 2022=1402, 2023=1403, 2024=1403, 2025=1401
+
+=== target occupation coverage (2018 SOC revision breaks some codes) ===
+  2019: found ['15-1211', '15-1221', '15-1245', '15-1299'], MISSING ['15-1252', '15-2051']
+  2020: found ['15-1211', '15-1221', '15-1245', '15-1299'], MISSING ['15-1252', '15-2051']
+  2021: found ['15-1211', '15-1221', '15-1252', '15-1299', '15-2051'], MISSING ['15-1245']
+  2022: found ['15-1211', '15-1221', '15-1252', '15-1299', '15-2051'], MISSING ['15-1245']
+  2023: found ['15-1211', '15-1221', '15-1252', '15-1299', '15-2051'], MISSING ['15-1245']
+  2024: found ['15-1211', '15-1221', '15-1252', '15-1299', '15-2051'], MISSING ['15-1245']
+  2025: found ['15-1211', '15-1221', '15-1252', '15-1299', '15-2051'], MISSING ['15-1245']
+  NOTE: 15-1245 BLS title ['Database Administrators and Architects'] != brief's label 'Database and Network Administrators' -- BLS title kept
+
+=== fields ===
+missing expected fields: none
+
+=== suppression markers ('*' = withheld, '#' = wage above $239,200 topcode) ===
+  a_pct90 2021: 0 suppressed ('*'), 1 topcoded ('#'), 0 other conversion failures
+wage_topcoded rows (wage > $239,200, value nulled, flagged not lost): 1
+  occ_code                                    occ_title  year
+ 15-1221 Computer and Information Research Scientists  2021
+
+=== missing values ===
+  a_pct90: 1 (3.0%)
+
+=== duplicates on (occ_code, year) ===
+0 exact duplicate rows dropped; 0 keys conflict (NOT dropped)
+
+=== year-over-year outliers (|change| > 20%, per occupation) ===
+3 rows flagged (first year of any series has no prior year, so is never flagged):
+occ_code       occ_title  year  emp_yoy_pct  wage_yoy_pct
+ 15-2051 Data Scientists  2022    50.622759      2.566644
+ 15-2051 Data Scientists  2023    20.722922      4.367150
+ 15-2051 Data Scientists  2024    21.135385      4.230698

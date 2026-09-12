@@ -1,0 +1,1669 @@
+series_id,series_name,date,value,footnotes,is_outlier,value_suspect,year,quarter
+JTS000000000000000HIL,Total nonfarm: hires,2015-01-01,5061,,False,False,2015,1
+JTS000000000000000HIL,Total nonfarm: hires,2015-02-01,5127,,False,False,2015,1
+JTS000000000000000HIL,Total nonfarm: hires,2015-03-01,5126,,False,False,2015,1
+JTS000000000000000HIL,Total nonfarm: hires,2015-04-01,5196,,False,False,2015,2
+JTS000000000000000HIL,Total nonfarm: hires,2015-05-01,5142,,False,False,2015,2
+JTS000000000000000HIL,Total nonfarm: hires,2015-06-01,5125,,False,False,2015,2
+JTS000000000000000HIL,Total nonfarm: hires,2015-07-01,5150,,False,False,2015,3
+JTS000000000000000HIL,Total nonfarm: hires,2015-08-01,5163,,False,False,2015,3
+JTS000000000000000HIL,Total nonfarm: hires,2015-09-01,5287,,False,False,2015,3
+JTS000000000000000HIL,Total nonfarm: hires,2015-10-01,5338,,False,False,2015,4
+JTS000000000000000HIL,Total nonfarm: hires,2015-11-01,5358,,False,False,2015,4
+JTS000000000000000HIL,Total nonfarm: hires,2015-12-01,5540,,False,False,2015,4
+JTS000000000000000HIL,Total nonfarm: hires,2016-01-01,5220,,False,False,2016,1
+JTS000000000000000HIL,Total nonfarm: hires,2016-02-01,5470,,False,False,2016,1
+JTS000000000000000HIL,Total nonfarm: hires,2016-03-01,5359,,False,False,2016,1
+JTS000000000000000HIL,Total nonfarm: hires,2016-04-01,5294,,False,False,2016,2
+JTS000000000000000HIL,Total nonfarm: hires,2016-05-01,5197,,False,False,2016,2
+JTS000000000000000HIL,Total nonfarm: hires,2016-06-01,5281,,False,False,2016,2
+JTS000000000000000HIL,Total nonfarm: hires,2016-07-01,5426,,False,False,2016,3
+JTS000000000000000HIL,Total nonfarm: hires,2016-08-01,5327,,False,False,2016,3
+JTS000000000000000HIL,Total nonfarm: hires,2016-09-01,5306,,False,False,2016,3
+JTS000000000000000HIL,Total nonfarm: hires,2016-10-01,5210,,False,False,2016,4
+JTS000000000000000HIL,Total nonfarm: hires,2016-11-01,5308,,False,False,2016,4
+JTS000000000000000HIL,Total nonfarm: hires,2016-12-01,5343,,False,False,2016,4
+JTS000000000000000HIL,Total nonfarm: hires,2017-01-01,5499,,False,False,2017,1
+JTS000000000000000HIL,Total nonfarm: hires,2017-02-01,5350,,False,False,2017,1
+JTS000000000000000HIL,Total nonfarm: hires,2017-03-01,5395,,False,False,2017,1
+JTS000000000000000HIL,Total nonfarm: hires,2017-04-01,5272,,False,False,2017,2
+JTS000000000000000HIL,Total nonfarm: hires,2017-05-01,5477,,False,False,2017,2
+JTS000000000000000HIL,Total nonfarm: hires,2017-06-01,5635,,False,False,2017,2
+JTS000000000000000HIL,Total nonfarm: hires,2017-07-01,5497,,False,False,2017,3
+JTS000000000000000HIL,Total nonfarm: hires,2017-08-01,5519,,False,False,2017,3
+JTS000000000000000HIL,Total nonfarm: hires,2017-09-01,5450,,False,False,2017,3
+JTS000000000000000HIL,Total nonfarm: hires,2017-10-01,5581,,False,False,2017,4
+JTS000000000000000HIL,Total nonfarm: hires,2017-11-01,5494,,False,False,2017,4
+JTS000000000000000HIL,Total nonfarm: hires,2017-12-01,5421,,False,False,2017,4
+JTS000000000000000HIL,Total nonfarm: hires,2018-01-01,5512,,False,False,2018,1
+JTS000000000000000HIL,Total nonfarm: hires,2018-02-01,5624,,False,False,2018,1
+JTS000000000000000HIL,Total nonfarm: hires,2018-03-01,5623,,False,False,2018,1
+JTS000000000000000HIL,Total nonfarm: hires,2018-04-01,5590,,False,False,2018,2
+JTS000000000000000HIL,Total nonfarm: hires,2018-05-01,5859,,False,False,2018,2
+JTS000000000000000HIL,Total nonfarm: hires,2018-06-01,5760,,False,False,2018,2
+JTS000000000000000HIL,Total nonfarm: hires,2018-07-01,5649,,False,False,2018,3
+JTS000000000000000HIL,Total nonfarm: hires,2018-08-01,5815,,False,False,2018,3
+JTS000000000000000HIL,Total nonfarm: hires,2018-09-01,5625,,False,False,2018,3
+JTS000000000000000HIL,Total nonfarm: hires,2018-10-01,5907,,False,False,2018,4
+JTS000000000000000HIL,Total nonfarm: hires,2018-11-01,5826,,False,False,2018,4
+JTS000000000000000HIL,Total nonfarm: hires,2018-12-01,5768,,False,False,2018,4
+JTS000000000000000HIL,Total nonfarm: hires,2019-01-01,5786,,False,False,2019,1
+JTS000000000000000HIL,Total nonfarm: hires,2019-02-01,5704,,False,False,2019,1
+JTS000000000000000HIL,Total nonfarm: hires,2019-03-01,5689,,False,False,2019,1
+JTS000000000000000HIL,Total nonfarm: hires,2019-04-01,6016,,False,False,2019,2
+JTS000000000000000HIL,Total nonfarm: hires,2019-05-01,5686,,False,False,2019,2
+JTS000000000000000HIL,Total nonfarm: hires,2019-06-01,5801,,False,False,2019,2
+JTS000000000000000HIL,Total nonfarm: hires,2019-07-01,5871,,False,False,2019,3
+JTS000000000000000HIL,Total nonfarm: hires,2019-08-01,5900,,False,False,2019,3
+JTS000000000000000HIL,Total nonfarm: hires,2019-09-01,5963,,False,False,2019,3
+JTS000000000000000HIL,Total nonfarm: hires,2019-10-01,5781,,False,False,2019,4
+JTS000000000000000HIL,Total nonfarm: hires,2019-11-01,5847,,False,False,2019,4
+JTS000000000000000HIL,Total nonfarm: hires,2019-12-01,5951,,False,False,2019,4
+JTS000000000000000HIL,Total nonfarm: hires,2020-01-01,5981,,False,False,2020,1
+JTS000000000000000HIL,Total nonfarm: hires,2020-02-01,5990,,False,False,2020,1
+JTS000000000000000HIL,Total nonfarm: hires,2020-03-01,5171,,False,False,2020,1
+JTS000000000000000HIL,Total nonfarm: hires,2020-04-01,4029,,True,False,2020,2
+JTS000000000000000HIL,Total nonfarm: hires,2020-05-01,8133,,True,False,2020,2
+JTS000000000000000HIL,Total nonfarm: hires,2020-06-01,7477,,True,False,2020,2
+JTS000000000000000HIL,Total nonfarm: hires,2020-07-01,6320,,False,False,2020,3
+JTS000000000000000HIL,Total nonfarm: hires,2020-08-01,6004,,False,False,2020,3
+JTS000000000000000HIL,Total nonfarm: hires,2020-09-01,5966,,False,False,2020,3
+JTS000000000000000HIL,Total nonfarm: hires,2020-10-01,6091,,False,False,2020,4
+JTS000000000000000HIL,Total nonfarm: hires,2020-11-01,5894,,False,False,2020,4
+JTS000000000000000HIL,Total nonfarm: hires,2020-12-01,5577,,False,False,2020,4
+JTS000000000000000HIL,Total nonfarm: hires,2021-01-01,5598,,False,False,2021,1
+JTS000000000000000HIL,Total nonfarm: hires,2021-02-01,5813,,False,False,2021,1
+JTS000000000000000HIL,Total nonfarm: hires,2021-03-01,6158,,False,False,2021,1
+JTS000000000000000HIL,Total nonfarm: hires,2021-04-01,6138,,False,False,2021,2
+JTS000000000000000HIL,Total nonfarm: hires,2021-05-01,5981,,False,False,2021,2
+JTS000000000000000HIL,Total nonfarm: hires,2021-06-01,6535,,False,False,2021,2
+JTS000000000000000HIL,Total nonfarm: hires,2021-07-01,6720,,False,False,2021,3
+JTS000000000000000HIL,Total nonfarm: hires,2021-08-01,6394,,False,False,2021,3
+JTS000000000000000HIL,Total nonfarm: hires,2021-09-01,6632,,False,False,2021,3
+JTS000000000000000HIL,Total nonfarm: hires,2021-10-01,6678,,False,False,2021,4
+JTS000000000000000HIL,Total nonfarm: hires,2021-11-01,6911,,False,False,2021,4
+JTS000000000000000HIL,Total nonfarm: hires,2021-12-01,6686,,False,False,2021,4
+JTS000000000000000HIL,Total nonfarm: hires,2022-01-01,6431,,False,False,2022,1
+JTS000000000000000HIL,Total nonfarm: hires,2022-02-01,6801,,False,False,2022,1
+JTS000000000000000HIL,Total nonfarm: hires,2022-03-01,6619,,False,False,2022,1
+JTS000000000000000HIL,Total nonfarm: hires,2022-04-01,6528,,False,False,2022,2
+JTS000000000000000HIL,Total nonfarm: hires,2022-05-01,6440,,False,False,2022,2
+JTS000000000000000HIL,Total nonfarm: hires,2022-06-01,6487,,False,False,2022,2
+JTS000000000000000HIL,Total nonfarm: hires,2022-07-01,6478,,False,False,2022,3
+JTS000000000000000HIL,Total nonfarm: hires,2022-08-01,6448,,False,False,2022,3
+JTS000000000000000HIL,Total nonfarm: hires,2022-09-01,6201,,False,False,2022,3
+JTS000000000000000HIL,Total nonfarm: hires,2022-10-01,6151,,False,False,2022,4
+JTS000000000000000HIL,Total nonfarm: hires,2022-11-01,6180,,False,False,2022,4
+JTS000000000000000HIL,Total nonfarm: hires,2022-12-01,6163,,False,False,2022,4
+JTS000000000000000HIL,Total nonfarm: hires,2023-01-01,6370,,False,False,2023,1
+JTS000000000000000HIL,Total nonfarm: hires,2023-02-01,5989,,False,False,2023,1
+JTS000000000000000HIL,Total nonfarm: hires,2023-03-01,5925,,False,False,2023,1
+JTS000000000000000HIL,Total nonfarm: hires,2023-04-01,5876,,False,False,2023,2
+JTS000000000000000HIL,Total nonfarm: hires,2023-05-01,6119,,False,False,2023,2
+JTS000000000000000HIL,Total nonfarm: hires,2023-06-01,5928,,False,False,2023,2
+JTS000000000000000HIL,Total nonfarm: hires,2023-07-01,5672,,False,False,2023,3
+JTS000000000000000HIL,Total nonfarm: hires,2023-08-01,5846,,False,False,2023,3
+JTS000000000000000HIL,Total nonfarm: hires,2023-09-01,5773,,False,False,2023,3
+JTS000000000000000HIL,Total nonfarm: hires,2023-10-01,5765,,False,False,2023,4
+JTS000000000000000HIL,Total nonfarm: hires,2023-11-01,5535,,False,False,2023,4
+JTS000000000000000HIL,Total nonfarm: hires,2023-12-01,5583,,False,False,2023,4
+JTS000000000000000HIL,Total nonfarm: hires,2024-01-01,5591,,False,False,2024,1
+JTS000000000000000HIL,Total nonfarm: hires,2024-02-01,5618,,False,False,2024,1
+JTS000000000000000HIL,Total nonfarm: hires,2024-03-01,5452,,False,False,2024,1
+JTS000000000000000HIL,Total nonfarm: hires,2024-04-01,5469,,False,False,2024,2
+JTS000000000000000HIL,Total nonfarm: hires,2024-05-01,5492,,False,False,2024,2
+JTS000000000000000HIL,Total nonfarm: hires,2024-06-01,5137,,False,False,2024,2
+JTS000000000000000HIL,Total nonfarm: hires,2024-07-01,5430,,False,False,2024,3
+JTS000000000000000HIL,Total nonfarm: hires,2024-08-01,5204,,False,False,2024,3
+JTS000000000000000HIL,Total nonfarm: hires,2024-09-01,5427,,False,False,2024,3
+JTS000000000000000HIL,Total nonfarm: hires,2024-10-01,5228,,False,False,2024,4
+JTS000000000000000HIL,Total nonfarm: hires,2024-11-01,5155,,False,False,2024,4
+JTS000000000000000HIL,Total nonfarm: hires,2024-12-01,5292,,False,False,2024,4
+JTS000000000000000HIL,Total nonfarm: hires,2025-01-01,5238,,False,False,2025,1
+JTS000000000000000HIL,Total nonfarm: hires,2025-02-01,5236,,False,False,2025,1
+JTS000000000000000HIL,Total nonfarm: hires,2025-03-01,5333,,False,False,2025,1
+JTS000000000000000HIL,Total nonfarm: hires,2025-04-01,5391,,False,False,2025,2
+JTS000000000000000HIL,Total nonfarm: hires,2025-05-01,5328,,False,False,2025,2
+JTS000000000000000HIL,Total nonfarm: hires,2025-06-01,5327,,False,False,2025,2
+JTS000000000000000HIL,Total nonfarm: hires,2025-07-01,5225,,False,False,2025,3
+JTS000000000000000HIL,Total nonfarm: hires,2025-08-01,5145,,False,False,2025,3
+JTS000000000000000HIL,Total nonfarm: hires,2025-09-01,5244,,False,False,2025,3
+JTS000000000000000HIL,Total nonfarm: hires,2025-10-01,5180,,False,False,2025,4
+JTS000000000000000HIL,Total nonfarm: hires,2025-11-01,5019,,False,False,2025,4
+JTS000000000000000HIL,Total nonfarm: hires,2025-12-01,5272,,False,False,2025,4
+JTS000000000000000HIL,Total nonfarm: hires,2026-01-01,5347,,False,False,2026,1
+JTS000000000000000HIL,Total nonfarm: hires,2026-02-01,4899,,False,False,2026,1
+JTS000000000000000HIL,Total nonfarm: hires,2026-03-01,5535,,False,False,2026,1
+JTS000000000000000HIL,Total nonfarm: hires,2026-04-01,5215,,False,False,2026,2
+JTS000000000000000HIL,Total nonfarm: hires,2026-05-01,5252,,False,False,2026,2
+JTS000000000000000HIL,Total nonfarm: hires,2026-06-01,5332,,False,False,2026,2
+JTS000000000000000HIL,Total nonfarm: hires,2026-07-01,5054,P: preliminary,False,False,2026,3
+JTS000000000000000JOL,Total nonfarm: job openings,2015-01-01,5344,,False,False,2015,1
+JTS000000000000000JOL,Total nonfarm: job openings,2015-02-01,5466,,False,False,2015,1
+JTS000000000000000JOL,Total nonfarm: job openings,2015-03-01,5210,,False,False,2015,1
+JTS000000000000000JOL,Total nonfarm: job openings,2015-04-01,5598,,False,False,2015,2
+JTS000000000000000JOL,Total nonfarm: job openings,2015-05-01,5563,,False,False,2015,2
+JTS000000000000000JOL,Total nonfarm: job openings,2015-06-01,5248,,False,False,2015,2
+JTS000000000000000JOL,Total nonfarm: job openings,2015-07-01,6056,,False,False,2015,3
+JTS000000000000000JOL,Total nonfarm: job openings,2015-08-01,5467,,False,False,2015,3
+JTS000000000000000JOL,Total nonfarm: job openings,2015-09-01,5488,,False,False,2015,3
+JTS000000000000000JOL,Total nonfarm: job openings,2015-10-01,5773,,False,False,2015,4
+JTS000000000000000JOL,Total nonfarm: job openings,2015-11-01,5708,,False,False,2015,4
+JTS000000000000000JOL,Total nonfarm: job openings,2015-12-01,5845,,False,False,2015,4
+JTS000000000000000JOL,Total nonfarm: job openings,2016-01-01,6012,,False,False,2016,1
+JTS000000000000000JOL,Total nonfarm: job openings,2016-02-01,5770,,False,False,2016,1
+JTS000000000000000JOL,Total nonfarm: job openings,2016-03-01,6129,,False,False,2016,1
+JTS000000000000000JOL,Total nonfarm: job openings,2016-04-01,5803,,False,False,2016,2
+JTS000000000000000JOL,Total nonfarm: job openings,2016-05-01,5777,,False,False,2016,2
+JTS000000000000000JOL,Total nonfarm: job openings,2016-06-01,5742,,False,False,2016,2
+JTS000000000000000JOL,Total nonfarm: job openings,2016-07-01,5962,,False,False,2016,3
+JTS000000000000000JOL,Total nonfarm: job openings,2016-08-01,5677,,False,False,2016,3
+JTS000000000000000JOL,Total nonfarm: job openings,2016-09-01,5868,,False,False,2016,3
+JTS000000000000000JOL,Total nonfarm: job openings,2016-10-01,5591,,False,False,2016,4
+JTS000000000000000JOL,Total nonfarm: job openings,2016-11-01,5971,,False,False,2016,4
+JTS000000000000000JOL,Total nonfarm: job openings,2016-12-01,5964,,False,False,2016,4
+JTS000000000000000JOL,Total nonfarm: job openings,2017-01-01,5617,,False,False,2017,1
+JTS000000000000000JOL,Total nonfarm: job openings,2017-02-01,5923,,False,False,2017,1
+JTS000000000000000JOL,Total nonfarm: job openings,2017-03-01,5811,,False,False,2017,1
+JTS000000000000000JOL,Total nonfarm: job openings,2017-04-01,6091,,False,False,2017,2
+JTS000000000000000JOL,Total nonfarm: job openings,2017-05-01,5826,,False,False,2017,2
+JTS000000000000000JOL,Total nonfarm: job openings,2017-06-01,6305,,False,False,2017,2
+JTS000000000000000JOL,Total nonfarm: job openings,2017-07-01,6238,,False,False,2017,3
+JTS000000000000000JOL,Total nonfarm: job openings,2017-08-01,6276,,False,False,2017,3
+JTS000000000000000JOL,Total nonfarm: job openings,2017-09-01,6320,,False,False,2017,3
+JTS000000000000000JOL,Total nonfarm: job openings,2017-10-01,6408,,False,False,2017,4
+JTS000000000000000JOL,Total nonfarm: job openings,2017-11-01,6271,,False,False,2017,4
+JTS000000000000000JOL,Total nonfarm: job openings,2017-12-01,6336,,False,False,2017,4
+JTS000000000000000JOL,Total nonfarm: job openings,2018-01-01,6621,,False,False,2018,1
+JTS000000000000000JOL,Total nonfarm: job openings,2018-02-01,6552,,False,False,2018,1
+JTS000000000000000JOL,Total nonfarm: job openings,2018-03-01,6818,,False,False,2018,1
+JTS000000000000000JOL,Total nonfarm: job openings,2018-04-01,6877,,False,False,2018,2
+JTS000000000000000JOL,Total nonfarm: job openings,2018-05-01,7016,,False,False,2018,2
+JTS000000000000000JOL,Total nonfarm: job openings,2018-06-01,7230,,False,False,2018,2
+JTS000000000000000JOL,Total nonfarm: job openings,2018-07-01,7190,,False,False,2018,3
+JTS000000000000000JOL,Total nonfarm: job openings,2018-08-01,7208,,False,False,2018,3
+JTS000000000000000JOL,Total nonfarm: job openings,2018-09-01,7411,,False,False,2018,3
+JTS000000000000000JOL,Total nonfarm: job openings,2018-10-01,7304,,False,False,2018,4
+JTS000000000000000JOL,Total nonfarm: job openings,2018-11-01,7594,,False,False,2018,4
+JTS000000000000000JOL,Total nonfarm: job openings,2018-12-01,7489,,False,False,2018,4
+JTS000000000000000JOL,Total nonfarm: job openings,2019-01-01,7502,,False,False,2019,1
+JTS000000000000000JOL,Total nonfarm: job openings,2019-02-01,7066,,False,False,2019,1
+JTS000000000000000JOL,Total nonfarm: job openings,2019-03-01,7317,,False,False,2019,1
+JTS000000000000000JOL,Total nonfarm: job openings,2019-04-01,7272,,False,False,2019,2
+JTS000000000000000JOL,Total nonfarm: job openings,2019-05-01,7275,,False,False,2019,2
+JTS000000000000000JOL,Total nonfarm: job openings,2019-06-01,7194,,False,False,2019,2
+JTS000000000000000JOL,Total nonfarm: job openings,2019-07-01,7042,,False,False,2019,3
+JTS000000000000000JOL,Total nonfarm: job openings,2019-08-01,7178,,False,False,2019,3
+JTS000000000000000JOL,Total nonfarm: job openings,2019-09-01,7124,,False,False,2019,3
+JTS000000000000000JOL,Total nonfarm: job openings,2019-10-01,7289,,False,False,2019,4
+JTS000000000000000JOL,Total nonfarm: job openings,2019-11-01,6888,,False,False,2019,4
+JTS000000000000000JOL,Total nonfarm: job openings,2019-12-01,6699,,False,False,2019,4
+JTS000000000000000JOL,Total nonfarm: job openings,2020-01-01,7124,,False,False,2020,1
+JTS000000000000000JOL,Total nonfarm: job openings,2020-02-01,6966,,False,False,2020,1
+JTS000000000000000JOL,Total nonfarm: job openings,2020-03-01,5894,,False,False,2020,1
+JTS000000000000000JOL,Total nonfarm: job openings,2020-04-01,4606,,False,False,2020,2
+JTS000000000000000JOL,Total nonfarm: job openings,2020-05-01,5612,,False,False,2020,2
+JTS000000000000000JOL,Total nonfarm: job openings,2020-06-01,6129,,False,False,2020,2
+JTS000000000000000JOL,Total nonfarm: job openings,2020-07-01,6530,,False,False,2020,3
+JTS000000000000000JOL,Total nonfarm: job openings,2020-08-01,6429,,False,False,2020,3
+JTS000000000000000JOL,Total nonfarm: job openings,2020-09-01,6511,,False,False,2020,3
+JTS000000000000000JOL,Total nonfarm: job openings,2020-10-01,6798,,False,False,2020,4
+JTS000000000000000JOL,Total nonfarm: job openings,2020-11-01,6820,,False,False,2020,4
+JTS000000000000000JOL,Total nonfarm: job openings,2020-12-01,6773,,False,False,2020,4
+JTS000000000000000JOL,Total nonfarm: job openings,2021-01-01,7162,,False,False,2021,1
+JTS000000000000000JOL,Total nonfarm: job openings,2021-02-01,7827,,False,False,2021,1
+JTS000000000000000JOL,Total nonfarm: job openings,2021-03-01,8499,,False,False,2021,1
+JTS000000000000000JOL,Total nonfarm: job openings,2021-04-01,9346,,False,False,2021,2
+JTS000000000000000JOL,Total nonfarm: job openings,2021-05-01,9954,,False,False,2021,2
+JTS000000000000000JOL,Total nonfarm: job openings,2021-06-01,10319,,False,False,2021,2
+JTS000000000000000JOL,Total nonfarm: job openings,2021-07-01,10983,,False,False,2021,3
+JTS000000000000000JOL,Total nonfarm: job openings,2021-08-01,10872,,False,False,2021,3
+JTS000000000000000JOL,Total nonfarm: job openings,2021-09-01,10834,,False,False,2021,3
+JTS000000000000000JOL,Total nonfarm: job openings,2021-10-01,11238,,False,False,2021,4
+JTS000000000000000JOL,Total nonfarm: job openings,2021-11-01,11199,,False,False,2021,4
+JTS000000000000000JOL,Total nonfarm: job openings,2021-12-01,11520,,False,False,2021,4
+JTS000000000000000JOL,Total nonfarm: job openings,2022-01-01,11210,,False,False,2022,1
+JTS000000000000000JOL,Total nonfarm: job openings,2022-02-01,11698,,False,False,2022,1
+JTS000000000000000JOL,Total nonfarm: job openings,2022-03-01,12301,,False,False,2022,1
+JTS000000000000000JOL,Total nonfarm: job openings,2022-04-01,11861,,False,False,2022,2
+JTS000000000000000JOL,Total nonfarm: job openings,2022-05-01,11535,,False,False,2022,2
+JTS000000000000000JOL,Total nonfarm: job openings,2022-06-01,11283,,False,False,2022,2
+JTS000000000000000JOL,Total nonfarm: job openings,2022-07-01,11576,,False,False,2022,3
+JTS000000000000000JOL,Total nonfarm: job openings,2022-08-01,10092,,False,False,2022,3
+JTS000000000000000JOL,Total nonfarm: job openings,2022-09-01,10800,,False,False,2022,3
+JTS000000000000000JOL,Total nonfarm: job openings,2022-10-01,10447,,False,False,2022,4
+JTS000000000000000JOL,Total nonfarm: job openings,2022-11-01,10632,,False,False,2022,4
+JTS000000000000000JOL,Total nonfarm: job openings,2022-12-01,10902,,False,False,2022,4
+JTS000000000000000JOL,Total nonfarm: job openings,2023-01-01,10318,,False,False,2023,1
+JTS000000000000000JOL,Total nonfarm: job openings,2023-02-01,9857,,False,False,2023,1
+JTS000000000000000JOL,Total nonfarm: job openings,2023-03-01,9655,,False,False,2023,1
+JTS000000000000000JOL,Total nonfarm: job openings,2023-04-01,9966,,False,False,2023,2
+JTS000000000000000JOL,Total nonfarm: job openings,2023-05-01,9368,,False,False,2023,2
+JTS000000000000000JOL,Total nonfarm: job openings,2023-06-01,9180,,False,False,2023,2
+JTS000000000000000JOL,Total nonfarm: job openings,2023-07-01,8657,,False,False,2023,3
+JTS000000000000000JOL,Total nonfarm: job openings,2023-08-01,9254,,False,False,2023,3
+JTS000000000000000JOL,Total nonfarm: job openings,2023-09-01,9259,,False,False,2023,3
+JTS000000000000000JOL,Total nonfarm: job openings,2023-10-01,8580,,False,False,2023,4
+JTS000000000000000JOL,Total nonfarm: job openings,2023-11-01,8602,,False,False,2023,4
+JTS000000000000000JOL,Total nonfarm: job openings,2023-12-01,8520,,False,False,2023,4
+JTS000000000000000JOL,Total nonfarm: job openings,2024-01-01,8378,,False,False,2024,1
+JTS000000000000000JOL,Total nonfarm: job openings,2024-02-01,8440,,False,False,2024,1
+JTS000000000000000JOL,Total nonfarm: job openings,2024-03-01,8206,,False,False,2024,1
+JTS000000000000000JOL,Total nonfarm: job openings,2024-04-01,7529,,False,False,2024,2
+JTS000000000000000JOL,Total nonfarm: job openings,2024-05-01,7782,,False,False,2024,2
+JTS000000000000000JOL,Total nonfarm: job openings,2024-06-01,7416,,False,False,2024,2
+JTS000000000000000JOL,Total nonfarm: job openings,2024-07-01,7426,,False,False,2024,3
+JTS000000000000000JOL,Total nonfarm: job openings,2024-08-01,7520,,False,False,2024,3
+JTS000000000000000JOL,Total nonfarm: job openings,2024-09-01,6943,,False,False,2024,3
+JTS000000000000000JOL,Total nonfarm: job openings,2024-10-01,7379,,False,False,2024,4
+JTS000000000000000JOL,Total nonfarm: job openings,2024-11-01,7566,,False,False,2024,4
+JTS000000000000000JOL,Total nonfarm: job openings,2024-12-01,7295,,False,False,2024,4
+JTS000000000000000JOL,Total nonfarm: job openings,2025-01-01,7431,,False,False,2025,1
+JTS000000000000000JOL,Total nonfarm: job openings,2025-02-01,7242,,False,False,2025,1
+JTS000000000000000JOL,Total nonfarm: job openings,2025-03-01,6952,,False,False,2025,1
+JTS000000000000000JOL,Total nonfarm: job openings,2025-04-01,7098,,False,False,2025,2
+JTS000000000000000JOL,Total nonfarm: job openings,2025-05-01,7310,,False,False,2025,2
+JTS000000000000000JOL,Total nonfarm: job openings,2025-06-01,7204,,False,False,2025,2
+JTS000000000000000JOL,Total nonfarm: job openings,2025-07-01,7089,,False,False,2025,3
+JTS000000000000000JOL,Total nonfarm: job openings,2025-08-01,6919,,False,False,2025,3
+JTS000000000000000JOL,Total nonfarm: job openings,2025-09-01,7169,,False,False,2025,3
+JTS000000000000000JOL,Total nonfarm: job openings,2025-10-01,7170,,False,False,2025,4
+JTS000000000000000JOL,Total nonfarm: job openings,2025-11-01,6846,,False,False,2025,4
+JTS000000000000000JOL,Total nonfarm: job openings,2025-12-01,6550,,False,False,2025,4
+JTS000000000000000JOL,Total nonfarm: job openings,2026-01-01,7240,,False,False,2026,1
+JTS000000000000000JOL,Total nonfarm: job openings,2026-02-01,6922,,False,False,2026,1
+JTS000000000000000JOL,Total nonfarm: job openings,2026-03-01,6887,,False,False,2026,1
+JTS000000000000000JOL,Total nonfarm: job openings,2026-04-01,7585,,False,False,2026,2
+JTS000000000000000JOL,Total nonfarm: job openings,2026-05-01,7537,,False,False,2026,2
+JTS000000000000000JOL,Total nonfarm: job openings,2026-06-01,7182,,False,False,2026,2
+JTS000000000000000JOL,Total nonfarm: job openings,2026-07-01,7271,P: preliminary,False,False,2026,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2015-01-01,1789,,False,False,2015,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2015-02-01,1757,,False,False,2015,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2015-03-01,1973,,False,False,2015,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2015-04-01,1856,,False,False,2015,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2015-05-01,1711,,False,False,2015,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2015-06-01,1821,,False,False,2015,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2015-07-01,1703,,False,False,2015,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2015-08-01,1773,,False,False,2015,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2015-09-01,1964,,False,False,2015,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2015-10-01,1845,,False,False,2015,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2015-11-01,1779,,False,False,2015,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2015-12-01,1803,,False,False,2015,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2016-01-01,1805,,False,False,2016,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2016-02-01,1894,,False,False,2016,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2016-03-01,1850,,False,False,2016,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2016-04-01,1771,,False,False,2016,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2016-05-01,1825,,False,False,2016,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2016-06-01,1750,,False,False,2016,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2016-07-01,1759,,False,False,2016,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2016-08-01,1860,,False,False,2016,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2016-09-01,1588,,False,False,2016,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2016-10-01,1664,,False,False,2016,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2016-11-01,1751,,False,False,2016,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2016-12-01,1708,,False,False,2016,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2017-01-01,1745,,False,False,2017,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2017-02-01,1711,,False,False,2017,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2017-03-01,1762,,False,False,2017,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2017-04-01,1710,,False,False,2017,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2017-05-01,1794,,False,False,2017,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2017-06-01,1970,,False,False,2017,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2017-07-01,1910,,False,False,2017,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2017-08-01,1868,,False,False,2017,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2017-09-01,1787,,False,False,2017,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2017-10-01,1837,,False,False,2017,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2017-11-01,1747,,False,False,2017,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2017-12-01,1732,,False,False,2017,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2018-01-01,1932,,False,False,2018,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2018-02-01,1771,,False,False,2018,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2018-03-01,1795,,False,False,2018,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2018-04-01,1727,,False,False,2018,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2018-05-01,1775,,False,False,2018,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2018-06-01,1822,,False,False,2018,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2018-07-01,1806,,False,False,2018,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2018-08-01,1803,,False,False,2018,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2018-09-01,1764,,False,False,2018,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2018-10-01,1813,,False,False,2018,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2018-11-01,1938,,False,False,2018,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2018-12-01,1839,,False,False,2018,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2019-01-01,1705,,False,False,2019,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2019-02-01,1763,,False,False,2019,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2019-03-01,1690,,False,False,2019,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2019-04-01,1963,,False,False,2019,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2019-05-01,1775,,False,False,2019,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2019-06-01,1780,,False,False,2019,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2019-07-01,1833,,False,False,2019,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2019-08-01,1808,,False,False,2019,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2019-09-01,1970,,False,False,2019,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2019-10-01,1819,,False,False,2019,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2019-11-01,1782,,False,False,2019,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2019-12-01,1931,,False,False,2019,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2020-01-01,1808,,False,False,2020,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2020-02-01,1954,,False,False,2020,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2020-03-01,12985,,True,False,2020,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2020-04-01,9170,,True,False,2020,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2020-05-01,2139,,False,False,2020,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2020-06-01,2245,,False,False,2020,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2020-07-01,1827,,False,False,2020,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2020-08-01,1560,,False,False,2020,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2020-09-01,1567,,False,False,2020,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2020-10-01,1697,,False,False,2020,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2020-11-01,2097,,False,False,2020,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2020-12-01,1906,,False,False,2020,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2021-01-01,1567,,False,False,2021,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2021-02-01,1628,,False,False,2021,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2021-03-01,1500,,False,False,2021,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2021-04-01,1402,,False,False,2021,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2021-05-01,1351,,False,False,2021,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2021-06-01,1335,,False,False,2021,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2021-07-01,1410,,False,False,2021,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2021-08-01,1332,,False,False,2021,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2021-09-01,1411,,False,False,2021,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2021-10-01,1313,,False,False,2021,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2021-11-01,1348,,False,False,2021,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2021-12-01,1403,,False,False,2021,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2022-01-01,1423,,False,False,2022,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2022-02-01,1401,,False,False,2022,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2022-03-01,1377,,False,False,2022,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2022-04-01,1312,,False,False,2022,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2022-05-01,1500,,False,False,2022,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2022-06-01,1528,,False,False,2022,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2022-07-01,1462,,False,False,2022,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2022-08-01,1606,,False,False,2022,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2022-09-01,1445,,False,False,2022,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2022-10-01,1553,,False,False,2022,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2022-11-01,1472,,False,False,2022,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2022-12-01,1535,,False,False,2022,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2023-01-01,1767,,False,False,2023,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2023-02-01,1535,,False,False,2023,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2023-03-01,1903,,False,False,2023,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2023-04-01,1654,,False,False,2023,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2023-05-01,1540,,False,False,2023,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2023-06-01,1658,,False,False,2023,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2023-07-01,1677,,False,False,2023,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2023-08-01,1675,,False,False,2023,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2023-09-01,1531,,False,False,2023,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2023-10-01,1623,,False,False,2023,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2023-11-01,1554,,False,False,2023,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2023-12-01,1685,,False,False,2023,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2024-01-01,1641,,False,False,2024,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2024-02-01,1692,,False,False,2024,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2024-03-01,1647,,False,False,2024,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2024-04-01,1548,,False,False,2024,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2024-05-01,1747,,False,False,2024,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2024-06-01,1497,,False,False,2024,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2024-07-01,1711,,False,False,2024,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2024-08-01,1683,,False,False,2024,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2024-09-01,1780,,False,False,2024,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2024-10-01,1650,,False,False,2024,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2024-11-01,1831,,False,False,2024,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2024-12-01,1689,,False,False,2024,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2025-01-01,1738,,False,False,2025,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2025-02-01,1867,,False,False,2025,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2025-03-01,1595,,False,False,2025,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2025-04-01,1818,,False,False,2025,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2025-05-01,1671,,False,False,2025,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2025-06-01,1843,,False,False,2025,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2025-07-01,1772,,False,False,2025,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2025-08-01,1832,,False,False,2025,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2025-09-01,1816,,False,False,2025,3
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2025-10-01,1891,,False,False,2025,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2025-11-01,1660,,False,False,2025,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2025-12-01,1666,,False,False,2025,4
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2026-01-01,1660,,False,False,2026,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2026-02-01,1714,,False,False,2026,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2026-03-01,1884,,False,False,2026,1
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2026-04-01,1667,,False,False,2026,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2026-05-01,1761,,False,False,2026,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2026-06-01,1785,,False,False,2026,2
+JTS000000000000000LDL,Total nonfarm: layoffs and discharges,2026-07-01,1666,P: preliminary,False,False,2026,3
+JTS000000000000000QUL,Total nonfarm: quits,2015-01-01,2764,,False,False,2015,1
+JTS000000000000000QUL,Total nonfarm: quits,2015-02-01,2741,,False,False,2015,1
+JTS000000000000000QUL,Total nonfarm: quits,2015-03-01,2754,,False,False,2015,1
+JTS000000000000000QUL,Total nonfarm: quits,2015-04-01,2705,,False,False,2015,2
+JTS000000000000000QUL,Total nonfarm: quits,2015-05-01,2743,,False,False,2015,2
+JTS000000000000000QUL,Total nonfarm: quits,2015-06-01,2756,,False,False,2015,2
+JTS000000000000000QUL,Total nonfarm: quits,2015-07-01,2764,,False,False,2015,3
+JTS000000000000000QUL,Total nonfarm: quits,2015-08-01,2879,,False,False,2015,3
+JTS000000000000000QUL,Total nonfarm: quits,2015-09-01,2778,,False,False,2015,3
+JTS000000000000000QUL,Total nonfarm: quits,2015-10-01,2810,,False,False,2015,4
+JTS000000000000000QUL,Total nonfarm: quits,2015-11-01,2897,,False,False,2015,4
+JTS000000000000000QUL,Total nonfarm: quits,2015-12-01,3056,,False,False,2015,4
+JTS000000000000000QUL,Total nonfarm: quits,2016-01-01,2875,,False,False,2016,1
+JTS000000000000000QUL,Total nonfarm: quits,2016-02-01,2994,,False,False,2016,1
+JTS000000000000000QUL,Total nonfarm: quits,2016-03-01,2917,,False,False,2016,1
+JTS000000000000000QUL,Total nonfarm: quits,2016-04-01,2955,,False,False,2016,2
+JTS000000000000000QUL,Total nonfarm: quits,2016-05-01,3009,,False,False,2016,2
+JTS000000000000000QUL,Total nonfarm: quits,2016-06-01,3018,,False,False,2016,2
+JTS000000000000000QUL,Total nonfarm: quits,2016-07-01,2967,,False,False,2016,3
+JTS000000000000000QUL,Total nonfarm: quits,2016-08-01,2998,,False,False,2016,3
+JTS000000000000000QUL,Total nonfarm: quits,2016-09-01,3047,,False,False,2016,3
+JTS000000000000000QUL,Total nonfarm: quits,2016-10-01,3074,,False,False,2016,4
+JTS000000000000000QUL,Total nonfarm: quits,2016-11-01,3026,,False,False,2016,4
+JTS000000000000000QUL,Total nonfarm: quits,2016-12-01,2989,,False,False,2016,4
+JTS000000000000000QUL,Total nonfarm: quits,2017-01-01,3188,,False,False,2017,1
+JTS000000000000000QUL,Total nonfarm: quits,2017-02-01,3089,,False,False,2017,1
+JTS000000000000000QUL,Total nonfarm: quits,2017-03-01,3150,,False,False,2017,1
+JTS000000000000000QUL,Total nonfarm: quits,2017-04-01,3028,,False,False,2017,2
+JTS000000000000000QUL,Total nonfarm: quits,2017-05-01,3111,,False,False,2017,2
+JTS000000000000000QUL,Total nonfarm: quits,2017-06-01,3154,,False,False,2017,2
+JTS000000000000000QUL,Total nonfarm: quits,2017-07-01,3097,,False,False,2017,3
+JTS000000000000000QUL,Total nonfarm: quits,2017-08-01,3103,,False,False,2017,3
+JTS000000000000000QUL,Total nonfarm: quits,2017-09-01,3190,,False,False,2017,3
+JTS000000000000000QUL,Total nonfarm: quits,2017-10-01,3219,,False,False,2017,4
+JTS000000000000000QUL,Total nonfarm: quits,2017-11-01,3186,,False,False,2017,4
+JTS000000000000000QUL,Total nonfarm: quits,2017-12-01,3222,,False,False,2017,4
+JTS000000000000000QUL,Total nonfarm: quits,2018-01-01,3019,,False,False,2018,1
+JTS000000000000000QUL,Total nonfarm: quits,2018-02-01,3222,,False,False,2018,1
+JTS000000000000000QUL,Total nonfarm: quits,2018-03-01,3323,,False,False,2018,1
+JTS000000000000000QUL,Total nonfarm: quits,2018-04-01,3370,,False,False,2018,2
+JTS000000000000000QUL,Total nonfarm: quits,2018-05-01,3382,,False,False,2018,2
+JTS000000000000000QUL,Total nonfarm: quits,2018-06-01,3382,,False,False,2018,2
+JTS000000000000000QUL,Total nonfarm: quits,2018-07-01,3426,,False,False,2018,3
+JTS000000000000000QUL,Total nonfarm: quits,2018-08-01,3423,,False,False,2018,3
+JTS000000000000000QUL,Total nonfarm: quits,2018-09-01,3391,,False,False,2018,3
+JTS000000000000000QUL,Total nonfarm: quits,2018-10-01,3458,,False,False,2018,4
+JTS000000000000000QUL,Total nonfarm: quits,2018-11-01,3511,,False,False,2018,4
+JTS000000000000000QUL,Total nonfarm: quits,2018-12-01,3407,,False,False,2018,4
+JTS000000000000000QUL,Total nonfarm: quits,2019-01-01,3517,,False,False,2019,1
+JTS000000000000000QUL,Total nonfarm: quits,2019-02-01,3547,,False,False,2019,1
+JTS000000000000000QUL,Total nonfarm: quits,2019-03-01,3529,,False,False,2019,1
+JTS000000000000000QUL,Total nonfarm: quits,2019-04-01,3501,,False,False,2019,2
+JTS000000000000000QUL,Total nonfarm: quits,2019-05-01,3472,,False,False,2019,2
+JTS000000000000000QUL,Total nonfarm: quits,2019-06-01,3474,,False,False,2019,2
+JTS000000000000000QUL,Total nonfarm: quits,2019-07-01,3654,,False,False,2019,3
+JTS000000000000000QUL,Total nonfarm: quits,2019-08-01,3540,,False,False,2019,3
+JTS000000000000000QUL,Total nonfarm: quits,2019-09-01,3447,,False,False,2019,3
+JTS000000000000000QUL,Total nonfarm: quits,2019-10-01,3452,,False,False,2019,4
+JTS000000000000000QUL,Total nonfarm: quits,2019-11-01,3541,,False,False,2019,4
+JTS000000000000000QUL,Total nonfarm: quits,2019-12-01,3487,,False,False,2019,4
+JTS000000000000000QUL,Total nonfarm: quits,2020-01-01,3563,,False,False,2020,1
+JTS000000000000000QUL,Total nonfarm: quits,2020-02-01,3497,,False,False,2020,1
+JTS000000000000000QUL,Total nonfarm: quits,2020-03-01,2933,,False,False,2020,1
+JTS000000000000000QUL,Total nonfarm: quits,2020-04-01,1991,,False,False,2020,2
+JTS000000000000000QUL,Total nonfarm: quits,2020-05-01,2259,,False,False,2020,2
+JTS000000000000000QUL,Total nonfarm: quits,2020-06-01,2594,,False,False,2020,2
+JTS000000000000000QUL,Total nonfarm: quits,2020-07-01,3020,,False,False,2020,3
+JTS000000000000000QUL,Total nonfarm: quits,2020-08-01,2931,,False,False,2020,3
+JTS000000000000000QUL,Total nonfarm: quits,2020-09-01,3185,,False,False,2020,3
+JTS000000000000000QUL,Total nonfarm: quits,2020-10-01,3311,,False,False,2020,4
+JTS000000000000000QUL,Total nonfarm: quits,2020-11-01,3209,,False,False,2020,4
+JTS000000000000000QUL,Total nonfarm: quits,2020-12-01,3369,,False,False,2020,4
+JTS000000000000000QUL,Total nonfarm: quits,2021-01-01,3292,,False,False,2021,1
+JTS000000000000000QUL,Total nonfarm: quits,2021-02-01,3373,,False,False,2021,1
+JTS000000000000000QUL,Total nonfarm: quits,2021-03-01,3654,,False,False,2021,1
+JTS000000000000000QUL,Total nonfarm: quits,2021-04-01,3943,,False,False,2021,2
+JTS000000000000000QUL,Total nonfarm: quits,2021-05-01,3817,,False,False,2021,2
+JTS000000000000000QUL,Total nonfarm: quits,2021-06-01,4017,,False,False,2021,2
+JTS000000000000000QUL,Total nonfarm: quits,2021-07-01,4059,,False,False,2021,3
+JTS000000000000000QUL,Total nonfarm: quits,2021-08-01,4171,,False,False,2021,3
+JTS000000000000000QUL,Total nonfarm: quits,2021-09-01,4354,,False,False,2021,3
+JTS000000000000000QUL,Total nonfarm: quits,2021-10-01,4153,,False,False,2021,4
+JTS000000000000000QUL,Total nonfarm: quits,2021-11-01,4453,,False,False,2021,4
+JTS000000000000000QUL,Total nonfarm: quits,2021-12-01,4314,,False,False,2021,4
+JTS000000000000000QUL,Total nonfarm: quits,2022-01-01,4413,,False,False,2022,1
+JTS000000000000000QUL,Total nonfarm: quits,2022-02-01,4233,,False,False,2022,1
+JTS000000000000000QUL,Total nonfarm: quits,2022-03-01,4447,,False,False,2022,1
+JTS000000000000000QUL,Total nonfarm: quits,2022-04-01,4499,,False,False,2022,2
+JTS000000000000000QUL,Total nonfarm: quits,2022-05-01,4237,,False,False,2022,2
+JTS000000000000000QUL,Total nonfarm: quits,2022-06-01,4165,,False,False,2022,2
+JTS000000000000000QUL,Total nonfarm: quits,2022-07-01,4031,,False,False,2022,3
+JTS000000000000000QUL,Total nonfarm: quits,2022-08-01,4258,,False,False,2022,3
+JTS000000000000000QUL,Total nonfarm: quits,2022-09-01,4134,,False,False,2022,3
+JTS000000000000000QUL,Total nonfarm: quits,2022-10-01,3956,,False,False,2022,4
+JTS000000000000000QUL,Total nonfarm: quits,2022-11-01,4083,,False,False,2022,4
+JTS000000000000000QUL,Total nonfarm: quits,2022-12-01,4125,,False,False,2022,4
+JTS000000000000000QUL,Total nonfarm: quits,2023-01-01,3839,,False,False,2023,1
+JTS000000000000000QUL,Total nonfarm: quits,2023-02-01,3917,,False,False,2023,1
+JTS000000000000000QUL,Total nonfarm: quits,2023-03-01,3800,,False,False,2023,1
+JTS000000000000000QUL,Total nonfarm: quits,2023-04-01,3617,,False,False,2023,2
+JTS000000000000000QUL,Total nonfarm: quits,2023-05-01,3999,,False,False,2023,2
+JTS000000000000000QUL,Total nonfarm: quits,2023-06-01,3693,,False,False,2023,2
+JTS000000000000000QUL,Total nonfarm: quits,2023-07-01,3552,,False,False,2023,3
+JTS000000000000000QUL,Total nonfarm: quits,2023-08-01,3621,,False,False,2023,3
+JTS000000000000000QUL,Total nonfarm: quits,2023-09-01,3644,,False,False,2023,3
+JTS000000000000000QUL,Total nonfarm: quits,2023-10-01,3574,,False,False,2023,4
+JTS000000000000000QUL,Total nonfarm: quits,2023-11-01,3576,,False,False,2023,4
+JTS000000000000000QUL,Total nonfarm: quits,2023-12-01,3412,,False,False,2023,4
+JTS000000000000000QUL,Total nonfarm: quits,2024-01-01,3347,,False,False,2024,1
+JTS000000000000000QUL,Total nonfarm: quits,2024-02-01,3482,,False,False,2024,1
+JTS000000000000000QUL,Total nonfarm: quits,2024-03-01,3289,,False,False,2024,1
+JTS000000000000000QUL,Total nonfarm: quits,2024-04-01,3438,,False,False,2024,2
+JTS000000000000000QUL,Total nonfarm: quits,2024-05-01,3386,,False,False,2024,2
+JTS000000000000000QUL,Total nonfarm: quits,2024-06-01,3280,,False,False,2024,2
+JTS000000000000000QUL,Total nonfarm: quits,2024-07-01,3359,,False,False,2024,3
+JTS000000000000000QUL,Total nonfarm: quits,2024-08-01,3240,,False,False,2024,3
+JTS000000000000000QUL,Total nonfarm: quits,2024-09-01,3123,,False,False,2024,3
+JTS000000000000000QUL,Total nonfarm: quits,2024-10-01,3215,,False,False,2024,4
+JTS000000000000000QUL,Total nonfarm: quits,2024-11-01,3050,,False,False,2024,4
+JTS000000000000000QUL,Total nonfarm: quits,2024-12-01,3085,,False,False,2024,4
+JTS000000000000000QUL,Total nonfarm: quits,2025-01-01,3203,,False,False,2025,1
+JTS000000000000000QUL,Total nonfarm: quits,2025-02-01,3153,,False,False,2025,1
+JTS000000000000000QUL,Total nonfarm: quits,2025-03-01,3456,,False,False,2025,1
+JTS000000000000000QUL,Total nonfarm: quits,2025-04-01,3144,,False,False,2025,2
+JTS000000000000000QUL,Total nonfarm: quits,2025-05-01,3287,,False,False,2025,2
+JTS000000000000000QUL,Total nonfarm: quits,2025-06-01,3254,,False,False,2025,2
+JTS000000000000000QUL,Total nonfarm: quits,2025-07-01,3132,,False,False,2025,3
+JTS000000000000000QUL,Total nonfarm: quits,2025-08-01,3095,,False,False,2025,3
+JTS000000000000000QUL,Total nonfarm: quits,2025-09-01,2990,,False,False,2025,3
+JTS000000000000000QUL,Total nonfarm: quits,2025-10-01,2980,,False,False,2025,4
+JTS000000000000000QUL,Total nonfarm: quits,2025-11-01,3119,,False,False,2025,4
+JTS000000000000000QUL,Total nonfarm: quits,2025-12-01,3225,,False,False,2025,4
+JTS000000000000000QUL,Total nonfarm: quits,2026-01-01,3131,,False,False,2026,1
+JTS000000000000000QUL,Total nonfarm: quits,2026-02-01,3046,,False,False,2026,1
+JTS000000000000000QUL,Total nonfarm: quits,2026-03-01,3160,,False,False,2026,1
+JTS000000000000000QUL,Total nonfarm: quits,2026-04-01,3043,,False,False,2026,2
+JTS000000000000000QUL,Total nonfarm: quits,2026-05-01,3153,,False,False,2026,2
+JTS000000000000000QUL,Total nonfarm: quits,2026-06-01,3213,,False,False,2026,2
+JTS000000000000000QUL,Total nonfarm: quits,2026-07-01,3056,P: preliminary,False,False,2026,3
+JTS510000000000000HIL,Information: hires,2015-01-01,80,,False,False,2015,1
+JTS510000000000000HIL,Information: hires,2015-02-01,78,,False,False,2015,1
+JTS510000000000000HIL,Information: hires,2015-03-01,81,,False,False,2015,1
+JTS510000000000000HIL,Information: hires,2015-04-01,84,,False,False,2015,2
+JTS510000000000000HIL,Information: hires,2015-05-01,88,,False,False,2015,2
+JTS510000000000000HIL,Information: hires,2015-06-01,80,,False,False,2015,2
+JTS510000000000000HIL,Information: hires,2015-07-01,82,,False,False,2015,3
+JTS510000000000000HIL,Information: hires,2015-08-01,82,,False,False,2015,3
+JTS510000000000000HIL,Information: hires,2015-09-01,82,,False,False,2015,3
+JTS510000000000000HIL,Information: hires,2015-10-01,89,,False,False,2015,4
+JTS510000000000000HIL,Information: hires,2015-11-01,78,,False,False,2015,4
+JTS510000000000000HIL,Information: hires,2015-12-01,75,,False,False,2015,4
+JTS510000000000000HIL,Information: hires,2016-01-01,88,,False,False,2016,1
+JTS510000000000000HIL,Information: hires,2016-02-01,86,,False,False,2016,1
+JTS510000000000000HIL,Information: hires,2016-03-01,76,,False,False,2016,1
+JTS510000000000000HIL,Information: hires,2016-04-01,92,,False,False,2016,2
+JTS510000000000000HIL,Information: hires,2016-05-01,72,,False,False,2016,2
+JTS510000000000000HIL,Information: hires,2016-06-01,85,,False,False,2016,2
+JTS510000000000000HIL,Information: hires,2016-07-01,79,,False,False,2016,3
+JTS510000000000000HIL,Information: hires,2016-08-01,78,,False,False,2016,3
+JTS510000000000000HIL,Information: hires,2016-09-01,80,,False,False,2016,3
+JTS510000000000000HIL,Information: hires,2016-10-01,78,,False,False,2016,4
+JTS510000000000000HIL,Information: hires,2016-11-01,85,,False,False,2016,4
+JTS510000000000000HIL,Information: hires,2016-12-01,82,,False,False,2016,4
+JTS510000000000000HIL,Information: hires,2017-01-01,89,,False,False,2017,1
+JTS510000000000000HIL,Information: hires,2017-02-01,82,,False,False,2017,1
+JTS510000000000000HIL,Information: hires,2017-03-01,77,,False,False,2017,1
+JTS510000000000000HIL,Information: hires,2017-04-01,68,,False,False,2017,2
+JTS510000000000000HIL,Information: hires,2017-05-01,78,,False,False,2017,2
+JTS510000000000000HIL,Information: hires,2017-06-01,79,,False,False,2017,2
+JTS510000000000000HIL,Information: hires,2017-07-01,84,,False,False,2017,3
+JTS510000000000000HIL,Information: hires,2017-08-01,90,,False,False,2017,3
+JTS510000000000000HIL,Information: hires,2017-09-01,97,,False,False,2017,3
+JTS510000000000000HIL,Information: hires,2017-10-01,90,,False,False,2017,4
+JTS510000000000000HIL,Information: hires,2017-11-01,88,,False,False,2017,4
+JTS510000000000000HIL,Information: hires,2017-12-01,96,,False,False,2017,4
+JTS510000000000000HIL,Information: hires,2018-01-01,94,,False,False,2018,1
+JTS510000000000000HIL,Information: hires,2018-02-01,93,,False,False,2018,1
+JTS510000000000000HIL,Information: hires,2018-03-01,93,,False,False,2018,1
+JTS510000000000000HIL,Information: hires,2018-04-01,93,,False,False,2018,2
+JTS510000000000000HIL,Information: hires,2018-05-01,96,,False,False,2018,2
+JTS510000000000000HIL,Information: hires,2018-06-01,89,,False,False,2018,2
+JTS510000000000000HIL,Information: hires,2018-07-01,85,,False,False,2018,3
+JTS510000000000000HIL,Information: hires,2018-08-01,89,,False,False,2018,3
+JTS510000000000000HIL,Information: hires,2018-09-01,87,,False,False,2018,3
+JTS510000000000000HIL,Information: hires,2018-10-01,86,,False,False,2018,4
+JTS510000000000000HIL,Information: hires,2018-11-01,100,,False,False,2018,4
+JTS510000000000000HIL,Information: hires,2018-12-01,84,,False,False,2018,4
+JTS510000000000000HIL,Information: hires,2019-01-01,92,,False,False,2019,1
+JTS510000000000000HIL,Information: hires,2019-02-01,90,,False,False,2019,1
+JTS510000000000000HIL,Information: hires,2019-03-01,98,,False,False,2019,1
+JTS510000000000000HIL,Information: hires,2019-04-01,95,,False,False,2019,2
+JTS510000000000000HIL,Information: hires,2019-05-01,99,,False,False,2019,2
+JTS510000000000000HIL,Information: hires,2019-06-01,94,,False,False,2019,2
+JTS510000000000000HIL,Information: hires,2019-07-01,97,,False,False,2019,3
+JTS510000000000000HIL,Information: hires,2019-08-01,93,,False,False,2019,3
+JTS510000000000000HIL,Information: hires,2019-09-01,94,,False,False,2019,3
+JTS510000000000000HIL,Information: hires,2019-10-01,97,,False,False,2019,4
+JTS510000000000000HIL,Information: hires,2019-11-01,92,,False,False,2019,4
+JTS510000000000000HIL,Information: hires,2019-12-01,95,,False,False,2019,4
+JTS510000000000000HIL,Information: hires,2020-01-01,83,,False,False,2020,1
+JTS510000000000000HIL,Information: hires,2020-02-01,96,,False,False,2020,1
+JTS510000000000000HIL,Information: hires,2020-03-01,73,,False,False,2020,1
+JTS510000000000000HIL,Information: hires,2020-04-01,40,,False,False,2020,2
+JTS510000000000000HIL,Information: hires,2020-05-01,68,,False,False,2020,2
+JTS510000000000000HIL,Information: hires,2020-06-01,55,,False,False,2020,2
+JTS510000000000000HIL,Information: hires,2020-07-01,84,,False,False,2020,3
+JTS510000000000000HIL,Information: hires,2020-08-01,91,,False,False,2020,3
+JTS510000000000000HIL,Information: hires,2020-09-01,98,,False,False,2020,3
+JTS510000000000000HIL,Information: hires,2020-10-01,124,,False,False,2020,4
+JTS510000000000000HIL,Information: hires,2020-11-01,88,,False,False,2020,4
+JTS510000000000000HIL,Information: hires,2020-12-01,83,,False,False,2020,4
+JTS510000000000000HIL,Information: hires,2021-01-01,99,,False,False,2021,1
+JTS510000000000000HIL,Information: hires,2021-02-01,93,,False,False,2021,1
+JTS510000000000000HIL,Information: hires,2021-03-01,101,,False,False,2021,1
+JTS510000000000000HIL,Information: hires,2021-04-01,121,,False,False,2021,2
+JTS510000000000000HIL,Information: hires,2021-05-01,101,,False,False,2021,2
+JTS510000000000000HIL,Information: hires,2021-06-01,106,,False,False,2021,2
+JTS510000000000000HIL,Information: hires,2021-07-01,123,,False,False,2021,3
+JTS510000000000000HIL,Information: hires,2021-08-01,115,,False,False,2021,3
+JTS510000000000000HIL,Information: hires,2021-09-01,121,,False,False,2021,3
+JTS510000000000000HIL,Information: hires,2021-10-01,140,,True,False,2021,4
+JTS510000000000000HIL,Information: hires,2021-11-01,110,,False,False,2021,4
+JTS510000000000000HIL,Information: hires,2021-12-01,108,,False,False,2021,4
+JTS510000000000000HIL,Information: hires,2022-01-01,133,,False,False,2022,1
+JTS510000000000000HIL,Information: hires,2022-02-01,76,,False,False,2022,1
+JTS510000000000000HIL,Information: hires,2022-03-01,108,,False,False,2022,1
+JTS510000000000000HIL,Information: hires,2022-04-01,109,,False,False,2022,2
+JTS510000000000000HIL,Information: hires,2022-05-01,110,,False,False,2022,2
+JTS510000000000000HIL,Information: hires,2022-06-01,121,,False,False,2022,2
+JTS510000000000000HIL,Information: hires,2022-07-01,101,,False,False,2022,3
+JTS510000000000000HIL,Information: hires,2022-08-01,115,,False,False,2022,3
+JTS510000000000000HIL,Information: hires,2022-09-01,97,,False,False,2022,3
+JTS510000000000000HIL,Information: hires,2022-10-01,107,,False,False,2022,4
+JTS510000000000000HIL,Information: hires,2022-11-01,108,,False,False,2022,4
+JTS510000000000000HIL,Information: hires,2022-12-01,88,,False,False,2022,4
+JTS510000000000000HIL,Information: hires,2023-01-01,70,,False,False,2023,1
+JTS510000000000000HIL,Information: hires,2023-02-01,82,,False,False,2023,1
+JTS510000000000000HIL,Information: hires,2023-03-01,105,,False,False,2023,1
+JTS510000000000000HIL,Information: hires,2023-04-01,78,,False,False,2023,2
+JTS510000000000000HIL,Information: hires,2023-05-01,64,,False,False,2023,2
+JTS510000000000000HIL,Information: hires,2023-06-01,72,,False,False,2023,2
+JTS510000000000000HIL,Information: hires,2023-07-01,76,,False,False,2023,3
+JTS510000000000000HIL,Information: hires,2023-08-01,62,,False,False,2023,3
+JTS510000000000000HIL,Information: hires,2023-09-01,71,,False,False,2023,3
+JTS510000000000000HIL,Information: hires,2023-10-01,47,,False,False,2023,4
+JTS510000000000000HIL,Information: hires,2023-11-01,72,,False,False,2023,4
+JTS510000000000000HIL,Information: hires,2023-12-01,76,,False,False,2023,4
+JTS510000000000000HIL,Information: hires,2024-01-01,73,,False,False,2024,1
+JTS510000000000000HIL,Information: hires,2024-02-01,83,,False,False,2024,1
+JTS510000000000000HIL,Information: hires,2024-03-01,80,,False,False,2024,1
+JTS510000000000000HIL,Information: hires,2024-04-01,70,,False,False,2024,2
+JTS510000000000000HIL,Information: hires,2024-05-01,80,,False,False,2024,2
+JTS510000000000000HIL,Information: hires,2024-06-01,71,,False,False,2024,2
+JTS510000000000000HIL,Information: hires,2024-07-01,74,,False,False,2024,3
+JTS510000000000000HIL,Information: hires,2024-08-01,79,,False,False,2024,3
+JTS510000000000000HIL,Information: hires,2024-09-01,78,,False,False,2024,3
+JTS510000000000000HIL,Information: hires,2024-10-01,67,,False,False,2024,4
+JTS510000000000000HIL,Information: hires,2024-11-01,72,,False,False,2024,4
+JTS510000000000000HIL,Information: hires,2024-12-01,77,,False,False,2024,4
+JTS510000000000000HIL,Information: hires,2025-01-01,65,,False,False,2025,1
+JTS510000000000000HIL,Information: hires,2025-02-01,74,,False,False,2025,1
+JTS510000000000000HIL,Information: hires,2025-03-01,77,,False,False,2025,1
+JTS510000000000000HIL,Information: hires,2025-04-01,83,,False,False,2025,2
+JTS510000000000000HIL,Information: hires,2025-05-01,78,,False,False,2025,2
+JTS510000000000000HIL,Information: hires,2025-06-01,83,,False,False,2025,2
+JTS510000000000000HIL,Information: hires,2025-07-01,70,,False,False,2025,3
+JTS510000000000000HIL,Information: hires,2025-08-01,69,,False,False,2025,3
+JTS510000000000000HIL,Information: hires,2025-09-01,71,,False,False,2025,3
+JTS510000000000000HIL,Information: hires,2025-10-01,72,,False,False,2025,4
+JTS510000000000000HIL,Information: hires,2025-11-01,76,,False,False,2025,4
+JTS510000000000000HIL,Information: hires,2025-12-01,89,,False,False,2025,4
+JTS510000000000000HIL,Information: hires,2026-01-01,91,,False,False,2026,1
+JTS510000000000000HIL,Information: hires,2026-02-01,71,,False,False,2026,1
+JTS510000000000000HIL,Information: hires,2026-03-01,89,,False,False,2026,1
+JTS510000000000000HIL,Information: hires,2026-04-01,78,,False,False,2026,2
+JTS510000000000000HIL,Information: hires,2026-05-01,79,,False,False,2026,2
+JTS510000000000000HIL,Information: hires,2026-06-01,73,,False,False,2026,2
+JTS510000000000000HIL,Information: hires,2026-07-01,68,P: preliminary,False,False,2026,3
+JTS510000000000000JOL,Information: job openings,2015-01-01,111,,False,False,2015,1
+JTS510000000000000JOL,Information: job openings,2015-02-01,130,,False,False,2015,1
+JTS510000000000000JOL,Information: job openings,2015-03-01,110,,False,False,2015,1
+JTS510000000000000JOL,Information: job openings,2015-04-01,109,,False,False,2015,2
+JTS510000000000000JOL,Information: job openings,2015-05-01,109,,False,False,2015,2
+JTS510000000000000JOL,Information: job openings,2015-06-01,113,,False,False,2015,2
+JTS510000000000000JOL,Information: job openings,2015-07-01,125,,False,False,2015,3
+JTS510000000000000JOL,Information: job openings,2015-08-01,116,,False,False,2015,3
+JTS510000000000000JOL,Information: job openings,2015-09-01,116,,False,False,2015,3
+JTS510000000000000JOL,Information: job openings,2015-10-01,112,,False,False,2015,4
+JTS510000000000000JOL,Information: job openings,2015-11-01,70,,False,False,2015,4
+JTS510000000000000JOL,Information: job openings,2015-12-01,111,,False,False,2015,4
+JTS510000000000000JOL,Information: job openings,2016-01-01,111,,False,False,2016,1
+JTS510000000000000JOL,Information: job openings,2016-02-01,94,,False,False,2016,1
+JTS510000000000000JOL,Information: job openings,2016-03-01,89,,False,False,2016,1
+JTS510000000000000JOL,Information: job openings,2016-04-01,84,,False,False,2016,2
+JTS510000000000000JOL,Information: job openings,2016-05-01,114,,False,False,2016,2
+JTS510000000000000JOL,Information: job openings,2016-06-01,90,,False,False,2016,2
+JTS510000000000000JOL,Information: job openings,2016-07-01,80,,False,False,2016,3
+JTS510000000000000JOL,Information: job openings,2016-08-01,79,,False,False,2016,3
+JTS510000000000000JOL,Information: job openings,2016-09-01,102,,False,False,2016,3
+JTS510000000000000JOL,Information: job openings,2016-10-01,85,,False,False,2016,4
+JTS510000000000000JOL,Information: job openings,2016-11-01,82,,False,False,2016,4
+JTS510000000000000JOL,Information: job openings,2016-12-01,81,,False,False,2016,4
+JTS510000000000000JOL,Information: job openings,2017-01-01,88,,False,False,2017,1
+JTS510000000000000JOL,Information: job openings,2017-02-01,70,,False,False,2017,1
+JTS510000000000000JOL,Information: job openings,2017-03-01,86,,False,False,2017,1
+JTS510000000000000JOL,Information: job openings,2017-04-01,102,,False,False,2017,2
+JTS510000000000000JOL,Information: job openings,2017-05-01,110,,False,False,2017,2
+JTS510000000000000JOL,Information: job openings,2017-06-01,112,,False,False,2017,2
+JTS510000000000000JOL,Information: job openings,2017-07-01,98,,False,False,2017,3
+JTS510000000000000JOL,Information: job openings,2017-08-01,120,,False,False,2017,3
+JTS510000000000000JOL,Information: job openings,2017-09-01,106,,False,False,2017,3
+JTS510000000000000JOL,Information: job openings,2017-10-01,91,,False,False,2017,4
+JTS510000000000000JOL,Information: job openings,2017-11-01,97,,False,False,2017,4
+JTS510000000000000JOL,Information: job openings,2017-12-01,125,,False,False,2017,4
+JTS510000000000000JOL,Information: job openings,2018-01-01,128,,False,False,2018,1
+JTS510000000000000JOL,Information: job openings,2018-02-01,129,,False,False,2018,1
+JTS510000000000000JOL,Information: job openings,2018-03-01,130,,False,False,2018,1
+JTS510000000000000JOL,Information: job openings,2018-04-01,177,,False,False,2018,2
+JTS510000000000000JOL,Information: job openings,2018-05-01,128,,False,False,2018,2
+JTS510000000000000JOL,Information: job openings,2018-06-01,133,,False,False,2018,2
+JTS510000000000000JOL,Information: job openings,2018-07-01,148,,False,False,2018,3
+JTS510000000000000JOL,Information: job openings,2018-08-01,146,,False,False,2018,3
+JTS510000000000000JOL,Information: job openings,2018-09-01,121,,False,False,2018,3
+JTS510000000000000JOL,Information: job openings,2018-10-01,143,,False,False,2018,4
+JTS510000000000000JOL,Information: job openings,2018-11-01,135,,False,False,2018,4
+JTS510000000000000JOL,Information: job openings,2018-12-01,130,,False,False,2018,4
+JTS510000000000000JOL,Information: job openings,2019-01-01,143,,False,False,2019,1
+JTS510000000000000JOL,Information: job openings,2019-02-01,138,,False,False,2019,1
+JTS510000000000000JOL,Information: job openings,2019-03-01,152,,False,False,2019,1
+JTS510000000000000JOL,Information: job openings,2019-04-01,114,,False,False,2019,2
+JTS510000000000000JOL,Information: job openings,2019-05-01,129,,False,False,2019,2
+JTS510000000000000JOL,Information: job openings,2019-06-01,130,,False,False,2019,2
+JTS510000000000000JOL,Information: job openings,2019-07-01,151,,False,False,2019,3
+JTS510000000000000JOL,Information: job openings,2019-08-01,128,,False,False,2019,3
+JTS510000000000000JOL,Information: job openings,2019-09-01,178,,False,False,2019,3
+JTS510000000000000JOL,Information: job openings,2019-10-01,148,,False,False,2019,4
+JTS510000000000000JOL,Information: job openings,2019-11-01,143,,False,False,2019,4
+JTS510000000000000JOL,Information: job openings,2019-12-01,141,,False,False,2019,4
+JTS510000000000000JOL,Information: job openings,2020-01-01,130,,False,False,2020,1
+JTS510000000000000JOL,Information: job openings,2020-02-01,138,,False,False,2020,1
+JTS510000000000000JOL,Information: job openings,2020-03-01,121,,False,False,2020,1
+JTS510000000000000JOL,Information: job openings,2020-04-01,118,,False,False,2020,2
+JTS510000000000000JOL,Information: job openings,2020-05-01,93,,False,False,2020,2
+JTS510000000000000JOL,Information: job openings,2020-06-01,106,,False,False,2020,2
+JTS510000000000000JOL,Information: job openings,2020-07-01,79,,False,False,2020,3
+JTS510000000000000JOL,Information: job openings,2020-08-01,86,,False,False,2020,3
+JTS510000000000000JOL,Information: job openings,2020-09-01,110,,False,False,2020,3
+JTS510000000000000JOL,Information: job openings,2020-10-01,126,,False,False,2020,4
+JTS510000000000000JOL,Information: job openings,2020-11-01,109,,False,False,2020,4
+JTS510000000000000JOL,Information: job openings,2020-12-01,123,,False,False,2020,4
+JTS510000000000000JOL,Information: job openings,2021-01-01,170,,False,False,2021,1
+JTS510000000000000JOL,Information: job openings,2021-02-01,109,,False,False,2021,1
+JTS510000000000000JOL,Information: job openings,2021-03-01,107,,False,False,2021,1
+JTS510000000000000JOL,Information: job openings,2021-04-01,128,,False,False,2021,2
+JTS510000000000000JOL,Information: job openings,2021-05-01,151,,False,False,2021,2
+JTS510000000000000JOL,Information: job openings,2021-06-01,165,,False,False,2021,2
+JTS510000000000000JOL,Information: job openings,2021-07-01,216,,False,False,2021,3
+JTS510000000000000JOL,Information: job openings,2021-08-01,216,,False,False,2021,3
+JTS510000000000000JOL,Information: job openings,2021-09-01,201,,False,False,2021,3
+JTS510000000000000JOL,Information: job openings,2021-10-01,208,,False,False,2021,4
+JTS510000000000000JOL,Information: job openings,2021-11-01,216,,False,False,2021,4
+JTS510000000000000JOL,Information: job openings,2021-12-01,249,,False,False,2021,4
+JTS510000000000000JOL,Information: job openings,2022-01-01,238,,False,False,2022,1
+JTS510000000000000JOL,Information: job openings,2022-02-01,242,,False,False,2022,1
+JTS510000000000000JOL,Information: job openings,2022-03-01,262,,False,False,2022,1
+JTS510000000000000JOL,Information: job openings,2022-04-01,274,,True,False,2022,2
+JTS510000000000000JOL,Information: job openings,2022-05-01,249,,False,False,2022,2
+JTS510000000000000JOL,Information: job openings,2022-06-01,254,,False,False,2022,2
+JTS510000000000000JOL,Information: job openings,2022-07-01,231,,False,False,2022,3
+JTS510000000000000JOL,Information: job openings,2022-08-01,207,,False,False,2022,3
+JTS510000000000000JOL,Information: job openings,2022-09-01,216,,False,False,2022,3
+JTS510000000000000JOL,Information: job openings,2022-10-01,215,,False,False,2022,4
+JTS510000000000000JOL,Information: job openings,2022-11-01,223,,False,False,2022,4
+JTS510000000000000JOL,Information: job openings,2022-12-01,80,,False,False,2022,4
+JTS510000000000000JOL,Information: job openings,2023-01-01,101,,False,False,2023,1
+JTS510000000000000JOL,Information: job openings,2023-02-01,144,,False,False,2023,1
+JTS510000000000000JOL,Information: job openings,2023-03-01,145,,False,False,2023,1
+JTS510000000000000JOL,Information: job openings,2023-04-01,146,,False,False,2023,2
+JTS510000000000000JOL,Information: job openings,2023-05-01,167,,False,False,2023,2
+JTS510000000000000JOL,Information: job openings,2023-06-01,156,,False,False,2023,2
+JTS510000000000000JOL,Information: job openings,2023-07-01,148,,False,False,2023,3
+JTS510000000000000JOL,Information: job openings,2023-08-01,155,,False,False,2023,3
+JTS510000000000000JOL,Information: job openings,2023-09-01,97,,False,False,2023,3
+JTS510000000000000JOL,Information: job openings,2023-10-01,101,,False,False,2023,4
+JTS510000000000000JOL,Information: job openings,2023-11-01,150,,False,False,2023,4
+JTS510000000000000JOL,Information: job openings,2023-12-01,141,,False,False,2023,4
+JTS510000000000000JOL,Information: job openings,2024-01-01,160,,False,False,2024,1
+JTS510000000000000JOL,Information: job openings,2024-02-01,129,,False,False,2024,1
+JTS510000000000000JOL,Information: job openings,2024-03-01,144,,False,False,2024,1
+JTS510000000000000JOL,Information: job openings,2024-04-01,87,,False,False,2024,2
+JTS510000000000000JOL,Information: job openings,2024-05-01,120,,False,False,2024,2
+JTS510000000000000JOL,Information: job openings,2024-06-01,108,,False,False,2024,2
+JTS510000000000000JOL,Information: job openings,2024-07-01,105,,False,False,2024,3
+JTS510000000000000JOL,Information: job openings,2024-08-01,105,,False,False,2024,3
+JTS510000000000000JOL,Information: job openings,2024-09-01,114,,False,False,2024,3
+JTS510000000000000JOL,Information: job openings,2024-10-01,178,,False,False,2024,4
+JTS510000000000000JOL,Information: job openings,2024-11-01,119,,False,False,2024,4
+JTS510000000000000JOL,Information: job openings,2024-12-01,105,,False,False,2024,4
+JTS510000000000000JOL,Information: job openings,2025-01-01,101,,False,False,2025,1
+JTS510000000000000JOL,Information: job openings,2025-02-01,125,,False,False,2025,1
+JTS510000000000000JOL,Information: job openings,2025-03-01,115,,False,False,2025,1
+JTS510000000000000JOL,Information: job openings,2025-04-01,134,,False,False,2025,2
+JTS510000000000000JOL,Information: job openings,2025-05-01,109,,False,False,2025,2
+JTS510000000000000JOL,Information: job openings,2025-06-01,123,,False,False,2025,2
+JTS510000000000000JOL,Information: job openings,2025-07-01,157,,False,False,2025,3
+JTS510000000000000JOL,Information: job openings,2025-08-01,141,,False,False,2025,3
+JTS510000000000000JOL,Information: job openings,2025-09-01,119,,False,False,2025,3
+JTS510000000000000JOL,Information: job openings,2025-10-01,117,,False,False,2025,4
+JTS510000000000000JOL,Information: job openings,2025-11-01,88,,False,False,2025,4
+JTS510000000000000JOL,Information: job openings,2025-12-01,112,,False,False,2025,4
+JTS510000000000000JOL,Information: job openings,2026-01-01,100,,False,False,2026,1
+JTS510000000000000JOL,Information: job openings,2026-02-01,80,,False,False,2026,1
+JTS510000000000000JOL,Information: job openings,2026-03-01,83,,False,False,2026,1
+JTS510000000000000JOL,Information: job openings,2026-04-01,82,,False,False,2026,2
+JTS510000000000000JOL,Information: job openings,2026-05-01,72,,False,False,2026,2
+JTS510000000000000JOL,Information: job openings,2026-06-01,89,,False,False,2026,2
+JTS510000000000000JOL,Information: job openings,2026-07-01,96,P: preliminary,False,False,2026,3
+JTS510000000000000LDL,Information: layoffs and discharges,2015-01-01,31,,False,False,2015,1
+JTS510000000000000LDL,Information: layoffs and discharges,2015-02-01,27,,False,False,2015,1
+JTS510000000000000LDL,Information: layoffs and discharges,2015-03-01,30,,False,False,2015,1
+JTS510000000000000LDL,Information: layoffs and discharges,2015-04-01,36,,False,False,2015,2
+JTS510000000000000LDL,Information: layoffs and discharges,2015-05-01,27,,False,False,2015,2
+JTS510000000000000LDL,Information: layoffs and discharges,2015-06-01,30,,False,False,2015,2
+JTS510000000000000LDL,Information: layoffs and discharges,2015-07-01,26,,False,False,2015,3
+JTS510000000000000LDL,Information: layoffs and discharges,2015-08-01,26,,False,False,2015,3
+JTS510000000000000LDL,Information: layoffs and discharges,2015-09-01,25,,False,False,2015,3
+JTS510000000000000LDL,Information: layoffs and discharges,2015-10-01,30,,False,False,2015,4
+JTS510000000000000LDL,Information: layoffs and discharges,2015-11-01,31,,False,False,2015,4
+JTS510000000000000LDL,Information: layoffs and discharges,2015-12-01,22,,False,False,2015,4
+JTS510000000000000LDL,Information: layoffs and discharges,2016-01-01,25,,False,False,2016,1
+JTS510000000000000LDL,Information: layoffs and discharges,2016-02-01,30,,False,False,2016,1
+JTS510000000000000LDL,Information: layoffs and discharges,2016-03-01,24,,False,False,2016,1
+JTS510000000000000LDL,Information: layoffs and discharges,2016-04-01,31,,False,False,2016,2
+JTS510000000000000LDL,Information: layoffs and discharges,2016-05-01,33,,False,False,2016,2
+JTS510000000000000LDL,Information: layoffs and discharges,2016-06-01,26,,False,False,2016,2
+JTS510000000000000LDL,Information: layoffs and discharges,2016-07-01,29,,False,False,2016,3
+JTS510000000000000LDL,Information: layoffs and discharges,2016-08-01,27,,False,False,2016,3
+JTS510000000000000LDL,Information: layoffs and discharges,2016-09-01,14,,False,False,2016,3
+JTS510000000000000LDL,Information: layoffs and discharges,2016-10-01,20,,False,False,2016,4
+JTS510000000000000LDL,Information: layoffs and discharges,2016-11-01,27,,False,False,2016,4
+JTS510000000000000LDL,Information: layoffs and discharges,2016-12-01,21,,False,False,2016,4
+JTS510000000000000LDL,Information: layoffs and discharges,2017-01-01,26,,False,False,2017,1
+JTS510000000000000LDL,Information: layoffs and discharges,2017-02-01,25,,False,False,2017,1
+JTS510000000000000LDL,Information: layoffs and discharges,2017-03-01,31,,False,False,2017,1
+JTS510000000000000LDL,Information: layoffs and discharges,2017-04-01,28,,False,False,2017,2
+JTS510000000000000LDL,Information: layoffs and discharges,2017-05-01,39,,False,False,2017,2
+JTS510000000000000LDL,Information: layoffs and discharges,2017-06-01,38,,False,False,2017,2
+JTS510000000000000LDL,Information: layoffs and discharges,2017-07-01,26,,False,False,2017,3
+JTS510000000000000LDL,Information: layoffs and discharges,2017-08-01,32,,False,False,2017,3
+JTS510000000000000LDL,Information: layoffs and discharges,2017-09-01,42,,False,False,2017,3
+JTS510000000000000LDL,Information: layoffs and discharges,2017-10-01,41,,False,False,2017,4
+JTS510000000000000LDL,Information: layoffs and discharges,2017-11-01,26,,False,False,2017,4
+JTS510000000000000LDL,Information: layoffs and discharges,2017-12-01,43,,False,False,2017,4
+JTS510000000000000LDL,Information: layoffs and discharges,2018-01-01,40,,False,False,2018,1
+JTS510000000000000LDL,Information: layoffs and discharges,2018-02-01,37,,False,False,2018,1
+JTS510000000000000LDL,Information: layoffs and discharges,2018-03-01,36,,False,False,2018,1
+JTS510000000000000LDL,Information: layoffs and discharges,2018-04-01,35,,False,False,2018,2
+JTS510000000000000LDL,Information: layoffs and discharges,2018-05-01,32,,False,False,2018,2
+JTS510000000000000LDL,Information: layoffs and discharges,2018-06-01,37,,False,False,2018,2
+JTS510000000000000LDL,Information: layoffs and discharges,2018-07-01,29,,False,False,2018,3
+JTS510000000000000LDL,Information: layoffs and discharges,2018-08-01,36,,False,False,2018,3
+JTS510000000000000LDL,Information: layoffs and discharges,2018-09-01,36,,False,False,2018,3
+JTS510000000000000LDL,Information: layoffs and discharges,2018-10-01,23,,False,False,2018,4
+JTS510000000000000LDL,Information: layoffs and discharges,2018-11-01,28,,False,False,2018,4
+JTS510000000000000LDL,Information: layoffs and discharges,2018-12-01,39,,False,False,2018,4
+JTS510000000000000LDL,Information: layoffs and discharges,2019-01-01,38,,False,False,2019,1
+JTS510000000000000LDL,Information: layoffs and discharges,2019-02-01,37,,False,False,2019,1
+JTS510000000000000LDL,Information: layoffs and discharges,2019-03-01,36,,False,False,2019,1
+JTS510000000000000LDL,Information: layoffs and discharges,2019-04-01,37,,False,False,2019,2
+JTS510000000000000LDL,Information: layoffs and discharges,2019-05-01,36,,False,False,2019,2
+JTS510000000000000LDL,Information: layoffs and discharges,2019-06-01,31,,False,False,2019,2
+JTS510000000000000LDL,Information: layoffs and discharges,2019-07-01,58,,False,False,2019,3
+JTS510000000000000LDL,Information: layoffs and discharges,2019-08-01,37,,False,False,2019,3
+JTS510000000000000LDL,Information: layoffs and discharges,2019-09-01,33,,False,False,2019,3
+JTS510000000000000LDL,Information: layoffs and discharges,2019-10-01,36,,False,False,2019,4
+JTS510000000000000LDL,Information: layoffs and discharges,2019-11-01,33,,False,False,2019,4
+JTS510000000000000LDL,Information: layoffs and discharges,2019-12-01,50,,False,False,2019,4
+JTS510000000000000LDL,Information: layoffs and discharges,2020-01-01,30,,False,False,2020,1
+JTS510000000000000LDL,Information: layoffs and discharges,2020-02-01,31,,False,False,2020,1
+JTS510000000000000LDL,Information: layoffs and discharges,2020-03-01,191,,True,False,2020,1
+JTS510000000000000LDL,Information: layoffs and discharges,2020-04-01,169,,True,False,2020,2
+JTS510000000000000LDL,Information: layoffs and discharges,2020-05-01,33,,False,False,2020,2
+JTS510000000000000LDL,Information: layoffs and discharges,2020-06-01,38,,False,False,2020,2
+JTS510000000000000LDL,Information: layoffs and discharges,2020-07-01,25,,False,False,2020,3
+JTS510000000000000LDL,Information: layoffs and discharges,2020-08-01,28,,False,False,2020,3
+JTS510000000000000LDL,Information: layoffs and discharges,2020-09-01,22,,False,False,2020,3
+JTS510000000000000LDL,Information: layoffs and discharges,2020-10-01,34,,False,False,2020,4
+JTS510000000000000LDL,Information: layoffs and discharges,2020-11-01,31,,False,False,2020,4
+JTS510000000000000LDL,Information: layoffs and discharges,2020-12-01,29,,False,False,2020,4
+JTS510000000000000LDL,Information: layoffs and discharges,2021-01-01,24,,False,False,2021,1
+JTS510000000000000LDL,Information: layoffs and discharges,2021-02-01,27,,False,False,2021,1
+JTS510000000000000LDL,Information: layoffs and discharges,2021-03-01,27,,False,False,2021,1
+JTS510000000000000LDL,Information: layoffs and discharges,2021-04-01,26,,False,False,2021,2
+JTS510000000000000LDL,Information: layoffs and discharges,2021-05-01,27,,False,False,2021,2
+JTS510000000000000LDL,Information: layoffs and discharges,2021-06-01,34,,False,False,2021,2
+JTS510000000000000LDL,Information: layoffs and discharges,2021-07-01,27,,False,False,2021,3
+JTS510000000000000LDL,Information: layoffs and discharges,2021-08-01,31,,False,False,2021,3
+JTS510000000000000LDL,Information: layoffs and discharges,2021-09-01,34,,False,False,2021,3
+JTS510000000000000LDL,Information: layoffs and discharges,2021-10-01,31,,False,False,2021,4
+JTS510000000000000LDL,Information: layoffs and discharges,2021-11-01,33,,False,False,2021,4
+JTS510000000000000LDL,Information: layoffs and discharges,2021-12-01,36,,False,False,2021,4
+JTS510000000000000LDL,Information: layoffs and discharges,2022-01-01,59,,False,False,2022,1
+JTS510000000000000LDL,Information: layoffs and discharges,2022-02-01,12,,False,False,2022,1
+JTS510000000000000LDL,Information: layoffs and discharges,2022-03-01,18,,False,False,2022,1
+JTS510000000000000LDL,Information: layoffs and discharges,2022-04-01,33,,False,False,2022,2
+JTS510000000000000LDL,Information: layoffs and discharges,2022-05-01,29,,False,False,2022,2
+JTS510000000000000LDL,Information: layoffs and discharges,2022-06-01,33,,False,False,2022,2
+JTS510000000000000LDL,Information: layoffs and discharges,2022-07-01,40,,False,False,2022,3
+JTS510000000000000LDL,Information: layoffs and discharges,2022-08-01,58,,False,False,2022,3
+JTS510000000000000LDL,Information: layoffs and discharges,2022-09-01,23,,False,False,2022,3
+JTS510000000000000LDL,Information: layoffs and discharges,2022-10-01,49,,False,False,2022,4
+JTS510000000000000LDL,Information: layoffs and discharges,2022-11-01,42,,False,False,2022,4
+JTS510000000000000LDL,Information: layoffs and discharges,2022-12-01,45,,False,False,2022,4
+JTS510000000000000LDL,Information: layoffs and discharges,2023-01-01,46,,False,False,2023,1
+JTS510000000000000LDL,Information: layoffs and discharges,2023-02-01,47,,False,False,2023,1
+JTS510000000000000LDL,Information: layoffs and discharges,2023-03-01,47,,False,False,2023,1
+JTS510000000000000LDL,Information: layoffs and discharges,2023-04-01,31,,False,False,2023,2
+JTS510000000000000LDL,Information: layoffs and discharges,2023-05-01,39,,False,False,2023,2
+JTS510000000000000LDL,Information: layoffs and discharges,2023-06-01,30,,False,False,2023,2
+JTS510000000000000LDL,Information: layoffs and discharges,2023-07-01,49,,False,False,2023,3
+JTS510000000000000LDL,Information: layoffs and discharges,2023-08-01,27,,False,False,2023,3
+JTS510000000000000LDL,Information: layoffs and discharges,2023-09-01,17,,False,False,2023,3
+JTS510000000000000LDL,Information: layoffs and discharges,2023-10-01,18,,False,False,2023,4
+JTS510000000000000LDL,Information: layoffs and discharges,2023-11-01,27,,False,False,2023,4
+JTS510000000000000LDL,Information: layoffs and discharges,2023-12-01,27,,False,False,2023,4
+JTS510000000000000LDL,Information: layoffs and discharges,2024-01-01,17,,False,False,2024,1
+JTS510000000000000LDL,Information: layoffs and discharges,2024-02-01,28,,False,False,2024,1
+JTS510000000000000LDL,Information: layoffs and discharges,2024-03-01,37,,False,False,2024,1
+JTS510000000000000LDL,Information: layoffs and discharges,2024-04-01,30,,False,False,2024,2
+JTS510000000000000LDL,Information: layoffs and discharges,2024-05-01,38,,False,False,2024,2
+JTS510000000000000LDL,Information: layoffs and discharges,2024-06-01,35,,False,False,2024,2
+JTS510000000000000LDL,Information: layoffs and discharges,2024-07-01,44,,False,False,2024,3
+JTS510000000000000LDL,Information: layoffs and discharges,2024-08-01,45,,False,False,2024,3
+JTS510000000000000LDL,Information: layoffs and discharges,2024-09-01,28,,False,False,2024,3
+JTS510000000000000LDL,Information: layoffs and discharges,2024-10-01,41,,False,False,2024,4
+JTS510000000000000LDL,Information: layoffs and discharges,2024-11-01,44,,False,False,2024,4
+JTS510000000000000LDL,Information: layoffs and discharges,2024-12-01,22,,False,False,2024,4
+JTS510000000000000LDL,Information: layoffs and discharges,2025-01-01,29,,False,False,2025,1
+JTS510000000000000LDL,Information: layoffs and discharges,2025-02-01,44,,False,False,2025,1
+JTS510000000000000LDL,Information: layoffs and discharges,2025-03-01,36,,False,False,2025,1
+JTS510000000000000LDL,Information: layoffs and discharges,2025-04-01,39,,False,False,2025,2
+JTS510000000000000LDL,Information: layoffs and discharges,2025-05-01,34,,False,False,2025,2
+JTS510000000000000LDL,Information: layoffs and discharges,2025-06-01,41,,False,False,2025,2
+JTS510000000000000LDL,Information: layoffs and discharges,2025-07-01,39,,False,False,2025,3
+JTS510000000000000LDL,Information: layoffs and discharges,2025-08-01,35,,False,False,2025,3
+JTS510000000000000LDL,Information: layoffs and discharges,2025-09-01,38,,False,False,2025,3
+JTS510000000000000LDL,Information: layoffs and discharges,2025-10-01,38,,False,False,2025,4
+JTS510000000000000LDL,Information: layoffs and discharges,2025-11-01,36,,False,False,2025,4
+JTS510000000000000LDL,Information: layoffs and discharges,2025-12-01,42,,False,False,2025,4
+JTS510000000000000LDL,Information: layoffs and discharges,2026-01-01,50,,False,False,2026,1
+JTS510000000000000LDL,Information: layoffs and discharges,2026-02-01,53,,False,False,2026,1
+JTS510000000000000LDL,Information: layoffs and discharges,2026-03-01,60,,False,False,2026,1
+JTS510000000000000LDL,Information: layoffs and discharges,2026-04-01,55,,False,False,2026,2
+JTS510000000000000LDL,Information: layoffs and discharges,2026-05-01,44,,False,False,2026,2
+JTS510000000000000LDL,Information: layoffs and discharges,2026-06-01,54,,False,False,2026,2
+JTS510000000000000LDL,Information: layoffs and discharges,2026-07-01,40,P: preliminary,False,False,2026,3
+JTS510000000000000QUL,Information: quits,2015-01-01,39,,False,False,2015,1
+JTS510000000000000QUL,Information: quits,2015-02-01,46,,False,False,2015,1
+JTS510000000000000QUL,Information: quits,2015-03-01,46,,False,False,2015,1
+JTS510000000000000QUL,Information: quits,2015-04-01,38,,False,False,2015,2
+JTS510000000000000QUL,Information: quits,2015-05-01,42,,False,False,2015,2
+JTS510000000000000QUL,Information: quits,2015-06-01,41,,False,False,2015,2
+JTS510000000000000QUL,Information: quits,2015-07-01,44,,False,False,2015,3
+JTS510000000000000QUL,Information: quits,2015-08-01,40,,False,False,2015,3
+JTS510000000000000QUL,Information: quits,2015-09-01,40,,False,False,2015,3
+JTS510000000000000QUL,Information: quits,2015-10-01,43,,False,False,2015,4
+JTS510000000000000QUL,Information: quits,2015-11-01,40,,False,False,2015,4
+JTS510000000000000QUL,Information: quits,2015-12-01,39,,False,False,2015,4
+JTS510000000000000QUL,Information: quits,2016-01-01,41,,False,False,2016,1
+JTS510000000000000QUL,Information: quits,2016-02-01,37,,False,False,2016,1
+JTS510000000000000QUL,Information: quits,2016-03-01,37,,False,False,2016,1
+JTS510000000000000QUL,Information: quits,2016-04-01,46,,False,False,2016,2
+JTS510000000000000QUL,Information: quits,2016-05-01,34,,False,False,2016,2
+JTS510000000000000QUL,Information: quits,2016-06-01,39,,False,False,2016,2
+JTS510000000000000QUL,Information: quits,2016-07-01,36,,False,False,2016,3
+JTS510000000000000QUL,Information: quits,2016-08-01,37,,False,False,2016,3
+JTS510000000000000QUL,Information: quits,2016-09-01,47,,False,False,2016,3
+JTS510000000000000QUL,Information: quits,2016-10-01,40,,False,False,2016,4
+JTS510000000000000QUL,Information: quits,2016-11-01,37,,False,False,2016,4
+JTS510000000000000QUL,Information: quits,2016-12-01,50,,False,False,2016,4
+JTS510000000000000QUL,Information: quits,2017-01-01,38,,False,False,2017,1
+JTS510000000000000QUL,Information: quits,2017-02-01,55,,False,False,2017,1
+JTS510000000000000QUL,Information: quits,2017-03-01,39,,False,False,2017,1
+JTS510000000000000QUL,Information: quits,2017-04-01,37,,False,False,2017,2
+JTS510000000000000QUL,Information: quits,2017-05-01,27,,False,False,2017,2
+JTS510000000000000QUL,Information: quits,2017-06-01,37,,False,False,2017,2
+JTS510000000000000QUL,Information: quits,2017-07-01,50,,False,False,2017,3
+JTS510000000000000QUL,Information: quits,2017-08-01,46,,False,False,2017,3
+JTS510000000000000QUL,Information: quits,2017-09-01,51,,False,False,2017,3
+JTS510000000000000QUL,Information: quits,2017-10-01,44,,False,False,2017,4
+JTS510000000000000QUL,Information: quits,2017-11-01,47,,False,False,2017,4
+JTS510000000000000QUL,Information: quits,2017-12-01,49,,False,False,2017,4
+JTS510000000000000QUL,Information: quits,2018-01-01,47,,False,False,2018,1
+JTS510000000000000QUL,Information: quits,2018-02-01,47,,False,False,2018,1
+JTS510000000000000QUL,Information: quits,2018-03-01,46,,False,False,2018,1
+JTS510000000000000QUL,Information: quits,2018-04-01,44,,False,False,2018,2
+JTS510000000000000QUL,Information: quits,2018-05-01,50,,False,False,2018,2
+JTS510000000000000QUL,Information: quits,2018-06-01,52,,False,False,2018,2
+JTS510000000000000QUL,Information: quits,2018-07-01,47,,False,False,2018,3
+JTS510000000000000QUL,Information: quits,2018-08-01,47,,False,False,2018,3
+JTS510000000000000QUL,Information: quits,2018-09-01,44,,False,False,2018,3
+JTS510000000000000QUL,Information: quits,2018-10-01,43,,False,False,2018,4
+JTS510000000000000QUL,Information: quits,2018-11-01,56,,False,False,2018,4
+JTS510000000000000QUL,Information: quits,2018-12-01,45,,False,False,2018,4
+JTS510000000000000QUL,Information: quits,2019-01-01,59,,False,False,2019,1
+JTS510000000000000QUL,Information: quits,2019-02-01,42,,False,False,2019,1
+JTS510000000000000QUL,Information: quits,2019-03-01,46,,False,False,2019,1
+JTS510000000000000QUL,Information: quits,2019-04-01,52,,False,False,2019,2
+JTS510000000000000QUL,Information: quits,2019-05-01,50,,False,False,2019,2
+JTS510000000000000QUL,Information: quits,2019-06-01,44,,False,False,2019,2
+JTS510000000000000QUL,Information: quits,2019-07-01,43,,False,False,2019,3
+JTS510000000000000QUL,Information: quits,2019-08-01,50,,False,False,2019,3
+JTS510000000000000QUL,Information: quits,2019-09-01,42,,False,False,2019,3
+JTS510000000000000QUL,Information: quits,2019-10-01,44,,False,False,2019,4
+JTS510000000000000QUL,Information: quits,2019-11-01,41,,False,False,2019,4
+JTS510000000000000QUL,Information: quits,2019-12-01,42,,False,False,2019,4
+JTS510000000000000QUL,Information: quits,2020-01-01,42,,False,False,2020,1
+JTS510000000000000QUL,Information: quits,2020-02-01,46,,False,False,2020,1
+JTS510000000000000QUL,Information: quits,2020-03-01,40,,False,False,2020,1
+JTS510000000000000QUL,Information: quits,2020-04-01,34,,False,False,2020,2
+JTS510000000000000QUL,Information: quits,2020-05-01,26,,False,False,2020,2
+JTS510000000000000QUL,Information: quits,2020-06-01,30,,False,False,2020,2
+JTS510000000000000QUL,Information: quits,2020-07-01,35,,False,False,2020,3
+JTS510000000000000QUL,Information: quits,2020-08-01,36,,False,False,2020,3
+JTS510000000000000QUL,Information: quits,2020-09-01,34,,False,False,2020,3
+JTS510000000000000QUL,Information: quits,2020-10-01,36,,False,False,2020,4
+JTS510000000000000QUL,Information: quits,2020-11-01,38,,False,False,2020,4
+JTS510000000000000QUL,Information: quits,2020-12-01,32,,False,False,2020,4
+JTS510000000000000QUL,Information: quits,2021-01-01,35,,False,False,2021,1
+JTS510000000000000QUL,Information: quits,2021-02-01,42,,False,False,2021,1
+JTS510000000000000QUL,Information: quits,2021-03-01,57,,False,False,2021,1
+JTS510000000000000QUL,Information: quits,2021-04-01,56,,False,False,2021,2
+JTS510000000000000QUL,Information: quits,2021-05-01,51,,False,False,2021,2
+JTS510000000000000QUL,Information: quits,2021-06-01,50,,False,False,2021,2
+JTS510000000000000QUL,Information: quits,2021-07-01,49,,False,False,2021,3
+JTS510000000000000QUL,Information: quits,2021-08-01,51,,False,False,2021,3
+JTS510000000000000QUL,Information: quits,2021-09-01,52,,False,False,2021,3
+JTS510000000000000QUL,Information: quits,2021-10-01,61,,False,False,2021,4
+JTS510000000000000QUL,Information: quits,2021-11-01,53,,False,False,2021,4
+JTS510000000000000QUL,Information: quits,2021-12-01,53,,False,False,2021,4
+JTS510000000000000QUL,Information: quits,2022-01-01,51,,False,False,2022,1
+JTS510000000000000QUL,Information: quits,2022-02-01,48,,False,False,2022,1
+JTS510000000000000QUL,Information: quits,2022-03-01,49,,False,False,2022,1
+JTS510000000000000QUL,Information: quits,2022-04-01,52,,False,False,2022,2
+JTS510000000000000QUL,Information: quits,2022-05-01,58,,False,False,2022,2
+JTS510000000000000QUL,Information: quits,2022-06-01,60,,False,False,2022,2
+JTS510000000000000QUL,Information: quits,2022-07-01,48,,False,False,2022,3
+JTS510000000000000QUL,Information: quits,2022-08-01,56,,False,False,2022,3
+JTS510000000000000QUL,Information: quits,2022-09-01,61,,False,False,2022,3
+JTS510000000000000QUL,Information: quits,2022-10-01,31,,False,False,2022,4
+JTS510000000000000QUL,Information: quits,2022-11-01,45,,False,False,2022,4
+JTS510000000000000QUL,Information: quits,2022-12-01,51,,False,False,2022,4
+JTS510000000000000QUL,Information: quits,2023-01-01,40,,False,False,2023,1
+JTS510000000000000QUL,Information: quits,2023-02-01,48,,False,False,2023,1
+JTS510000000000000QUL,Information: quits,2023-03-01,43,,False,False,2023,1
+JTS510000000000000QUL,Information: quits,2023-04-01,41,,False,False,2023,2
+JTS510000000000000QUL,Information: quits,2023-05-01,31,,False,False,2023,2
+JTS510000000000000QUL,Information: quits,2023-06-01,42,,False,False,2023,2
+JTS510000000000000QUL,Information: quits,2023-07-01,57,,False,False,2023,3
+JTS510000000000000QUL,Information: quits,2023-08-01,24,,False,False,2023,3
+JTS510000000000000QUL,Information: quits,2023-09-01,44,,False,False,2023,3
+JTS510000000000000QUL,Information: quits,2023-10-01,43,,False,False,2023,4
+JTS510000000000000QUL,Information: quits,2023-11-01,45,,False,False,2023,4
+JTS510000000000000QUL,Information: quits,2023-12-01,32,,False,False,2023,4
+JTS510000000000000QUL,Information: quits,2024-01-01,54,,False,False,2024,1
+JTS510000000000000QUL,Information: quits,2024-02-01,49,,False,False,2024,1
+JTS510000000000000QUL,Information: quits,2024-03-01,41,,False,False,2024,1
+JTS510000000000000QUL,Information: quits,2024-04-01,44,,False,False,2024,2
+JTS510000000000000QUL,Information: quits,2024-05-01,50,,False,False,2024,2
+JTS510000000000000QUL,Information: quits,2024-06-01,33,,False,False,2024,2
+JTS510000000000000QUL,Information: quits,2024-07-01,53,,False,False,2024,3
+JTS510000000000000QUL,Information: quits,2024-08-01,43,,False,False,2024,3
+JTS510000000000000QUL,Information: quits,2024-09-01,38,,False,False,2024,3
+JTS510000000000000QUL,Information: quits,2024-10-01,40,,False,False,2024,4
+JTS510000000000000QUL,Information: quits,2024-11-01,33,,False,False,2024,4
+JTS510000000000000QUL,Information: quits,2024-12-01,36,,False,False,2024,4
+JTS510000000000000QUL,Information: quits,2025-01-01,40,,False,False,2025,1
+JTS510000000000000QUL,Information: quits,2025-02-01,34,,False,False,2025,1
+JTS510000000000000QUL,Information: quits,2025-03-01,39,,False,False,2025,1
+JTS510000000000000QUL,Information: quits,2025-04-01,31,,False,False,2025,2
+JTS510000000000000QUL,Information: quits,2025-05-01,36,,False,False,2025,2
+JTS510000000000000QUL,Information: quits,2025-06-01,42,,False,False,2025,2
+JTS510000000000000QUL,Information: quits,2025-07-01,36,,False,False,2025,3
+JTS510000000000000QUL,Information: quits,2025-08-01,34,,False,False,2025,3
+JTS510000000000000QUL,Information: quits,2025-09-01,22,,False,False,2025,3
+JTS510000000000000QUL,Information: quits,2025-10-01,36,,False,False,2025,4
+JTS510000000000000QUL,Information: quits,2025-11-01,44,,False,False,2025,4
+JTS510000000000000QUL,Information: quits,2025-12-01,45,,False,False,2025,4
+JTS510000000000000QUL,Information: quits,2026-01-01,40,,False,False,2026,1
+JTS510000000000000QUL,Information: quits,2026-02-01,42,,False,False,2026,1
+JTS510000000000000QUL,Information: quits,2026-03-01,31,,False,False,2026,1
+JTS510000000000000QUL,Information: quits,2026-04-01,26,,False,False,2026,2
+JTS510000000000000QUL,Information: quits,2026-05-01,32,,False,False,2026,2
+JTS510000000000000QUL,Information: quits,2026-06-01,28,,False,False,2026,2
+JTS510000000000000QUL,Information: quits,2026-07-01,26,P: preliminary,False,False,2026,3
+JTS540099000000000HIL,Professional and business services: hires,2015-01-01,1035,,False,False,2015,1
+JTS540099000000000HIL,Professional and business services: hires,2015-02-01,1082,,False,False,2015,1
+JTS540099000000000HIL,Professional and business services: hires,2015-03-01,1076,,False,False,2015,1
+JTS540099000000000HIL,Professional and business services: hires,2015-04-01,1095,,False,False,2015,2
+JTS540099000000000HIL,Professional and business services: hires,2015-05-01,1068,,False,False,2015,2
+JTS540099000000000HIL,Professional and business services: hires,2015-06-01,1033,,False,False,2015,2
+JTS540099000000000HIL,Professional and business services: hires,2015-07-01,1011,,False,False,2015,3
+JTS540099000000000HIL,Professional and business services: hires,2015-08-01,1039,,False,False,2015,3
+JTS540099000000000HIL,Professional and business services: hires,2015-09-01,1083,,False,False,2015,3
+JTS540099000000000HIL,Professional and business services: hires,2015-10-01,1085,,False,False,2015,4
+JTS540099000000000HIL,Professional and business services: hires,2015-11-01,1115,,False,False,2015,4
+JTS540099000000000HIL,Professional and business services: hires,2015-12-01,1217,,False,False,2015,4
+JTS540099000000000HIL,Professional and business services: hires,2016-01-01,1187,,False,False,2016,1
+JTS540099000000000HIL,Professional and business services: hires,2016-02-01,1113,,False,False,2016,1
+JTS540099000000000HIL,Professional and business services: hires,2016-03-01,1112,,False,False,2016,1
+JTS540099000000000HIL,Professional and business services: hires,2016-04-01,1097,,False,False,2016,2
+JTS540099000000000HIL,Professional and business services: hires,2016-05-01,1096,,False,False,2016,2
+JTS540099000000000HIL,Professional and business services: hires,2016-06-01,1070,,False,False,2016,2
+JTS540099000000000HIL,Professional and business services: hires,2016-07-01,1187,,False,False,2016,3
+JTS540099000000000HIL,Professional and business services: hires,2016-08-01,1105,,False,False,2016,3
+JTS540099000000000HIL,Professional and business services: hires,2016-09-01,1095,,False,False,2016,3
+JTS540099000000000HIL,Professional and business services: hires,2016-10-01,1057,,False,False,2016,4
+JTS540099000000000HIL,Professional and business services: hires,2016-11-01,1116,,False,False,2016,4
+JTS540099000000000HIL,Professional and business services: hires,2016-12-01,1105,,False,False,2016,4
+JTS540099000000000HIL,Professional and business services: hires,2017-01-01,1126,,False,False,2017,1
+JTS540099000000000HIL,Professional and business services: hires,2017-02-01,1055,,False,False,2017,1
+JTS540099000000000HIL,Professional and business services: hires,2017-03-01,1046,,False,False,2017,1
+JTS540099000000000HIL,Professional and business services: hires,2017-04-01,1015,,False,False,2017,2
+JTS540099000000000HIL,Professional and business services: hires,2017-05-01,1098,,False,False,2017,2
+JTS540099000000000HIL,Professional and business services: hires,2017-06-01,1250,,False,False,2017,2
+JTS540099000000000HIL,Professional and business services: hires,2017-07-01,1181,,False,False,2017,3
+JTS540099000000000HIL,Professional and business services: hires,2017-08-01,1158,,False,False,2017,3
+JTS540099000000000HIL,Professional and business services: hires,2017-09-01,1145,,False,False,2017,3
+JTS540099000000000HIL,Professional and business services: hires,2017-10-01,1175,,False,False,2017,4
+JTS540099000000000HIL,Professional and business services: hires,2017-11-01,1114,,False,False,2017,4
+JTS540099000000000HIL,Professional and business services: hires,2017-12-01,1065,,False,False,2017,4
+JTS540099000000000HIL,Professional and business services: hires,2018-01-01,1087,,False,False,2018,1
+JTS540099000000000HIL,Professional and business services: hires,2018-02-01,1164,,False,False,2018,1
+JTS540099000000000HIL,Professional and business services: hires,2018-03-01,1169,,False,False,2018,1
+JTS540099000000000HIL,Professional and business services: hires,2018-04-01,1128,,False,False,2018,2
+JTS540099000000000HIL,Professional and business services: hires,2018-05-01,1182,,False,False,2018,2
+JTS540099000000000HIL,Professional and business services: hires,2018-06-01,1192,,False,False,2018,2
+JTS540099000000000HIL,Professional and business services: hires,2018-07-01,1124,,False,False,2018,3
+JTS540099000000000HIL,Professional and business services: hires,2018-08-01,1114,,False,False,2018,3
+JTS540099000000000HIL,Professional and business services: hires,2018-09-01,1103,,False,False,2018,3
+JTS540099000000000HIL,Professional and business services: hires,2018-10-01,1189,,False,False,2018,4
+JTS540099000000000HIL,Professional and business services: hires,2018-11-01,1135,,False,False,2018,4
+JTS540099000000000HIL,Professional and business services: hires,2018-12-01,1156,,False,False,2018,4
+JTS540099000000000HIL,Professional and business services: hires,2019-01-01,1065,,False,False,2019,1
+JTS540099000000000HIL,Professional and business services: hires,2019-02-01,1184,,False,False,2019,1
+JTS540099000000000HIL,Professional and business services: hires,2019-03-01,1181,,False,False,2019,1
+JTS540099000000000HIL,Professional and business services: hires,2019-04-01,1263,,False,False,2019,2
+JTS540099000000000HIL,Professional and business services: hires,2019-05-01,1136,,False,False,2019,2
+JTS540099000000000HIL,Professional and business services: hires,2019-06-01,1108,,False,False,2019,2
+JTS540099000000000HIL,Professional and business services: hires,2019-07-01,1144,,False,False,2019,3
+JTS540099000000000HIL,Professional and business services: hires,2019-08-01,1149,,False,False,2019,3
+JTS540099000000000HIL,Professional and business services: hires,2019-09-01,1155,,False,False,2019,3
+JTS540099000000000HIL,Professional and business services: hires,2019-10-01,1113,,False,False,2019,4
+JTS540099000000000HIL,Professional and business services: hires,2019-11-01,1147,,False,False,2019,4
+JTS540099000000000HIL,Professional and business services: hires,2019-12-01,1147,,False,False,2019,4
+JTS540099000000000HIL,Professional and business services: hires,2020-01-01,1165,,False,False,2020,1
+JTS540099000000000HIL,Professional and business services: hires,2020-02-01,1109,,False,False,2020,1
+JTS540099000000000HIL,Professional and business services: hires,2020-03-01,1117,,False,False,2020,1
+JTS540099000000000HIL,Professional and business services: hires,2020-04-01,829,,False,False,2020,2
+JTS540099000000000HIL,Professional and business services: hires,2020-05-01,1006,,False,False,2020,2
+JTS540099000000000HIL,Professional and business services: hires,2020-06-01,1189,,False,False,2020,2
+JTS540099000000000HIL,Professional and business services: hires,2020-07-01,1129,,False,False,2020,3
+JTS540099000000000HIL,Professional and business services: hires,2020-08-01,1164,,False,False,2020,3
+JTS540099000000000HIL,Professional and business services: hires,2020-09-01,1161,,False,False,2020,3
+JTS540099000000000HIL,Professional and business services: hires,2020-10-01,1133,,False,False,2020,4
+JTS540099000000000HIL,Professional and business services: hires,2020-11-01,1236,,False,False,2020,4
+JTS540099000000000HIL,Professional and business services: hires,2020-12-01,1186,,False,False,2020,4
+JTS540099000000000HIL,Professional and business services: hires,2021-01-01,1189,,False,False,2021,1
+JTS540099000000000HIL,Professional and business services: hires,2021-02-01,1180,,False,False,2021,1
+JTS540099000000000HIL,Professional and business services: hires,2021-03-01,1171,,False,False,2021,1
+JTS540099000000000HIL,Professional and business services: hires,2021-04-01,1187,,False,False,2021,2
+JTS540099000000000HIL,Professional and business services: hires,2021-05-01,1158,,False,False,2021,2
+JTS540099000000000HIL,Professional and business services: hires,2021-06-01,1233,,False,False,2021,2
+JTS540099000000000HIL,Professional and business services: hires,2021-07-01,1321,,False,False,2021,3
+JTS540099000000000HIL,Professional and business services: hires,2021-08-01,1219,,False,False,2021,3
+JTS540099000000000HIL,Professional and business services: hires,2021-09-01,1338,,False,False,2021,3
+JTS540099000000000HIL,Professional and business services: hires,2021-10-01,1383,,False,False,2021,4
+JTS540099000000000HIL,Professional and business services: hires,2021-11-01,1417,,False,False,2021,4
+JTS540099000000000HIL,Professional and business services: hires,2021-12-01,1322,,False,False,2021,4
+JTS540099000000000HIL,Professional and business services: hires,2022-01-01,1267,,False,False,2022,1
+JTS540099000000000HIL,Professional and business services: hires,2022-02-01,1391,,False,False,2022,1
+JTS540099000000000HIL,Professional and business services: hires,2022-03-01,1337,,False,False,2022,1
+JTS540099000000000HIL,Professional and business services: hires,2022-04-01,1295,,False,False,2022,2
+JTS540099000000000HIL,Professional and business services: hires,2022-05-01,1333,,False,False,2022,2
+JTS540099000000000HIL,Professional and business services: hires,2022-06-01,1281,,False,False,2022,2
+JTS540099000000000HIL,Professional and business services: hires,2022-07-01,1278,,False,False,2022,3
+JTS540099000000000HIL,Professional and business services: hires,2022-08-01,1182,,False,False,2022,3
+JTS540099000000000HIL,Professional and business services: hires,2022-09-01,1179,,False,False,2022,3
+JTS540099000000000HIL,Professional and business services: hires,2022-10-01,1155,,False,False,2022,4
+JTS540099000000000HIL,Professional and business services: hires,2022-11-01,1149,,False,False,2022,4
+JTS540099000000000HIL,Professional and business services: hires,2022-12-01,1070,,False,False,2022,4
+JTS540099000000000HIL,Professional and business services: hires,2023-01-01,1100,,False,False,2023,1
+JTS540099000000000HIL,Professional and business services: hires,2023-02-01,1057,,False,False,2023,1
+JTS540099000000000HIL,Professional and business services: hires,2023-03-01,1041,,False,False,2023,1
+JTS540099000000000HIL,Professional and business services: hires,2023-04-01,1163,,False,False,2023,2
+JTS540099000000000HIL,Professional and business services: hires,2023-05-01,1032,,False,False,2023,2
+JTS540099000000000HIL,Professional and business services: hires,2023-06-01,1054,,False,False,2023,2
+JTS540099000000000HIL,Professional and business services: hires,2023-07-01,1018,,False,False,2023,3
+JTS540099000000000HIL,Professional and business services: hires,2023-08-01,1028,,False,False,2023,3
+JTS540099000000000HIL,Professional and business services: hires,2023-09-01,999,,False,False,2023,3
+JTS540099000000000HIL,Professional and business services: hires,2023-10-01,1074,,False,False,2023,4
+JTS540099000000000HIL,Professional and business services: hires,2023-11-01,894,,False,False,2023,4
+JTS540099000000000HIL,Professional and business services: hires,2023-12-01,1070,,False,False,2023,4
+JTS540099000000000HIL,Professional and business services: hires,2024-01-01,1061,,False,False,2024,1
+JTS540099000000000HIL,Professional and business services: hires,2024-02-01,1048,,False,False,2024,1
+JTS540099000000000HIL,Professional and business services: hires,2024-03-01,1068,,False,False,2024,1
+JTS540099000000000HIL,Professional and business services: hires,2024-04-01,984,,False,False,2024,2
+JTS540099000000000HIL,Professional and business services: hires,2024-05-01,1007,,False,False,2024,2
+JTS540099000000000HIL,Professional and business services: hires,2024-06-01,924,,False,False,2024,2
+JTS540099000000000HIL,Professional and business services: hires,2024-07-01,914,,False,False,2024,3
+JTS540099000000000HIL,Professional and business services: hires,2024-08-01,982,,False,False,2024,3
+JTS540099000000000HIL,Professional and business services: hires,2024-09-01,995,,False,False,2024,3
+JTS540099000000000HIL,Professional and business services: hires,2024-10-01,937,,False,False,2024,4
+JTS540099000000000HIL,Professional and business services: hires,2024-11-01,893,,False,False,2024,4
+JTS540099000000000HIL,Professional and business services: hires,2024-12-01,1000,,False,False,2024,4
+JTS540099000000000HIL,Professional and business services: hires,2025-01-01,972,,False,False,2025,1
+JTS540099000000000HIL,Professional and business services: hires,2025-02-01,1023,,False,False,2025,1
+JTS540099000000000HIL,Professional and business services: hires,2025-03-01,1066,,False,False,2025,1
+JTS540099000000000HIL,Professional and business services: hires,2025-04-01,1092,,False,False,2025,2
+JTS540099000000000HIL,Professional and business services: hires,2025-05-01,1043,,False,False,2025,2
+JTS540099000000000HIL,Professional and business services: hires,2025-06-01,1040,,False,False,2025,2
+JTS540099000000000HIL,Professional and business services: hires,2025-07-01,1047,,False,False,2025,3
+JTS540099000000000HIL,Professional and business services: hires,2025-08-01,1037,,False,False,2025,3
+JTS540099000000000HIL,Professional and business services: hires,2025-09-01,1003,,False,False,2025,3
+JTS540099000000000HIL,Professional and business services: hires,2025-10-01,994,,False,False,2025,4
+JTS540099000000000HIL,Professional and business services: hires,2025-11-01,981,,False,False,2025,4
+JTS540099000000000HIL,Professional and business services: hires,2025-12-01,947,,False,False,2025,4
+JTS540099000000000HIL,Professional and business services: hires,2026-01-01,1018,,False,False,2026,1
+JTS540099000000000HIL,Professional and business services: hires,2026-02-01,904,,False,False,2026,1
+JTS540099000000000HIL,Professional and business services: hires,2026-03-01,1064,,False,False,2026,1
+JTS540099000000000HIL,Professional and business services: hires,2026-04-01,955,,False,False,2026,2
+JTS540099000000000HIL,Professional and business services: hires,2026-05-01,1079,,False,False,2026,2
+JTS540099000000000HIL,Professional and business services: hires,2026-06-01,1088,,False,False,2026,2
+JTS540099000000000HIL,Professional and business services: hires,2026-07-01,900,P: preliminary,False,False,2026,3
+JTS540099000000000JOL,Professional and business services: job openings,2015-01-01,1028,,False,False,2015,1
+JTS540099000000000JOL,Professional and business services: job openings,2015-02-01,1082,,False,False,2015,1
+JTS540099000000000JOL,Professional and business services: job openings,2015-03-01,1101,,False,False,2015,1
+JTS540099000000000JOL,Professional and business services: job openings,2015-04-01,1239,,False,False,2015,2
+JTS540099000000000JOL,Professional and business services: job openings,2015-05-01,1235,,False,False,2015,2
+JTS540099000000000JOL,Professional and business services: job openings,2015-06-01,1109,,False,False,2015,2
+JTS540099000000000JOL,Professional and business services: job openings,2015-07-01,1146,,False,False,2015,3
+JTS540099000000000JOL,Professional and business services: job openings,2015-08-01,1091,,False,False,2015,3
+JTS540099000000000JOL,Professional and business services: job openings,2015-09-01,1110,,False,False,2015,3
+JTS540099000000000JOL,Professional and business services: job openings,2015-10-01,1212,,False,False,2015,4
+JTS540099000000000JOL,Professional and business services: job openings,2015-11-01,1285,,False,False,2015,4
+JTS540099000000000JOL,Professional and business services: job openings,2015-12-01,1199,,False,False,2015,4
+JTS540099000000000JOL,Professional and business services: job openings,2016-01-01,1310,,False,False,2016,1
+JTS540099000000000JOL,Professional and business services: job openings,2016-02-01,1236,,False,False,2016,1
+JTS540099000000000JOL,Professional and business services: job openings,2016-03-01,1471,,False,False,2016,1
+JTS540099000000000JOL,Professional and business services: job openings,2016-04-01,1049,,False,False,2016,2
+JTS540099000000000JOL,Professional and business services: job openings,2016-05-01,1163,,False,False,2016,2
+JTS540099000000000JOL,Professional and business services: job openings,2016-06-01,1143,,False,False,2016,2
+JTS540099000000000JOL,Professional and business services: job openings,2016-07-01,1248,,False,False,2016,3
+JTS540099000000000JOL,Professional and business services: job openings,2016-08-01,1105,,False,False,2016,3
+JTS540099000000000JOL,Professional and business services: job openings,2016-09-01,1204,,False,False,2016,3
+JTS540099000000000JOL,Professional and business services: job openings,2016-10-01,985,,False,False,2016,4
+JTS540099000000000JOL,Professional and business services: job openings,2016-11-01,1227,,False,False,2016,4
+JTS540099000000000JOL,Professional and business services: job openings,2016-12-01,1081,,False,False,2016,4
+JTS540099000000000JOL,Professional and business services: job openings,2017-01-01,984,,False,False,2017,1
+JTS540099000000000JOL,Professional and business services: job openings,2017-02-01,986,,False,False,2017,1
+JTS540099000000000JOL,Professional and business services: job openings,2017-03-01,1009,,False,False,2017,1
+JTS540099000000000JOL,Professional and business services: job openings,2017-04-01,1047,,False,False,2017,2
+JTS540099000000000JOL,Professional and business services: job openings,2017-05-01,1010,,False,False,2017,2
+JTS540099000000000JOL,Professional and business services: job openings,2017-06-01,1237,,False,False,2017,2
+JTS540099000000000JOL,Professional and business services: job openings,2017-07-01,1131,,False,False,2017,3
+JTS540099000000000JOL,Professional and business services: job openings,2017-08-01,1110,,False,False,2017,3
+JTS540099000000000JOL,Professional and business services: job openings,2017-09-01,1113,,False,False,2017,3
+JTS540099000000000JOL,Professional and business services: job openings,2017-10-01,1323,,False,False,2017,4
+JTS540099000000000JOL,Professional and business services: job openings,2017-11-01,1034,,False,False,2017,4
+JTS540099000000000JOL,Professional and business services: job openings,2017-12-01,971,,False,False,2017,4
+JTS540099000000000JOL,Professional and business services: job openings,2018-01-01,1118,,False,False,2018,1
+JTS540099000000000JOL,Professional and business services: job openings,2018-02-01,1108,,False,False,2018,1
+JTS540099000000000JOL,Professional and business services: job openings,2018-03-01,1185,,False,False,2018,1
+JTS540099000000000JOL,Professional and business services: job openings,2018-04-01,1196,,False,False,2018,2
+JTS540099000000000JOL,Professional and business services: job openings,2018-05-01,1239,,False,False,2018,2
+JTS540099000000000JOL,Professional and business services: job openings,2018-06-01,1268,,False,False,2018,2
+JTS540099000000000JOL,Professional and business services: job openings,2018-07-01,1253,,False,False,2018,3
+JTS540099000000000JOL,Professional and business services: job openings,2018-08-01,1331,,False,False,2018,3
+JTS540099000000000JOL,Professional and business services: job openings,2018-09-01,1342,,False,False,2018,3
+JTS540099000000000JOL,Professional and business services: job openings,2018-10-01,1344,,False,False,2018,4
+JTS540099000000000JOL,Professional and business services: job openings,2018-11-01,1343,,False,False,2018,4
+JTS540099000000000JOL,Professional and business services: job openings,2018-12-01,1351,,False,False,2018,4
+JTS540099000000000JOL,Professional and business services: job openings,2019-01-01,1391,,False,False,2019,1
+JTS540099000000000JOL,Professional and business services: job openings,2019-02-01,1387,,False,False,2019,1
+JTS540099000000000JOL,Professional and business services: job openings,2019-03-01,1347,,False,False,2019,1
+JTS540099000000000JOL,Professional and business services: job openings,2019-04-01,1169,,False,False,2019,2
+JTS540099000000000JOL,Professional and business services: job openings,2019-05-01,1277,,False,False,2019,2
+JTS540099000000000JOL,Professional and business services: job openings,2019-06-01,1279,,False,False,2019,2
+JTS540099000000000JOL,Professional and business services: job openings,2019-07-01,1252,,False,False,2019,3
+JTS540099000000000JOL,Professional and business services: job openings,2019-08-01,1282,,False,False,2019,3
+JTS540099000000000JOL,Professional and business services: job openings,2019-09-01,1241,,False,False,2019,3
+JTS540099000000000JOL,Professional and business services: job openings,2019-10-01,1205,,False,False,2019,4
+JTS540099000000000JOL,Professional and business services: job openings,2019-11-01,1202,,False,False,2019,4
+JTS540099000000000JOL,Professional and business services: job openings,2019-12-01,1237,,False,False,2019,4
+JTS540099000000000JOL,Professional and business services: job openings,2020-01-01,1293,,False,False,2020,1
+JTS540099000000000JOL,Professional and business services: job openings,2020-02-01,1288,,False,False,2020,1
+JTS540099000000000JOL,Professional and business services: job openings,2020-03-01,1095,,False,False,2020,1
+JTS540099000000000JOL,Professional and business services: job openings,2020-04-01,817,,False,False,2020,2
+JTS540099000000000JOL,Professional and business services: job openings,2020-05-01,1001,,False,False,2020,2
+JTS540099000000000JOL,Professional and business services: job openings,2020-06-01,1079,,False,False,2020,2
+JTS540099000000000JOL,Professional and business services: job openings,2020-07-01,1149,,False,False,2020,3
+JTS540099000000000JOL,Professional and business services: job openings,2020-08-01,1152,,False,False,2020,3
+JTS540099000000000JOL,Professional and business services: job openings,2020-09-01,1262,,False,False,2020,3
+JTS540099000000000JOL,Professional and business services: job openings,2020-10-01,1259,,False,False,2020,4
+JTS540099000000000JOL,Professional and business services: job openings,2020-11-01,1343,,False,False,2020,4
+JTS540099000000000JOL,Professional and business services: job openings,2020-12-01,1448,,False,False,2020,4
+JTS540099000000000JOL,Professional and business services: job openings,2021-01-01,1436,,False,False,2021,1
+JTS540099000000000JOL,Professional and business services: job openings,2021-02-01,1474,,False,False,2021,1
+JTS540099000000000JOL,Professional and business services: job openings,2021-03-01,1564,,False,False,2021,1
+JTS540099000000000JOL,Professional and business services: job openings,2021-04-01,1729,,False,False,2021,2
+JTS540099000000000JOL,Professional and business services: job openings,2021-05-01,1876,,False,False,2021,2
+JTS540099000000000JOL,Professional and business services: job openings,2021-06-01,1925,,False,False,2021,2
+JTS540099000000000JOL,Professional and business services: job openings,2021-07-01,2078,,False,False,2021,3
+JTS540099000000000JOL,Professional and business services: job openings,2021-08-01,2056,,False,False,2021,3
+JTS540099000000000JOL,Professional and business services: job openings,2021-09-01,1957,,False,False,2021,3
+JTS540099000000000JOL,Professional and business services: job openings,2021-10-01,2105,,False,False,2021,4
+JTS540099000000000JOL,Professional and business services: job openings,2021-11-01,2039,,False,False,2021,4
+JTS540099000000000JOL,Professional and business services: job openings,2021-12-01,2088,,False,False,2021,4
+JTS540099000000000JOL,Professional and business services: job openings,2022-01-01,2089,,False,False,2022,1
+JTS540099000000000JOL,Professional and business services: job openings,2022-02-01,2368,,False,False,2022,1
+JTS540099000000000JOL,Professional and business services: job openings,2022-03-01,2464,,True,False,2022,1
+JTS540099000000000JOL,Professional and business services: job openings,2022-04-01,2317,,False,False,2022,2
+JTS540099000000000JOL,Professional and business services: job openings,2022-05-01,2239,,False,False,2022,2
+JTS540099000000000JOL,Professional and business services: job openings,2022-06-01,2282,,False,False,2022,2
+JTS540099000000000JOL,Professional and business services: job openings,2022-07-01,2113,,False,False,2022,3
+JTS540099000000000JOL,Professional and business services: job openings,2022-08-01,1779,,False,False,2022,3
+JTS540099000000000JOL,Professional and business services: job openings,2022-09-01,2131,,False,False,2022,3
+JTS540099000000000JOL,Professional and business services: job openings,2022-10-01,1778,,False,False,2022,4
+JTS540099000000000JOL,Professional and business services: job openings,2022-11-01,2117,,False,False,2022,4
+JTS540099000000000JOL,Professional and business services: job openings,2022-12-01,2114,,False,False,2022,4
+JTS540099000000000JOL,Professional and business services: job openings,2023-01-01,2019,,False,False,2023,1
+JTS540099000000000JOL,Professional and business services: job openings,2023-02-01,1844,,False,False,2023,1
+JTS540099000000000JOL,Professional and business services: job openings,2023-03-01,1825,,False,False,2023,1
+JTS540099000000000JOL,Professional and business services: job openings,2023-04-01,1808,,False,False,2023,2
+JTS540099000000000JOL,Professional and business services: job openings,2023-05-01,1651,,False,False,2023,2
+JTS540099000000000JOL,Professional and business services: job openings,2023-06-01,1527,,False,False,2023,2
+JTS540099000000000JOL,Professional and business services: job openings,2023-07-01,1254,,False,False,2023,3
+JTS540099000000000JOL,Professional and business services: job openings,2023-08-01,1561,,False,False,2023,3
+JTS540099000000000JOL,Professional and business services: job openings,2023-09-01,1499,,False,False,2023,3
+JTS540099000000000JOL,Professional and business services: job openings,2023-10-01,1478,,False,False,2023,4
+JTS540099000000000JOL,Professional and business services: job openings,2023-11-01,1329,,False,False,2023,4
+JTS540099000000000JOL,Professional and business services: job openings,2023-12-01,1375,,False,False,2023,4
+JTS540099000000000JOL,Professional and business services: job openings,2024-01-01,1438,,False,False,2024,1
+JTS540099000000000JOL,Professional and business services: job openings,2024-02-01,1424,,False,False,2024,1
+JTS540099000000000JOL,Professional and business services: job openings,2024-03-01,1311,,False,False,2024,1
+JTS540099000000000JOL,Professional and business services: job openings,2024-04-01,1232,,False,False,2024,2
+JTS540099000000000JOL,Professional and business services: job openings,2024-05-01,1325,,False,False,2024,2
+JTS540099000000000JOL,Professional and business services: job openings,2024-06-01,1097,,False,False,2024,2
+JTS540099000000000JOL,Professional and business services: job openings,2024-07-01,1302,,False,False,2024,3
+JTS540099000000000JOL,Professional and business services: job openings,2024-08-01,1308,,False,False,2024,3
+JTS540099000000000JOL,Professional and business services: job openings,2024-09-01,1230,,False,False,2024,3
+JTS540099000000000JOL,Professional and business services: job openings,2024-10-01,1253,,False,False,2024,4
+JTS540099000000000JOL,Professional and business services: job openings,2024-11-01,1508,,False,False,2024,4
+JTS540099000000000JOL,Professional and business services: job openings,2024-12-01,1295,,False,False,2024,4
+JTS540099000000000JOL,Professional and business services: job openings,2025-01-01,1253,,False,False,2025,1
+JTS540099000000000JOL,Professional and business services: job openings,2025-02-01,1222,,False,False,2025,1
+JTS540099000000000JOL,Professional and business services: job openings,2025-03-01,1211,,False,False,2025,1
+JTS540099000000000JOL,Professional and business services: job openings,2025-04-01,1339,,False,False,2025,2
+JTS540099000000000JOL,Professional and business services: job openings,2025-05-01,1224,,False,False,2025,2
+JTS540099000000000JOL,Professional and business services: job openings,2025-06-01,1332,,False,False,2025,2
+JTS540099000000000JOL,Professional and business services: job openings,2025-07-01,1240,,False,False,2025,3
+JTS540099000000000JOL,Professional and business services: job openings,2025-08-01,1095,,False,False,2025,3
+JTS540099000000000JOL,Professional and business services: job openings,2025-09-01,1267,,False,False,2025,3
+JTS540099000000000JOL,Professional and business services: job openings,2025-10-01,1268,,False,False,2025,4
+JTS540099000000000JOL,Professional and business services: job openings,2025-11-01,1309,,False,False,2025,4
+JTS540099000000000JOL,Professional and business services: job openings,2025-12-01,1167,,False,False,2025,4
+JTS540099000000000JOL,Professional and business services: job openings,2026-01-01,1196,,False,False,2026,1
+JTS540099000000000JOL,Professional and business services: job openings,2026-02-01,1303,,False,False,2026,1
+JTS540099000000000JOL,Professional and business services: job openings,2026-03-01,1047,,False,False,2026,1
+JTS540099000000000JOL,Professional and business services: job openings,2026-04-01,1473,,False,False,2026,2
+JTS540099000000000JOL,Professional and business services: job openings,2026-05-01,1375,,False,False,2026,2
+JTS540099000000000JOL,Professional and business services: job openings,2026-06-01,1203,,False,False,2026,2
+JTS540099000000000JOL,Professional and business services: job openings,2026-07-01,1138,P: preliminary,False,False,2026,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2015-01-01,408,,False,False,2015,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2015-02-01,408,,False,False,2015,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2015-03-01,462,,False,False,2015,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2015-04-01,467,,False,False,2015,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2015-05-01,403,,False,False,2015,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2015-06-01,399,,False,False,2015,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2015-07-01,409,,False,False,2015,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2015-08-01,370,,False,False,2015,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2015-09-01,493,,False,False,2015,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2015-10-01,445,,False,False,2015,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2015-11-01,457,,False,False,2015,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2015-12-01,473,,False,False,2015,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2016-01-01,514,,False,False,2016,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2016-02-01,446,,False,False,2016,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2016-03-01,485,,False,False,2016,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2016-04-01,437,,False,False,2016,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2016-05-01,400,,False,False,2016,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2016-06-01,432,,False,False,2016,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2016-07-01,451,,False,False,2016,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2016-08-01,433,,False,False,2016,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2016-09-01,344,,False,False,2016,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2016-10-01,395,,False,False,2016,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2016-11-01,464,,False,False,2016,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2016-12-01,390,,False,False,2016,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2017-01-01,383,,False,False,2017,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2017-02-01,397,,False,False,2017,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2017-03-01,368,,False,False,2017,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2017-04-01,374,,False,False,2017,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2017-05-01,432,,False,False,2017,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2017-06-01,528,,False,False,2017,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2017-07-01,464,,False,False,2017,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2017-08-01,396,,False,False,2017,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2017-09-01,434,,False,False,2017,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2017-10-01,413,,False,False,2017,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2017-11-01,340,,False,False,2017,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2017-12-01,367,,False,False,2017,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2018-01-01,405,,False,False,2018,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2018-02-01,434,,False,False,2018,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2018-03-01,431,,False,False,2018,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2018-04-01,342,,False,False,2018,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2018-05-01,424,,False,False,2018,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2018-06-01,442,,False,False,2018,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2018-07-01,397,,False,False,2018,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2018-08-01,408,,False,False,2018,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2018-09-01,380,,False,False,2018,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2018-10-01,429,,False,False,2018,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2018-11-01,448,,False,False,2018,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2018-12-01,455,,False,False,2018,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2019-01-01,367,,False,False,2019,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2019-02-01,405,,False,False,2019,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2019-03-01,396,,False,False,2019,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2019-04-01,484,,False,False,2019,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2019-05-01,442,,False,False,2019,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2019-06-01,381,,False,False,2019,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2019-07-01,397,,False,False,2019,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2019-08-01,412,,False,False,2019,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2019-09-01,441,,False,False,2019,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2019-10-01,402,,False,False,2019,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2019-11-01,433,,False,False,2019,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2019-12-01,465,,False,False,2019,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2020-01-01,409,,False,False,2020,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2020-02-01,414,,False,False,2020,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2020-03-01,1260,,True,False,2020,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2020-04-01,1228,,True,False,2020,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2020-05-01,458,,False,False,2020,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2020-06-01,441,,False,False,2020,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2020-07-01,410,,False,False,2020,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2020-08-01,380,,False,False,2020,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2020-09-01,343,,False,False,2020,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2020-10-01,351,,False,False,2020,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2020-11-01,444,,False,False,2020,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2020-12-01,378,,False,False,2020,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2021-01-01,357,,False,False,2021,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2021-02-01,420,,False,False,2021,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2021-03-01,399,,False,False,2021,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2021-04-01,342,,False,False,2021,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2021-05-01,311,,False,False,2021,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2021-06-01,301,,False,False,2021,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2021-07-01,422,,False,False,2021,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2021-08-01,289,,False,False,2021,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2021-09-01,403,,False,False,2021,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2021-10-01,311,,False,False,2021,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2021-11-01,343,,False,False,2021,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2021-12-01,366,,False,False,2021,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2022-01-01,309,,False,False,2022,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2022-02-01,401,,False,False,2022,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2022-03-01,407,,False,False,2022,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2022-04-01,313,,False,False,2022,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2022-05-01,404,,False,False,2022,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2022-06-01,404,,False,False,2022,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2022-07-01,337,,False,False,2022,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2022-08-01,401,,False,False,2022,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2022-09-01,316,,False,False,2022,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2022-10-01,421,,False,False,2022,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2022-11-01,339,,False,False,2022,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2022-12-01,352,,False,False,2022,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2023-01-01,504,,False,False,2023,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2023-02-01,369,,False,False,2023,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2023-03-01,409,,False,False,2023,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2023-04-01,402,,False,False,2023,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2023-05-01,285,,False,False,2023,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2023-06-01,415,,False,False,2023,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2023-07-01,421,,False,False,2023,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2023-08-01,381,,False,False,2023,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2023-09-01,374,,False,False,2023,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2023-10-01,393,,False,False,2023,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2023-11-01,318,,False,False,2023,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2023-12-01,444,,False,False,2023,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2024-01-01,492,,False,False,2024,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2024-02-01,388,,False,False,2024,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2024-03-01,353,,False,False,2024,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2024-04-01,324,,False,False,2024,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2024-05-01,390,,False,False,2024,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2024-06-01,336,,False,False,2024,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2024-07-01,368,,False,False,2024,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2024-08-01,430,,False,False,2024,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2024-09-01,493,,False,False,2024,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2024-10-01,409,,False,False,2024,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2024-11-01,414,,False,False,2024,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2024-12-01,349,,False,False,2024,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2025-01-01,450,,False,False,2025,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2025-02-01,464,,False,False,2025,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2025-03-01,377,,False,False,2025,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2025-04-01,480,,False,False,2025,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2025-05-01,414,,False,False,2025,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2025-06-01,578,,False,False,2025,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2025-07-01,423,,False,False,2025,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2025-08-01,481,,False,False,2025,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2025-09-01,448,,False,False,2025,3
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2025-10-01,462,,False,False,2025,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2025-11-01,492,,False,False,2025,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2025-12-01,432,,False,False,2025,4
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2026-01-01,411,,False,False,2026,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2026-02-01,428,,False,False,2026,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2026-03-01,561,,False,False,2026,1
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2026-04-01,448,,False,False,2026,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2026-05-01,463,,False,False,2026,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2026-06-01,494,,False,False,2026,2
+JTS540099000000000LDL,Professional and business services: layoffs and discharges,2026-07-01,435,P: preliminary,False,False,2026,3
+JTS540099000000000QUL,Professional and business services: quits,2015-01-01,548,,False,False,2015,1
+JTS540099000000000QUL,Professional and business services: quits,2015-02-01,563,,False,False,2015,1
+JTS540099000000000QUL,Professional and business services: quits,2015-03-01,544,,False,False,2015,1
+JTS540099000000000QUL,Professional and business services: quits,2015-04-01,511,,False,False,2015,2
+JTS540099000000000QUL,Professional and business services: quits,2015-05-01,555,,False,False,2015,2
+JTS540099000000000QUL,Professional and business services: quits,2015-06-01,508,,False,False,2015,2
+JTS540099000000000QUL,Professional and business services: quits,2015-07-01,516,,False,False,2015,3
+JTS540099000000000QUL,Professional and business services: quits,2015-08-01,562,,False,False,2015,3
+JTS540099000000000QUL,Professional and business services: quits,2015-09-01,505,,False,False,2015,3
+JTS540099000000000QUL,Professional and business services: quits,2015-10-01,536,,False,False,2015,4
+JTS540099000000000QUL,Professional and business services: quits,2015-11-01,554,,False,False,2015,4
+JTS540099000000000QUL,Professional and business services: quits,2015-12-01,575,,False,False,2015,4
+JTS540099000000000QUL,Professional and business services: quits,2016-01-01,572,,False,False,2016,1
+JTS540099000000000QUL,Professional and business services: quits,2016-02-01,592,,False,False,2016,1
+JTS540099000000000QUL,Professional and business services: quits,2016-03-01,543,,False,False,2016,1
+JTS540099000000000QUL,Professional and business services: quits,2016-04-01,581,,False,False,2016,2
+JTS540099000000000QUL,Professional and business services: quits,2016-05-01,679,,False,False,2016,2
+JTS540099000000000QUL,Professional and business services: quits,2016-06-01,543,,False,False,2016,2
+JTS540099000000000QUL,Professional and business services: quits,2016-07-01,617,,False,False,2016,3
+JTS540099000000000QUL,Professional and business services: quits,2016-08-01,594,,False,False,2016,3
+JTS540099000000000QUL,Professional and business services: quits,2016-09-01,617,,False,False,2016,3
+JTS540099000000000QUL,Professional and business services: quits,2016-10-01,612,,False,False,2016,4
+JTS540099000000000QUL,Professional and business services: quits,2016-11-01,585,,False,False,2016,4
+JTS540099000000000QUL,Professional and business services: quits,2016-12-01,605,,False,False,2016,4
+JTS540099000000000QUL,Professional and business services: quits,2017-01-01,647,,False,False,2017,1
+JTS540099000000000QUL,Professional and business services: quits,2017-02-01,562,,False,False,2017,1
+JTS540099000000000QUL,Professional and business services: quits,2017-03-01,586,,False,False,2017,1
+JTS540099000000000QUL,Professional and business services: quits,2017-04-01,575,,False,False,2017,2
+JTS540099000000000QUL,Professional and business services: quits,2017-05-01,582,,False,False,2017,2
+JTS540099000000000QUL,Professional and business services: quits,2017-06-01,619,,False,False,2017,2
+JTS540099000000000QUL,Professional and business services: quits,2017-07-01,605,,False,False,2017,3
+JTS540099000000000QUL,Professional and business services: quits,2017-08-01,654,,False,False,2017,3
+JTS540099000000000QUL,Professional and business services: quits,2017-09-01,670,,False,False,2017,3
+JTS540099000000000QUL,Professional and business services: quits,2017-10-01,651,,False,False,2017,4
+JTS540099000000000QUL,Professional and business services: quits,2017-11-01,679,,False,False,2017,4
+JTS540099000000000QUL,Professional and business services: quits,2017-12-01,631,,False,False,2017,4
+JTS540099000000000QUL,Professional and business services: quits,2018-01-01,553,,False,False,2018,1
+JTS540099000000000QUL,Professional and business services: quits,2018-02-01,639,,False,False,2018,1
+JTS540099000000000QUL,Professional and business services: quits,2018-03-01,639,,False,False,2018,1
+JTS540099000000000QUL,Professional and business services: quits,2018-04-01,675,,False,False,2018,2
+JTS540099000000000QUL,Professional and business services: quits,2018-05-01,638,,False,False,2018,2
+JTS540099000000000QUL,Professional and business services: quits,2018-06-01,659,,False,False,2018,2
+JTS540099000000000QUL,Professional and business services: quits,2018-07-01,642,,False,False,2018,3
+JTS540099000000000QUL,Professional and business services: quits,2018-08-01,601,,False,False,2018,3
+JTS540099000000000QUL,Professional and business services: quits,2018-09-01,601,,False,False,2018,3
+JTS540099000000000QUL,Professional and business services: quits,2018-10-01,652,,False,False,2018,4
+JTS540099000000000QUL,Professional and business services: quits,2018-11-01,632,,False,False,2018,4
+JTS540099000000000QUL,Professional and business services: quits,2018-12-01,637,,False,False,2018,4
+JTS540099000000000QUL,Professional and business services: quits,2019-01-01,634,,False,False,2019,1
+JTS540099000000000QUL,Professional and business services: quits,2019-02-01,664,,False,False,2019,1
+JTS540099000000000QUL,Professional and business services: quits,2019-03-01,680,,False,False,2019,1
+JTS540099000000000QUL,Professional and business services: quits,2019-04-01,659,,False,False,2019,2
+JTS540099000000000QUL,Professional and business services: quits,2019-05-01,628,,False,False,2019,2
+JTS540099000000000QUL,Professional and business services: quits,2019-06-01,639,,False,False,2019,2
+JTS540099000000000QUL,Professional and business services: quits,2019-07-01,701,,False,False,2019,3
+JTS540099000000000QUL,Professional and business services: quits,2019-08-01,638,,False,False,2019,3
+JTS540099000000000QUL,Professional and business services: quits,2019-09-01,637,,False,False,2019,3
+JTS540099000000000QUL,Professional and business services: quits,2019-10-01,620,,False,False,2019,4
+JTS540099000000000QUL,Professional and business services: quits,2019-11-01,630,,False,False,2019,4
+JTS540099000000000QUL,Professional and business services: quits,2019-12-01,638,,False,False,2019,4
+JTS540099000000000QUL,Professional and business services: quits,2020-01-01,682,,False,False,2020,1
+JTS540099000000000QUL,Professional and business services: quits,2020-02-01,640,,False,False,2020,1
+JTS540099000000000QUL,Professional and business services: quits,2020-03-01,613,,False,False,2020,1
+JTS540099000000000QUL,Professional and business services: quits,2020-04-01,372,,False,False,2020,2
+JTS540099000000000QUL,Professional and business services: quits,2020-05-01,425,,False,False,2020,2
+JTS540099000000000QUL,Professional and business services: quits,2020-06-01,398,,False,False,2020,2
+JTS540099000000000QUL,Professional and business services: quits,2020-07-01,526,,False,False,2020,3
+JTS540099000000000QUL,Professional and business services: quits,2020-08-01,550,,False,False,2020,3
+JTS540099000000000QUL,Professional and business services: quits,2020-09-01,640,,False,False,2020,3
+JTS540099000000000QUL,Professional and business services: quits,2020-10-01,618,,False,False,2020,4
+JTS540099000000000QUL,Professional and business services: quits,2020-11-01,553,,False,False,2020,4
+JTS540099000000000QUL,Professional and business services: quits,2020-12-01,579,,False,False,2020,4
+JTS540099000000000QUL,Professional and business services: quits,2021-01-01,606,,False,False,2021,1
+JTS540099000000000QUL,Professional and business services: quits,2021-02-01,650,,False,False,2021,1
+JTS540099000000000QUL,Professional and business services: quits,2021-03-01,634,,False,False,2021,1
+JTS540099000000000QUL,Professional and business services: quits,2021-04-01,713,,False,False,2021,2
+JTS540099000000000QUL,Professional and business services: quits,2021-05-01,696,,False,False,2021,2
+JTS540099000000000QUL,Professional and business services: quits,2021-06-01,750,,False,False,2021,2
+JTS540099000000000QUL,Professional and business services: quits,2021-07-01,690,,False,False,2021,3
+JTS540099000000000QUL,Professional and business services: quits,2021-08-01,738,,False,False,2021,3
+JTS540099000000000QUL,Professional and business services: quits,2021-09-01,757,,False,False,2021,3
+JTS540099000000000QUL,Professional and business services: quits,2021-10-01,751,,False,False,2021,4
+JTS540099000000000QUL,Professional and business services: quits,2021-11-01,831,,False,False,2021,4
+JTS540099000000000QUL,Professional and business services: quits,2021-12-01,783,,False,False,2021,4
+JTS540099000000000QUL,Professional and business services: quits,2022-01-01,799,,False,False,2022,1
+JTS540099000000000QUL,Professional and business services: quits,2022-02-01,734,,False,False,2022,1
+JTS540099000000000QUL,Professional and business services: quits,2022-03-01,780,,False,False,2022,1
+JTS540099000000000QUL,Professional and business services: quits,2022-04-01,848,,False,False,2022,2
+JTS540099000000000QUL,Professional and business services: quits,2022-05-01,779,,False,False,2022,2
+JTS540099000000000QUL,Professional and business services: quits,2022-06-01,765,,False,False,2022,2
+JTS540099000000000QUL,Professional and business services: quits,2022-07-01,795,,False,False,2022,3
+JTS540099000000000QUL,Professional and business services: quits,2022-08-01,702,,False,False,2022,3
+JTS540099000000000QUL,Professional and business services: quits,2022-09-01,746,,False,False,2022,3
+JTS540099000000000QUL,Professional and business services: quits,2022-10-01,644,,False,False,2022,4
+JTS540099000000000QUL,Professional and business services: quits,2022-11-01,732,,False,False,2022,4
+JTS540099000000000QUL,Professional and business services: quits,2022-12-01,695,,False,False,2022,4
+JTS540099000000000QUL,Professional and business services: quits,2023-01-01,537,,False,False,2023,1
+JTS540099000000000QUL,Professional and business services: quits,2023-02-01,630,,False,False,2023,1
+JTS540099000000000QUL,Professional and business services: quits,2023-03-01,620,,False,False,2023,1
+JTS540099000000000QUL,Professional and business services: quits,2023-04-01,605,,False,False,2023,2
+JTS540099000000000QUL,Professional and business services: quits,2023-05-01,639,,False,False,2023,2
+JTS540099000000000QUL,Professional and business services: quits,2023-06-01,585,,False,False,2023,2
+JTS540099000000000QUL,Professional and business services: quits,2023-07-01,589,,False,False,2023,3
+JTS540099000000000QUL,Professional and business services: quits,2023-08-01,593,,False,False,2023,3
+JTS540099000000000QUL,Professional and business services: quits,2023-09-01,585,,False,False,2023,3
+JTS540099000000000QUL,Professional and business services: quits,2023-10-01,637,,False,False,2023,4
+JTS540099000000000QUL,Professional and business services: quits,2023-11-01,610,,False,False,2023,4
+JTS540099000000000QUL,Professional and business services: quits,2023-12-01,554,,False,False,2023,4
+JTS540099000000000QUL,Professional and business services: quits,2024-01-01,488,,False,False,2024,1
+JTS540099000000000QUL,Professional and business services: quits,2024-02-01,607,,False,False,2024,1
+JTS540099000000000QUL,Professional and business services: quits,2024-03-01,670,,False,False,2024,1
+JTS540099000000000QUL,Professional and business services: quits,2024-04-01,512,,False,False,2024,2
+JTS540099000000000QUL,Professional and business services: quits,2024-05-01,503,,False,False,2024,2
+JTS540099000000000QUL,Professional and business services: quits,2024-06-01,588,,False,False,2024,2
+JTS540099000000000QUL,Professional and business services: quits,2024-07-01,505,,False,False,2024,3
+JTS540099000000000QUL,Professional and business services: quits,2024-08-01,545,,False,False,2024,3
+JTS540099000000000QUL,Professional and business services: quits,2024-09-01,508,,False,False,2024,3
+JTS540099000000000QUL,Professional and business services: quits,2024-10-01,531,,False,False,2024,4
+JTS540099000000000QUL,Professional and business services: quits,2024-11-01,488,,False,False,2024,4
+JTS540099000000000QUL,Professional and business services: quits,2024-12-01,576,,False,False,2024,4
+JTS540099000000000QUL,Professional and business services: quits,2025-01-01,544,,False,False,2025,1
+JTS540099000000000QUL,Professional and business services: quits,2025-02-01,520,,False,False,2025,1
+JTS540099000000000QUL,Professional and business services: quits,2025-03-01,645,,False,False,2025,1
+JTS540099000000000QUL,Professional and business services: quits,2025-04-01,519,,False,False,2025,2
+JTS540099000000000QUL,Professional and business services: quits,2025-05-01,542,,False,False,2025,2
+JTS540099000000000QUL,Professional and business services: quits,2025-06-01,424,,False,False,2025,2
+JTS540099000000000QUL,Professional and business services: quits,2025-07-01,591,,False,False,2025,3
+JTS540099000000000QUL,Professional and business services: quits,2025-08-01,552,,False,False,2025,3
+JTS540099000000000QUL,Professional and business services: quits,2025-09-01,528,,False,False,2025,3
+JTS540099000000000QUL,Professional and business services: quits,2025-10-01,529,,False,False,2025,4
+JTS540099000000000QUL,Professional and business services: quits,2025-11-01,472,,False,False,2025,4
+JTS540099000000000QUL,Professional and business services: quits,2025-12-01,426,,False,False,2025,4
+JTS540099000000000QUL,Professional and business services: quits,2026-01-01,495,,False,False,2026,1
+JTS540099000000000QUL,Professional and business services: quits,2026-02-01,441,,False,False,2026,1
+JTS540099000000000QUL,Professional and business services: quits,2026-03-01,450,,False,False,2026,1
+JTS540099000000000QUL,Professional and business services: quits,2026-04-01,436,,False,False,2026,2
+JTS540099000000000QUL,Professional and business services: quits,2026-05-01,493,,False,False,2026,2
+JTS540099000000000QUL,Professional and business services: quits,2026-06-01,478,,False,False,2026,2
+JTS540099000000000QUL,Professional and business services: quits,2026-07-01,401,P: preliminary,False,False,2026,3

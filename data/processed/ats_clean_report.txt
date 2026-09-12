@@ -1,0 +1,145 @@
+=== ats_clean report ===
+final rows written: 4294, columns: 32
+
+loaded: 4409 rows from 4 files
+  Batch B1.csv: 317 rows
+  Batch B2.csv: 163 rows
+  Companies A dataset.csv: 3574 rows
+  Companies B dataset.csv: 355 rows
+after dedup on jobId: 4294 unique (dropped 115 duplicates)
+rows retained per source file after dedup:
+  Companies A dataset.csv: 3574
+  Batch B1.csv: 317
+  Companies B dataset.csv: 240
+  Batch B2.csv: 163
+
+desc_len distribution:
+  count     4294.000000
+  mean      6431.547974
+  std       1723.816676
+  min       1018.000000
+  25%       5238.000000
+  50%       6351.500000
+  75%       7519.750000
+  max      16912.000000
+
+company_clean: 19 raw names -> 19 canonical (0 unmapped)
+
+seniority distribution:
+  mid: 1703
+  lead: 1435
+  staff: 626
+  senior: 401
+  intern: 62
+  new_grad: 38
+  junior: 29
+
+role_family distribution:
+  other: 1781
+  software_eng: 839
+  sales_gtm: 603
+  solutions: 327
+  forward_deployed: 245
+  product: 177
+  applied_ai: 113
+  research: 82
+  data: 68
+  recruiting: 59
+sample titles per family:
+  forward_deployed:
+    - Deployment Strategist - Japan Forward Deployed
+    - Deployment Strategist - Korea Forward Deployed
+    - Forward Deployed AI Engineer
+    - Forward Deployed AI Engineer
+    - Forward Deployed Enablement Engineer - Customer Success
+  solutions:
+    - Deployment Strategist
+    - Deployment Strategist
+    - Deployment Strategist
+    - Deployment Strategist
+    - Deployment Strategist
+  applied_ai:
+    - AI Engineer, GTM Claudification
+    - Applied AI Architect
+    - Applied AI Architect
+    - Applied AI Architect
+    - Applied AI Architect
+  research:
+    - [Expression of Interest] Research Engineer / Scientist, Alignment - London
+    - ML/Research Engineer, Safeguards
+    - People Research Scientist, Recruiting
+    - Research Engineer, Chip Design RL (Reinforcement Learning)
+    - Research Engineer, Code RL (Reinforcement Learning)
+  software_eng:
+    - Backend Software Engineer - Application Development
+    - Backend Software Engineer - Application Development
+    - Backend Software Engineer - Defense
+    - Backend Software Engineer - Defense
+    - Backend Software Engineer - Defense
+  data:
+    - Data Engineer
+    - Data Engineer, Safeguards
+    - Data Science, Finance & Strategy
+    - Data Scientist, Developer Productivity
+    - Data Scientist, GTM
+  product:
+    - Product Designer
+    - Product Designer - US Government
+    - Product Designer - US Government
+    - Product Designer, Internship
+    - Product Designer, Internship
+  sales_gtm:
+    - Sales
+    - Account Executive, AI Native
+    - Account Executive - DNB
+    - Account Executive - Public Sector (ASEAN)
+    - Account Executive, Startups
+  recruiting:
+    - Talent Coordinator
+    - Talent Coordinator
+    - Talent Coordinator
+    - Talent Sourcer (Contractor)
+    - Talent Strategist
+  other:
+    - Administrative Business Partner
+    - Commercial Administrative Business Partner
+    - Commercial Administrative Business Partner
+    - Commercial Administrative Business Partner
+    - Commercial Contracts Specialist
+
+salary: 1521 / 4294 rows have salaryMin
+  salaryInterval given blank/year/hour: 1314 / 205 / 2
+  interval inferred as hourly: 5, annual: 1516
+  currency: USD=1469, GBP=43, EUR=9
+  salary_is_usd True/False: 1469 / 52
+  salary_suspect True/False: 12 / 1509
+  10 lowest salary_annual_min:
+    0  (hour, raw min=0.0)  Research Engineer, Privacy
+    0  (hour, raw min=0.0)  Solutions Consultant, Post Sales, Enterprise
+    32  (year, raw min=32.0)  Talent Coordinator
+    32  (year, raw min=32.0)  Talent Coordinator
+    2400  (year, raw min=2400.0)  Deployment Strategist
+    2800  (year, raw min=2800.0)  Forward Deployed Software Engineer
+    5900  (year, raw min=5900.0)  Year at Palantir - Forward Deployed Software Engineer, Internship - Commercial
+    5900  (year, raw min=5900.0)  Year at Palantir - Forward Deployed Software Engineer, Internship - Commercial
+    5900  (year, raw min=5900.0)  Year at Palantir - Forward Deployed Software Engineer, Internship - USG
+    5900  (year, raw min=5900.0)  Year at Palantir - Forward Deployed Software Engineer, Internship - USG
+  10 highest salary_annual_min:
+    510000  (year, raw min=510000.0)  Engineering Manager, Core Experimentation
+    500000  (year, raw min=500000.0)  Engineering Manager, MLE
+    500000  (year, raw min=500000.0)  Area Vice President, Consumer Business Services
+    450000  (year, raw min=450000.0)  Enterprise Sales Leader
+    450000  (year, raw min=450000.0)  Enterprise Sales Leader, Healthcare
+    450000  (year, raw min=450000.0)  Enterprise Sales Leader, Retail
+    450000  (year, raw min=450000.0)  Enterprise Sales Leader, Consumer Business Services
+    441000  (year, raw min=441000.0)  Applied Data Science & Insights Leader - GTM Intelligence Solutions and Technical Success
+    441000  (year, raw min=441000.0)  Principal Software Engineer, Enterprise Technology Vertical
+    430000  (year, raw min=430000.0)  Account Director, Tech
+
+posted_date range: 2009-12-05 to 2026-09-08
+
+dropped (0% populated): ['experienceLevel', 'jobFunction', 'latitude', 'longitude', 'postedAtText']
+  NOTE: city/region are NOT 0% populated (35.0% / 32.7%) -- kept despite the brief, since {'city', 'region'} have data
+dropped (ATS scraping plumbing, redundant with kept fields): ['__src', 'applyUrl', 'companyInput', 'companySlug', 'customFields/0/label', 'customFields/0/value', 'customFields/1/label', 'customFields/1/value', 'customFields/2/label', 'customFields/2/value', 'customFields/3/label', 'customFields/3/value', 'firstPublishedAt', 'locations/0', 'locations/1', 'locations/10', 'locations/11', 'locations/12', 'locations/13', 'locations/14', 'locations/15', 'locations/2', 'locations/3', 'locations/4', 'locations/5', 'locations/6', 'locations/7', 'locations/8', 'locations/9', 'postalCode', 'requisitionId', 'salaryRaw', 'scrapedAt', 'tags/0', 'tags/1', 'team', 'updatedAt', 'url']
+
+is_remote: 1970 resolved, 2324 unknown (915 rows where isRemote=True conflicted with a non-remote workplaceType -- isRemote wins)
