@@ -1,0 +1,44 @@
+loaded: 52040
+after dead/deleted filter: 48296 (dropped 3744)
+final rows written: 48296
+parse_ok overall: 92.7%
+parse_ok by year:
+  2019: 93.5% (n=8439)
+  2020: 92.4% (n=7125)
+  2021: 93.3% (n=10286)
+  2022: 93.1% (n=7585)
+  2023: 92.1% (n=4175)
+  2024: 92.2% (n=3932)
+  2025: 92.2% (n=4046)
+  2026: 89.8% (n=2708)
+fill rate by field:
+  company: 100.0%
+  role: 92.7%
+  location: 53.9%
+  work_mode: 39.2%
+  salary_raw: 7.1%
+  visa_note: 5.6%
+  header_extra: 79.2%
+top 20 companies:
+  Datadog: 80
+  Uncountable: 79
+  SerpApi: 73
+  ML6: 71
+  Spacelift: 69
+  Tulip: 68
+  Aha! (https://www.aha.io): 68
+  Temporal Technologies: 66
+  Nuna (https://www.nuna.com): 63
+  PlantingSpace: 63
+  OpenRent: 61
+  MixRank (YC S11): 59
+  Scribd: 58
+  Tesla: 58
+  Interactive Brokers: 57
+  Fleetio: 55
+  PostHog: 55
+  TalkJS (https://talkjs.com): 52
+  Beautiful.ai: 52
+  Stream: 51
+is_short rows (kept set): 244 (0.5%)
+of 3744 dropped dead/deleted rows, 3539 (94.5%) were also short-text -- overlap between the two filters

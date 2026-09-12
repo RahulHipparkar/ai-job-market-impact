@@ -1,0 +1,108 @@
+
+=== bls_jolts (jolts_2026-09-08.json) ===
+units: levels in thousands (BLS JOLTS national convention)
+series: 12, raw rows: 1668
+value conversion failures: 0
+M13 (annual average) rows flagged and excluded: 0
+final rows: 1668, date range: 2015-01-01 to 2026-07-01
+  missing values:
+    none
+  date gaps: 0 missing monthly steps across 0 of 12 series
+  duplicates: 0 exact duplicate rows dropped; 0 (series_id, date) keys have conflicting values (NOT dropped, needs a decision)
+  outliers: 12 rows flagged across 12 series (|z|>3 computed per series, not pooled)
+    per-series min/p1/p99/max:
+                        min       p1       p99    max
+series_id                                            
+JTS000000000000000HIL  4029  4944.60   7261.92   8133
+JTS000000000000000JOL  4606  5224.44  11799.06  12301
+JTS000000000000000LDL  1312  1320.22   6538.50  12985
+JTS000000000000000QUL  1991  2386.30   4450.72   4499
+JTS510000000000000HIL    40    50.04    129.58    140
+JTS510000000000000JOL    70    70.76    258.96    274
+JTS510000000000000LDL    12    15.14    127.58    191
+JTS510000000000000QUL    22    24.76     60.62     61
+JTS540099000000000HIL   829   893.38   1387.96   1417
+JTS540099000000000JOL   817   975.94   2348.62   2464
+JTS540099000000000LDL   285   293.56    981.00   1260
+JTS540099000000000QUL   372   399.14    818.84    848
+    10 most extreme values:
+            series_id       date  value   z
+JTS000000000000000LDL 2020-03-01  12985 9.6
+JTS510000000000000LDL 2020-03-01    191 7.8
+JTS540099000000000LDL 2020-03-01   1260 7.4
+JTS540099000000000LDL 2020-04-01   1228 7.1
+JTS510000000000000LDL 2020-04-01    169 6.7
+JTS000000000000000LDL 2020-04-01   9170 6.3
+JTS000000000000000HIL 2020-05-01   8133 4.6
+JTS510000000000000HIL 2021-10-01    140 3.4
+JTS000000000000000HIL 2020-06-01   7477 3.3
+JTS510000000000000JOL 2022-04-01    274 3.2
+  range check (value < 0, impossible for a level/headcount/wage): 0 rows flagged
+NOTE: JOLTS API returns 'Unable to get Catalog Data' for every series -- that's a BLS-side metadata gap, not a data problem. Names above come from _series_catalog.json, not the API response.
+
+=== bls_ces (ces_2026-09-08.json) ===
+units: all-employee counts in thousands
+series: 2, raw rows: 280
+value conversion failures: 0
+M13 (annual average) rows flagged and excluded: 0
+final rows: 280, date range: 2015-01-01 to 2026-08-01
+  missing values:
+    none
+  date gaps: 0 missing monthly steps across 0 of 2 series
+  duplicates: 0 exact duplicate rows dropped; 0 (series_id, date) keys have conflicting values (NOT dropped, needs a decision)
+  outliers: 0 rows flagged across 2 series (|z|>3 computed per series, not pooled)
+    per-series min/p1/p99/max:
+                  min        p1       p99     max
+series_id                                        
+CES5000000001  2609.0  2622.000  3098.830  3115.0
+CES6054150001  1866.3  1882.078  2482.961  2483.5
+    10 most extreme values:
+    series_id       date  value    z
+CES5000000001 2022-11-01 3115.0  2.4
+CES5000000001 2020-05-01 2609.0 -2.3
+CES5000000001 2022-10-01 3100.0  2.3
+CES5000000001 2022-08-01 3097.0  2.2
+CES5000000001 2022-09-01 3095.0  2.2
+CES5000000001 2022-07-01 3094.0  2.2
+CES5000000001 2020-07-01 2622.0 -2.2
+CES5000000001 2020-06-01 2622.0 -2.2
+CES5000000001 2022-12-01 3092.0  2.2
+CES5000000001 2022-06-01 3076.0  2.0
+  range check (value < 0, impossible for a level/headcount/wage): 0 rows flagged
+
+=== bls_oews (oews_2026-09-08.json) ===
+units: mixed within the survey: 'employment' series = raw headcount, 'median annual wage' series = USD/year -- see series_name
+series: 8, raw rows: 8
+value conversion failures: 0
+M13 (annual average) rows flagged and excluded: 0
+final rows: 8, date range: 2025-01-01 to 2025-01-01
+  missing values:
+    none
+  date gaps: 0 missing monthly steps across 0 of 8 series
+  duplicates: 0 exact duplicate rows dropped; 0 (series_id, date) keys have conflicting values (NOT dropped, needs a decision)
+  outliers: 0 rows flagged across 8 series (|z|>3 computed per series, not pooled)
+    per-series min/p1/p99/max:
+                               min         p1        p99      max
+series_id                                                        
+OEUN000000000000015122101    37200    37200.0    37200.0    37200
+OEUN000000000000015122113   140300   140300.0   140300.0   140300
+OEUN000000000000015125201  1687890  1687890.0  1687890.0  1687890
+OEUN000000000000015125213   135980   135980.0   135980.0   135980
+OEUN000000000000015129901   435370   435370.0   435370.0   435370
+OEUN000000000000015129913   116580   116580.0   116580.0   116580
+OEUN000000000000015205101   262440   262440.0   262440.0   262440
+OEUN000000000000015205113   120230   120230.0   120230.0   120230
+    10 most extreme values:
+                series_id       date   value   z
+OEUN000000000000015122101 2025-01-01   37200 NaN
+OEUN000000000000015122113 2025-01-01  140300 NaN
+OEUN000000000000015125201 2025-01-01 1687890 NaN
+OEUN000000000000015125213 2025-01-01  135980 NaN
+OEUN000000000000015129901 2025-01-01  435370 NaN
+OEUN000000000000015129913 2025-01-01  116580 NaN
+OEUN000000000000015205101 2025-01-01  262440 NaN
+OEUN000000000000015205113 2025-01-01  120230 NaN
+  range check (value < 0, impossible for a level/headcount/wage): 0 rows flagged
+NOTE: OEWS carries only the 2025 reference year by design -- the API exposes one year at a time for this survey. A single row per series is expected, not an error.
+
+NORMALISATION applied to every survey above: columns already snake_case (series_id, series_name, date, value, footnotes), string columns stripped, 'date' as the sole date column name/dtype (datetime64[ns] before CSV write), year/quarter added for later aggregation.

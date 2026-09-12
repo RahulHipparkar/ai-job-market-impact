@@ -1,0 +1,797 @@
+jobId,ats,company_clean,companyName,title,seniority,role_family,description_clean,desc_len,salaryMin,salaryMax,salaryInterval,salaryCurrency,salary_interval_inferred,salary_annual_min,salary_annual_max,salary_currency,salary_is_usd,salary_suspect,isRemote,workplaceType,is_remote,city,region,country,location,employmentType,hasEquity,department,posted_date,month,year,has_salary,has_department,location_primary,location_count,is_multi_location,location_clean,is_near_dup,desc_too_short,desc_too_long,desc_len_band,salary_band
+00c2c97b-8514-4617-9883-e53e486b6dcd,lever,Palantir,palantir,Forward Deployed Enablement Engineer - Customer Success,mid,forward_deployed,"A World-Changing Company
+Palantir builds the world's leading software for data-driven decisions and operations. By bringing the right data to the people who need it, our platforms empower our partners to develop lifesaving drugs, forecast supply chain disruptions, locate missing children, and more.
+The Role
+Forward Deployed Enablement Engineers are embedded with centralised customer success teams to maximise the outcomes of our deployed products and workflows across all commercial customers from small-scale start-ups to large enterprises. This role balances high-level support responsibilities with the development of innovative tooling and infrastructure to scale customer enablement effectively. You are a resourceful, gritty and adaptable problem solver who is able to work both collaboratively and independently to resolve difficult and nebulous technical issues, as well as work productively with external customers to debug and resolve their problems.
+Palantir's Customer Success team helps our customers build on Palantir's Foundry & AIP Platforms to drive the workflows that power their most important business outcomes. In this role, you'll leverage your problem-solving abilities, creativity, and technical skills to support and guide customer development teams, ensuring they can effectively build and optimise their workflows. You'll have the opportunity to gain rare insight into and contribute to some of the world's most important industries and institutions.
+Every day at Palantir is different: we're constantly evolving to better respond to customer needs, and you will have the opportunity to contribute your creativity and problem-solving to internal processes and tools that define how we deliver business value to the customer with increasing efficacy and efficiency.
+Every Palantirian is encouraged to play to their personal strengths, so there is no ""one size fits all"" approach to engineering at Palantir. The scope of this role is intentionally broad so that people can find their strengths and grow in a way that excites them.
+No two days are the same, but as a Forward Deployed Enablement Engineer you can expect to:
+• Respond to and triage incoming support requests from both internal and external teams.
+• Provide guidance to customer engineers and unblock their workflows on Palantir's platform.
+• Build with Foundry and AIP to enhance enablement operations and use your creativity to solve novel problems that deliver more value to internal and external stakeholders.
+• Collaborate with our Product Development teams to tackle workflow problems, resolve product issues, and inform product improvements.
+• Partner with Business teams to understand and meet customer needs.
+• Participate in a 24/7 on-call rotation responsible for coordinating responses to critical customer-facing incidents.
+• Take ownership as the first responder when things go wrong. Even if a problem is outside your area of expertise, you make the first move to fix it and pull in the necessary expertise to get the job done.
+What We Value
+• Ability to continuously learn and work independently, making decisions with minimal supervision.
+• Excellent written and verbal communication skills, capable of interacting effectively with both technical and non-technical stakeholders.
+• Strong creative problem solving skills.
+• Comfortable working in a rapidly changing environment with dynamic objectives and iteration with users.
+• Proficiency with one or more programming languages or data engineering frameworks, such as Python, SQL, Spark, Java, C++, TypeScript/JavaScript, or similar.
+What We Require
+• Background in Data Science, Computer Science, Engineering or STEM
+• OR equivalent relevant practical experience in a technical or engineering role.
+Our team has people from a variety of backgrounds-people who studied computer science, sales, psychology, or went to a bootcamp; people who joined Palantir right after university; and people who joined our team after switching industries. We value skills and mindset over a specific educational background.
+Life at Palantir
+We want every Palantirian to achieve their best outcomes, that's why we celebrate individuals' strengths, skills, and interests, from your first interview to your longterm growth, rather than rely on traditional career ladders. Paying attention to the needs of our community enables us to optimize our opportunities to grow and helps ensure many pathways to success at Palantir. Promoting health and well-being across all areas of Palantirians' lives is just one of the ways we're investing in our community. Learn more at Life at Palantir and note that our offerings may vary by region.
+In keeping consistent with Palantir's values and culture, we believe employees are ""better together"" and in-person work affords the opportunity for more creative outcomes. Therefore, we encourage employees to work from our offices to foster connectivity and innovation. Many teams do offer hybrid options (WFH a day or two a week), allowing our employees to strike the right trade-off for their personal productivity. Based on business need, there are a few roles that allow for ""Remote"" work on an exceptional basis. If you are applying for one of these roles, you must work from the city and or country in which you are employed. If the posting is specified as Onsite, you are required to work from an office.
+If you want to empower the world's most important institutions, you belong here. Palantir values excellence regardless of background. We are committed to making the application and hiring process accessible to everyone and will provide a reasonable accommodation for those living with a disability. If you need an accommodation for the application or hiring process, please reach out and let us know how we can help.
+Please note that you will never be asked to submit a payment or share financial information to participate in our interview process. If you suspect that you've been contacted by a scammer, we recommend you cease all communication with the individual and consider reporting them to the relevant authorities, such as the US FBI Internet Crime Complaint Center (IC3).",6165,,,,,,,,,,,,hybrid,False,London,United Kingdom,GB,"London, United Kingdom",Full-time,,Engineering,2024-11-12,2024-11,2024,False,True,"London, United Kingdom",1,False,"London, UK",True,False,False,medium,
+0322d6d8-6588-4209-a304-83e768063a25,ashby,OpenAI,openai,"Security Engineer, Application Security",mid,other,"About the Team
+Security is at the foundation of OpenAI's mission to ensure that artificial general intelligence benefits all of humanity. The Security team protects OpenAI's technology, people, and products. We are technical in what we build but are operational in how we do our work, and are committed to supporting all products and research at OpenAI. Our Security team tenets include: prioritizing for impact, enabling researchers, preparing for future transformative technologies, and engaging a robust security culture.
+About the Role
+As a Security Engineer, Application Security you will be responsible for identifying and mitigating security vulnerabilities within software applications through building security tools, code reviews, penetration testing, and security assessments.
+We're looking for people who will work closely with development teams to ensure secure coding practices are integrated throughout the software development lifecycle, preventing security risks before they emerge. You will also provide security guidance to developers and other stakeholders, fostering a culture of security awareness within the organization.
+The role is preferred to be based in San Francisco, Seattle or New York City but may consider remote work. We use a hybrid work model of 3 days in the office per week and offer relocation assistance to new employees.
+In this role, you will:
+- Perform Security Assessments: Conduct regular security assessments, code reviews, and penetration testing to identify vulnerabilities in applications and software.
+- Develop and Implement Security Tools: Design, develop, and implement security tools, frameworks, and methodologies to protect applications against security threats.
+- Collaborate with Development Teams: Work closely with development teams to ensure security best practices are integrated throughout the software development lifecycle (SDLC), including secure coding guidelines.
+- Threat Modeling and Risk Assessment: Conduct threat modeling and risk assessments to proactively identify potential risks and develop mitigation strategies.
+- Vulnerability Management: Track, analyze, and manage vulnerabilities in applications, providing guidance and support for remediation efforts.
+- Incident Response Support: Assist in investigating, analyzing, and responding to security incidents related to applications, ensuring timely resolution and documentation of incidents.
+- Stay Current on Security Trends: Continuously stay updated on the latest security threats, vulnerabilities, and technologies to enhance security measures in applications.
+You might thrive in this role if you:
+- Extensive experience in information security, cybersecurity, or a related field, with a significant portion of that experience in leadership or management roles.
+- Deep understanding of security technologies, tools, and best practices, including experience with secure coding practices, threat modeling, risk assessments, and incident response.
+- Experience in application security, software development, or related areas with a strong understanding of secure coding practices and application security frameworks.
+- Proficiency in programming languages (such as Python, Java, C++, etc.), knowledge of security tools (e.g., Burp Suite, OWASP ZAP), and familiarity with security protocols and encryption methods.
+- Strong written and verbal communication skills, with the ability to explain complex security issues to both technical and non-technical audiences
+About OpenAI
+OpenAI is an AI research and deployment company dedicated to ensuring that general-purpose artificial intelligence benefits all of humanity. We push the boundaries of the capabilities of AI systems and seek to safely deploy them to the world through our products. AI is an extremely powerful tool that must be created with safety and human needs at its core, and to achieve our mission, we must encompass and value the many different perspectives, voices, and experiences that form the full spectrum of humanity.
+We are an equal opportunity employer, and we do not discriminate on the basis of race, religion, color, national origin, sex, sexual orientation, age, veteran status, disability, genetic information, or other applicable legally protected characteristic.
+For additional information, please see OpenAI's Affirmative Action and Equal Employment Opportunity Policy Statement https://cdn.openai.com/policies/eeo-policy-statement.pdf.
+Background checks for applicants will be administered in accordance with applicable law, and qualified applicants with arrest or conviction records will be considered for employment consistent with those laws, including the San Francisco Fair Chance Ordinance, the Los Angeles County Fair Chance Ordinance for Employers, and the California Fair Chance Act, for US-based candidates. For unincorporated Los Angeles County workers: we reasonably believe that criminal history may have a direct, adverse and negative relationship with the following job duties, potentially resulting in the withdrawal of a conditional offer of employment: protect computer hardware entrusted to you from theft, loss or damage; return all computer hardware in your possession (including the data contained therein) upon termination of employment or end of assignment; and maintain the confidentiality of proprietary, confidential, and non-public information. In addition, job duties require access to secure and protected information technology systems and related data security obligations.
+To notify OpenAI that you believe this job posting is non-compliant, please submit a report through this form https://form.asana.com/?d=57018692298241&k=5MqR40fZd7jlxVUh5J-UeA. No response will be provided to inquiries unrelated to job posting compliance.
+We are committed to providing reasonable accommodations to applicants with disabilities, and requests can be made via this link https://form.asana.com/?k=bQ7w9h3iexRlicUdWRiwvg&d=57018692298241.
+OpenAI Global Applicant Privacy Policy https://cdn.openai.com/policies/global-employee-and-contractor-privacy-policy.pdf
+At OpenAI, we believe artificial intelligence has the potential to help people solve immense global challenges, and we want the upside of AI to be widely shared. Join us in shaping the future of technology.",6296,266000.0,445000.0,,USD,year,266000.0,445000.0,USD,True,False,True,hybrid,True,San Francisco,California,United States,San Francisco,Full-time,True,Security,2024-10-02,2024-10,2024,True,True,San Francisco,1,False,"San Francisco, CA",True,False,False,medium,Q4
+00207abc-49b7-465c-a219-f7c1140f8047,ashby,OpenAI,openai,Forward Deployed Software Engineer - SF,mid,forward_deployed,"About the team
+OpenAI's Forward Deployed Engineering team partners with customers to turn research breakthroughs into production systems. We operate at the intersection of customer delivery and core platform development.
+About the Role
+We are looking for customer-focused software engineers to build effective custom software that leverages OpenAI's APIs to solve real customer problems. As an FDSWE, you will work with our customers and OpenAI Forward Deployed Engineers to design and implement scalable solutions that solve their most difficult problems. You will design abstractions to solve customer problems, and then use them to scale our speed and quality of delivery across all Forward Deployed engagements.
+You will collaborate closely with Sales, Solutions Engineering, Solutions Architects, and Customer Success Managers who work on the same account. You will also work with our Research and Applied Product and Engineering teams to provide insightful customer feedback.
+This role is based in San Francisco. We use a hybrid work model of 3 days in the office per week. We offer relocation assistance. Travel up to 50% is required.
+In this role, you will:
+- Embed deeply with strategic customers to understand their business challenges and technical requirements in detail.
+- Design, architect, and develop full-stack solutions using an experiment-driven, iterative approach.
+- Prepare detailed scopes of work and project plans for both proof-of-concept prototypes and full production deployments.
+- Work hands-on with customers' technical teams as a technical expert and trusted advisor, coding side-by-side to drive projects to completion on their infrastructure.
+- Collaborate with Product, Research and Applied teams to ensure seamless customer experiences, project success and actionable product feedback
+- Contribute to internal knowledge bases, codifying best practices and sharing insights gained from customer engagements to scale the Forward Deployed Engineering function.
+You'll thrive in this role if you:
+- 7+ years of professional full stack engineering experience (excluding internships) in relevant roles at tech and product-driven companies - customer-facing experience is highly desirable
+- Former founder, or early engineer at a startup who has built a product from scratch is a plus
+- Experience with relational databases like Postgres/MySQL
+- Have a bias for action and willingness to work iteratively with your customers to deliver the right solution that solves their problem.
+About OpenAI
+OpenAI is an AI research and deployment company dedicated to ensuring that general-purpose artificial intelligence benefits all of humanity. We push the boundaries of the capabilities of AI systems and seek to safely deploy them to the world through our products. AI is an extremely powerful tool that must be created with safety and human needs at its core, and to achieve our mission, we must encompass and value the many different perspectives, voices, and experiences that form the full spectrum of humanity.
+We are an equal opportunity employer, and we do not discriminate on the basis of race, religion, color, national origin, sex, sexual orientation, age, veteran status, disability, genetic information, or other applicable legally protected characteristic.
+For additional information, please see OpenAI's Affirmative Action and Equal Employment Opportunity Policy Statement https://cdn.openai.com/policies/eeo-policy-statement.pdf.
+Background checks for applicants will be administered in accordance with applicable law, and qualified applicants with arrest or conviction records will be considered for employment consistent with those laws, including the San Francisco Fair Chance Ordinance, the Los Angeles County Fair Chance Ordinance for Employers, and the California Fair Chance Act, for US-based candidates. For unincorporated Los Angeles County workers: we reasonably believe that criminal history may have a direct, adverse and negative relationship with the following job duties, potentially resulting in the withdrawal of a conditional offer of employment: protect computer hardware entrusted to you from theft, loss or damage; return all computer hardware in your possession (including the data contained therein) upon termination of employment or end of assignment; and maintain the confidentiality of proprietary, confidential, and non-public information. In addition, job duties require access to secure and protected information technology systems and related data security obligations.
+To notify OpenAI that you believe this job posting is non-compliant, please submit a report through this form https://form.asana.com/?d=57018692298241&k=5MqR40fZd7jlxVUh5J-UeA. No response will be provided to inquiries unrelated to job posting compliance.
+We are committed to providing reasonable accommodations to applicants with disabilities, and requests can be made via this link https://form.asana.com/?k=bQ7w9h3iexRlicUdWRiwvg&d=57018692298241.
+OpenAI Global Applicant Privacy Policy https://cdn.openai.com/policies/global-employee-and-contractor-privacy-policy.pdf
+At OpenAI, we believe artificial intelligence has the potential to help people solve immense global challenges, and we want the upside of AI to be widely shared. Join us in shaping the future of technology.",5313,185000.0,325000.0,,USD,year,185000.0,325000.0,USD,True,False,True,hybrid,True,San Francisco,California,United States,San Francisco,Full-time,True,Forward Deployed Engineering,2025-11-15,2025-11,2025,True,True,San Francisco,1,False,"San Francisco, CA",False,False,False,short,Q2
+004ae8f4-245b-4aad-8903-9daabdb58bb9,ashby,OpenAI,openai,"Technical Program Manager, Custom Silicon Development",lead,other,"About the Team
+OpenAI's Hardware organization develops AI-native silicon and system-level solutions for the unique demands of advanced AI workloads. Building on efforts like Jalapeño, the team is developing future generations of AI-native silicon and tightly integrated systems to power the next generation of frontier models. By co-designing chips, systems, tools, and methodologies, the team helps deliver faster, more efficient, and production-ready hardware for OpenAI's supercomputing platform.
+About the Role
+As a Hardware Chips Programs Manager at OpenAI, you will help bring our chips hardware roadmap to life, navigating an array of technical and partnership challenges. We're looking for people excited to push the frontiers of computing by navigating technical explorations and are passionate about building.
+This role is based in San Francisco, CA. We use a hybrid work model of 3 days in the office per week and offer relocation assistance to new employees.
+In this role, you will:
+- Manage the design and implementation planning of our ML acceleration hardware, working across technical, cross-functional and external stakeholders
+- Lead planning and scheduling of chip hardware designs with our strategic partners and vendors
+- Coordinate and marshal internal resources and communication for efficient interaction with partners and vendors.
+You might thrive in this role if you:
+- Have experience as a technical program manager for data center hardware products (server, GPU, TPU, networking, storage and so on)
+- Know the whole end-to-end system program management from concept, design, production, deployment into the data center
+- Have some experience with System SW programs through NPI
+- Want to help design some of the world's largest supercomputing systems, working at the edge of complex hardware challenges
+- Enjoy working with and enabling world-class AI Researchers and Engineers
+- Are passionate about the technical program function, and enjoy independently owning and delivering on your teams' goals and cutting-edge problems in AI compute
+""To comply with U.S. export control laws and regulations, candidates for this role may need to meet certain legal status requirements as provided in those laws and regulations.""
+About OpenAI
+OpenAI is an AI research and deployment company dedicated to ensuring that general-purpose artificial intelligence benefits all of humanity. We push the boundaries of the capabilities of AI systems and seek to safely deploy them to the world through our products. AI is an extremely powerful tool that must be created with safety and human needs at its core, and to achieve our mission, we must encompass and value the many different perspectives, voices, and experiences that form the full spectrum of humanity.
+We are an equal opportunity employer, and we do not discriminate on the basis of race, religion, color, national origin, sex, sexual orientation, age, veteran status, disability, genetic information, or other applicable legally protected characteristic.
+For additional information, please see OpenAI's Affirmative Action and Equal Employment Opportunity Policy Statement https://cdn.openai.com/policies/eeo-policy-statement.pdf.
+Background checks for applicants will be administered in accordance with applicable law, and qualified applicants with arrest or conviction records will be considered for employment consistent with those laws, including the San Francisco Fair Chance Ordinance, the Los Angeles County Fair Chance Ordinance for Employers, and the California Fair Chance Act, for US-based candidates. For unincorporated Los Angeles County workers: we reasonably believe that criminal history may have a direct, adverse and negative relationship with the following job duties, potentially resulting in the withdrawal of a conditional offer of employment: protect computer hardware entrusted to you from theft, loss or damage; return all computer hardware in your possession (including the data contained therein) upon termination of employment or end of assignment; and maintain the confidentiality of proprietary, confidential, and non-public information. In addition, job duties require access to secure and protected information technology systems and related data security obligations.
+To notify OpenAI that you believe this job posting is non-compliant, please submit a report through this form https://form.asana.com/?d=57018692298241&k=5MqR40fZd7jlxVUh5J-UeA. No response will be provided to inquiries unrelated to job posting compliance.
+We are committed to providing reasonable accommodations to applicants with disabilities, and requests can be made via this link https://form.asana.com/?k=bQ7w9h3iexRlicUdWRiwvg&d=57018692298241.
+OpenAI Global Applicant Privacy Policy https://cdn.openai.com/policies/global-employee-and-contractor-privacy-policy.pdf
+At OpenAI, we believe artificial intelligence has the potential to help people solve immense global challenges, and we want the upside of AI to be widely shared. Join us in shaping the future of technology.",5049,302000.0,445000.0,,USD,year,302000.0,445000.0,USD,True,False,True,hybrid,True,San Francisco,California,United States,San Francisco,Full-time,True,Technical Program Management,2026-07-10,2026-07,2026,True,True,San Francisco,1,False,"San Francisco, CA",False,False,False,short,Q4
+020b2aae-8be0-408c-ab49-20eefa8541af,ashby,OpenAI,openai,"RE / RS - Foundations, Search",mid,other,"About the Team
+The Foundations Research team works on high-risk, high-reward ideas that could shape the next decade of AI. Our goal is to advance the science and data that enable our training and scaling efforts, with a particular focus on future frontier models. Pushing the boundaries of data, scaling laws, optimization techniques, model architectures, and efficiency improvements to propel our science.
+The Search team sits within Foundations, building agentic search by co-designing model-system interfaces with the core search stack (serving, indexing, retrieval) to translate model intent into reliable, real-world actions. Operating at the frontier of AI and information retrieval, the team develops large-scale systems that transform and index vast corpora, enabling models to reason over global knowledge and act dependably. In close partnership with researchers, we rapidly bring modeling breakthroughs into production and redefine how intelligent systems discover, retrieve, and synthesize information at planetary scale.
+About the Role
+We're looking for a researcher focused on our embedding retrieval efforts. You'll work with a a team of world-class research scientists and engineers developing foundational technology that enables models to retrieve and condition on the right information, at the right time. This includes designing new embedding training objectives, scalable vector store architectures, and dynamic indexing methods.
+This work will support retrieval across many OpenAI products and internal research efforts, with opportunities for scientific publication and deep technical impact.
+This role is based in San Francisco, CA. We use a hybrid work model of 3 days in the office per week and offer relocation assistance to new employees.
+Responsibilities
+- Tackle embedding models and retrieval systems optimized for grounding, relevance, and adaptive reasoning.
+- Collaborate with a team of researchers and engineers building end-to-end infrastructure for training, evaluating, and integrating embeddings into frontier models.
+- Drive innovation in dense, sparse, and hybrid representation techniques, metric learning, and learning-to-retrieve systems.
+- Collaborate closely with Pretraining, Inference, and other Research teams to integrate retrieval throughout the model lifecycle
+- Contribute to OpenAI's long-term vision of AI systems with memory and knowledge access capabilities rooted in learned representations.
+You Might Thrive in This Role If You Have
+- Proven experience leading high-performance teams of researchers or engineers in ML infrastructure or foundational research.
+- Deep technical expertise in representation learning, embedding models, or vector retrieval systems.
+- Familiarity with transformer-based LLMs and how embedding spaces can interact with language model objectives.
+- Research experience in areas such as contrastive learning, supervised or unsupervised embedding learning, or metric learning.
+- A track record of building or scaling large machine learning systems, particularly embedding pipelines in production or research contexts.
+- A first-principles mindset for challenging assumptions about how retrieval and memory should work for large models.
+About OpenAI
+OpenAI is an AI research and deployment company dedicated to ensuring that general-purpose artificial intelligence benefits all of humanity. We push the boundaries of the capabilities of AI systems and seek to safely deploy them to the world through our products. AI is an extremely powerful tool that must be created with safety and human needs at its core, and to achieve our mission, we must encompass and value the many different perspectives, voices, and experiences that form the full spectrum of humanity.
+We are an equal opportunity employer, and we do not discriminate on the basis of race, religion, color, national origin, sex, sexual orientation, age, veteran status, disability, genetic information, or other applicable legally protected characteristic.
+For additional information, please see OpenAI's Affirmative Action and Equal Employment Opportunity Policy Statement https://cdn.openai.com/policies/eeo-policy-statement.pdf.
+Background checks for applicants will be administered in accordance with applicable law, and qualified applicants with arrest or conviction records will be considered for employment consistent with those laws, including the San Francisco Fair Chance Ordinance, the Los Angeles County Fair Chance Ordinance for Employers, and the California Fair Chance Act, for US-based candidates. For unincorporated Los Angeles County workers: we reasonably believe that criminal history may have a direct, adverse and negative relationship with the following job duties, potentially resulting in the withdrawal of a conditional offer of employment: protect computer hardware entrusted to you from theft, loss or damage; return all computer hardware in your possession (including the data contained therein) upon termination of employment or end of assignment; and maintain the confidentiality of proprietary, confidential, and non-public information. In addition, job duties require access to secure and protected information technology systems and related data security obligations.
+To notify OpenAI that you believe this job posting is non-compliant, please submit a report through this form https://form.asana.com/?d=57018692298241&k=5MqR40fZd7jlxVUh5J-UeA. No response will be provided to inquiries unrelated to job posting compliance.
+We are committed to providing reasonable accommodations to applicants with disabilities, and requests can be made via this link https://form.asana.com/?k=bQ7w9h3iexRlicUdWRiwvg&d=57018692298241.
+OpenAI Global Applicant Privacy Policy https://cdn.openai.com/policies/global-employee-and-contractor-privacy-policy.pdf
+At OpenAI, we believe artificial intelligence has the potential to help people solve immense global challenges, and we want the upside of AI to be widely shared. Join us in shaping the future of technology.",6022,380000.0,850000.0,,USD,year,380000.0,850000.0,USD,True,False,,,,San Francisco,California,United States,San Francisco,Full-time,True,Research,2025-06-16,2025-06,2025,True,True,San Francisco,1,False,"San Francisco, CA",False,False,False,medium,Q4
+01091aed-427d-4e10-8cdb-fb500cf55bb9,ashby,OpenAI,openai,"Applied AI Engineer, Enterprise",mid,applied_ai,"About the Team
+OpenAI's Applied AI Engineering team helps organizations turn frontier AI capabilities into safe, reliable, and high-impact production systems. We work with customer executives, product and engineeriIng teams, security leaders, and transformation teams to identify valuable opportunities, accelerate technical implementation, and scale what works. Enterprise deployments are defined by complexity rather than any one industry: existing architectures, diverse data environments, security and governance requirements, multiple stakeholder groups, and organization-wide change. We turn lessons from these deployments into better products and reusable patterns for customers everywhere.
+About the Role
+As an Enterprise Applied AI Engineer you will partner directly with leading organizations to design, build, and deploy AI systems that deliver measurable business outcomes. You will combine deep technical judgment, hands-on engineering, and customer leadership to take ambitious ideas from use-case selection and architecture through prototyping, evaluation, production launch, and scale. You will write and debug code, build evaluation systems, resolve complex integrations, and guide decisions involving model behavior, reliability, latency, cost, safety, security, governance, and operational readiness. Success is measured by production systems, sustained adoption, and meaningful customer impact-not simply activity or successful demonstrations. This is a rare opportunity to work on consequential real-world deployments at the frontier of AI while directly influencing how OpenAI's products evolve.
+This role is based in our SF or NYC office. We use a hybrid work model of 3 days in the office per week and offer relocation assistance to new employees.
+In this role, you will:
+- Partner directly with enterprise customers to identify high-value opportunities and translate them into technical architectures, implementation plans, evaluation strategies, and measurable success criteria.
+- Design, build, and deploy AI systems that solve important customer problems and produce measurable business outcomes.
+- Work hands-on in code to build prototypes, evaluation harnesses, reference implementations, integrations, and production accelerators.
+- Make sound technical decisions across models, agents, retrieval, tools, data, reliability, observability, latency, cost, safety, security, and governance.
+- Diagnose complex implementation challenges, reproduce failures, test hypotheses, and drive blockers toward resolution.
+- Help customers progress from promising prototypes to reliable production systems, sustained adoption, and scaled impact.
+- Partner closely with customer engineering teams and OpenAI Product, Research, Engineering, Security, and go-to-market teams, translating deployment experience into high-signal product feedback.
+- Create reusable architectures, tooling, playbooks, and technical guidance that accelerate future enterprise deployments.
+You'll thrive in this role if you:
+- Have a demonstrated track record of designing, building, and delivering AI or machine-learning systems in enterprise environments, including taking systems from prototype to production. Relevant backgrounds may include applied AI or ML engineering, forward-deployed engineering, software engineering, customer engineering, solutions architecture, or technical consulting.
+- Can point to substantial personal contributions in code, architecture, evaluation, debugging, or production engineering-not only program or stakeholder management.
+- Are highly proficient in Python and comfortable working across an AI application stack; experience with JavaScript, TypeScript, or another relevant language is valuable.
+- Understand how to evaluate AI systems systematically using representative data, graders, production signals, and human judgment.
+- Have navigated enterprise production requirements such as integrations, reliability, observability, security, privacy, data governance, performance, and cost.
+- Can connect technical decisions to customer workflows, adoption, and measurable business outcomes.
+- Communicate with clarity and credibility across hands-on engineers, technical leaders, security teams, product leaders, and executives.
+- Bring high agency, strong technical judgment, and end-to-end ownership in ambiguous environments.
+- Learn quickly, challenge assumptions constructively, and collaborate with humility; experience in a particular industry or with OpenAI products is not required.
+About OpenAI
+OpenAI is an AI research and deployment company dedicated to ensuring that general-purpose artificial intelligence benefits all of humanity. We push the boundaries of the capabilities of AI systems and seek to safely deploy them to the world through our products. AI is an extremely powerful tool that must be created with safety and human needs at its core, and to achieve our mission, we must encompass and value the many different perspectives, voices, and experiences that form the full spectrum of humanity.
+We are an equal opportunity employer, and we do not discriminate on the basis of race, religion, color, national origin, sex, sexual orientation, age, veteran status, disability, genetic information, or other applicable legally protected characteristic.
+For additional information, please see OpenAI's Affirmative Action and Equal Employment Opportunity Policy Statement https://cdn.openai.com/policies/eeo-policy-statement.pdf.
+Background checks for applicants will be administered in accordance with applicable law, and qualified applicants with arrest or conviction records will be considered for employment consistent with those laws, including the San Francisco Fair Chance Ordinance, the Los Angeles County Fair Chance Ordinance for Employers, and the California Fair Chance Act, for US-based candidates. For unincorporated Los Angeles County workers: we reasonably believe that criminal history may have a direct, adverse and negative relationship with the following job duties, potentially resulting in the withdrawal of a conditional offer of employment: protect computer hardware entrusted to you from theft, loss or damage; return all computer hardware in your possession (including the data contained therein) upon termination of employment or end of assignment; and maintain the confidentiality of proprietary, confidential, and non-public information. In addition, job duties require access to secure and protected information technology systems and related data security obligations.
+To notify OpenAI that you believe this job posting is non-compliant, please submit a report through this form https://form.asana.com/?d=57018692298241&k=5MqR40fZd7jlxVUh5J-UeA. No response will be provided to inquiries unrelated to job posting compliance.
+We are committed to providing reasonable accommodations to applicants with disabilities, and requests can be made via this link https://form.asana.com/?k=bQ7w9h3iexRlicUdWRiwvg&d=57018692298241.
+OpenAI Global Applicant Privacy Policy https://cdn.openai.com/policies/global-employee-and-contractor-privacy-policy.pdf
+At OpenAI, we believe artificial intelligence has the potential to help people solve immense global challenges, and we want the upside of AI to be widely shared. Join us in shaping the future of technology.",7326,251000.0,278000.0,,USD,year,251000.0,278000.0,USD,True,False,True,hybrid,True,San Francisco,California,United States,San Francisco,Full-time,True,Go To Market,2026-07-08,2026-07,2026,True,True,San Francisco,1,False,"San Francisco, CA",False,False,False,long,Q3
+000cf0f2-090d-40c6-b9f8-1699db9a4c68,ashby,OpenAI,openai,"HRBP, Consumer Devices",mid,other,"About the Team
+- The HR Business Partner (HRBP) team at OpenAI helps shape how our organization operates and performs. We work alongside senior leaders and their teams to design effective organizations, strengthen leadership capabilities, and help people do their best work.
+- Our expertise spans leadership coaching, organizational design, talent strategy, employee relations, and change management. Our work is grounded in a deep understanding of OpenAI's Contributions & Impact (C&I) culture and the needs of teams working at the frontier of AI and hardware.
+- We operate with urgency, empathy, and sound judgment. We value sincerity over polish, collaboration over ego, and a relentless focus on meaningful impact.
+About the Role
+- We're looking for an experienced HR Business Partner to support OpenAI's Consumer Device's team.
+- This is an opportunity to partner closely with leaders and teams doing highly ambitious, multidisciplinary work. You'll serve as a trusted advisor as the organization builds, collaborates, and evolves-helping create the conditions for people and teams to perform at their best.
+- The role combines strategic advising with hands-on partnership. You'll help leaders think through organizational questions, coach managers through complex situations, strengthen people practices, and make thoughtful trade-offs that balance the needs of our people, teams, and mission.
+- This is an individual contributor role. Come build with us.
+Your Key Responsibilities
+- Shape high-performing, resilient teams: Partner with leaders on organizational design, talent planning, and ways of working that support strong performance and sustainable teams.
+- Advise with context and judgment: Develop a deep understanding of the organization and provide thoughtful guidance on people, leadership, and organizational matters.
+- Collaborate across OpenAI: Work closely with fellow HRBPs, People centers of excellence, and cross-functional partners to create a cohesive employee experience rooted in humanity, humility, and impact.
+- Evolve people programs: Strengthen approaches to performance, engagement, and talent development by building solutions that are practical, scalable, and aligned with how OpenAI operates.
+- Guide and develop managers: Offer candid, actionable feedback and help managers build the skills needed to lead effectively.
+- Anticipate and solve problems: Stay close to the work, identify challenges early, diagnose root causes, and develop durable solutions as priorities evolve.
+- Lead meaningful change: Help teams navigate organizational change with empathy, clarity, and rigor, including when established playbooks do not exist.
+We're Seeking
+- Deep HRBP expertise: At least five years of experience as an HR Business Partner supporting hardware, engineering, or similarly technical organizations in fast-moving environments.
+- Experience with multidisciplinary teams: An ability to understand and support organizations that bring together different technical, creative, and operational disciplines.
+- Strategic partnership: The ability to see the broader organizational picture, guide leaders through difficult trade-offs, and adapt as circumstances change.
+- Impactful coaching: Skill in delivering candid feedback with care and strengthening leadership capability across an organization.
+- Resourceful problem-solving: Sound judgment and the ability to diagnose complex challenges, test thoughtful solutions, and establish a path forward without an existing playbook.
+- Calm, clear change leadership: Steadiness, empathy, and influence during moments of ambiguity or transition.
+- High integrity: A reputation for discretion, fairness, and trustworthiness, particularly when the stakes are high.
+Workplace & Location
+This role is based in San Francisco, with an in-office schedule on Monday, Tuesday, Thursday, and Friday. We are not considering remote applications at this time. We offer relocation support to new employees.
+About OpenAI
+OpenAI is an AI research and deployment company dedicated to ensuring that general-purpose artificial intelligence benefits all of humanity. We push the boundaries of the capabilities of AI systems and seek to safely deploy them to the world through our products. AI is an extremely powerful tool that must be created with safety and human needs at its core, and to achieve our mission, we must encompass and value the many different perspectives, voices, and experiences that form the full spectrum of humanity.
+We are an equal opportunity employer, and we do not discriminate on the basis of race, religion, color, national origin, sex, sexual orientation, age, veteran status, disability, genetic information, or other applicable legally protected characteristic.
+For additional information, please see OpenAI's Affirmative Action and Equal Employment Opportunity Policy Statement https://cdn.openai.com/policies/eeo-policy-statement.pdf.
+Background checks for applicants will be administered in accordance with applicable law, and qualified applicants with arrest or conviction records will be considered for employment consistent with those laws, including the San Francisco Fair Chance Ordinance, the Los Angeles County Fair Chance Ordinance for Employers, and the California Fair Chance Act, for US-based candidates. For unincorporated Los Angeles County workers: we reasonably believe that criminal history may have a direct, adverse and negative relationship with the following job duties, potentially resulting in the withdrawal of a conditional offer of employment: protect computer hardware entrusted to you from theft, loss or damage; return all computer hardware in your possession (including the data contained therein) upon termination of employment or end of assignment; and maintain the confidentiality of proprietary, confidential, and non-public information. In addition, job duties require access to secure and protected information technology systems and related data security obligations.
+To notify OpenAI that you believe this job posting is non-compliant, please submit a report through this form https://form.asana.com/?d=57018692298241&k=5MqR40fZd7jlxVUh5J-UeA. No response will be provided to inquiries unrelated to job posting compliance.
+We are committed to providing reasonable accommodations to applicants with disabilities, and requests can be made via this link https://form.asana.com/?k=bQ7w9h3iexRlicUdWRiwvg&d=57018692298241.
+OpenAI Global Applicant Privacy Policy https://cdn.openai.com/policies/global-employee-and-contractor-privacy-policy.pdf
+At OpenAI, we believe artificial intelligence has the potential to help people solve immense global challenges, and we want the upside of AI to be widely shared. Join us in shaping the future of technology.",6771,230000.0,260000.0,,USD,year,230000.0,260000.0,USD,True,False,False,onsite,False,San Francisco,California,United States,San Francisco,Full-time,True,Consumer Devices,2026-07-17,2026-07,2026,True,True,San Francisco,1,False,"San Francisco, CA",False,False,False,medium,Q3
+002c6146-f1bf-4653-8929-8112b577837b,ashby,OpenAI,openai,"Global Mobility Manager, Strategic Initiatives",lead,other,"About the role
+OpenAI is building a world-class global mobility and immigration program-agile, compliant, technology-enabled, and designed to help exceptional people work where they can have the greatest impact. In this role, you will lead high-impact strategic initiatives, including U.S. permanent residence strategy, M&A, organizational change, and global expansion.
+This is a senior individual-contributor role for a builder who can translate legal and operational complexity into clear, practical solutions. Reporting to the Head of Global Mobility & Immigration, you will partner with the broader team and lead through expertise and influence across Legal, Corporate Development, Recruiting, People, Finance, business teams, and external counsel to turn emerging business needs into scalable programs, policies, and durable controls.
+What you'll do
+- Set the roadmap, principles, governance, and operating model for priority global mobility and immigration initiatives.
+- Lead the U.S. permanent residence strategy, including PERM planning, controls, communications, compliance and continuous improvement.
+- Own immigration and mobility workstreams for M&A, divestitures, restructurings, entity changes, and new-market entry-from diligence through integration.
+- Lead global expansion strategy, ensuring work authorization, business travel, and compliance in rapidly growing international jurisdictions.
+- Build reusable playbooks, decision frameworks, risk assessments, and change-management plans.
+- Partner with Legal, Corporate Development, Recruiting, People, Finance, and business leaders to identify implications early and drive sound decisions.
+- Establish dashboards and program-health measures covering compliance, cycle time, quality, cost, vendor performance, and employee experience.
+- Manage external counsel and vendor partners through clear service levels, quality standards, budgets, and outcomes.
+- Use systems, automation, and AI-enabled tools to improve case handling, documentation, communications, and leadership visibility.
+You might thrive in this role if you
+- Bring 7+ years of progressive experience in corporate immigration, global mobility, or related program management.
+- Have deep knowledge of U.S. employment-based immigration, including PERM, I-140, adjustment of status, and major nonimmigrant visa categories.
+- Have built or materially improved a complex immigration or mobility program in a fast-growing, multinational environment.
+- Bring experience supporting M&A, restructurings, entity changes, new-market entry, or another significant business transformation.
+- Can turn technical requirements into practical policies, controls, workflows, and clear guidance for employees and business partners.
+- Have a track record of leading complex cross-functional programs, influencing senior stakeholders, and driving decisions through ambiguity.
+- Use data, systems, and automation to improve compliance, visibility, efficiency, and service quality.
+- Communicate with precision, exercise sound judgment, and balance employee experience with business and compliance needs.
+About OpenAI
+OpenAI is an AI research and deployment company dedicated to ensuring that general-purpose artificial intelligence benefits all of humanity. We push the boundaries of the capabilities of AI systems and seek to safely deploy them to the world through our products. AI is an extremely powerful tool that must be created with safety and human needs at its core, and to achieve our mission, we must encompass and value the many different perspectives, voices, and experiences that form the full spectrum of humanity.
+We are an equal opportunity employer, and we do not discriminate on the basis of race, religion, color, national origin, sex, sexual orientation, age, veteran status, disability, genetic information, or other applicable legally protected characteristic.
+For additional information, please see OpenAI's Affirmative Action and Equal Employment Opportunity Policy Statement https://cdn.openai.com/policies/eeo-policy-statement.pdf.
+Background checks for applicants will be administered in accordance with applicable law, and qualified applicants with arrest or conviction records will be considered for employment consistent with those laws, including the San Francisco Fair Chance Ordinance, the Los Angeles County Fair Chance Ordinance for Employers, and the California Fair Chance Act, for US-based candidates. For unincorporated Los Angeles County workers: we reasonably believe that criminal history may have a direct, adverse and negative relationship with the following job duties, potentially resulting in the withdrawal of a conditional offer of employment: protect computer hardware entrusted to you from theft, loss or damage; return all computer hardware in your possession (including the data contained therein) upon termination of employment or end of assignment; and maintain the confidentiality of proprietary, confidential, and non-public information. In addition, job duties require access to secure and protected information technology systems and related data security obligations.
+To notify OpenAI that you believe this job posting is non-compliant, please submit a report through this form https://form.asana.com/?d=57018692298241&k=5MqR40fZd7jlxVUh5J-UeA. No response will be provided to inquiries unrelated to job posting compliance.
+We are committed to providing reasonable accommodations to applicants with disabilities, and requests can be made via this link https://form.asana.com/?k=bQ7w9h3iexRlicUdWRiwvg&d=57018692298241.
+OpenAI Global Applicant Privacy Policy https://cdn.openai.com/policies/global-employee-and-contractor-privacy-policy.pdf
+At OpenAI, we believe artificial intelligence has the potential to help people solve immense global challenges, and we want the upside of AI to be widely shared. Join us in shaping the future of technology.",5917,220000.0,260000.0,,USD,year,220000.0,260000.0,USD,True,False,True,hybrid,True,San Francisco,California,United States,San Francisco,Full-time,True,People,2026-08-26,2026-08,2026,True,True,San Francisco,1,False,"San Francisco, CA",False,False,False,medium,Q3
+02a0e59c-7262-41da-9f61-168d7c9b84a4,ashby,OpenAI,openai,Inventory Manager - Robotics,lead,other,"About Team
+Our Robotics team is focused on unlocking general-purpose robotics and advancing toward AGI-level intelligence in dynamic, real-world environments. Working across the full model and systems stack, we integrate cutting-edge hardware and software to explore a broad range of robotic form factors. We strive to seamlessly blend high-level AI capabilities with the physical constraints of real-world systems to improve people's lives.
+About Role
+We are building a supply-chain organization capable of supporting our transition from laboratory-scale development to factory-scale operations. We are looking for an Inventory Manager to build and operate our inventory function from the ground up.
+This is a highly hands-on role. In the near term, you may start with an empty room and be responsible for determininga what racks, shelving, bins, labels, scanners, workflows, and systems are needed to turn it into a functional stockroom. You will receive material, organize inventory, perform counts, move parts between buildings, resolve discrepancies, and establish the processes others will eventually follow.
+As we grow, you will have the opportunity to develop this foundation into a full-scale, multi-site factory inventory operation. You may hire and manage contractors or onsite inventory administrators, but this role will initially have a significant individual-contributor component and will remain accountable for day-to-day execution.
+This role owns inventory and internal logistics. It does not own purchasing, production planning, or inbound and outbound supplier logistics.
+This role is based in San Francisco, CA and requires in-person presence 5 days a week.
+In this role you will:
+- Build inventory operations from the ground up across various OpenAI facilities.
+- Design and set up stockrooms, receiving areas, and material-storage locations, including selecting racks, shelving, bins, carts, labeling equipment, scanners, and other infrastructure.
+- Personally execute core inventory activities, including receiving, labeling, putaway, picking, kitting, issuing, cycle counting, transfers, returns, and inventory adjustments.
+- Establish practical receiving procedures that ensure incoming material is identified, recorded, inspected or quarantined when appropriate, and made available quickly.
+- Hire, train, and manage contractors or onsite inventory administrators as volume and facility needs grow.
+- Create location structures, naming conventions, barcode workflows, material-status controls, and standard work.
+- Maintain accurate visibility into what inventory exists, where it is located, and whether it is available for use.
+- Establish and maintain cycle-counting and physical-inventory programs, investigate discrepancies, identify root causes, and implement corrective actions.
+- Own internal logistics and material movement between company facilities, including transfer processes, delivery schedules, chain of custody, transaction accuracy, and reconciliation.
+- Develop appropriate controls for serialized, lot-controlled, high-value, consigned, returned, obsolete, and nonconforming material.
+- Serve as the business owner for inventory tools and workflows.
+- Partner with the systems team to translate operational needs into requirements, prioritize improvements, test new functionality, and drive adoption.
+- Create procedures and training that allow inventory operations to be replicated consistently at new facilities.
+- Identify inventory risks, shortages, excess material, unidentified material, and process breakdowns before they disrupt operations.
+You might thrive in this role if you:
+- 4+ years of experience in inventory management, warehouse operations, materials operations, internal logistics, or a related field.
+- Experience building or substantially improving an inventory operation, not only working within an established one.
+- Strong working knowledge of receiving, putaway, picking, kitting, cycle counting, material transfers, inventory reconciliation, and physical inventory controls.
+- Willingness to work directly in stockrooms, receiving areas, laboratories, and manufacturing spaces.
+- Ability to move comfortably between strategic design and hands-on execution.
+- Experience selecting and implementing physical inventory infrastructure such as racks, shelving, bins, labeling systems, barcode scanners, and material-handling equipment.
+- Familiarity with ERP, WMS, MES, or inventory-management systems and the transactions required to maintain accurate inventory.
+- Willingness to travel regularly among company facilities.
+What success looks like:
+Within the first 6 months, you will have:
+- Turned empty or informal storage areas into organized, functional stockrooms.
+- Established consistent receiving, storage, counting, and material-transfer processes across active facilities.
+- Created reliable visibility into what inventory exists, where it is located, and whether it is available for use.
+- Implemented practical location controls, labeling standards, transaction procedures, and cycle counting.
+- Built a reliable inter-building logistics process with clear ownership and traceability.
+About OpenAI
+OpenAI is an AI research and deployment company dedicated to ensuring that general-purpose artificial intelligence benefits all of humanity. We push the boundaries of the capabilities of AI systems and seek to safely deploy them to the world through our products. AI is an extremely powerful tool that must be created with safety and human needs at its core, and to achieve our mission, we must encompass and value the many different perspectives, voices, and experiences that form the full spectrum of humanity.
+We are an equal opportunity employer, and we do not discriminate on the basis of race, religion, color, national origin, sex, sexual orientation, age, veteran status, disability, genetic information, or other applicable legally protected characteristic.
+For additional information, please see OpenAI's Affirmative Action and Equal Employment Opportunity Policy Statement https://cdn.openai.com/policies/eeo-policy-statement.pdf.
+Background checks for applicants will be administered in accordance with applicable law, and qualified applicants with arrest or conviction records will be considered for employment consistent with those laws, including the San Francisco Fair Chance Ordinance, the Los Angeles County Fair Chance Ordinance for Employers, and the California Fair Chance Act, for US-based candidates. For unincorporated Los Angeles County workers: we reasonably believe that criminal history may have a direct, adverse and negative relationship with the following job duties, potentially resulting in the withdrawal of a conditional offer of employment: protect computer hardware entrusted to you from theft, loss or damage; return all computer hardware in your possession (including the data contained therein) upon termination of employment or end of assignment; and maintain the confidentiality of proprietary, confidential, and non-public information. In addition, job duties require access to secure and protected information technology systems and related data security obligations.
+To notify OpenAI that you believe this job posting is non-compliant, please submit a report through this form https://form.asana.com/?d=57018692298241&k=5MqR40fZd7jlxVUh5J-UeA. No response will be provided to inquiries unrelated to job posting compliance.
+We are committed to providing reasonable accommodations to applicants with disabilities, and requests can be made via this link https://form.asana.com/?k=bQ7w9h3iexRlicUdWRiwvg&d=57018692298241.
+OpenAI Global Applicant Privacy Policy https://cdn.openai.com/policies/global-employee-and-contractor-privacy-policy.pdf
+At OpenAI, we believe artificial intelligence has the potential to help people solve immense global challenges, and we want the upside of AI to be widely shared. Join us in shaping the future of technology.",7969,157000.0,196000.0,,USD,year,157000.0,196000.0,USD,True,False,False,onsite,False,San Francisco,California,United States,San Francisco,Full-time,True,Research,2026-07-29,2026-07,2026,True,True,San Francisco,1,False,"San Francisco, CA",False,False,False,long,Q2
+00f7eaa5-315d-44bd-9c11-047ee53f2b0d,ashby,OpenAI,openai,Infrastructure Sourcing Operations Lead,lead,software_eng,"About the Team
+OpenAI's Industrial Compute organization is building and scaling the infrastructure required to support frontier AI. The Infrastructure Strategic Sourcing team connects technical and project requirements to supplier readiness, contracting, purchasing, equipment delivery, and portfolio-level risk visibility across owner-furnished contractor-installed equipment (OFCI), data center networking, rack systems and integration, fiber, cabling, optical interconnects, and related infrastructure.
+The team partners across Pre-Construction, Design, Construction, Electrical and Mechanical Engineering, Network Engineering, Hardware and Rack Delivery, Strategic Sourcing, Procurement, Legal, Finance, Accounts Payable, Logistics, and external suppliers. We build the operating mechanisms that keep sourcing decisions, purchase execution, long-lead equipment, network and fiber dependencies, rack readiness, and delivery commitments aligned to infrastructure schedules.
+About the Role
+We are seeking an Infrastructure Sourcing Operations Lead to own procurement operations across pre-construction, design, construction, and sourcing through purchase order issuance, while maintaining visibility through invoice resolution, production, logistics, delivery, installation, and readiness. The portfolio includes electrical and mechanical OFCI, networking equipment, rack systems and integration, fiber, cabling, optical interconnects, and other infrastructure required to bring capacity online.
+In this role, you will set priorities, make or escalate decisions that affect cost, supplier relationships, contractual position, and delivery schedules, and define the standards used by execution support for queue management, documentation, tracker maintenance, and recurring reporting. Success requires sound commercial and program judgment, operational rigor, systems thinking, and the ability to turn incomplete information across vendors, tools, and project teams into clear decisions, accountable actions, and credible leadership reporting.
+Key Responsibilities
+- Own sourcing-operations intake and prioritization, translating requirements and need-by dates across electrical and mechanical OFCI, networking, rack systems, fiber, cabling, optical interconnects, and related infrastructure into actionable procurement workstreams aligned to project schedules.
+- Drive vendor readiness and onboarding; own exceptions, stakeholder commitments, escalations, and readiness decisions before purchase execution.
+- Lead contract coordination for NDAs, service agreements, master agreements, statements of work, and related workflows; resolve nonstandard business issues and drive Legal and stakeholder decisions.
+- Own purchase-order strategy, package quality, approval sequencing, urgent escalations, and exceptions through PO issuance.
+- Review invoice exceptions involving quantity, pricing, tax, delivery evidence, payment terms, or other commercial discrepancies and determine the recommended resolution.
+- Maintain portfolio visibility across electrical and mechanical OFCI, networking equipment, rack systems and integration, fiber, cabling, optical interconnects, and related infrastructure from design and configuration readiness through production, shipment, delivery, installation, testing, and exception closure; assess critical-path and capacity impact and lead supplier escalation.
+- Own source-of-record requirements, including data definitions, status logic, milestones, permissions, restricted cost visibility, governance, and reporting quality.
+- Design and continuously improve operating mechanisms, SOPs, intake processes, templates, escalation paths, and tool workflows across Procurement, Legal, Finance, vendors, and Infrastructure teams.
+- Produce concise leadership reporting that distinguishes facts from assumptions, surfaces aging decisions and material risks, quantifies schedule or commercial impact, and recommends action.
+Qualifications
+- 8+ years of experience in sourcing operations, procurement, infrastructure program management, construction operations, supply chain, or a related field, or equivalent demonstrated experience.
+- Demonstrated ownership of complex procurement or capital-project workflows spanning vendor readiness, contracting, PO execution, invoice management, and delivery tracking.
+- Experience integrating supplier commitments and long-lead requirements across OFCI, networking, rack systems, fiber, cabling, or interconnect infrastructure with design, construction, commissioning, deployment, and operational need-by dates.
+- Strong critical-path, risk-management, and recovery-planning capability, with evidence of driving issues through closure under schedule pressure.
+- Experience building scalable operating mechanisms, dashboards, KPIs, trackers, SOPs, and governance for data distributed across multiple systems and stakeholders.
+- Sound commercial judgment and the ability to frame nonstandard contract, pricing, invoice, or supplier issues for timely decisions.
+- Proven ability to influence Procurement, Legal, Finance, Engineering, Construction, suppliers, and senior leaders without direct authority.
+- Excellent written and verbal communication skills, including concise executive updates and clear separation of facts, assumptions, risks, and recommendations.
+- Ability to manage multiple concurrent, high-priority workstreams in a fast-paced and ambiguous environment.
+Preferred Skills
+- Experience with hyperscale data centers, AI infrastructure, cloud infrastructure, mission-critical facilities, advanced manufacturing, or other large capital programs.
+- Working knowledge of critical electrical and mechanical OFCI, data center networking, rack architecture and integration, fiber and structured cabling, optical interconnects, controls, and commissioning equipment, including the dependencies from design and configuration readiness through delivery, testing, installation, and startup.
+- Experience with procurement, contract-lifecycle, workflow, and reporting platforms.
+- Experience launching tools, participating in user acceptance testing, training users, and driving adoption of standardized processes.
+- Bachelor's degree in engineering, construction management, supply chain, business, operations, finance, or equivalent practical experience; relevant professional certification is a plus.
+About OpenAI
+OpenAI is an AI research and deployment company dedicated to ensuring that general-purpose artificial intelligence benefits all of humanity. We push the boundaries of the capabilities of AI systems and seek to safely deploy them to the world through our products. AI is an extremely powerful tool that must be created with safety and human needs at its core, and to achieve our mission, we must encompass and value the many different perspectives, voices, and experiences that form the full spectrum of humanity.
+We are an equal opportunity employer, and we do not discriminate on the basis of race, religion, color, national origin, sex, sexual orientation, age, veteran status, disability, genetic information, or other applicable legally protected characteristic.
+For additional information, please see OpenAI's Affirmative Action and Equal Employment Opportunity Policy Statement https://cdn.openai.com/policies/eeo-policy-statement.pdf.
+Background checks for applicants will be administered in accordance with applicable law, and qualified applicants with arrest or conviction records will be considered for employment consistent with those laws, including the San Francisco Fair Chance Ordinance, the Los Angeles County Fair Chance Ordinance for Employers, and the California Fair Chance Act, for US-based candidates. For unincorporated Los Angeles County workers: we reasonably believe that criminal history may have a direct, adverse and negative relationship with the following job duties, potentially resulting in the withdrawal of a conditional offer of employment: protect computer hardware entrusted to you from theft, loss or damage; return all computer hardware in your possession (including the data contained therein) upon termination of employment or end of assignment; and maintain the confidentiality of proprietary, confidential, and non-public information. In addition, job duties require access to secure and protected information technology systems and related data security obligations.
+To notify OpenAI that you believe this job posting is non-compliant, please submit a report through this form https://form.asana.com/?d=57018692298241&k=5MqR40fZd7jlxVUh5J-UeA. No response will be provided to inquiries unrelated to job posting compliance.
+We are committed to providing reasonable accommodations to applicants with disabilities, and requests can be made via this link https://form.asana.com/?k=bQ7w9h3iexRlicUdWRiwvg&d=57018692298241.
+OpenAI Global Applicant Privacy Policy https://cdn.openai.com/policies/global-employee-and-contractor-privacy-policy.pdf
+At OpenAI, we believe artificial intelligence has the potential to help people solve immense global challenges, and we want the upside of AI to be widely shared. Join us in shaping the future of technology.",9174,226000.0,285000.0,,USD,year,226000.0,285000.0,USD,True,False,True,hybrid,True,San Francisco,California,United States,San Francisco,Full-time,True,Scaling,2026-09-01,2026-09,2026,True,True,San Francisco,1,False,"San Francisco, CA",False,False,False,long,Q3
+00e3508a-3008-422d-9c1a-b5ca808f3335,ashby,Sierra,sierra,Senior Privacy Counsel,senior,other,"ABOUT US
+At Sierra, we're building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with growing offices across North America, Europe, and Asia.
+We are guided by a set of values that are at the core of our actions and define our culture: Trust, Customer Obsession, Craftsmanship, Intensity, and Family. These values are the foundation of our work, and we are committed to upholding them in everything we do.
+Our co-founders are Bret Taylor https://www.linkedin.com/in/brettaylor/ and Clay Bavor https://www.linkedin.com/in/claybavor/. Bret currently serves as Board Chair of OpenAI. Previously, he was co-CEO of Salesforce (which had acquired the company he founded, Quip) and CTO of Facebook. Bret was also one of Google's earliest product managers and co-creator of Google Maps. Before founding Sierra, Clay spent 18 years at Google, where he most recently led Google Labs. Earlier, he started and led Google's AR/VR effort, Project Starline, and Google Lens. Before that, Clay led the product and design teams for Google Workspace.
+WHAT YOU'LL DO
+We're hiring a Senior Privacy Counsel to be a core member of Sierra's growing legal team. This role will report to our Associate General Counsel, Product and Privacy, as part of our growing privacy legal function. We are looking for someone who has deep expertise in privacy counseling, AI privacy regulation, and commercial privacy support (e.g., DPAs, BAAs, and MSA privacy provisions). You will thrive in dynamic environments, enjoy tackling challenges beyond your comfort zone, and be excited to contribute across the business. In return, we'll provide the support and opportunities you need to grow and excel as a lawyer. You'll be part of a legal team that is highly respected within the company - committed to excellence, collaboration, and making a meaningful impact.
+PRIVACY
+- Advise product, engineering, operations, marketing and other cross-functional teams on compliance with global privacy laws and related regulation applicable to Sierra's business, including GDPR, the EU AI Act, DORA, etc.
+- Build and own Sierra's privacy counseling and compliance program as we scale globally.
+- Develop specific privacy regulation expertise in core regulated industries of Sierra customers, such as healthcare, insurance, banking, telecommunications, and financial services.
+- Support the commercial legal team and GTM teams by drafting, reviewing, and negotiating the commercial privacy aspects of transactional work, including data processing agreements, business associate agreements, and other privacy-related transactional documents.
+- Manage privacy incident response processes and related notification obligations.
+- Develop training materials and conduct training sessions for product and business teams.
+REGULATORY (WITH FOCUS ON AI)
+- Advise on all aspects of emerging AI-specific privacy regulations and their applicability to Sierra's business.
+- Develop and implement AI governance policies and frameworks to ensure responsible AI deployment, ethical data usage, and regulatory adherence.
+- Monitor and interpret global AI and privacy regulations, advising leadership on risks, trends, and strategic compliance initiatives.
+- Represent Sierra in discussions with regulators, industry groups, and external stakeholders on privacy and AI governance matters.
+WHAT YOU'LL BRING
+- 8+ years of legal experience, with a combination of large international law firm and in-house experience at a tech company.
+- Deep knowledge of global privacy laws (e.g., GDPR, CCPA, and other US state privacy laws) and AI regulatory frameworks (e.g., EU AI Act, NIST AI Risk Management Framework).
+- A passion for AI, with a deep understanding of AI products, LLMs and the related legal issues, and personal experience with integrating AI into your work.
+- Experience mentoring and managing more junior team members.
+- Extensive experience drafting, reviewing, and negotiating DPAs, BAAs, and other privacy-related commercial terms.
+- Ability to assess privacy risks and implement compliance solutions in the context of a hyperscaling business, with sound judgment and strategic decision making. You will not be afraid to make judgment calls, and you will be empowered to do so.
+- Strong analytical skills and the ability to balance legal risks and business objectives in a fast-moving environment.
+- Strong verbal and written communication skills and the ability to partner with both legal and non-legal stakeholders.
+- A strong work ethic with an eye for detail. You will strive for perfection, and expect that of others.
+- Be a team player first and foremost. Sierra is a unique place to work, with a strong sense of togetherness, and the legal team is no exception. You will look out for your colleagues, be accustomed to sharing and helping the team succeed.
+EVEN BETTER…
+- Experience building a privacy program in a regulated industry (healthcare, financial services, insurance, banking, telecommunications), and/or at a high-growth technology company.
+- Experience engaging with regulators and policymakers on AI and privacy issues.
+- CIPP/US, CIPP/E, or similar certification.
+- Previous experience developing trust and safety or responsible AI programs.
+- Startup experience and comfort with rapid iteration and ambiguity.
+OUR VALUES
+- Trust: We build trust with our customers with our accountability, empathy, quality, and responsiveness. We build trust in AI by making it more accessible, safe, and useful. We build trust with each other by showing up for each other professionally and personally, creating an environment that enables all of us to do our best work.
+- Customer Obsession: We deeply understand our customers' business goals and relentlessly focus on driving outcomes, not just technical milestones. Everyone at the company knows and spends time with our customers. When our customer is having an issue, we drop everything and fix it.
+- Craftsmanship: We get the details right, from the words on the page to the system architecture. We have good taste. When we notice something isn't right, we take the time to fix it. We are proud of the products we produce. We continuously self-reflect to continuously self-improve.
+- Intensity: We know we don't have the luxury of patience. We play to win. We care about our product being the best, and when it isn't, we fix it. When we fail, we talk about it openly and without blame so we succeed the next time.
+- Family: We know that balance and intensity are compatible, and we model it in our actions and processes. We are the best technology company for parents. We support and respect each other and celebrate each other's personal and professional achievements.
+WHAT WE OFFER
+We want our benefits to reflect our values and offer the following to full-time employees:
+- Flexible (unlimited) paid time off
+- Medical, dental, and vision benefits for you and your family
+- Life insurance and disability benefits
+- Retirement plan dependent on country of employment
+- Parental leave
+- Fertility and family building benefits through Carrot
+- Lunch, as well as delicious snacks and coffee to keep you energized
+- Discretionary benefit stipend giving people the ability to spend where it matters most
+- Free alphorn lessons
+These benefits are further detailed in Sierra's policies, may vary by region, and are subject to change at any time, consistent with the terms of any applicable compensation or benefits plans. Eligible full-time employees can participate in Sierra's equity plans subject to the terms of the applicable plans and policies.
+BE YOU, WITH US
+We're working to bring the transformative power of AI to every organization in the world. To do so, it is important to us that the diversity of our employees represents the diversity of our customers. We believe that our work and culture are better when we encourage, support, and respect different skills and experiences represented within our team. We encourage you to apply even if your experience doesn't precisely match the job description. We strive to evaluate all applicants consistently without regard to race, color, religion, gender, national origin, age, disability, veteran status, pregnancy, gender expression or identity, sexual orientation, citizenship, or any other legally protected class.",8484,280000.0,300000.0,,USD,year,280000.0,300000.0,USD,True,False,False,onsite,False,San Francisco,CA,United States,"San Francisco, CA",Full-time,True,Legal,2026-08-13,2026-08,2026,True,True,"San Francisco, CA",1,False,"San Francisco, CA",False,False,False,long,Q4
+000618f7-e0d0-43dc-ae15-2b20d948852f,ashby,Sierra,sierra,"Software Engineer, Agent - Insurance",mid,software_eng,"ABOUT US
+At Sierra, we're building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with growing offices across North America, Europe, and Asia.
+We are guided by a set of values that are at the core of our actions and define our culture: Trust, Customer Obsession, Craftsmanship, Intensity, and Family. These values are the foundation of our work, and we are committed to upholding them in everything we do.
+Our co-founders are Bret Taylor https://www.linkedin.com/in/brettaylor/ and Clay Bavor https://www.linkedin.com/in/claybavor/. Bret currently serves as Board Chair of OpenAI. Previously, he was co-CEO of Salesforce (which had acquired the company he founded, Quip) and CTO of Facebook. Bret was also one of Google's earliest product managers and co-creator of Google Maps. Before founding Sierra, Clay spent 18 years at Google, where he most recently led Google Labs. Earlier, he started and led Google's AR/VR effort, Project Starline, and Google Lens. Before that, Clay led the product and design teams for Google Workspace.
+ABOUT THE FINANCIAL SERVICES TEAM
+- Our financial services customers span insurers that provide protection for life's most challenging moments, systemically important banks, neobanks committed to building more delightful banking software, vertically integrated ecosystems like Rocket Companies, and more. The decisions we make impact millions of end customers and billions of dollars in economic activity.
+- Our Financial Services team partners closely with these organizations to set their AI strategies and build modern tools that carefully handle moments when a person's private anxiety meets an institution's procedural muscle-the hours after a family discovers their home has been damaged by a wildfire and begins filing a claim; the difficult conversation following the loss of a loved one as beneficiaries navigate a life insurance claim; the frustration of dropping a phone, shattering the screen, and trying to quickly understand coverage and arrange for a repair or replacement.
+- Sierra's Financial Services team is transforming the customer experience and building technology that makes the industry more accessible, human, and affordable for everyone.
+WHAT YOU'LL DO
+- Design and deliver production-grade AI agents https://sierra.ai/blog/meet-the-ai-agent-engineer: You'll build and ship highly performant, reliable, and intuitive AI agents that are central, mission-critical and drive revenue directly to Sierra's growth. These aren't prototypes-they are powerful, scalable systems running in production environments across industries like finance, healthcare, and commerce.
+- Drive the Agent Development Life Cycle https://sierra.ai/blog/agent-development-life-cycle (ADLC): You'll have complete ownership and autonomy from initial pilot through deployment and continuous iteration. You'll be responsible for building, tuning, and evolving AI agents in production environments, defining the standard for ADLC best practices along the way.
+- Partner with large enterprises and cutting-edge startups: You'll work directly with leaders at some of the world's largest enterprises to understand their most pressing business challenges, and build AI agents that transform how they operate at scale. You'll also partner with the most cutting-edge startups in Silicon Valley, embedding AI agents across their entire business stack to drive innovation and efficiency.
+- Build the future of the platform: Your direct work with customers will guide the evolution of Sierra's core platform. You'll surface unmet needs, prototype new tools and features, and collaborate with research, product, and platform to shape the future of AI agent development and Sierra's product.
+EXAMPLE PROJECTS
+These are some examples of projects that engineers on our team have worked on recently:
+- Design and build AI agents for large insurance companies that consistently outperform human agents in filing claims quickly and consistently.
+- Develop and refine AI agents capable of navigating complex customer interactions, like generating a quote for insuring a modified 1960s Corvette.
+- Create generalizable AI agent frameworks tailored for industry-specific use cases. See some examples in our financial services blog https://sierra.ai/blog/five-ways-to-use-ai-agents-financial-services!
+- Facilitate design partnerships for new product initiatives, such as new agent architectures, self-service capabilities, and generative agent development
+- Experiment with the latest voice models and figure out how to integrate them at scale to enterprise-grade customers
+WHAT YOU'LL BRING
+- Experience building and scaling end-to-end production systems.
+- Strong technical problem-solving skills, especially in fast-changing, ambiguous environments.
+- A builder and tinkerer's mindset with high agency - you find creative ways to overcome obstacles and ship.
+- Comfort working directly with customers to understand their needs and solve real-world problems.
+- Excellent communication skills-clear, direct, and persuasive across technical and non-technical audiences.
+- Genuine interest in Financial Services and improving the end customer experience. Experience in insurance technology, implementations at financial institutions, working inside of these institutions or familiarity with financial services security and compliance requirements (coverage advice, PII handling, etc.) are a strong plus.
+EVEN BETTER...
+- Experience building or deploying AI/LLM systems in production
+- Have been a founder or founding engineer - you know what it means to balance craft, ownership, and speed
+- Familiarity with tools that power today's AI agents: eval frameworks, agent tooling, RAG pipelines, and prompt engineering
+- Prior experience with React, TypeScript, and/or Go
+- Previous roles where you interfaced with customers or led technical projects with external stakeholders
+OUR VALUES
+- Trust: We build trust with our customers with our accountability, empathy, quality, and responsiveness. We build trust in AI by making it more accessible, safe, and useful. We build trust with each other by showing up for each other professionally and personally, creating an environment that enables all of us to do our best work.
+- Customer Obsession: We deeply understand our customers' business goals and relentlessly focus on driving outcomes, not just technical milestones. Everyone at the company knows and spends time with our customers. When our customer is having an issue, we drop everything and fix it.
+- Craftsmanship: We get the details right, from the words on the page to the system architecture. We have good taste. When we notice something isn't right, we take the time to fix it. We are proud of the products we produce. We continuously self-reflect to continuously self-improve.
+- Intensity: We know we don't have the luxury of patience. We play to win. We care about our product being the best, and when it isn't, we fix it. When we fail, we talk about it openly and without blame so we succeed the next time.
+- Family: We know that balance and intensity are compatible, and we model it in our actions and processes. We are the best technology company for parents. We support and respect each other and celebrate each other's personal and professional achievements.
+WHAT WE OFFER
+We want our benefits to reflect our values and offer the following to full-time employees:
+- Flexible (unlimited) paid time off
+- Medical, dental, and vision benefits for you and your family
+- Life insurance and disability benefits
+- Retirement plan dependent on country of employment
+- Parental leave
+- Fertility and family building benefits through Carrot
+- Lunch, as well as delicious snacks and coffee to keep you energized
+- Discretionary benefit stipend giving people the ability to spend where it matters most
+- Free alphorn lessons
+These benefits are further detailed in Sierra's policies, may vary by region, and are subject to change at any time, consistent with the terms of any applicable compensation or benefits plans. Eligible full-time employees can participate in Sierra's equity plans subject to the terms of the applicable plans and policies.
+BE YOU, WITH US
+We're working to bring the transformative power of AI to every organization in the world. To do so, it is important to us that the diversity of our employees represents the diversity of our customers. We believe that our work and culture are better when we encourage, support, and respect different skills and experiences represented within our team. We encourage you to apply even if your experience doesn't precisely match the job description. We strive to evaluate all applicants consistently without regard to race, color, religion, gender, national origin, age, disability, veteran status, pregnancy, gender expression or identity, sexual orientation, citizenship, or any other legally protected class.",9092,180000.0,390000.0,,USD,year,180000.0,390000.0,USD,True,False,False,onsite,False,San Francisco,CA,United States,"San Francisco, CA",Full-time,True,Engineering,2026-07-02,2026-07,2026,True,True,"San Francisco, CA",1,False,"San Francisco, CA",False,False,False,long,Q2
+02382d7f-0fb2-4ba3-89af-caf20a448e3a,ashby,Sierra,sierra,"Strategist, Agent Development - Retail",mid,other,"ABOUT US
+At Sierra, we're building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with growing offices across North America, Europe, and Asia.
+We are guided by a set of values that are at the core of our actions and define our culture: Trust, Customer Obsession, Craftsmanship, Intensity, and Family. These values are the foundation of our work, and we are committed to upholding them in everything we do.
+Our co-founders are Bret Taylor https://www.linkedin.com/in/brettaylor/ and Clay Bavor https://www.linkedin.com/in/claybavor/. Bret currently serves as Board Chair of OpenAI. Previously, he was co-CEO of Salesforce (which had acquired the company he founded, Quip) and CTO of Facebook. Bret was also one of Google's earliest product managers and co-creator of Google Maps. Before founding Sierra, Clay spent 18 years at Google, where he most recently led Google Labs. Earlier, he started and led Google's AR/VR effort, Project Starline, and Google Lens. Before that, Clay led the product and design teams for Google Workspace.
+ABOUT THE RETAIL TEAM
+- Sierra is partnering with a large and growing number of retailers - spanning apparel and beauty, grocery and big-box, home and auto, consumer services, marketplaces, and consumer technology. Our agents help millions of shoppers and members every day: tracking and returning orders, finding the right product, booking services, and resolving issues in each brand's own voice.
+- Retail is also where AI agents go beyond support to generate revenue. From product discovery and personalized recommendations to cart recovery, win-back campaigns, and in-store support that turns unanswered store calls into visits and sales, our team is redefining what an agent can do for a brand's top line - not just its cost line.
+- Join us to transform how the world's most-loved consumer brands engage their customers - and help build technology that makes shopping more personal, effortless, and delightful for everyone.
+WHAT YOU'LL DO
+As an Agent Strategist https://sierra.ai/blog/agent-strategist-your-phd-in-applied-ai, you own how Sierra's AI agents come to life for our customers - from first pilot to a production agent handling thousands of conversations a day. You sit at the intersection of product, building agents and customer-facing work, and stay just as close to the technology as you are to the people you build for. You transform a customer's thorniest, highest-stakes problems into agents that measurably move their business.
+- Own the Agent Development Life Cycle https://sierra.ai/blog/agent-development-life-cycle. Take agents from initial scope through conversation design, tooling, and evaluation, to launch and continuous iteration in production - translating business goals into an agent that outperforms, and tuning relentlessly until it's the best version of itself in the real world. You'll have real ownership and autonomy over the outcome.
+- Be the trusted strategic advisor to enterprise leaders. Sit shoulder-to-shoulder with our customers' executives, understand what success actually means to their business, and shape the AI strategy that gets them there.
+- Partner with the customer's working teams day to day. Run working sessions, troubleshoot the agent as issues come up, and make the calls that keep the build on track for launch.
+- Directly impact product. Surface unmet needs from your customer work, and feed them back to research and platform to shape where Sierra goes next.
+EXAMPLE PROJECTS
+These are the kinds of projects that strategists on our team have worked on recently:
+- Launch an order management agent for a national apparel brand - order lookup, cancellations, returns, and exchanges - then hill-climb containment and CSAT week over week.
+- Partner with Product to build a shopping agent that plugs into a retailer's existing search and recommendation systems to guide product discovery - turning the support channel into a revenue channel.
+- Stand up an in-store support voice agent for a big-box or grocery retailer, answering the stock-check and store-info calls that largely go unanswered today and converting them into store visits and sales.
+- Design a booking, payments, and outbound agent for a consumer services brand operating hundreds of locations.
+- Help a marketplace handle order status and buyer-seller disputes at enormous scale.
+- Launch outbound campaigns - cart recovery, win-back, churn saves, and subscription renewals - across voice and SMS.
+WHAT YOU'LL BRING
+- Customer obsession. Genuine energy being in front of customers - understanding their business and needs, thriving in complex organizations, and building trusted relationships.
+- Communication. Clear, direct, and persuasive across technical and non-technical audiences.
+- Strategic problem-solving in ambiguity. Strong analytical and critical-thinking skills to break down complex problems, spot risks early, and adapt as things change fast.
+- Technical aptitude. Comfortable engaging directly with technical concepts - reading API documentation, understanding data models and system architecture, and following engineering tradeoffs in a design discussion.
+- Ownership and delivery. A track record of running multiple complex, high-visibility projects at once and driving them to outcomes.
+- Genuine interest in Financial Services and improving the end customer experience. Experience in financial technology, implementations at financial institutions, working inside of these institutions or familiarity with financial services security and compliance requirements (fair lending, PII handling, etc.) are a strong plus.
+EVEN BETTER...
+- Experience building or deploying AI/LLM agents in production - hands-on with the tools behind them (eval frameworks, agent tooling, RAG, prompt engineering) - working closely with technical counterparts.
+- You've been a founder, founding team member, or operator - you know how to balance craft, ownership, and speed.
+- A degree in Computer Science, Engineering, Mathematics, a related technical field, or equivalent practical experience - and/or an MBA or comparable experience at the intersection of technology and business.
+OUR VALUES
+- Trust: We build trust with our customers with our accountability, empathy, quality, and responsiveness. We build trust in AI by making it more accessible, safe, and useful. We build trust with each other by showing up for each other professionally and personally, creating an environment that enables all of us to do our best work.
+- Customer Obsession: We deeply understand our customers' business goals and relentlessly focus on driving outcomes, not just technical milestones. Everyone at the company knows and spends time with our customers. When our customer is having an issue, we drop everything and fix it.
+- Craftsmanship: We get the details right, from the words on the page to the system architecture. We have good taste. When we notice something isn't right, we take the time to fix it. We are proud of the products we produce. We continuously self-reflect to continuously self-improve.
+- Intensity: We know we don't have the luxury of patience. We play to win. We care about our product being the best, and when it isn't, we fix it. When we fail, we talk about it openly and without blame so we succeed the next time.
+- Family: We know that balance and intensity are compatible, and we model it in our actions and processes. We are the best technology company for parents. We support and respect each other and celebrate each other's personal and professional achievements.
+WHAT WE OFFER
+We want our benefits to reflect our values and offer the following to full-time employees:
+- Flexible (unlimited) paid time off
+- Medical, dental, and vision benefits for you and your family
+- Life insurance and disability benefits
+- Retirement plan dependent on country of employment
+- Parental leave
+- Fertility and family building benefits through Carrot
+- Lunch, as well as delicious snacks and coffee to keep you energized
+- Discretionary benefit stipend giving people the ability to spend where it matters most
+- Free alphorn lessons
+These benefits are further detailed in Sierra's policies, may vary by region, and are subject to change at any time, consistent with the terms of any applicable compensation or benefits plans. Eligible full-time employees can participate in Sierra's equity plans subject to the terms of the applicable plans and policies.
+BE YOU, WITH US
+We're working to bring the transformative power of AI to every organization in the world. To do so, it is important to us that the diversity of our employees represents the diversity of our customers. We believe that our work and culture are better when we encourage, support, and respect different skills and experiences represented within our team. We encourage you to apply even if your experience doesn't precisely match the job description. We strive to evaluate all applicants consistently without regard to race, color, religion, gender, national origin, age, disability, veteran status, pregnancy, gender expression or identity, sexual orientation, citizenship, or any other legally protected class.",9356,200000.0,290000.0,,USD,year,200000.0,290000.0,USD,True,False,False,onsite,False,San Francisco,CA,United States,"San Francisco, CA",Full-time,True,Product,2026-07-22,2026-07,2026,True,True,"San Francisco, CA",1,False,"San Francisco, CA",False,False,False,long,Q2
+02e1c456-8489-4a74-9fe7-af8845b040e4,ashby,Sierra,sierra,"Intern, Agent Development (Winter 2027)",intern,other,"ABOUT US
+At Sierra, we're building a platform to enable every company in the world to build better, more human customer experiences with AI. We partner with industry leaders such as SoftBank, Uber, Rivian, CLEAR, and Sutter Health. We are primarily an in-person company based in San Francisco, with growing offices across North America, Europe, and Asia.
+We are guided by a set of values that are at the core of our actions and define our culture: Trust, Customer Obsession, Craftsmanship, Intensity, and Family. These values are the foundation of our work, and we are committed to upholding them in everything we do.
+Our co-founders are Bret Taylor https://www.linkedin.com/in/brettaylor/ and Clay Bavor https://www.linkedin.com/in/claybavor/. Bret currently serves as Board Chair of OpenAI. Previously, he was co-CEO of Salesforce (which had acquired the company he founded, Quip) and CTO of Facebook. Bret was also one of Google's earliest product managers and co-creator of Google Maps. Before founding Sierra, Clay spent 18 years at Google, where he most recently led Google Labs. Earlier, he started and led Google's AR/VR effort, Project Starline, and Google Lens. Before that, Clay led the product and design teams for Google Workspace.
+As a Software Engineer, Agent Intern, you'll work directly on production AI agents for Sierra's customers. You'll gain hands-on experience contributing to the design and development of AI agents, shipping features, and learning from real-world use cases at scale. If you're hungry to shape and learn from the most important technological wave in history, come build at Sierra.
+WHAT YOU'LL BRING
+- Pursuing a bachelor's or master's degree in computer science or a related field
+- Strong technical problem-solving skills, especially in fast-changing, ambiguous environments
+- A builder and tinkerer's mindset with high agency - you find creative ways to overcome obstacles and ship
+- Excellent communication skills - clear, direct, and persuasive across technical and non-technical audiences
+EVEN BETTER
+- Experience building or deploying AI/LLM systems in production
+- Familiarity with tools that power today's AI agents: eval frameworks, agent tooling, RAG pipelines, and prompt engineering
+- Prior experience with React, TypeScript, and/or Go
+INTERN QUALIFICATIONS
+- The intern program is open to students graduating December 2027 - June 2028
+- Note: The full benefits listed below are available only to full-time employees. Interns are eligible for a monthly stipend for health insurance, daily lunch, and, of course, free alphorn lessons.
+OUR VALUES
+- Trust: We build trust with our customers with our accountability, empathy, quality, and responsiveness. We build trust in AI by making it more accessible, safe, and useful. We build trust with each other by showing up for each other professionally and personally, creating an environment that enables all of us to do our best work.
+- Customer Obsession: We deeply understand our customers' business goals and relentlessly focus on driving outcomes, not just technical milestones. Everyone at the company knows and spends time with our customers. When our customer is having an issue, we drop everything and fix it.
+- Craftsmanship: We get the details right, from the words on the page to the system architecture. We have good taste. When we notice something isn't right, we take the time to fix it. We are proud of the products we produce. We continuously self-reflect to continuously self-improve.
+- Intensity: We know we don't have the luxury of patience. We play to win. We care about our product being the best, and when it isn't, we fix it. When we fail, we talk about it openly and without blame so we succeed the next time.
+- Family: We know that balance and intensity are compatible, and we model it in our actions and processes. We are the best technology company for parents. We support and respect each other and celebrate each other's personal and professional achievements.
+WHAT WE OFFER
+We want our benefits to reflect our values and offer the following to full-time employees:
+- Flexible (unlimited) paid time off
+- Medical, dental, and vision benefits for you and your family
+- Life insurance and disability benefits
+- Retirement plan dependent on country of employment
+- Parental leave
+- Fertility and family building benefits through Carrot
+- Lunch, as well as delicious snacks and coffee to keep you energized
+- Discretionary benefit stipend giving people the ability to spend where it matters most
+- Free alphorn lessons
+These benefits are further detailed in Sierra's policies, may vary by region, and are subject to change at any time, consistent with the terms of any applicable compensation or benefits plans. Eligible full-time employees can participate in Sierra's equity plans subject to the terms of the applicable plans and policies.
+BE YOU, WITH US
+We're working to bring the transformative power of AI to every organization in the world. To do so, it is important to us that the diversity of our employees represents the diversity of our customers. We believe that our work and culture are better when we encourage, support, and respect different skills and experiences represented within our team. We encourage you to apply even if your experience doesn't precisely match the job description. We strive to evaluate all applicants consistently without regard to race, color, religion, gender, national origin, age, disability, veteran status, pregnancy, gender expression or identity, sexual orientation, citizenship, or any other legally protected class.",5586,,,,,,,,,,,False,onsite,False,San Francisco,CA,United States,"San Francisco, CA",Internship,,Early Career,2026-09-01,2026-09,2026,False,True,"San Francisco, CA",1,False,"San Francisco, CA",False,False,False,short,
+031c2335-db85-4265-8a88-a54b911be36a,ashby,Cohere,cohere,"Forward Deployed Engineer, Agentic Platform (Korea)",mid,forward_deployed,"Who are we?
+Cohere is the leading security-first enterprise AI company. We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.
+We're training and deploying frontier models for enterprises who are building AI systems. We believe that our work is instrumental to the widespread adoption of AI and we are looking for folks that want to be part of that.
+We obsess over what we build. Each one of us is responsible for contributing to increasing the capabilities of our models and the value they drive for our customers. Cohere is a team of researchers, engineers, designers, and more, who are all passionate about their craft.
+We are a global technology company headquartered in Toronto with key offices in London, New York City, San Francisco, Montreal, Paris, Berlin and Seoul. Join us!
+ABOUT NORTH
+North is Cohere's cutting-edge AI workspace platform, designed to revolutionize the way enterprises utilize AI. It offers a secure and customizable environment, allowing companies to deploy AI while maintaining control over sensitive data. North integrates seamlessly with existing workflows, providing a trusted platform that connects AI agents with workplace tools and applications.
+WHY THIS ROLE?
+This role offers a unique opportunity to shape how enterprises harness the power of AI in real-world applications. As a bridge between our core North product and our clients' engineering teams, you'll be at the forefront of solving complex problems and securely integrating AI into critical sectors such as finance, healthcare, and telecommunications.
+We're looking for senior software engineers with Applied AI experience who can own the design, build, and deployment of agentic workflows powered by Large Language Models (LLMs), from early prototypes to production-grade AI agents, to deliver concrete business value in enterprise workflows. You'll work closely with customers on real-world business problems, often building first-of-their-kind agent workflows that integrate LLMs with tools, APIs, and data sources. While our pace is startup-fast, the bar is enterprise-high: agents must be reliable, observable, safe, and auditable from day one.
+WHAT YOU'LL DO
+Customer-Facing Technical Impact
+- Work closely with enterprise customers to translate high-value, ambiguous business problems into well-framed agentic problems with clear success criteria and evaluation methodologies.
+- Provide technical leadership across the full development and evaluation lifecycle, including post-deployment iteration, for agentic workflows.
+- Travel up to 20-40% to work on-site with customers and partners
+Agent Design, Build and Production launches
+- Lead the design, build, and delivery of LLM-powered agents that reason, plan, and act across tools and data sources with enterprise-grade reliability and performance.
+- Balance rapid iteration with enterprise requirements, evolving prototypes into stable, reusable solutions.
+- Define and apply evaluation and quality standards to measure success, failures, and regressions; Debug real-world agent behavior and systematically improve prompts, workflows, tools, and guardrails.
+- Build and ship features for North, our AI workspace platform, working across the full product lifecycle from conceptualisation through production
+- Take ownership of scoping and shaping use cases end-to-end, flexing into whatever technical area the problem demands (including frontend) to drive the most effective solution
+Team Mentorship & Organizational Impact
+- Mentor engineers across distributed teams.
+- Drive clarity in ambiguous situations, build alignment, and raise engineering quality across the organization.
+- Contribute to shared frameworks and patterns that enable consistent delivery across customers.
+REQUIRED SKILLS & EXPERIENCE
+Technical Foundations
+- Demonstrated ability to build, ship, and operate production-grade software systems.
+- Substantial hands-on experience designing, building, evaluating, and fine-tuning LLM-based agents in real-world applications.
+- Deep familiarity with modern LLM ecosystems, including models (e.g., GPT, Claude, Gemini), vector databases, RAG architectures, agent/orchestration frameworks, prompt engineering, tool use, multi-step agent workflows (e.g., ReAct), and robust failure handling.
+- Strong proficiency in Python and/or JavaScript/TypeScript.
+Experience and Leadership
+- Experience working directly with customers or stakeholders to design and deliver LLM-powered agentic solutions aligned with real business needs.
+- Proven technical leadership at the team level, including guiding architecture, implementation, and delivery of complex AI systems.
+ADDITIONAL REQUIREMENTS
+- Strong written and verbal communication skills.
+- Fluency in English and Korean language.
+IT'S A BONUS IF YOU HAVE:
+- Experience setting architectural standards for AI and agentic systems across distributed teams
+- Experience flexing into unfamiliar technical areas, such as frontend, when the problem calls for it
+- Exposure to regulated or sensitive industry environments (finance, healthcare, telecoms)
+- Experience with enterprise security, compliance, or auditability requirements for AI systems
+FULL-TIME EMPLOYEES AT COHERE ENJOY THESE PERKS:
+- A weekly lunch stipend of $75/£75 or equivalent in your local currency for lunch.
+- Full health and dental benefits, including a separate budget for mental health.
+- RRSP matching, 401K, Pension Scheme.
+- 100% Parental Leave top-up for up to 6 months, for either parent.
+- Annual enrichment benefits:
+Arts & culture, fitness/wellness, quality time, and a workspace improvement credit.
+Education & learning stipend for conferences, courses, and coaching.
+- 6 weeks of paid vacation (30 working days!)
+- Budget for traveling to other offices if you are remote, plus an annual company offsite.
+HOW AND WHERE WE WORK:
+- Cohere is remote-friendly, but we also have offices in Toronto, London, New York City, San Francisco, Montreal, Paris, Berlin and Seoul with more opening soon.
+- For those in the office: a daily lunch program, plenty of snacks, and regular community and social events.
+- For those not near an office: a co-working benefit so you can work alongside others in your city.
+- Everyone receives a $500 home office stipend to set up your workspace properly.
+If any of the above doesn't line up exactly with your experience, we still encourage you to apply.
+We strive to create an inclusive work environment for all; we welcome applicants from all backgrounds and are committed to providing equal opportunities. Should you require any accommodations during the recruitment process, please submit an Accommodations Request Form https://docs.google.com/forms/d/12a6IrLdF3kI2nonKSr4tiFuz18rLQbaeYV-JM9L4o9Q/edit, and we will work together to meet your needs.
+We may use AI-enabled tools to screen and assess applicants against the criteria for this position. This helps our recruiters identify potentially qualified candidates, but it doesn't limit the applications our recruiters may review or consider.
+Beware of Scams: Cohere will never ask for payment or third-party services (e.g., CV writing) as part of our hiring process. All legitimate roles are listed on the Cohere careers page and LinkedIn only, with all communications from Cohere employees coming from an @cohere.com or @cw.cohere email alias. If jobs are viewed on other sites then please verify these through our official careers https://cohere.com/careers page.",7510,,,,,,,,,,,True,remote,True,Seoul,,South Korea,Korea,Full-time,,Modeling,2026-01-28,2026-01,2026,False,True,Korea,1,False,Korea,False,False,False,long,
+01a34bc3-6421-4af2-bf5b-f42e98155dda,ashby,Cohere,cohere,"Technical Program Manager, AI Delivery for Public Sector & Defence, Canada",lead,solutions,"Who are we?
+Cohere is the leading security-first enterprise AI company. We build cutting-edge foundation AI models and end-to-end products that are designed to solve real-world business problems.
+We're training and deploying frontier models for enterprises who are building AI systems. We believe that our work is instrumental to the widespread adoption of AI and we are looking for folks that want to be part of that.
+We obsess over what we build. Each one of us is responsible for contributing to increasing the capabilities of our models and the value they drive for our customers. Cohere is a team of researchers, engineers, designers, and more, who are all passionate about their craft.
+We are a global technology company headquartered in Toronto with key offices in London, New York City, San Francisco, Montreal, Paris, Berlin and Seoul. Join us!
+Why This Role?
+We're seeking an experienced Program Manager to join Cohere's customer-facing Program Management team, with a focus on Canadian public sector and defence accounts. This is a highly specialized role requiring an individual who understands technical program delivery, the technical complexity of frontier AI models and the unique requirements of government and defence organizations.
+You will be the critical bridge between our cutting-edge AI capabilities and the specific needs of Canadian federal departments, provincial agencies, Crown corporations, and defence organizations. You'll navigate complex procurement processes, stringent security requirements, data sovereignty concerns, and regulatory compliance while ensuring our customers successfully deploy and scale our AI solutions.
+In this role, you'll collaborate with our Strategic Customer team, Applied ML (AML) Engineering, Forward Deployed Engineering (FDE), Platform, Product, and Go-to-Market teams, serving as the technical program lead and trusted advisor for our most sensitive and high-impact government engagements.
+Location: Ottawa (preferred) or Montreal or Toronto required (proximity to government customers)
+Security Clearance: Active Top Secret clearance strongly preferred; candidates eligible and willing to obtain clearance will also be considered.
+What You'll Do
+Customer Program Leadership:
+- Own end-to-end technical program delivery for Canadian public sector and defence customers, from initial deployment through production scaling
+- Serve as the primary technical program point of contact for government customers, building trusted relationships with departmental CIOs, IT directors, and technical teams
+- Translate complex government requirements (security, compliance, accessibility, bilingualism, data sovereignty) into actionable engineering plans
+- Navigate government procurement processes, RFP responses, and contractual technical obligations.
+Strategic Communication:
+- Provide clear, timely, and objective communication across Cohere's engineering organization, customer stakeholders, and government leadership
+- Translate between AI/ML technical concepts and government-appropriate language for decision-makers who may not have deep technical backgrounds
+- Present technical roadmaps and status updates to senior government officials and departmental executives
+- Represent Cohere's technical capabilities in sensitive government and defence contexts.
+Complex Program Management:
+- Create and manage project schedules that account for government timelines, security review processes, and ministerial approval cycles
+- Identify and manage dependencies across government departments, security authorities, cloud service providers, and internal Cohere teams
+- Navigate risks unique to government deployments: privacy compliance, Algorithmic Impact Assessments, Treasury Board submissions, security authorizations
+- Drive alignment between product development priorities and specific government requirements.
+Technical Delivery & Execution:
+- Ensure on-time delivery of AI solutions that meet government-grade security, privacy, accessibility, and performance standards
+- Coordinate technical work across multiple teams: model customization, security hardening, integration with government systems, bilingual support
+- Establish governance checkpoints appropriate for high-stakes government deployments
+- Problem-solve complex technical challenges in air-gapped, on-premises, or highly regulated environments.
+You May Be a Good Fit If:
+Required Experience:
+- 6+ years of experience as a customer-facing Technical or Engineering Program Manager in AI/ML consulting, technology transformation, or enterprise software delivery.
+- Excellent executive communication and stakeholder management.
+- Experience working with government, defence, or heavily regulated customers (public sector, defence contractors).
+- Proven track record managing complex, multi-stakeholder technical programs with stringent compliance requirements.
+- Bachelor's degree in a relevant field; advanced degree or technical certs a plus.
+Technical Background:
+- Strong understanding of enterprise software deployment architectures (cloud, on-premises, hybrid, air-gapped)
+- Working knowledge of or experience with modern AI: LLMs, agentic systems, MCP, RAG, fine-tuning, evals, and responsible AI would be a strong differentiator
+- Comfortable discussing API integrations, model inference, data pipelines, and ML operations with technical stakeholders.
+Government & Defence Acumen:
+- Deep understanding of how government organizations procure, evaluate, and deploy technology
+- Familiarity with Canadian government requirements: data sovereignty, privacy laws (Privacy Act), accessibility standards, official languages obligations, security classifications
+- Understanding of defence and national security considerations in AI deployment
+- Experience with Algorithmic Impact Assessments or AI ethics frameworks is a strong asset
+- Eligible to obtain Canadian government security clearance (Top Secret preferred)
+Nice to Have:
+- Active Canadian government security clearance (Secret or Top Secret) - strong preference for active Top Secret clearance
+- Bilingual (English/French) proficiency
+- Background in or strong familiarity with Canadian defence, intelligence, or critical infrastructure sectors
+- Experience with GC Cloud services (Azure, AWS GovCloud) or Protected B/C environments
+- Project management certification (PMP, PgMP) or government-specific methodologies.
+Security Clearance Requirements
+This role requires eligibility for Canadian government security clearance.
+Strong preference will be given to candidates who currently hold an active Top Secret (TS) clearance, as this will enable immediate engagement with our most sensitive defence and national security customers.
+However, we will also consider exceptional candidates who:
+- Currently hold Secret clearance and are eligible for TS upgrade
+- Do not currently hold clearance, but are eligible and willing to undergo the Top Secret clearance process
+- Have a previous government security clearance that has lapsed
+Please note that obtaining Top Secret clearance can take 12-18 months. Candidates without active clearance will work on non-classified public sector accounts while the clearance process is underway.
+What Makes This Role Unique
+This isn't typical program management-it's a highly specialized role at the intersection of frontier AI, national security, and public sector digital transformation. You'll work on some of Canada's most sensitive and impactful AI deployments, helping government organizations harness cutting-edge technology while maintaining the highest standards of security, ethics, and accountability.
+If you're passionate about responsible AI adoption, understand the unique constraints and opportunities within government, and want to have an outsized impact on how Canada leverages AI to serve its citizens, this role is for you.
+For candidates in Canada, the Compensation Range is: $160,000 - $245,000 [CAD]
+FULL-TIME EMPLOYEES AT COHERE ENJOY THESE PERKS:
+- A weekly lunch stipend of $75/£75 or equivalent in your local currency for lunch.
+- Full health and dental benefits, including a separate budget for mental health.
+- RRSP matching, 401K, Pension Scheme.
+- 100% Parental Leave top-up for up to 6 months, for either parent.
+- Annual enrichment benefits:
+- Arts & culture, fitness/wellness, quality time, and a workspace improvement credit.
+- Education & learning stipend for conferences, courses, and coaching.
+- 6 weeks of paid vacation (30 working days!)
+- Budget for traveling to other offices if you are remote, plus an annual company offsite.
+FULL-TIME EMPLOYEES AT COHERE ENJOY THESE PERKS:
+- A weekly lunch stipend of $75/£75 or equivalent in your local currency for lunch.
+- Full health and dental benefits, including a separate budget for mental health.
+- RRSP matching, 401K, Pension Scheme.
+- 100% Parental Leave top-up for up to 6 months, for either parent.
+- Annual enrichment benefits:
+Arts & culture, fitness/wellness, quality time, and a workspace improvement credit.
+Education & learning stipend for conferences, courses, and coaching.
+- 6 weeks of paid vacation (30 working days!)
+- Budget for traveling to other offices if you are remote, plus an annual company offsite.
+HOW AND WHERE WE WORK:
+- Cohere is remote-friendly, but we also have offices in Toronto, London, New York City, San Francisco, Montreal, Paris, Berlin and Seoul with more opening soon.
+- For those in the office: a daily lunch program, plenty of snacks, and regular community and social events.
+- For those not near an office: a co-working benefit so you can work alongside others in your city.
+- Everyone receives a $500 home office stipend to set up your workspace properly.
+If any of the above doesn't line up exactly with your experience, we still encourage you to apply.
+We strive to create an inclusive work environment for all; we welcome applicants from all backgrounds and are committed to providing equal opportunities. Should you require any accommodations during the recruitment process, please submit an Accommodations Request Form https://docs.google.com/forms/d/12a6IrLdF3kI2nonKSr4tiFuz18rLQbaeYV-JM9L4o9Q/edit, and we will work together to meet your needs.
+We may use AI-enabled tools to screen and assess applicants against the criteria for this position. This helps our recruiters identify potentially qualified candidates, but it doesn't limit the applications our recruiters may review or consider.
+Beware of Scams: Cohere will never ask for payment or third-party services (e.g., CV writing) as part of our hiring process. All legitimate roles are listed on the Cohere careers page and LinkedIn only, with all communications from Cohere employees coming from an @cohere.com or @cw.cohere email alias. If jobs are viewed on other sites then please verify these through our official careers https://cohere.com/careers page.",10870,,,,,,,,,,,True,hybrid,True,Ottawa,Ontario,Canada,Ottawa,Full-time,True,Product Management & Program Management,2026-09-03,2026-09,2026,False,True,Ottawa,1,False,Ottawa,False,False,False,long,
+01da8934-d3e3-4ebb-beb9-681b3c24fb9c,ashby,Harvey,harvey,"Staff Software Engineer, AI Platform",staff,software_eng,"WHY HARVEY
+At Harvey, we're transforming how legal and professional services operate. By combining frontier agentic AI, an enterprise-grade platform, and deep domain expertise, we're reshaping how critical knowledge work gets done for decades to come.
+This is a rare chance to help build a generational company at a true inflection point. We have strong product-market fit and world-class investor support. We're scaling fast and defining a new category in real time. The work is ambitious, the bar is high, and the opportunity for growth - personal, professional, and financial - is unmatched.
+Our team moves fast, takes ownership, and is deeply committed to the mission - operating with intensity, staying close to our customers, and pushing each other for excellence. We live by three values: Decisiveness, Simplicity, and Job's Not Finished. We act quickly on clear judgment over perfect information, we believe simplicity is what scales, and we're never satisfied with where we are. If you want to do the best work of your career alongside people who share that drive, we'd love to build with you.
+At Harvey, the future of professional services is being written today - and we're just getting started.
+ROLE OVERVIEW
+Harvey's products all depend on a shared AI foundation: the model layer and agent infrastructure that determine the quality of work our agents deliver. Legal is one of the hardest domains for AI: documents run to hundreds of pages, matters can span millions of files, and there is zero margin for error on accuracy.
+The AI Platform team builds the foundation that every product and agent team at Harvey builds upon. This team is early and there's a lot to build: model routing, agent architecture, context management, evals. Your work here sets the ceiling for what Harvey's AI can do.
+REPRESENTATIVE PROJECTS
+- Context Engineering & Agent Infrastructure. Build the platform-level systems for context management, session state, and memory that all of Harvey's agents and products rely on.
+- Model Integration & Routing. Own the infrastructure that lets Harvey onboard new foundation models fast and route to the right one for every task - a capability every product team depends on.
+- Evaluation Infrastructure. Build the shared eval tooling and frameworks that let every team across Harvey measure and improve AI quality systematically.
+- Shared Abstractions. Create the SDKs, platform primitives, and developer tooling that make it dramatically easier for product teams to ship AI-powered features.
+WHAT YOU'LL DO
+- Design and build abstractions and platform-level systems that improve all of Harvey's agentic products.
+- Own infrastructure for model integration, routing, and evaluation that helps Harvey choose and deploy the right foundation model for any given context.
+- Build evaluation frameworks and tooling that let every team across Harvey iterate on AI quality effectively.
+- Partner closely with product engineering teams, PMs, and design to launch cutting-edge AI products.
+- Evaluate, prototype, and integrate the latest advancements in AI and agentic systems as they emerge.
+WHAT YOU HAVE
+- 8+ years of experience building backend systems, with at least 1+ year focused on AI/ML engineering and a track record of technical leadership across teams.
+- Experience building and shipping multi-model or multi-provider AI systems in production.
+- Familiarity with context management, session state, or memory systems in AI or distributed systems. You've thought about what the model sees and why it matters.
+- A track record of building internal platforms, SDKs, or shared infrastructure that other engineering teams actually adopted - and an understanding of why developer experience matters as much as raw capability.
+- Strong judgment about abstractions. Opinionated about good design but pragmatic about shipping incrementally.
+- Excitement about agentic AI and the infrastructure challenges of making autonomous systems reliable when the stakes are real.
+- A bias toward full ownership: you navigate ambiguity well and don't wait for a roadmap to start solving problems.
+- Bonus: experience building evaluation frameworks, working with agent/function-calling architectures, familiarity with legal or other high-stakes professional services domains, or time at early-stage or hyper-growth startups where the underlying technology changes regularly.
+COMPENSATION RANGE
+$231,000 - $340,000
+DEPENDING ON YOUR LOCATION, AN APPLICANT PRIVACY NOTICE MAY APPLY TO YOU. YOU CAN FIND ALL OF OUR APPLICANT PRIVACY NOTICES [HERE https://www.notion.so/harveyai/Harvey-Candidate-Privacy-Policies-319ac3fcdd7a803bb807d5094f249922].
+#LI-AK1
+Harvey is an equal opportunity employer and does not discriminate on the basis of race, gender, sexual orientation, gender identity/expression, national origin, disability, age, genetic information, veteran status, marital status, pregnancy or related condition, or any other basis protected by law.
+We are committed to providing reasonable accommodations to applicants with disabilities, and requests can be made by emailing accommodations@harvey.ai",5112,231000.0,340000.0,,USD,year,231000.0,340000.0,USD,True,False,True,hybrid,True,San Francisco,California,USA,San Francisco,Full-time,False,Engineering,2026-04-24,2026-04,2026,True,True,San Francisco,1,False,"San Francisco, CA",True,False,False,short,Q3
+01f31ece-f3fe-4991-b6fb-b59f21faa8e9,ashby,Harvey,harvey,"Staff Software Engineer, Full Stack",staff,software_eng,"WHY HARVEY
+At Harvey, we're transforming how legal and professional services operate. By combining frontier agentic AI, an enterprise-grade platform, and deep domain expertise, we're reshaping how critical knowledge work gets done for decades to come.
+This is a rare chance to help build a generational company at a true inflection point. We have strong product-market fit and world-class investor support. We're scaling fast and defining a new category in real time. The work is ambitious, the bar is high, and the opportunity for growth - personal, professional, and financial - is unmatched.
+Our team moves fast, takes ownership, and is deeply committed to the mission - operating with intensity, staying close to our customers, and pushing each other for excellence. We live by three values: Decisiveness, Simplicity, and Job's Not Finished. We act quickly on clear judgment over perfect information, we believe simplicity is what scales, and we're never satisfied with where we are. If you want to do the best work of your career alongside people who share that drive, we'd love to build with you.
+At Harvey, the future of professional services is being written today - and we're just getting started.
+ROLE OVERVIEW
+As a Staff Full Stack Software Engineer at Harvey, you'll play a pivotal role in shaping the foundation of our product platform while directly building user-facing features for some of the world's leading law firms and enterprise customers. This team owns and operates the platform layer that enables secure, reliable, and flexible experiences for our customers including notifications, permissions and feature flag infrastructure. We also build enterprise-grade collaboration product experiences for law firms.
+You will design and own systems that not only serve as critical infrastructure for the rest of the company, but also directly impact how our users engage with Harvey's AI-powered legal tools. This role is ideal for engineers who are excited by the opportunity to move between deep platform thinking and hands-on product iteration.
+This role is based in Toronto, Canada. We use a hybrid, 3+ days-per week in-person work model and offer relocation assistance to new employees.
+WHAT YOU'LL DO
+- Design and build foundational infrastructure including authentication, permissions, feature flagging, notifications, and document management integrations
+- Build and evolve Harvey's internal product platform, accelerating development across multiple product lines and engineering teams
+- Lead development of enterprise-facing features, such as secure multi-party collaboration, cross-organization workflows, and robust admin controls
+- Maintain high standards for security, privacy, and system reliability, particularly in handling sensitive legal data
+- Collaborate cross-functionally with product, AI, design, and GTM teams to deliver delightful, enterprise-ready experiences
+WHAT YOU HAVE
+- 5+ YoE (post-BS/MS) in a product focused full-stack software engineering role.
+- Experience with React, Typescript, CSS (we use TailwindCSS), Python, or related.
+- Track record of building fast-growing SaaS products by leveraging PWA technologies.
+- Track record of shipping highly intuitive products, strong attention to detail.
+- Experience building backend platforms that can support multiple product lines.
+- Strong programming skills and general Computer Science knowledge.
+WHAT WE OFFER
+- Be part of building something special as a founding member of our Toronto team
+- Structured hybrid working arrangement: 3 days in our Toronto office, 2 days working from home
+COMPENSATION
+CA $196,800 - CA $295,200
+We are an AI company and we use AI to improve all of our processes, including in the recruitment process. Whilst we do use AI to help improve efficiency in our recruitment process, we do not rely on AI to make any automated decisions and ensure that a human reviews AI output.
+DEPENDING ON YOUR LOCATION, AN APPLICANT PRIVACY NOTICE MAY APPLY TO YOU. YOU CAN FIND ALL OF OUR APPLICANT PRIVACY NOTICES [HERE https://www.notion.so/harveyai/Harvey-Candidate-Privacy-Policies-319ac3fcdd7a803bb807d5094f249922].
+#LI-KT1
+The annualized base salary ranges for the role are listed below. Harvey pay ranges vary based on work location. As a part of the total compensation package, this role may be eligible for the Harvey Bonus Plan or a role-specific commission/bonus, as well as annual refresh equity grants. Recruiters can share more detail during the hiring process. Each candidate's compensation offer will be based on multiple factors including, but not limited to, geography, experience, skills, job duties, and business need, among other things.
+Harvey is an equal opportunity employer and does not discriminate on the basis of race, gender, sexual orientation, gender identity/expression, national origin, disability, age, genetic information, veteran status, marital status, pregnancy or related condition, or any other basis protected by law.
+We are committed to providing reasonable accommodations to applicants with disabilities, and requests can be made by emailing accommodations@harvey.ai",5123,,,,,,,,,,,True,hybrid,True,Toronto,,Canada,Toronto,Full-time,True,Engineering,2026-02-11,2026-02,2026,False,True,Toronto,1,False,"Toronto, Canada",True,False,False,short,
+02005c77-4871-4100-8030-27aa08ed7aa7,ashby,Harvey,harvey,"Sr. Systems Engineer, Client Engineering",senior,other,"WHY HARVEY
+At Harvey, we're transforming how legal and professional services operate. By combining frontier agentic AI, an enterprise-grade platform, and deep domain expertise, we're reshaping how critical knowledge work gets done for decades to come.
+This is a rare chance to help build a generational company at a true inflection point. We have strong product-market fit and world-class investor support. We're scaling fast and defining a new category in real time. The work is ambitious, the bar is high, and the opportunity for growth - personal, professional, and financial - is unmatched.
+Our team moves fast, takes ownership, and is deeply committed to the mission - operating with intensity, staying close to our customers, and pushing each other for excellence. We live by three values: Decisiveness, Simplicity, and Job's Not Finished. We act quickly on clear judgment over perfect information, we believe simplicity is what scales, and we're never satisfied with where we are. If you want to do the best work of your career alongside people who share that drive, we'd love to build with you.
+At Harvey, the future of professional services is being written today - and we're just getting started.
+ROLE OVERVIEW
+Harvey runs on a fleet of Macs and Windows devices, and every one of them is the front door to how each Harvey employee does their work. We're seeking a Senior Systems Engineer to own client engineering end to end - Jamf, Intune, Autopilot, Okta device trust, and more, and the automation that ties them together. This is the person who decides how a laptop gets built, secured, patched, recovered, and retired, and who makes those decisions hold up as we scale across offices globally.
+The ideal candidate has run a production device management environment at scale and can move between writing the deployment tooling, debugging a broken enrollment, and pushing for improvements to policy, process, and systems along the way.
+WHAT YOU'LL DO
+- Own the endpoint platform. Jamf Pro for macOS, Intune and Autopilot for Windows, and the mobile fleet alongside them. You set configuration standards, patching cadence, and compliance baselines in partnership with Security, and you're accountable for the fleet actually meeting them.
+- Engineer the device lifecycle. Zero-touch provisioning through Apple Business Manager and Autopilot, automated onboarding and offboarding, hardware refreshes, DLP, and forensics. Where the lifecycle still depends on someone remembering to do something, replace that with code.
+- Build the automation the fleet runs on. Most of this role's leverage comes from tooling - Python and scripts against Jamf, Intune, and Okta APIs, event-driven workflows, and self-service that lets employees fix their own problems.
+- Partner with Security on endpoint posture. Work directly with Security on endpoint policies, EDR coverage, device trust and Okta FastPass, disk encryption and key escrow, browser management, and more.
+- Be the final escalation for endpoint issues. IT Operations handles tier 1 and 2 globally; the problems that reach you are the strange ones. You'll fix them, and then fix the class of problem so the next person doesn't file the ticket.
+- Support a global, in-person-heavy company. Harvey has offices across the US, EMEA, and APAC. You'll build for time zones you aren't in, and document and train the team well enough that someone in each location can resolve issues independently.
+WHAT YOU HAVE
+- Minimum 5 years in endpoint, client, or IT systems engineering, including direct ownership of a macOS MDM environment at 1000+ devices.
+- Deep hands-on Jamf experience, plus real Windows management experience via Intune, Autopilot, and Entra.
+- Strong scripting and automation ability in Python, Bash, or Swift, with a track record of building tooling against vendor APIs rather than clicking through admin consoles.
+- Working fluency with an IdP, Okta preferred, covering SSO, MFA, device trust, and how identity and endpoint policy interact.
+- Strong communication and stakeholder management skills, especially with non-technical teams.
+- Ability to thrive in a fast-paced, high-growth, and global environment.
+BONUS POINTS:
+- Experience running endpoint security tooling in a production environment - CrowdStrike or equivalent EDR, managed Chrome Enterprise, DLP.
+- Endpoint work inside a compliance program (SOC 2, ISO 27001).
+COMPENSATION
+$153,000 - $210,500 USD
+DEPENDING ON YOUR LOCATION, AN APPLICANT PRIVACY NOTICE MAY APPLY TO YOU. YOU CAN FIND ALL OF OUR APPLICANT PRIVACY NOTICES HERE https://harveyai.notion.site/Harvey-Candidate-Privacy-Notices-319ac3fcdd7a803bb807d5094f249922?pvs=74.
+#LI-RB1
+Harvey is an equal opportunity employer and does not discriminate on the basis of race, gender, sexual orientation, gender identity/expression, national origin, disability, age, genetic information, veteran status, marital status, pregnancy or related condition, or any other basis protected by law.
+We are committed to providing reasonable accommodations to applicants with disabilities, and requests can be made by emailing accommodations@harvey.ai",5121,153000.0,210500.0,,USD,year,153000.0,210500.0,USD,True,False,True,hybrid,True,New York,New York,USA,New York,Full-time,True,IT,2026-08-28,2026-08,2026,True,True,New York,1,False,"New York, NY",True,False,False,short,Q2
+0190699f-010b-44f2-8399-278899fef018,ashby,Perplexity,perplexity,"Member of Technical Staff (Machine Learning Engineer, Search)",staff,applied_ai,"Perplexity is seeking an experienced Machine Learning Engineer to help build the next generation of advanced search technologies, with a focus on retrieval and ranking.
+Responsibilities
+- Relentlessly push search quality forward-through models, data, tools, or any other leverage available
+- Architect and build core components of our search platform and model stack
+- Train and evaluate retrieval, ranking and classification models, including LLMs
+- Deploy models - from boosting to LLMs - in a scalable and performant way
+- Build and optimize RAG pipelines for grounding and answer generation
+- Collaborate with Data, AI, Infrastructure and Product teams to ensure fast and high quality delivery
+Qualifications
+- Deep understanding of search and retrieval systems, including quality evaluation principles and metrics
+- Proven track record with large-scale search or recommender systems
+- Self-driven, with a strong sense of ownership and execution
+- Minimum of 5 years of working on search or recsys-related projects",1018,,,,,,,,,,,True,hybrid,True,Belgrade,,Serbia,Belgrade,Full-time,,Search,2025-03-25,2025-03,2025,False,True,Belgrade,1,False,Belgrade,False,True,False,short,

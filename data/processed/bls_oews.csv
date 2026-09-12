@@ -1,0 +1,9 @@
+series_id,series_name,date,value,footnotes,is_outlier,value_suspect,year,quarter
+OEUN000000000000015122101,Computer and Information Research Scientists: employment,2025-01-01,37200,,False,False,2025,1
+OEUN000000000000015122113,Computer and Information Research Scientists: median annual wage,2025-01-01,140300,,False,False,2025,1
+OEUN000000000000015125201,Software Developers: employment,2025-01-01,1687890,,False,False,2025,1
+OEUN000000000000015125213,Software Developers: median annual wage,2025-01-01,135980,,False,False,2025,1
+OEUN000000000000015129901,"Computer Occupations, All Other: employment",2025-01-01,435370,,False,False,2025,1
+OEUN000000000000015129913,"Computer Occupations, All Other: median annual wage",2025-01-01,116580,,False,False,2025,1
+OEUN000000000000015205101,Data Scientists: employment,2025-01-01,262440,,False,False,2025,1
+OEUN000000000000015205113,Data Scientists: median annual wage,2025-01-01,120230,,False,False,2025,1

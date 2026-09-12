@@ -229,3 +229,7 @@ data/raw/*
 !data/raw/.gitkeep
 data/interim/*
 !data/interim/.gitkeep
+
+data/processed/hn_clean.csv
+data/processed/hn_postings.csv
+data/processed/indeed_metro.csv

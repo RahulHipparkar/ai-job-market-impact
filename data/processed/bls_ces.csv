@@ -1,0 +1,281 @@
+series_id,series_name,date,value,footnotes,is_outlier,value_suspect,year,quarter
+CES5000000001,Information: all employees,2015-01-01,2740.0,,False,False,2015,1
+CES5000000001,Information: all employees,2015-02-01,2741.0,,False,False,2015,1
+CES5000000001,Information: all employees,2015-03-01,2737.0,,False,False,2015,1
+CES5000000001,Information: all employees,2015-04-01,2742.0,,False,False,2015,2
+CES5000000001,Information: all employees,2015-05-01,2747.0,,False,False,2015,2
+CES5000000001,Information: all employees,2015-06-01,2748.0,,False,False,2015,2
+CES5000000001,Information: all employees,2015-07-01,2752.0,,False,False,2015,3
+CES5000000001,Information: all employees,2015-08-01,2751.0,,False,False,2015,3
+CES5000000001,Information: all employees,2015-09-01,2764.0,,False,False,2015,3
+CES5000000001,Information: all employees,2015-10-01,2766.0,,False,False,2015,4
+CES5000000001,Information: all employees,2015-11-01,2751.0,,False,False,2015,4
+CES5000000001,Information: all employees,2015-12-01,2761.0,,False,False,2015,4
+CES5000000001,Information: all employees,2016-01-01,2762.0,,False,False,2016,1
+CES5000000001,Information: all employees,2016-02-01,2775.0,,False,False,2016,1
+CES5000000001,Information: all employees,2016-03-01,2785.0,,False,False,2016,1
+CES5000000001,Information: all employees,2016-04-01,2789.0,,False,False,2016,2
+CES5000000001,Information: all employees,2016-05-01,2751.0,,False,False,2016,2
+CES5000000001,Information: all employees,2016-06-01,2801.0,,False,False,2016,2
+CES5000000001,Information: all employees,2016-07-01,2799.0,,False,False,2016,3
+CES5000000001,Information: all employees,2016-08-01,2803.0,,False,False,2016,3
+CES5000000001,Information: all employees,2016-09-01,2817.0,,False,False,2016,3
+CES5000000001,Information: all employees,2016-10-01,2814.0,,False,False,2016,4
+CES5000000001,Information: all employees,2016-11-01,2812.0,,False,False,2016,4
+CES5000000001,Information: all employees,2016-12-01,2817.0,,False,False,2016,4
+CES5000000001,Information: all employees,2017-01-01,2821.0,,False,False,2017,1
+CES5000000001,Information: all employees,2017-02-01,2815.0,,False,False,2017,1
+CES5000000001,Information: all employees,2017-03-01,2813.0,,False,False,2017,1
+CES5000000001,Information: all employees,2017-04-01,2804.0,,False,False,2017,2
+CES5000000001,Information: all employees,2017-05-01,2801.0,,False,False,2017,2
+CES5000000001,Information: all employees,2017-06-01,2811.0,,False,False,2017,2
+CES5000000001,Information: all employees,2017-07-01,2809.0,,False,False,2017,3
+CES5000000001,Information: all employees,2017-08-01,2813.0,,False,False,2017,3
+CES5000000001,Information: all employees,2017-09-01,2816.0,,False,False,2017,3
+CES5000000001,Information: all employees,2017-10-01,2811.0,,False,False,2017,4
+CES5000000001,Information: all employees,2017-11-01,2815.0,,False,False,2017,4
+CES5000000001,Information: all employees,2017-12-01,2818.0,,False,False,2017,4
+CES5000000001,Information: all employees,2018-01-01,2817.0,,False,False,2018,1
+CES5000000001,Information: all employees,2018-02-01,2819.0,,False,False,2018,1
+CES5000000001,Information: all employees,2018-03-01,2826.0,,False,False,2018,1
+CES5000000001,Information: all employees,2018-04-01,2838.0,,False,False,2018,2
+CES5000000001,Information: all employees,2018-05-01,2841.0,,False,False,2018,2
+CES5000000001,Information: all employees,2018-06-01,2838.0,,False,False,2018,2
+CES5000000001,Information: all employees,2018-07-01,2841.0,,False,False,2018,3
+CES5000000001,Information: all employees,2018-08-01,2840.0,,False,False,2018,3
+CES5000000001,Information: all employees,2018-09-01,2838.0,,False,False,2018,3
+CES5000000001,Information: all employees,2018-10-01,2850.0,,False,False,2018,4
+CES5000000001,Information: all employees,2018-11-01,2850.0,,False,False,2018,4
+CES5000000001,Information: all employees,2018-12-01,2851.0,,False,False,2018,4
+CES5000000001,Information: all employees,2019-01-01,2842.0,,False,False,2019,1
+CES5000000001,Information: all employees,2019-02-01,2843.0,,False,False,2019,1
+CES5000000001,Information: all employees,2019-03-01,2849.0,,False,False,2019,1
+CES5000000001,Information: all employees,2019-04-01,2846.0,,False,False,2019,2
+CES5000000001,Information: all employees,2019-05-01,2858.0,,False,False,2019,2
+CES5000000001,Information: all employees,2019-06-01,2875.0,,False,False,2019,2
+CES5000000001,Information: all employees,2019-07-01,2866.0,,False,False,2019,3
+CES5000000001,Information: all employees,2019-08-01,2865.0,,False,False,2019,3
+CES5000000001,Information: all employees,2019-09-01,2871.0,,False,False,2019,3
+CES5000000001,Information: all employees,2019-10-01,2874.0,,False,False,2019,4
+CES5000000001,Information: all employees,2019-11-01,2885.0,,False,False,2019,4
+CES5000000001,Information: all employees,2019-12-01,2891.0,,False,False,2019,4
+CES5000000001,Information: all employees,2020-01-01,2901.0,,False,False,2020,1
+CES5000000001,Information: all employees,2020-02-01,2910.0,,False,False,2020,1
+CES5000000001,Information: all employees,2020-03-01,2902.0,,False,False,2020,1
+CES5000000001,Information: all employees,2020-04-01,2643.0,,False,False,2020,2
+CES5000000001,Information: all employees,2020-05-01,2609.0,,False,False,2020,2
+CES5000000001,Information: all employees,2020-06-01,2622.0,,False,False,2020,2
+CES5000000001,Information: all employees,2020-07-01,2622.0,,False,False,2020,3
+CES5000000001,Information: all employees,2020-08-01,2640.0,,False,False,2020,3
+CES5000000001,Information: all employees,2020-09-01,2695.0,,False,False,2020,3
+CES5000000001,Information: all employees,2020-10-01,2684.0,,False,False,2020,4
+CES5000000001,Information: all employees,2020-11-01,2696.0,,False,False,2020,4
+CES5000000001,Information: all employees,2020-12-01,2712.0,,False,False,2020,4
+CES5000000001,Information: all employees,2021-01-01,2747.0,,False,False,2021,1
+CES5000000001,Information: all employees,2021-02-01,2764.0,,False,False,2021,1
+CES5000000001,Information: all employees,2021-03-01,2770.0,,False,False,2021,1
+CES5000000001,Information: all employees,2021-04-01,2796.0,,False,False,2021,2
+CES5000000001,Information: all employees,2021-05-01,2816.0,,False,False,2021,2
+CES5000000001,Information: all employees,2021-06-01,2824.0,,False,False,2021,2
+CES5000000001,Information: all employees,2021-07-01,2881.0,,False,False,2021,3
+CES5000000001,Information: all employees,2021-08-01,2903.0,,False,False,2021,3
+CES5000000001,Information: all employees,2021-09-01,2917.0,,False,False,2021,3
+CES5000000001,Information: all employees,2021-10-01,2938.0,,False,False,2021,4
+CES5000000001,Information: all employees,2021-11-01,2957.0,,False,False,2021,4
+CES5000000001,Information: all employees,2021-12-01,2967.0,,False,False,2021,4
+CES5000000001,Information: all employees,2022-01-01,2984.0,,False,False,2022,1
+CES5000000001,Information: all employees,2022-02-01,2990.0,,False,False,2022,1
+CES5000000001,Information: all employees,2022-03-01,3018.0,,False,False,2022,1
+CES5000000001,Information: all employees,2022-04-01,3034.0,,False,False,2022,2
+CES5000000001,Information: all employees,2022-05-01,3057.0,,False,False,2022,2
+CES5000000001,Information: all employees,2022-06-01,3076.0,,False,False,2022,2
+CES5000000001,Information: all employees,2022-07-01,3094.0,,False,False,2022,3
+CES5000000001,Information: all employees,2022-08-01,3097.0,,False,False,2022,3
+CES5000000001,Information: all employees,2022-09-01,3095.0,,False,False,2022,3
+CES5000000001,Information: all employees,2022-10-01,3100.0,,False,False,2022,4
+CES5000000001,Information: all employees,2022-11-01,3115.0,,False,False,2022,4
+CES5000000001,Information: all employees,2022-12-01,3092.0,,False,False,2022,4
+CES5000000001,Information: all employees,2023-01-01,3061.0,,False,False,2023,1
+CES5000000001,Information: all employees,2023-02-01,3048.0,,False,False,2023,1
+CES5000000001,Information: all employees,2023-03-01,3049.0,,False,False,2023,1
+CES5000000001,Information: all employees,2023-04-01,3043.0,,False,False,2023,2
+CES5000000001,Information: all employees,2023-05-01,3034.0,,False,False,2023,2
+CES5000000001,Information: all employees,2023-06-01,3021.0,,False,False,2023,2
+CES5000000001,Information: all employees,2023-07-01,3001.0,,False,False,2023,3
+CES5000000001,Information: all employees,2023-08-01,2981.0,,False,False,2023,3
+CES5000000001,Information: all employees,2023-09-01,2975.0,,False,False,2023,3
+CES5000000001,Information: all employees,2023-10-01,2951.0,,False,False,2023,4
+CES5000000001,Information: all employees,2023-11-01,2962.0,,False,False,2023,4
+CES5000000001,Information: all employees,2023-12-01,2963.0,,False,False,2023,4
+CES5000000001,Information: all employees,2024-01-01,2963.0,,False,False,2024,1
+CES5000000001,Information: all employees,2024-02-01,2958.0,,False,False,2024,1
+CES5000000001,Information: all employees,2024-03-01,2951.0,,False,False,2024,1
+CES5000000001,Information: all employees,2024-04-01,2940.0,,False,False,2024,2
+CES5000000001,Information: all employees,2024-05-01,2930.0,,False,False,2024,2
+CES5000000001,Information: all employees,2024-06-01,2930.0,,False,False,2024,2
+CES5000000001,Information: all employees,2024-07-01,2917.0,,False,False,2024,3
+CES5000000001,Information: all employees,2024-08-01,2909.0,,False,False,2024,3
+CES5000000001,Information: all employees,2024-09-01,2903.0,,False,False,2024,3
+CES5000000001,Information: all employees,2024-10-01,2887.0,,False,False,2024,4
+CES5000000001,Information: all employees,2024-11-01,2885.0,,False,False,2024,4
+CES5000000001,Information: all employees,2024-12-01,2895.0,,False,False,2024,4
+CES5000000001,Information: all employees,2025-01-01,2877.0,,False,False,2025,1
+CES5000000001,Information: all employees,2025-02-01,2876.0,,False,False,2025,1
+CES5000000001,Information: all employees,2025-03-01,2867.0,,False,False,2025,1
+CES5000000001,Information: all employees,2025-04-01,2865.0,,False,False,2025,2
+CES5000000001,Information: all employees,2025-05-01,2864.0,,False,False,2025,2
+CES5000000001,Information: all employees,2025-06-01,2863.0,,False,False,2025,2
+CES5000000001,Information: all employees,2025-07-01,2861.0,,False,False,2025,3
+CES5000000001,Information: all employees,2025-08-01,2860.0,,False,False,2025,3
+CES5000000001,Information: all employees,2025-09-01,2859.0,,False,False,2025,3
+CES5000000001,Information: all employees,2025-10-01,2853.0,,False,False,2025,4
+CES5000000001,Information: all employees,2025-11-01,2848.0,,False,False,2025,4
+CES5000000001,Information: all employees,2025-12-01,2842.0,,False,False,2025,4
+CES5000000001,Information: all employees,2026-01-01,2815.0,,False,False,2026,1
+CES5000000001,Information: all employees,2026-02-01,2792.0,,False,False,2026,1
+CES5000000001,Information: all employees,2026-03-01,2793.0,,False,False,2026,1
+CES5000000001,Information: all employees,2026-04-01,2787.0,,False,False,2026,2
+CES5000000001,Information: all employees,2026-05-01,2782.0,,False,False,2026,2
+CES5000000001,Information: all employees,2026-06-01,2763.0,,False,False,2026,2
+CES5000000001,Information: all employees,2026-07-01,2768.0,P: preliminary,False,False,2026,3
+CES5000000001,Information: all employees,2026-08-01,2745.0,P: preliminary,False,False,2026,3
+CES6054150001,Computer systems design and related services: all employees,2015-01-01,1866.3,,False,False,2015,1
+CES6054150001,Computer systems design and related services: all employees,2015-02-01,1878.1,,False,False,2015,1
+CES6054150001,Computer systems design and related services: all employees,2015-03-01,1888.3,,False,False,2015,1
+CES6054150001,Computer systems design and related services: all employees,2015-04-01,1896.9,,False,False,2015,2
+CES6054150001,Computer systems design and related services: all employees,2015-05-01,1905.7,,False,False,2015,2
+CES6054150001,Computer systems design and related services: all employees,2015-06-01,1913.8,,False,False,2015,2
+CES6054150001,Computer systems design and related services: all employees,2015-07-01,1923.0,,False,False,2015,3
+CES6054150001,Computer systems design and related services: all employees,2015-08-01,1929.6,,False,False,2015,3
+CES6054150001,Computer systems design and related services: all employees,2015-09-01,1937.6,,False,False,2015,3
+CES6054150001,Computer systems design and related services: all employees,2015-10-01,1944.7,,False,False,2015,4
+CES6054150001,Computer systems design and related services: all employees,2015-11-01,1950.9,,False,False,2015,4
+CES6054150001,Computer systems design and related services: all employees,2015-12-01,1951.7,,False,False,2015,4
+CES6054150001,Computer systems design and related services: all employees,2016-01-01,1957.2,,False,False,2016,1
+CES6054150001,Computer systems design and related services: all employees,2016-02-01,1963.0,,False,False,2016,1
+CES6054150001,Computer systems design and related services: all employees,2016-03-01,1968.3,,False,False,2016,1
+CES6054150001,Computer systems design and related services: all employees,2016-04-01,1976.6,,False,False,2016,2
+CES6054150001,Computer systems design and related services: all employees,2016-05-01,1985.9,,False,False,2016,2
+CES6054150001,Computer systems design and related services: all employees,2016-06-01,1993.2,,False,False,2016,2
+CES6054150001,Computer systems design and related services: all employees,2016-07-01,1997.8,,False,False,2016,3
+CES6054150001,Computer systems design and related services: all employees,2016-08-01,1999.9,,False,False,2016,3
+CES6054150001,Computer systems design and related services: all employees,2016-09-01,2010.4,,False,False,2016,3
+CES6054150001,Computer systems design and related services: all employees,2016-10-01,2016.4,,False,False,2016,4
+CES6054150001,Computer systems design and related services: all employees,2016-11-01,2021.1,,False,False,2016,4
+CES6054150001,Computer systems design and related services: all employees,2016-12-01,2026.1,,False,False,2016,4
+CES6054150001,Computer systems design and related services: all employees,2017-01-01,2036.1,,False,False,2017,1
+CES6054150001,Computer systems design and related services: all employees,2017-02-01,2040.1,,False,False,2017,1
+CES6054150001,Computer systems design and related services: all employees,2017-03-01,2038.0,,False,False,2017,1
+CES6054150001,Computer systems design and related services: all employees,2017-04-01,2039.2,,False,False,2017,2
+CES6054150001,Computer systems design and related services: all employees,2017-05-01,2040.9,,False,False,2017,2
+CES6054150001,Computer systems design and related services: all employees,2017-06-01,2045.4,,False,False,2017,2
+CES6054150001,Computer systems design and related services: all employees,2017-07-01,2049.2,,False,False,2017,3
+CES6054150001,Computer systems design and related services: all employees,2017-08-01,2055.8,,False,False,2017,3
+CES6054150001,Computer systems design and related services: all employees,2017-09-01,2059.8,,False,False,2017,3
+CES6054150001,Computer systems design and related services: all employees,2017-10-01,2066.1,,False,False,2017,4
+CES6054150001,Computer systems design and related services: all employees,2017-11-01,2067.5,,False,False,2017,4
+CES6054150001,Computer systems design and related services: all employees,2017-12-01,2073.5,,False,False,2017,4
+CES6054150001,Computer systems design and related services: all employees,2018-01-01,2085.2,,False,False,2018,1
+CES6054150001,Computer systems design and related services: all employees,2018-02-01,2091.6,,False,False,2018,1
+CES6054150001,Computer systems design and related services: all employees,2018-03-01,2094.1,,False,False,2018,1
+CES6054150001,Computer systems design and related services: all employees,2018-04-01,2098.3,,False,False,2018,2
+CES6054150001,Computer systems design and related services: all employees,2018-05-01,2106.1,,False,False,2018,2
+CES6054150001,Computer systems design and related services: all employees,2018-06-01,2113.7,,False,False,2018,2
+CES6054150001,Computer systems design and related services: all employees,2018-07-01,2122.1,,False,False,2018,3
+CES6054150001,Computer systems design and related services: all employees,2018-08-01,2127.7,,False,False,2018,3
+CES6054150001,Computer systems design and related services: all employees,2018-09-01,2132.8,,False,False,2018,3
+CES6054150001,Computer systems design and related services: all employees,2018-10-01,2142.4,,False,False,2018,4
+CES6054150001,Computer systems design and related services: all employees,2018-11-01,2151.6,,False,False,2018,4
+CES6054150001,Computer systems design and related services: all employees,2018-12-01,2154.4,,False,False,2018,4
+CES6054150001,Computer systems design and related services: all employees,2019-01-01,2153.6,,False,False,2019,1
+CES6054150001,Computer systems design and related services: all employees,2019-02-01,2156.9,,False,False,2019,1
+CES6054150001,Computer systems design and related services: all employees,2019-03-01,2168.7,,False,False,2019,1
+CES6054150001,Computer systems design and related services: all employees,2019-04-01,2180.7,,False,False,2019,2
+CES6054150001,Computer systems design and related services: all employees,2019-05-01,2189.4,,False,False,2019,2
+CES6054150001,Computer systems design and related services: all employees,2019-06-01,2199.7,,False,False,2019,2
+CES6054150001,Computer systems design and related services: all employees,2019-07-01,2208.2,,False,False,2019,3
+CES6054150001,Computer systems design and related services: all employees,2019-08-01,2216.4,,False,False,2019,3
+CES6054150001,Computer systems design and related services: all employees,2019-09-01,2214.1,,False,False,2019,3
+CES6054150001,Computer systems design and related services: all employees,2019-10-01,2213.8,,False,False,2019,4
+CES6054150001,Computer systems design and related services: all employees,2019-11-01,2218.9,,False,False,2019,4
+CES6054150001,Computer systems design and related services: all employees,2019-12-01,2213.6,,False,False,2019,4
+CES6054150001,Computer systems design and related services: all employees,2020-01-01,2228.5,,False,False,2020,1
+CES6054150001,Computer systems design and related services: all employees,2020-02-01,2234.1,,False,False,2020,1
+CES6054150001,Computer systems design and related services: all employees,2020-03-01,2219.8,,False,False,2020,1
+CES6054150001,Computer systems design and related services: all employees,2020-04-01,2165.8,,False,False,2020,2
+CES6054150001,Computer systems design and related services: all employees,2020-05-01,2166.1,,False,False,2020,2
+CES6054150001,Computer systems design and related services: all employees,2020-06-01,2167.7,,False,False,2020,2
+CES6054150001,Computer systems design and related services: all employees,2020-07-01,2167.2,,False,False,2020,3
+CES6054150001,Computer systems design and related services: all employees,2020-08-01,2180.6,,False,False,2020,3
+CES6054150001,Computer systems design and related services: all employees,2020-09-01,2191.3,,False,False,2020,3
+CES6054150001,Computer systems design and related services: all employees,2020-10-01,2202.5,,False,False,2020,4
+CES6054150001,Computer systems design and related services: all employees,2020-11-01,2208.3,,False,False,2020,4
+CES6054150001,Computer systems design and related services: all employees,2020-12-01,2222.1,,False,False,2020,4
+CES6054150001,Computer systems design and related services: all employees,2021-01-01,2232.6,,False,False,2021,1
+CES6054150001,Computer systems design and related services: all employees,2021-02-01,2249.0,,False,False,2021,1
+CES6054150001,Computer systems design and related services: all employees,2021-03-01,2260.5,,False,False,2021,1
+CES6054150001,Computer systems design and related services: all employees,2021-04-01,2272.3,,False,False,2021,2
+CES6054150001,Computer systems design and related services: all employees,2021-05-01,2279.1,,False,False,2021,2
+CES6054150001,Computer systems design and related services: all employees,2021-06-01,2296.9,,False,False,2021,2
+CES6054150001,Computer systems design and related services: all employees,2021-07-01,2319.6,,False,False,2021,3
+CES6054150001,Computer systems design and related services: all employees,2021-08-01,2332.0,,False,False,2021,3
+CES6054150001,Computer systems design and related services: all employees,2021-09-01,2348.9,,False,False,2021,3
+CES6054150001,Computer systems design and related services: all employees,2021-10-01,2361.2,,False,False,2021,4
+CES6054150001,Computer systems design and related services: all employees,2021-11-01,2377.8,,False,False,2021,4
+CES6054150001,Computer systems design and related services: all employees,2021-12-01,2389.5,,False,False,2021,4
+CES6054150001,Computer systems design and related services: all employees,2022-01-01,2406.9,,False,False,2022,1
+CES6054150001,Computer systems design and related services: all employees,2022-02-01,2413.6,,False,False,2022,1
+CES6054150001,Computer systems design and related services: all employees,2022-03-01,2436.5,,False,False,2022,1
+CES6054150001,Computer systems design and related services: all employees,2022-04-01,2441.6,,False,False,2022,2
+CES6054150001,Computer systems design and related services: all employees,2022-05-01,2453.3,,False,False,2022,2
+CES6054150001,Computer systems design and related services: all employees,2022-06-01,2458.3,,False,False,2022,2
+CES6054150001,Computer systems design and related services: all employees,2022-07-01,2457.1,,False,False,2022,3
+CES6054150001,Computer systems design and related services: all employees,2022-08-01,2462.0,,False,False,2022,3
+CES6054150001,Computer systems design and related services: all employees,2022-09-01,2469.3,,False,False,2022,3
+CES6054150001,Computer systems design and related services: all employees,2022-10-01,2479.0,,False,False,2022,4
+CES6054150001,Computer systems design and related services: all employees,2022-11-01,2482.9,,False,False,2022,4
+CES6054150001,Computer systems design and related services: all employees,2022-12-01,2483.0,,False,False,2022,4
+CES6054150001,Computer systems design and related services: all employees,2023-01-01,2478.6,,False,False,2023,1
+CES6054150001,Computer systems design and related services: all employees,2023-02-01,2481.3,,False,False,2023,1
+CES6054150001,Computer systems design and related services: all employees,2023-03-01,2483.5,,False,False,2023,1
+CES6054150001,Computer systems design and related services: all employees,2023-04-01,2482.4,,False,False,2023,2
+CES6054150001,Computer systems design and related services: all employees,2023-05-01,2478.2,,False,False,2023,2
+CES6054150001,Computer systems design and related services: all employees,2023-06-01,2472.9,,False,False,2023,2
+CES6054150001,Computer systems design and related services: all employees,2023-07-01,2470.7,,False,False,2023,3
+CES6054150001,Computer systems design and related services: all employees,2023-08-01,2467.0,,False,False,2023,3
+CES6054150001,Computer systems design and related services: all employees,2023-09-01,2456.5,,False,False,2023,3
+CES6054150001,Computer systems design and related services: all employees,2023-10-01,2454.0,,False,False,2023,4
+CES6054150001,Computer systems design and related services: all employees,2023-11-01,2451.1,,False,False,2023,4
+CES6054150001,Computer systems design and related services: all employees,2023-12-01,2449.8,,False,False,2023,4
+CES6054150001,Computer systems design and related services: all employees,2024-01-01,2446.9,,False,False,2024,1
+CES6054150001,Computer systems design and related services: all employees,2024-02-01,2444.6,,False,False,2024,1
+CES6054150001,Computer systems design and related services: all employees,2024-03-01,2439.8,,False,False,2024,1
+CES6054150001,Computer systems design and related services: all employees,2024-04-01,2441.0,,False,False,2024,2
+CES6054150001,Computer systems design and related services: all employees,2024-05-01,2440.6,,False,False,2024,2
+CES6054150001,Computer systems design and related services: all employees,2024-06-01,2444.7,,False,False,2024,2
+CES6054150001,Computer systems design and related services: all employees,2024-07-01,2442.6,,False,False,2024,3
+CES6054150001,Computer systems design and related services: all employees,2024-08-01,2437.2,,False,False,2024,3
+CES6054150001,Computer systems design and related services: all employees,2024-09-01,2437.6,,False,False,2024,3
+CES6054150001,Computer systems design and related services: all employees,2024-10-01,2433.4,,False,False,2024,4
+CES6054150001,Computer systems design and related services: all employees,2024-11-01,2429.2,,False,False,2024,4
+CES6054150001,Computer systems design and related services: all employees,2024-12-01,2431.4,,False,False,2024,4
+CES6054150001,Computer systems design and related services: all employees,2025-01-01,2426.3,,False,False,2025,1
+CES6054150001,Computer systems design and related services: all employees,2025-02-01,2416.7,,False,False,2025,1
+CES6054150001,Computer systems design and related services: all employees,2025-03-01,2408.9,,False,False,2025,1
+CES6054150001,Computer systems design and related services: all employees,2025-04-01,2411.3,,False,False,2025,2
+CES6054150001,Computer systems design and related services: all employees,2025-05-01,2410.3,,False,False,2025,2
+CES6054150001,Computer systems design and related services: all employees,2025-06-01,2399.9,,False,False,2025,2
+CES6054150001,Computer systems design and related services: all employees,2025-07-01,2395.7,,False,False,2025,3
+CES6054150001,Computer systems design and related services: all employees,2025-08-01,2394.0,,False,False,2025,3
+CES6054150001,Computer systems design and related services: all employees,2025-09-01,2387.6,,False,False,2025,3
+CES6054150001,Computer systems design and related services: all employees,2025-10-01,2379.7,,False,False,2025,4
+CES6054150001,Computer systems design and related services: all employees,2025-11-01,2381.5,,False,False,2025,4
+CES6054150001,Computer systems design and related services: all employees,2025-12-01,2380.6,,False,False,2025,4
+CES6054150001,Computer systems design and related services: all employees,2026-01-01,2374.2,,False,False,2026,1
+CES6054150001,Computer systems design and related services: all employees,2026-02-01,2379.1,,False,False,2026,1
+CES6054150001,Computer systems design and related services: all employees,2026-03-01,2369.6,,False,False,2026,1
+CES6054150001,Computer systems design and related services: all employees,2026-04-01,2369.5,,False,False,2026,2
+CES6054150001,Computer systems design and related services: all employees,2026-05-01,2370.0,,False,False,2026,2
+CES6054150001,Computer systems design and related services: all employees,2026-06-01,2368.3,,False,False,2026,2
+CES6054150001,Computer systems design and related services: all employees,2026-07-01,2363.6,P: preliminary,False,False,2026,3
+CES6054150001,Computer systems design and related services: all employees,2026-08-01,2362.7,P: preliminary,False,False,2026,3

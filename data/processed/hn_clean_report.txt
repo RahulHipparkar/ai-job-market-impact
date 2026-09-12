@@ -1,0 +1,116 @@
+work_mode fill rate: 39.2% -> 91.2%
+location fill rate: 53.9% -> 68.6%
+distinct companies: 17943 -> 16401
+distinct locations: 9679 -> 1973
+top 25 locations:
+  Remote: 8112
+  San Francisco, CA: 6297
+  New York, NY: 3609
+  London, UK: 2173
+  Berlin, Germany: 1356
+  Boston, MA: 1139
+  Seattle, WA: 867
+  Los Angeles, CA: 737
+  Austin, TX: 653
+  Toronto, Canada: 622
+  Chicago, IL: 416
+  Denver, CO: 220
+  Palo Alto, CA: 135
+  Redwood City, CA: 128
+  Washington, DC: 107
+  Cambridge, MA: 98
+  Paris, France: 95
+  San Mateo, CA: 94
+  Atlanta, GA: 88
+  San Diego, CA: 86
+  USA: 85
+  Philadelphia, PA: 84
+  Oakland, CA: 80
+  Amsterdam: 78
+  Mountain View, CA: 72
+is_junk rows: 233 (0.5%)
+10 is_junk examples:
+  'Anyone hiring interns'
+  'Intern'
+  'Kaam24 (Delhi, India) is hiring for several tech related Roles https://angel.co/'
+  'IdeaFox.io, Full-Stack-Developer, Berlin, Germany, full time, onsite or remote'
+  '[flagged]'
+  '[flagged]'
+  'This company is not very good at communicating.'
+  "Time waste alert! You don't actually bother to respond to candidates."
+  'Senior PHP Developer\nAgent Software Ltd\nManchester, UK\nFull-Time\nhttps://spectre'
+  'Accenture is always hiring, got a degree or two? Hit me up'
+text_len: min=0 median=976 p95=1973 p99.5=3251 max=7678
+is_outlier_len rows (>p99.5): 242
+
+is_repost rows: 17538 (36.3%)
+repost groups (2+ postings, excludes unmatched originals): 6567
+repost group size distribution:
+  2: 3488
+  3: 1258
+  4: 607
+  5: 328
+  6: 223
+  7: 154
+  8: 100
+  9: 73
+  10: 56
+  11: 44
+  12: 43
+  13: 30
+  14: 23
+  15: 18
+  16: 16
+  17: 24
+  18: 11
+  19: 8
+  20: 10
+  21: 1
+  22: 4
+  23: 7
+  24: 4
+  25: 1
+  26: 4
+  27: 7
+  28: 2
+  29: 2
+  30: 1
+  31: 2
+  32: 1
+  33: 2
+  34: 2
+  35: 1
+  37: 2
+  39: 1
+  40: 2
+  42: 1
+  45: 1
+  49: 1
+  53: 2
+  58: 1
+  74: 1
+10 largest repost groups:
+  datadog (repost_group=19545345): 74 postings across 74 months
+  tulip (repost_group=18808465): 58 postings across 58 months
+  temporal technologies (repost_group=24969569): 53 postings across 53 months
+  uncountable (repost_group=27028029): 53 postings across 53 months
+  nova credit (repost_group=19545478): 49 postings across 49 months
+  ae studio (repost_group=28724131): 45 postings across 40 months
+  simplesurance (repost_group=18810197): 42 postings across 42 months
+  rockstar games (repost_group=26664233): 40 postings across 40 months
+  spacelift (repost_group=28037734): 40 postings across 40 months
+  ml6 (repost_group=22266313): 39 postings across 39 months
+
+text_len_band boundaries (tercile, non-junk rows only): [38, 806, 1183, 7678]
+  text_len_band
+  short     16037
+  medium    16030
+  long      15996
+posting_frequency_band boundaries: one_off=1, occasional=2-5, regular=6-20, persistent=21+ (distinct months posted per company_clean)
+  posting_frequency_band
+  regular       16328
+  occasional    13264
+  one_off        9935
+  persistent     8735
+
+text_len_scaled: z-score fitted on non-junk rows only, mean=1064.57, std=524.45
