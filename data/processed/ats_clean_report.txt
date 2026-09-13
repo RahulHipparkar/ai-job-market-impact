@@ -26,13 +26,14 @@ desc_len distribution:
 company_clean: 19 raw names -> 19 canonical (0 unmapped)
 
 seniority distribution:
-  mid: 1703
-  lead: 1435
-  staff: 626
-  senior: 401
-  intern: 62
-  new_grad: 38
-  junior: 29
+  mid: 1719
+  lead: 1434
+  staff: 625
+  senior: 394
+  intern: 55
+  new_grad: 39
+  junior: 28
+  NOTE: the words "junior" and "jr" appear in zero titles across all 4294 postings, and no alternate level ladder (L1-9, IC1-9, P1-9) is present either -- the junior bucket is built entirely from "associate" titles. This is a property of the data, not a limitation of the rules.
 
 role_family distribution:
   other: 1781

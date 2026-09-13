@@ -169,6 +169,25 @@ def main() -> None:
     report.append(f"salary_band boundaries: {[round(b) for b in sal_bins]}")
     report.append("  " + df["salary_band"].value_counts(dropna=True).to_string().replace("\n", "\n  "))
 
+    # seniority is derived in clean_ats.py; recorded here with the rule decisions
+    titles = df["title"].fillna("")
+    n_junior_jr = titles.str.contains(r"\b(?:junior|jr)\b", case=False).sum()
+    n_ladder = titles.str.contains(r"\b(?:L|IC|P)[1-9]\b", case=False).sum()
+    report.append("\nseniority distribution:")
+    for label, count in df["seniority"].value_counts().items():
+        report.append(f"  {label}: {count}")
+    report.append(
+        f'  The words "junior" and "jr" appear in {n_junior_jr} of {len(df):,} titles, and {n_ladder} carry an '
+        "alternate level ladder (L1-9, IC1-9, P1-9), so the junior bucket is built entirely from \"associate\" "
+        "titles -- a property of the data, not a limitation of the rules.\n"
+        "  The intern pattern was originally unanchored and matched inside \"International\" and \"Internal\" "
+        "from the start. Last-match-wins masked this, because lead/senior/staff overrode it, until intern was "
+        "made non-overridable and the false matches surfaced; it is now anchored as \\bintern(ship)?\\b.\n"
+        "  lead and vp remain deliberately unanchored: their embedded matches are genuine lead-tier titles "
+        "(\"Leader\", 27 titles; \"RVP\" = Regional VP, 2 titles), and anchoring them would move 29 correctly "
+        "classified rows to mid."
+    )
+
     # output
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     SAMPLES_DIR.mkdir(parents=True, exist_ok=True)

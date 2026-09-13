@@ -215,7 +215,8 @@ main img {
   border-radius: 6px;
 }
 
-.thumb img {
+.thumb img,
+img.thumb {
   max-width: 320px;
 }
 

@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -47,9 +82,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d5a4003294d71645696f55c37ceefad9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-75dac068bd1d94cc7bdbf096448e6cfa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d5a4003294d71645696f55c37ceefad9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-5fe85b71f08b1104f20ec0df289399e7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-19620194546ad008c5f15a182f857588.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-5fe85b71f08b1104f20ec0df289399e7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -404,9 +439,18 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#data-sources" id="toc-data-sources" class="nav-link active" data-scroll-target="#data-sources">Data Sources</a></li>
-  <li><a href="#raw-data" id="toc-raw-data" class="nav-link" data-scroll-target="#raw-data">Raw Data</a></li>
-  <li><a href="#cleaning" id="toc-cleaning" class="nav-link" data-scroll-target="#cleaning">Cleaning</a></li>
-  <li><a href="#exploratory-visualizations" id="toc-exploratory-visualizations" class="nav-link" data-scroll-target="#exploratory-visualizations">Exploratory Visualizations</a></li>
+  <li><a href="#apis-used" id="toc-apis-used" class="nav-link" data-scroll-target="#apis-used">APIs Used</a>
+  <ul class="collapse">
+  <li><a href="#hacker-news-search-api-algolia" id="toc-hacker-news-search-api-algolia" class="nav-link" data-scroll-target="#hacker-news-search-api-algolia">Hacker News Search API (Algolia)</a></li>
+  <li><a href="#hacker-news-api-firebase" id="toc-hacker-news-api-firebase" class="nav-link" data-scroll-target="#hacker-news-api-firebase">Hacker News API (Firebase)</a></li>
+  <li><a href="#apify-api" id="toc-apify-api" class="nav-link" data-scroll-target="#apify-api">Apify API</a></li>
+  <li><a href="#bls-public-data-api-v2" id="toc-bls-public-data-api-v2" class="nav-link" data-scroll-target="#bls-public-data-api-v2">BLS Public Data API (v2)</a></li>
+  </ul></li>
+  <li><a href="#raw-data-access" id="toc-raw-data-access" class="nav-link" data-scroll-target="#raw-data-access">Raw Data Access</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a></li>
+  <li><a href="#raw-and-cleaned-data" id="toc-raw-and-cleaned-data" class="nav-link" data-scroll-target="#raw-and-cleaned-data">Raw and Cleaned Data</a></li>
+  <li><a href="#cleaning-pipeline" id="toc-cleaning-pipeline" class="nav-link" data-scroll-target="#cleaning-pipeline">Cleaning Pipeline</a></li>
+  <li><a href="#exploratory-data-visualizations" id="toc-exploratory-data-visualizations" class="nav-link" data-scroll-target="#exploratory-data-visualizations">Exploratory Data Visualizations</a></li>
   </ul>
 </nav>
     </div>
@@ -435,17 +479,376 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="data-sources" class="level2">
 <h2 class="anchored" data-anchor-id="data-sources">Data Sources</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>Type</th>
+<th>What it gives</th>
+<th>Records</th>
+<th>Dates covered</th>
+<th>Licence</th>
+<th>Accessed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hacker News “Who is hiring?”</td>
+<td>API</td>
+<td>Job posts left as comments on the monthly “Ask HN: Who is hiring?” threads</td>
+<td>52,040 posts from 93 monthly threads</td>
+<td>Jan 2019 to Sep 2026</td>
+<td>No data licence published. Posts belong to their authors.</td>
+<td>2026-09-07</td>
+</tr>
+<tr class="even">
+<td>ATS job boards via Apify</td>
+<td>API</td>
+<td>Job posts from the hiring pages of 19 AI and software companies on Ashby, Greenhouse and Lever</td>
+<td>4,409 rows, 4,294 unique jobs</td>
+<td>Dec 2009 to Sep 2026. 83% were posted in 2026.</td>
+<td><a href="https://docs.apify.com/legal/general-terms-and-conditions">Apify terms of use</a>. Posts belong to the companies.</td>
+<td>2026-09-07</td>
+</tr>
+<tr class="odd">
+<td>Indeed Hiring Lab</td>
+<td>Download</td>
+<td>Daily job postings index (Feb 2020 = 100) for the US by sector, state and metro area, plus the share of AI job posts in 9 countries</td>
+<td>1,801,661 rows in 5 files</td>
+<td>Feb 2020 to Aug 2026. AI share: Jan 2019 to Jul 2026.</td>
+<td><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></td>
+<td>2026-09-08</td>
+</tr>
+<tr class="even">
+<td>BLS</td>
+<td>API</td>
+<td>Monthly JOLTS openings, hires, quits and layoffs (12 series), CES employment (2 series) and one year of OEWS figures (8 series)</td>
+<td>1,956 rows in 22 series</td>
+<td>Jan 2015 to Aug 2026</td>
+<td>Public domain (US government data)</td>
+<td>2026-09-08</td>
+</tr>
+<tr class="odd">
+<td>OEWS annual files</td>
+<td>Download</td>
+<td>Yearly national employment and wages for every occupation</td>
+<td>9,670 rows in 7 files</td>
+<td>2019 to 2025, one file per year</td>
+<td>Public domain (US government data)</td>
+<td>2026-09-07</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="raw-data" class="level2">
-<h2 class="anchored" data-anchor-id="raw-data">Raw Data</h2>
+<section id="apis-used" class="level2">
+<h2 class="anchored" data-anchor-id="apis-used">APIs Used</h2>
+<section id="hacker-news-search-api-algolia" class="level3">
+<h3 class="anchored" data-anchor-id="hacker-news-search-api-algolia">Hacker News Search API (Algolia)</h3>
+<ul>
+<li>Documentation: <a href="https://hn.algolia.com/api" class="uri">https://hn.algolia.com/api</a></li>
+<li>Endpoint: <code>GET https://hn.algolia.com/api/v1/search_by_date</code></li>
+<li>Used to find the monthly “Who is hiring?” threads.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="st">"https://hn.algolia.com/api/v1/search_by_date?query=Ask%20HN%3A%20Who%20is%20hiring&amp;tags=story,author_whoishiring&amp;hitsPerPage=100"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="cleaning" class="level2">
-<h2 class="anchored" data-anchor-id="cleaning">Cleaning</h2>
+<section id="hacker-news-api-firebase" class="level3">
+<h3 class="anchored" data-anchor-id="hacker-news-api-firebase">Hacker News API (Firebase)</h3>
+<ul>
+<li>Documentation: <a href="https://github.com/HackerNews/API" class="uri">https://github.com/HackerNews/API</a></li>
+<li>Endpoint: <code>GET https://hacker-news.firebaseio.com/v0/item/{id}.json</code></li>
+<li>Used to download each thread and every job post in it.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="st">"https://hacker-news.firebaseio.com/v0/item/18807017.json"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="exploratory-visualizations" class="level2">
-<h2 class="anchored" data-anchor-id="exploratory-visualizations">Exploratory Visualizations</h2>
+<section id="apify-api" class="level3">
+<h3 class="anchored" data-anchor-id="apify-api">Apify API</h3>
+<ul>
+<li>Documentation: <a href="https://docs.apify.com/api/v2/actor-run-sync-get-dataset-items-post" class="uri">https://docs.apify.com/api/v2/actor-run-sync-get-dataset-items-post</a></li>
+<li>Endpoint: <code>POST https://api.apify.com/v2/acts/scrapesage~multi-ats-job-scraper/run-sync-get-dataset-items</code></li>
+<li>Used to run the job board scraper and get the job posts back in the same request. It needs an Apify token.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-X</span> POST <span class="st">"https://api.apify.com/v2/acts/scrapesage~multi-ats-job-scraper/run-sync-get-dataset-items"</span> <span class="dt">\</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">-H</span> <span class="st">"Authorization: Bearer </span><span class="va">$APIFY_TOKEN</span><span class="st">"</span> <span class="dt">\</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span> <span class="dt">\</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">-d</span> <span class="st">'{</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="st">        "companies": ["greenhouse:anthropic", "ashby:openai"],</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="st">        "maxItems": 200,</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="st">        "maxItemsPerCompany": 50,</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="st">        "includeCompensation": true,</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="st">        "includeDescription": true,</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="st">        "includeRawData": false,</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="st">        "onlyNewItems": false,</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="st">        "proxyConfiguration": {"useApifyProxy": true}</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="st">      }'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="bls-public-data-api-v2" class="level3">
+<h3 class="anchored" data-anchor-id="bls-public-data-api-v2">BLS Public Data API (v2)</h3>
+<ul>
+<li>Documentation: <a href="https://www.bls.gov/developers/api_signature_v2.htm" class="uri">https://www.bls.gov/developers/api_signature_v2.htm</a></li>
+<li>Endpoint: <code>POST https://api.bls.gov/publicAPI/v2/timeseries/data/</code></li>
+<li>Used to download the JOLTS, CES and OEWS series. A free registration key raises the request limits.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-X</span> POST <span class="st">"https://api.bls.gov/publicAPI/v2/timeseries/data/"</span> <span class="dt">\</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">-H</span> <span class="st">"Content-Type: application/json"</span> <span class="dt">\</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">-d</span> <span class="st">'{</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="st">        "seriesid": ["JTS510000000000000JOL"],</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="st">        "startyear": "2015",</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="st">        "endyear": "2026",</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="st">        "registrationkey": "YOUR_BLS_API_KEY"</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="st">      }'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="raw-data-access" class="level2">
+<h2 class="anchored" data-anchor-id="raw-data-access">Raw Data Access</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>Where it came from</th>
+<th>How to get it again</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hacker News</td>
+<td><a href="https://news.ycombinator.com/submitted?id=whoishiring">“Who is hiring?” threads</a></td>
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/fetch_hn.py">fetch_hn.py</a></td>
+</tr>
+<tr class="even">
+<td>ATS job boards</td>
+<td><a href="https://apify.com/scrapesage/multi-ats-job-scraper">Apify multi-ATS job scraper</a></td>
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/fetch_apify.py">fetch_apify.py</a></td>
+</tr>
+<tr class="odd">
+<td>Indeed Hiring Lab</td>
+<td><a href="https://github.com/hiring-lab/job_postings_tracker">job_postings_tracker</a> and <a href="https://github.com/hiring-lab/ai-tracker">ai-tracker</a> on GitHub</td>
+<td>Clone the two repositories</td>
+</tr>
+<tr class="even">
+<td>BLS</td>
+<td><a href="https://www.bls.gov/developers/">BLS Public Data API</a></td>
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/fetch_bls.py">fetch_bls.py</a></td>
+</tr>
+<tr class="odd">
+<td>OEWS annual files</td>
+<td><a href="https://www.bls.gov/oes/tables.htm">OEWS data tables</a></td>
+<td>Download the national XLSX file for each year</td>
+</tr>
+</tbody>
+</table>
+<p>The raw files are not stored in version control. They take up about 300 MB, which is too large for the repository. The fetch scripts in <code>src/</code> download the Hacker News, job board and BLS data again. The Indeed and OEWS files have no fetch script, so they are downloaded from the links in the table. The job board script saves JSON, while the cleaning script reads CSV exports of the same data.</p>
+<p>Small samples of the raw and cleaned data are stored in <code>data/samples/</code>:</p>
+<ul>
+<li><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/hn_raw_sample.json">hn_raw_sample.json</a>: 20 raw Hacker News posts</li>
+<li><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/hn_clean_sample.csv">hn_clean_sample.csv</a>: the same 20 posts after the first cleaning step</li>
+<li><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/hn_parsed_sample.csv">hn_parsed_sample.csv</a>: the same 20 posts, sorted by date, as the second cleaning step reads them</li>
+<li><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/hn_cleaned_sample.csv">hn_cleaned_sample.csv</a>: the same 20 posts after the second cleaning step</li>
+<li><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/ats_raw_sample.csv">ats_raw_sample.csv</a>: 20 raw job board rows</li>
+<li><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/ats_clean_sample.csv">ats_clean_sample.csv</a>: the same 20 rows after the first cleaning step</li>
+<li><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/ats_final_sample.csv">ats_final_sample.csv</a>: the same 20 rows after the second cleaning step</li>
+</ul>
+</section>
+<section id="code" class="level2">
+<h2 class="anchored" data-anchor-id="code">Code</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Script</th>
+<th>What it does</th>
+<th>Language</th>
+<th>Main packages</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/fetch_hn.py">fetch_hn.py</a></td>
+<td>Finds the monthly “Who is hiring?” threads and downloads every job post in them.</td>
+<td>Python 3.12</td>
+<td>httpx, tqdm</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/fetch_apify.py">fetch_apify.py</a></td>
+<td>Runs the Apify job board scraper for one group of companies and saves the posts.</td>
+<td>Python 3.12</td>
+<td>requests, python-dotenv</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/fetch_bls.py">fetch_bls.py</a></td>
+<td>Downloads the JOLTS, CES and OEWS series from the BLS API.</td>
+<td>Python 3.12</td>
+<td>requests, python-dotenv</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/clean_hn.py">clean_hn.py</a></td>
+<td>Reads the raw Hacker News posts and splits each one into company, role, location and other fields.</td>
+<td>Python 3.12</td>
+<td>pandas</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/clean_hn_stage2.py">clean_hn_stage2.py</a></td>
+<td>Fills in missing work mode and location, cleans company and place names, and flags junk and repeat posts.</td>
+<td>Python 3.12</td>
+<td>pandas</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/clean_ats.py">clean_ats.py</a></td>
+<td>Joins the four job board files, drops duplicate jobs, and adds seniority and role family.</td>
+<td>Python 3.12</td>
+<td>pandas</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/clean_ats_stage2.py">clean_ats_stage2.py</a></td>
+<td>Recovers city and region, groups locations, and flags near duplicates and unusual description lengths.</td>
+<td>Python 3.12</td>
+<td>pandas</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/clean_indeed.py">clean_indeed.py</a></td>
+<td>Reshapes the Indeed files into one row per date and series, and flags gaps, duplicates and outliers.</td>
+<td>Python 3.12</td>
+<td>pandas</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/clean_bls.py">clean_bls.py</a></td>
+<td>Turns the BLS API responses into tables, and flags gaps, duplicates and outliers.</td>
+<td>Python 3.12</td>
+<td>pandas</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/clean_oews_files.py">clean_oews_files.py</a></td>
+<td>Pulls six occupations out of the yearly OEWS files and builds one table for 2019 to 2025.</td>
+<td>Python 3.12</td>
+<td>pandas, openpyxl</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/plotstyle.py">plotstyle.py</a></td>
+<td>Holds the shared chart colours and style, and saves each figure with a thumbnail.</td>
+<td>Python 3.12</td>
+<td>matplotlib</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/make_sample_images.py">make_sample_images.py</a></td>
+<td>Draws the raw and cleaned sample files as table images for this page.</td>
+<td>Python 3.12</td>
+<td>pandas, matplotlib</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="raw-and-cleaned-data" class="level2">
+<h2 class="anchored" data-anchor-id="raw-and-cleaned-data">Raw and Cleaned Data</h2>
+<p><img src="figures/samples/hn_raw.png" class="img-fluid"> <!-- PLACEHOLDER: caption --></p>
+<p><img src="figures/samples/hn_cleaned.png" class="img-fluid"> <!-- PLACEHOLDER: caption --></p>
+<p><img src="figures/samples/ats_raw.png" class="img-fluid"> <!-- PLACEHOLDER: caption --></p>
+<p><img src="figures/samples/ats_cleaned.png" class="img-fluid"> <!-- PLACEHOLDER: caption --></p>
+</section>
+<section id="cleaning-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="cleaning-pipeline">Cleaning Pipeline</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 17%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th style="text-align: right;">Rows in</th>
+<th style="text-align: right;">Rows out</th>
+<th>What was removed</th>
+<th>What was flagged</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hacker News</td>
+<td style="text-align: right;">52,040</td>
+<td style="text-align: right;">48,296</td>
+<td>3,744 deleted or dead comments</td>
+<td>233 junk posts, 17,538 reposts, 242 very long posts</td>
+</tr>
+<tr class="even">
+<td>ATS job boards</td>
+<td style="text-align: right;">4,409</td>
+<td style="text-align: right;">4,294</td>
+<td>115 duplicate job IDs. 5 empty columns and 38 scraper-only columns.</td>
+<td>933 near duplicates, 12 suspect salaries, 43 very short and 43 very long descriptions</td>
+</tr>
+<tr class="odd">
+<td>Indeed Hiring Lab</td>
+<td style="text-align: right;">1,801,661</td>
+<td style="text-align: right;">1,801,661</td>
+<td>Nothing</td>
+<td>9,010 outliers (more than 3 standard deviations from their series mean), 12 values outside the 0 to 500 range</td>
+</tr>
+<tr class="even">
+<td>BLS</td>
+<td style="text-align: right;">1,956</td>
+<td style="text-align: right;">1,956</td>
+<td>Nothing</td>
+<td>12 JOLTS outliers</td>
+</tr>
+<tr class="odd">
+<td>OEWS annual files</td>
+<td style="text-align: right;">9,670</td>
+<td style="text-align: right;">33</td>
+<td>Rows for all occupations outside the six studied</td>
+<td>1 top-coded wage, 3 year-over-year changes above 20%</td>
+</tr>
+</tbody>
+</table>
+<!-- PLACEHOLDER: paragraph on the cleaning approach -->
+</section>
+<section id="exploratory-data-visualizations" class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-data-visualizations">Exploratory Data Visualizations</h2>
+<section id="job-postings-index-ai-exposed-against-control-sectors" class="level4">
+<h4 class="anchored" data-anchor-id="job-postings-index-ai-exposed-against-control-sectors">1. Job postings index: AI-exposed against control sectors</h4>
+<p><a href="figures/indeed_sector_divergence.png"><img src="figures/thumbs/indeed_sector_divergence.png" class="thumb img-fluid"></a> <!-- PLACEHOLDER: two-sentence caption --></p>
+</section>
+<section id="job-openings-against-online-postings" class="level4">
+<h4 class="anchored" data-anchor-id="job-openings-against-online-postings">2. Job openings against online postings</h4>
+<p><a href="figures/jolts_vs_indeed.png"><img src="figures/thumbs/jolts_vs_indeed.png" class="thumb img-fluid"></a> <!-- PLACEHOLDER: two-sentence caption --></p>
+</section>
+<section id="hires-and-quits-in-the-information-sector" class="level4">
+<h4 class="anchored" data-anchor-id="hires-and-quits-in-the-information-sector">3. Hires and quits in the information sector</h4>
+<p><a href="figures/jolts_hires_quits.png"><img src="figures/thumbs/jolts_hires_quits.png" class="thumb img-fluid"></a> <!-- PLACEHOLDER: two-sentence caption --></p>
+</section>
+<section id="employment-by-computer-occupation" class="level4">
+<h4 class="anchored" data-anchor-id="employment-by-computer-occupation">4. Employment by computer occupation</h4>
+<p><a href="figures/oews_employment_trend.png"><img src="figures/thumbs/oews_employment_trend.png" class="thumb img-fluid"></a> <!-- PLACEHOLDER: two-sentence caption --></p>
+</section>
+<section id="role-families-across-company-job-postings" class="level4">
+<h4 class="anchored" data-anchor-id="role-families-across-company-job-postings">5. Role families across company job postings</h4>
+<p><a href="figures/ats_role_family.png"><img src="figures/thumbs/ats_role_family.png" class="thumb img-fluid"></a> <!-- PLACEHOLDER: two-sentence caption --></p>
+</section>
+<section id="forward-deployed-and-solutions-postings-by-company" class="level4">
+<h4 class="anchored" data-anchor-id="forward-deployed-and-solutions-postings-by-company">6. Forward deployed and solutions postings by company</h4>
+<p><a href="figures/ats_fde_by_company.png"><img src="figures/thumbs/ats_fde_by_company.png" class="thumb img-fluid"></a> <!-- PLACEHOLDER: two-sentence caption --></p>
+</section>
+<section id="seniority-mix-within-each-role-family" class="level4">
+<h4 class="anchored" data-anchor-id="seniority-mix-within-each-role-family">7. Seniority mix within each role family</h4>
+<p><a href="figures/ats_seniority_by_family.png"><img src="figures/thumbs/ats_seniority_by_family.png" class="thumb img-fluid"></a> <!-- PLACEHOLDER: two-sentence caption --></p>
+</section>
+<section id="advertised-salary-by-role-family" class="level4">
+<h4 class="anchored" data-anchor-id="advertised-salary-by-role-family">8. Advertised salary by role family</h4>
+<p><a href="figures/ats_salary_by_family.png"><img src="figures/thumbs/ats_salary_by_family.png" class="thumb img-fluid"></a> <!-- PLACEHOLDER: two-sentence caption --></p>
+</section>
+<section id="description-length-and-advertised-salary" class="level4">
+<h4 class="anchored" data-anchor-id="description-length-and-advertised-salary">9. Description length and advertised salary</h4>
+<p><a href="figures/ats_desc_len_vs_salary.png"><img src="figures/thumbs/ats_desc_len_vs_salary.png" class="thumb img-fluid"></a> <!-- PLACEHOLDER: two-sentence caption --></p>
+</section>
+<section id="work-arrangement-over-time" class="level4">
+<h4 class="anchored" data-anchor-id="work-arrangement-over-time">10. Work arrangement over time</h4>
+<p><a href="figures/hn_work_mode_over_time.png"><img src="figures/thumbs/hn_work_mode_over_time.png" class="thumb img-fluid"></a> <!-- PLACEHOLDER: two-sentence caption --></p>
+</section>
+<section id="most-common-locations-in-job-postings" class="level4">
+<h4 class="anchored" data-anchor-id="most-common-locations-in-job-postings">11. Most common locations in job postings</h4>
+<p><a href="figures/hn_top_locations.png"><img src="figures/thumbs/hn_top_locations.png" class="thumb img-fluid"></a> <!-- PLACEHOLDER: two-sentence caption --></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

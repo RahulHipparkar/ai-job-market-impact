@@ -37,14 +37,23 @@ COMPANY_MAP = {
 # Checked in order; later rules override earlier ones (last match wins), so
 # a title matching two rules resolves to the more senior one -- e.g.
 # "Senior Staff Engineer" matches senior then staff, and staff wins.
-# senior/II/III use inline case flags so bare "I" doesn't match inside
-# words like "AI" (word-boundary regex already excludes that).
+# Exception: intern/new_grad are protected -- once either matches, no later
+# rule (junior/senior/staff/lead) can displace it, so e.g. "Associate Product
+# Manager, New Grad" resolves to new_grad rather than lead via "Manager".
+# sr./jr./intern/architects are word-boundary-anchored so they don't match
+# substrings inside unrelated words (e.g. "Israel", "QSR", "International",
+# "Internal", "Architecture"). lead and vp stay unanchored on purpose: their
+# embedded matches ("Leader", "RVP") are genuine lead-tier titles. Bare roman
+# numerals (I/II/III) were dropped: only 2 occurrences exist across 4,294
+# titles, and one of those was a false positive ("UK&I" = UK and Ireland).
+PROTECTED_SENIORITY = {"intern", "new_grad"}
+
 SENIORITY_RULES = [
-    ("intern", re.compile(r"(?i:intern(ship)?)")),
+    ("intern", re.compile(r"(?i:\bintern(ship)?\b)")),
     ("new_grad", re.compile(r"(?i:new\s?grad(uate)?|university\s?grad|early career)")),
-    ("junior", re.compile(r"(?i:junior|jr\.?|associate)|\bI\b")),
-    ("senior", re.compile(r"(?i:senior|sr\.?)|\bII\b|\bIII\b")),
-    ("staff", re.compile(r"(?i:staff|principal|distinguished|architect)")),
+    ("junior", re.compile(r"(?i:junior|\bjr\.?\b|associate)")),
+    ("senior", re.compile(r"(?i:senior|\bsr\.?\b)")),
+    ("staff", re.compile(r"(?i:staff|principal|distinguished|\barchitects?\b)")),
     ("lead", re.compile(r"(?i:lead|manager|head of|director|vp|chief)")),
 ]
 
@@ -102,6 +111,8 @@ def classify_seniority(title: str) -> str:
         return "mid"
     result = "mid"
     for label, rx in SENIORITY_RULES:
+        if result in PROTECTED_SENIORITY and label not in PROTECTED_SENIORITY:
+            continue
         if rx.search(title):
             result = label
     return result
@@ -173,6 +184,12 @@ def main() -> None:
     report.append("\nseniority distribution:")
     for label, count in df["seniority"].value_counts().items():
         report.append(f"  {label}: {count}")
+    report.append(
+        "  NOTE: the words \"junior\" and \"jr\" appear in zero titles across all "
+        f"{len(df)} postings, and no alternate level ladder (L1-9, IC1-9, P1-9) is "
+        "present either -- the junior bucket is built entirely from \"associate\" "
+        "titles. This is a property of the data, not a limitation of the rules."
+    )
 
     df["role_family"] = df["title"].apply(classify_role_family)
     report.append("\nrole_family distribution:")
