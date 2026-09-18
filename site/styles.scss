@@ -7,7 +7,7 @@ $headings-font-weight:   600;
 $font-size-base:         1.0625rem;
 $line-height-base:       1.65;
 $h1-font-size:           1.75rem;
-$h2-font-size:           1.25rem;
+$h2-font-size:           1.4rem;
 $h3-font-size:           1.0625rem;
 $h4-font-size:           1.0625rem;
 
@@ -17,6 +17,8 @@ $body-color:     #1C1C1A;
 $link-color:     #4C4BA8;
 $border-color:   #DEDEDA;
 $code-bg:        #F1F1EE;
+$navbar-bg:     #FFFFFF;
+$navbar-fg:     #3A3A36;
 
 /*-- scss:rules --*/
 
@@ -34,8 +36,41 @@ $accent-dk: #2B2A6B;
 
 // ---------- base ----------
 
+// One left edge down the whole page. The content column spans the page
+// grid with a left gutter that the navbar title shares (the navbar sits 18px
+// in, so its container padding is the gutter minus 18px). The right gutter
+// matches the left. Running text wraps at 95ch; tables and figures use the
+// full column width. Nothing is centred.
+$page-gutter:   clamp(24px, 5vw, 72px);  // 72px on a 1440px window, 25px on a phone
+$prose-measure: 60.57rem;  // 95ch of body text (1030px; root font size is 17px)
+
 #quarto-document-content {
-  max-width: 68ch;
+  grid-column: screen-start / screen-end;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 1.5rem;  // space between the navbar and the page title
+  padding-left: $page-gutter;
+  padding-right: $page-gutter;
+}
+
+#title-block-header,
+#quarto-document-content :is(h1, h2, h3, h4, h5, h6, ul, ol, dl, blockquote, div.sourceCode),
+#quarto-document-content p:not(figure p) {
+  max-width: $prose-measure;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+// bullets and numbers sit close to the shared left edge
+#quarto-document-content :is(ul, ol) {
+  padding-left: 1.25em;
+}
+
+#quarto-document-content table,
+#quarto-document-content :is(.quarto-figure, p:not(figure p):has(> img:only-child)) {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 // ---------- navbar (site header bar) ----------
@@ -50,7 +85,7 @@ $accent-dk: #2B2A6B;
   display: flex;
   align-items: center;
   gap: 9px;
-  padding: 0 15px;
+  padding: 0 calc(#{$page-gutter} - 18px);
 }
 
 .navbar-brand-container.mx-auto {
@@ -62,16 +97,6 @@ $accent-dk: #2B2A6B;
   font-size: 0.9375rem;
   font-weight: 600;
   color: $body-color;
-}
-
-.navbar-title::after {
-  content: "Generative AI and tech hiring";
-  display: inline-block;
-  margin-left: 9px;
-  font-family: $font-family-sans-serif;
-  font-size: 0.75rem;
-  font-weight: 400;
-  color: $muted;
 }
 
 .quarto-navbar-tools.tools-end {
@@ -100,33 +125,42 @@ $accent-dk: #2B2A6B;
   content: "\f5a1"; // sun-fill — dark mode, click to go light
 }
 
-// ---------- sidebar ----------
+// ---------- navbar items ----------
 
-.sidebar-item-section > .sidebar-item-container > .sidebar-link {
-  color: $muted-2;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0;
-  padding-left: 8px;
-}
-
-.sidebar-item:not(.sidebar-item-section) > .sidebar-item-container > .sidebar-link {
+.navbar .navbar-nav .nav-link {
   color: $ink-2;
-  font-size: 0.8125rem;
-  padding: 5px 8px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  padding: 5px 10px;
   border-radius: 5px;
 }
 
-.sidebar-link:hover {
-  background-color: rgba($accent-bg, 0.6);
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
   color: $accent;
 }
 
-.sidebar-link.active {
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .dropdown-item.active {
   color: $accent-dk;
   background-color: $accent-bg;
   font-weight: 600;
-  border-radius: 5px;
+}
+
+.navbar .dropdown-menu {
+  border: 1px solid $border-color;
+  box-shadow: none;
+}
+
+.navbar .dropdown-item {
+  color: $ink-2;
+  font-size: 0.85rem;
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  color: $accent;
+  background-color: $surface;
 }
 
 // ---------- breadcrumb ----------
@@ -150,7 +184,7 @@ $accent-dk: #2B2A6B;
 // ---------- headings ----------
 
 h1.title {
-  border-top: none;
+  border: none;
   margin-bottom: 0.4rem;
 }
 
@@ -162,15 +196,36 @@ h1.title {
   margin-bottom: 1.25rem;
 }
 
+// A page description sits directly under the subtitle, in the same style.
+#title-block-header:has(.description) .subtitle {
+  margin-bottom: 0.25rem;
+}
+
+#title-block-header .description {
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  color: $muted;
+  margin-bottom: 1.25rem;
+}
+
+// No rules under headings; whitespace separates sections instead.
+// border and padding are reset because Quarto's theme also adds an h2
+// border-bottom with its own padding.
 h2 {
-  border-top: 1px solid $border-color;
-  padding-top: 0.9rem;
-  margin-top: 2.6rem;
+  border: none;
+  padding: 0;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
   border: none;
   color: $muted;
+}
+
+h4 {
+  border: none;
 }
 
 // ---------- table of contents (right rail) ----------
@@ -185,14 +240,11 @@ h3 {
   display: none;
 }
 
-.sidebar nav[role="doc-toc"] > ul a,
 #TOC a {
   color: $muted;
   border-left: 1px solid $border-color;
 }
 
-.sidebar nav[role="doc-toc"] ul > li > a.active,
-.sidebar nav[role="doc-toc"] ul > li > ul > li > a.active,
 #TOC a.active {
   color: $accent !important;
   font-weight: 500;
@@ -201,13 +253,36 @@ h3 {
 
 // ---------- figures ----------
 
+// Captions: smaller muted text directly under the image, no wider than it.
 figcaption,
 .figure-caption {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
   color: $muted;
-  border-left: 2px solid $accent;
-  border-radius: 0;
-  padding-left: 10px;
+  border: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+// Quarto sets figures to width: 100%; shrink to the image so the caption
+// wraps at the image's width and sits directly under it.
+#quarto-document-content .quarto-figure figure {
+  display: table;
+  width: auto;
+}
+
+#quarto-document-content .quarto-figure .figure-img {
+  display: block;
+  margin-bottom: 0;
+}
+
+#quarto-document-content .quarto-figure figure > p {
+  margin-bottom: 0;
+}
+
+#quarto-document-content .quarto-figure figcaption {
+  display: table-caption;
+  caption-side: bottom;
 }
 
 main img {
@@ -215,31 +290,308 @@ main img {
   border-radius: 6px;
 }
 
-.thumb img,
-img.thumb {
-  max-width: 320px;
+// Cap image height so a figure and its caption fit on screen together.
+main img {
+  max-height: 460px;
+  width: auto;
+}
+
+// Figures sit on the shared left edge with clear space above and below.
+#quarto-document-content :is(.quarto-figure, p:not(figure p):has(> img:only-child)) {
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
+}
+
+// Extra room when a figure ends its section, before the next heading.
+#quarto-document-content :is(.quarto-figure, p:not(figure p):has(> img:only-child)):last-child {
+  margin-bottom: 4.5rem;
+}
+
+#quarto-document-content .quarto-figure :is(figure, figure > p, figcaption) {
+  text-align: left;
+}
+
+// ---------- figure grid ----------
+// ::: {.figure-grid} holding raw-HTML .figure-card divs: a linked thumbnail,
+// an h4 title and a caption. The grid is capped at the prose measure so
+// auto-fit settles on three columns on desktop, two on tablet and one on
+// phones; uncapped, it fits four on a 1440px window.
+
+.figure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: $prose-measure;
+  margin: 2rem 0;
+}
+
+.figure-card {
+  background: $white;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+// Block link so the focus outline wraps the thumbnail; inset because the
+// card clips anything outside it.
+.figure-card > a {
+  display: block;
+}
+
+.figure-card > a:focus-visible {
+  outline-offset: -2px;
+}
+
+// border, border-radius and max-height undo the `main img` rules above
+.figure-card img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  max-height: none;
+  object-fit: contain;
+  background: #FFFFFF;
+  border: none;
+  border-bottom: 1px solid $border-color;
+  border-radius: 0;
+  padding: 8px;
+}
+
+.figure-card-body {
+  padding: 1rem 1.1rem 1.2rem;
+}
+
+.figure-card h4 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+  border: none;
+}
+
+.figure-card p {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: $muted;
+  margin: 0;
+}
+
+// ---------- key numbers ----------
+// ::: {.key-numbers} holding a .key-number block per figure: a large value
+// above a small label. Four across on desktop, two on tablet, one on phones.
+
+.key-numbers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: $prose-measure;
+  margin: 2rem 0;
+}
+
+.key-number-value {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $accent;
+}
+
+.key-number-label {
+  display: block;
+  font-size: 0.8rem;
+  color: $muted;
+}
+
+@media (max-width: 900px) {
+  .key-numbers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .key-numbers {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ---------- about page ----------
+// ::: {.about-header} is a panel holding the profile photo beside the name
+// and intro line; it stacks on phones. .profile-photo undoes the shared
+// `main img` rules so the photo stays a fixed portrait frame.
+
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  max-width: $prose-measure;
+  margin: 2rem 0 2.5rem;
+  padding: 1.5rem;
+  background: $panel-bg;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+}
+
+.profile-photo {
+  flex-shrink: 0;
+  width: 180px;
+  height: 225px;
+  max-height: none;
+  object-fit: cover;
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  padding: 0;
+}
+
+// The name is the <strong> on the first line, the intro line follows it.
+.about-header p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: $muted;
+}
+
+.about-header strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-family: $headings-font-family;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: $body-color;
+}
+
+// ::: {.about-areas} — the four areas of work, as icon cards.
+.about-areas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  max-width: $prose-measure;
+  margin: 1.5rem 0;
+}
+
+.about-areas > div {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.95rem;
+  background: $panel-bg;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+}
+
+.about-areas i {
+  flex-shrink: 0;
+  font-size: 1.15rem;
+  color: $accent;
+}
+
+// ::: {.about-links} — profile links as pills rather than a run of text.
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.5rem 0;
+}
+
+.about-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.95rem;
+  font-size: 0.9rem;
+  color: $ink-2;
+  text-decoration: none;
+  background: $panel-bg;
+  border: 1px solid $border-color;
+  border-radius: 999px;
+}
+
+.about-links a:hover,
+.about-links a:focus {
+  color: $accent;
+  border-color: $accent;
+}
+
+@media (max-width: 560px) {
+  .about-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-areas {
+    grid-template-columns: 1fr;
+  }
+}
+
+// The Background list on the About page: term on the left, detail on the
+// right, stacking on phones. Styled on the element, since it is the only
+// definition list on the site. Quarto's theme ships no Bootstrap grid
+// classes, so dl.row would simply stack.
+
+#quarto-document-content dl {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 0 1.5rem;
+  margin: 1.5rem 0;
+}
+
+#quarto-document-content dt {
+  font-weight: 600;
+}
+
+#quarto-document-content dd,
+#quarto-document-content dd > p {
+  margin: 0;
+}
+
+// A quiet rule above each entry, so the two columns read as a tidy table.
+#quarto-document-content dt,
+#quarto-document-content dd {
+  padding: 0.6rem 0;
+  border-top: 1px solid $border-color;
+}
+
+@media (max-width: 560px) {
+  #quarto-document-content dl {
+    grid-template-columns: 1fr;
+  }
+
+  #quarto-document-content dt {
+    padding-bottom: 0.15rem;
+  }
+
+  #quarto-document-content dd {
+    padding-top: 0;
+    padding-bottom: 0.9rem;
+    border-top: none;
+  }
 }
 
 // ---------- tables ----------
 
+// Pandoc fixes pipe-table column widths from the --- separators, which
+// splits wide tables into equal columns; let the browser size them instead.
+main table col {
+  width: auto !important;
+}
+
 table {
-  font-size: 0.9375rem;
+  font-size: 0.85rem;
   border-collapse: collapse;
   width: 100%;
   margin: 1.5rem 0;
 }
 
+.table thead th,
 thead th {
   text-align: left;
   font-weight: 600;
   color: $ink-2;
   border-bottom: 2px solid $body-color;
-  padding: 0.5rem 0.6rem;
+  padding: 0.6rem 0.75rem;
 }
 
+.table tbody td,
 tbody td {
   border-bottom: 1px solid $border-color;
-  padding: 0.45rem 0.6rem;
+  padding: 0.55rem 0.75rem;
 }
 
 tbody tr:hover {
@@ -249,6 +601,27 @@ tbody tr:hover {
 td.num, th.num {
   text-align: right;
   font-variant-numeric: tabular-nums;
+}
+
+// Wide tables scroll inside their own box on narrow screens instead of
+// widening the page. Wrap each table in ::: {.table-wrap} in the .qmd.
+.table-wrap {
+  overflow-x: auto;
+}
+
+// ---------- code ----------
+
+// Inline code (white-space: pre) and bare URLs have no break points, so a
+// long endpoint or link pushes the page wider on a phone; let them break.
+// Code blocks already scroll inside their own box: Quarto sets
+// div.sourceCode to overflow-x: auto.
+#quarto-document-content :not(pre) > code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+#quarto-document-content a.uri {
+  overflow-wrap: anywhere;
 }
 
 // ---------- run-summary component ----------
@@ -314,8 +687,7 @@ blockquote {
 
 // ---------- accessibility & responsive ----------
 
-a:focus-visible,
-.sidebar-link:focus-visible {
+a:focus-visible {
   outline: 2px solid $accent;
   outline-offset: 2px;
 }
@@ -324,11 +696,5 @@ a:focus-visible,
   * {
     transition: none !important;
     animation: none !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar-title::after {
-    display: none;
   }
 }

@@ -2,4 +2,58 @@
 title: "About Me"
 ---
 
-<!-- PLACEHOLDER: about me. First person is allowed on this tab. -->
+::: {.about-header}
+```{=html}
+<img class="profile-photo" src="figures/profile.jpg" alt="Rahul Hipparkar">
+
+<div>
+  <p><strong>Rahul Hipparkar</strong>
+  Data science master's student at CU Boulder. I build machine learning and language model systems.</p>
+</div>
+```
+:::
+
+## About
+
+I am working on an M.S. in Data Science at the University of Colorado Boulder, from 2025 to 2027. Before that I spent about three and a half years at Eviden as a data scientist, where I built LLM tools that automated parts of financial audit review, the FastAPI services behind them, SQL pipelines, and an anomaly detection system for spotting odd transactions. This summer I am a data scientist intern at Summer Atlantic Capital, working on a risk scoring model for compliance checks and an LLM module that explains in plain language why a score came out the way it did. Further back, I studied computer engineering at Savitribai Phule Pune University.
+
+The idea for this project came out of an earlier one. I built a resume-to-job matching platform that pulled live job listings from LinkedIn and Indeed, and spending that much time inside posting data left me wondering what actually happened to tech hiring after 2022. The claim that AI is behind the slowdown is everywhere, but interest rates rose and pandemic-era overhiring unwound in the same window, so all three explanations fit the shape of the drop. That seemed worth digging into with real data rather than taking any of them on faith.
+
+## What I work on
+
+::: {.about-areas}
+```{=html}
+<div><i class="bi bi-graph-up" aria-hidden="true"></i> Machine learning and applied statistics</div>
+<div><i class="bi bi-robot" aria-hidden="true"></i> Large language models and multi-agent systems</div>
+<div><i class="bi bi-diagram-3" aria-hidden="true"></i> Data pipelines and backend services</div>
+<div><i class="bi bi-cloud" aria-hidden="true"></i> Cloud infrastructure and MLOps</div>
+```
+:::
+
+## Background
+
+Education
+:   M.S. Data Science, University of Colorado Boulder (2025 to 2027); B.E. Computer Engineering, Savitribai Phule Pune University
+
+Experience
+:   Data Scientist Intern, Summer Atlantic Capital; Associate Consultant, Eviden
+
+Teaching
+:   Course Assistant, STAT 5000/5010; Grader, MATH 2001
+
+Based in
+:   Boulder, Colorado
+
+## Outside work
+
+<!-- PLACEHOLDER: a short paragraph on running and anything else -->
+
+## Elsewhere
+
+::: {.about-links}
+```{=html}
+<a href="https://github.com/RahulHipparkar"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a>
+<a href="https://www.linkedin.com/in/rahul-hipparkar/"><i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn</a>
+<a href="https://rahulhipparkar.github.io/"><i class="bi bi-globe" aria-hidden="true"></i> Portfolio</a>
+```
+:::

@@ -4,6 +4,8 @@ title: "DataPrep_EDA"
 
 ## Data Sources
 
+::: {.table-wrap}
+
 | Source | Type | What it gives | Records | Dates covered | Licence | Accessed |
 |---|---|---|---|---|---|---|
 | Hacker News "Who is hiring?" | API | Job posts left as comments on the monthly "Ask HN: Who is hiring?" threads | 52,040 posts from 93 monthly threads | Jan 2019 to Sep 2026 | No data licence published. Posts belong to their authors. | 2026-09-07 |
@@ -11,6 +13,8 @@ title: "DataPrep_EDA"
 | Indeed Hiring Lab | Download | Daily job postings index (Feb 2020 = 100) for the US by sector, state and metro area, plus the share of AI job posts in 9 countries | 1,801,661 rows in 5 files | Feb 2020 to Aug 2026. AI share: Jan 2019 to Jul 2026. | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 2026-09-08 |
 | BLS | API | Monthly JOLTS openings, hires, quits and layoffs (12 series), CES employment (2 series) and one year of OEWS figures (8 series) | 1,956 rows in 22 series | Jan 2015 to Aug 2026 | Public domain (US government data) | 2026-09-08 |
 | OEWS annual files | Download | Yearly national employment and wages for every occupation | 9,670 rows in 7 files | 2019 to 2025, one file per year | Public domain (US government data) | 2026-09-07 |
+
+:::
 
 ## APIs Used
 
@@ -75,6 +79,8 @@ curl -X POST "https://api.bls.gov/publicAPI/v2/timeseries/data/" \
 
 ## Raw Data Access
 
+::: {.table-wrap}
+
 | Source | Where it came from | How to get it again |
 |---|---|---|
 | Hacker News | ["Who is hiring?" threads](https://news.ycombinator.com/submitted?id=whoishiring) | [fetch_hn.py](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/fetch_hn.py) |
@@ -82,6 +88,8 @@ curl -X POST "https://api.bls.gov/publicAPI/v2/timeseries/data/" \
 | Indeed Hiring Lab | [job_postings_tracker](https://github.com/hiring-lab/job_postings_tracker) and [ai-tracker](https://github.com/hiring-lab/ai-tracker) on GitHub | Clone the two repositories |
 | BLS | [BLS Public Data API](https://www.bls.gov/developers/) | [fetch_bls.py](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/fetch_bls.py) |
 | OEWS annual files | [OEWS data tables](https://www.bls.gov/oes/tables.htm) | Download the national XLSX file for each year |
+
+:::
 
 The raw files are not stored in version control. They take up about 300 MB, which is too large for the repository. The fetch scripts in `src/` download the Hacker News, job board and BLS data again. The Indeed and OEWS files have no fetch script, so they are downloaded from the links in the table. The job board script saves JSON, while the cleaning script reads CSV exports of the same data.
 
@@ -97,6 +105,8 @@ Small samples of the raw and cleaned data are stored in `data/samples/`:
 
 ## Code
 
+::: {.table-wrap}
+
 | Script | What it does | Language | Main packages |
 |---|---|---|---|
 | [fetch_hn.py](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/fetch_hn.py) | Finds the monthly "Who is hiring?" threads and downloads every job post in them. | Python 3.12 | httpx, tqdm |
@@ -110,7 +120,11 @@ Small samples of the raw and cleaned data are stored in `data/samples/`:
 | [clean_bls.py](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/clean_bls.py) | Turns the BLS API responses into tables, and flags gaps, duplicates and outliers. | Python 3.12 | pandas |
 | [clean_oews_files.py](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/clean_oews_files.py) | Pulls six occupations out of the yearly OEWS files and builds one table for 2019 to 2025. | Python 3.12 | pandas, openpyxl |
 | [plotstyle.py](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/plotstyle.py) | Holds the shared chart colours and style, and saves each figure with a thumbnail. | Python 3.12 | matplotlib |
+| [make_samples.py](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/make_samples.py) | Pulls matching raw and cleaned sample rows for the Indeed, BLS and OEWS sources. | Python 3.12 | pandas, openpyxl |
 | [make_sample_images.py](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/make_sample_images.py) | Draws the raw and cleaned sample files as table images for this page. | Python 3.12 | pandas, matplotlib |
+| [make_intro_figure.py](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/make_intro_figure.py) | Draws the US job openings chart for the Introduction page. | Python 3.12 | pandas, matplotlib |
+
+:::
 
 ## Raw and Cleaned Data
 
@@ -126,7 +140,24 @@ Small samples of the raw and cleaned data are stored in `data/samples/`:
 ![](figures/samples/ats_cleaned.png)
 <!-- PLACEHOLDER: caption -->
 
+![](figures/samples/indeed_raw.png)
+
+![](figures/samples/indeed_cleaned.png)
+<!-- PLACEHOLDER: caption -->
+
+![](figures/samples/bls_raw.png)
+
+![](figures/samples/bls_cleaned.png)
+<!-- PLACEHOLDER: caption -->
+
+![](figures/samples/oews_raw.png)
+
+![](figures/samples/oews_cleaned.png)
+<!-- PLACEHOLDER: caption -->
+
 ## Cleaning Pipeline
+
+::: {.table-wrap}
 
 | Source | Rows in | Rows out | What was removed | What was flagged |
 |---|---:|---:|---|---|
@@ -136,50 +167,143 @@ Small samples of the raw and cleaned data are stored in `data/samples/`:
 | BLS | 1,956 | 1,956 | Nothing | 12 JOLTS outliers |
 | OEWS annual files | 9,670 | 33 | Rows for all occupations outside the six studied | 1 top-coded wage, 3 year-over-year changes above 20% |
 
-<!-- PLACEHOLDER: paragraph on the cleaning approach -->
+:::
+
+Every source went through the same seven cleaning steps in the same order. The steps were loading and deduplication, text and field cleaning, field extraction, missing values, normalisation, outliers, and discretisation. Not every step applied to every source. The Indeed, BLS and OEWS files arrived as tidy tables of numbers, so they had no text to clean and no fields to pull out. Only the Hacker News and job board data were sorted into bands, such as short, medium and long posts. Rows were removed for only two cleaning reasons. The job board exports held 115 repeat copies of the same jobs, identical except for the time they were collected. Only the newest copy of each was kept. Hacker News had 3,744 comments marked as deleted or dead, and almost all of them were too short to hold a real job post. The OEWS files were also cut down to the six occupations the project follows. Every other row stayed in. Rows that looked wrong, unusual or repeated were marked with a flag. That way, each analysis can decide for itself what to leave out.
+
+Some values are still missing on purpose. Of the 4,294 job board postings, 2,773 list no salary. All 2,244 postings from companies that use Greenhouse are in that group, because Greenhouse has no salary field at all. The other 529 are Ashby and Lever postings that left pay out. Filling these gaps with a guess would invent pay that was never offered, so they were left empty and marked with a flag. City names were read from the job board location text, which raised city coverage from 35 to 92 percent. Some Hacker News posts gave no work arrangement in their first line. For those, the rest of the text was searched, which raised coverage from 39 to 91 percent. Values found this way are marked, so they can be told apart from values in the first line.
+
+Outliers were checked with a different method for each source, because each source holds a different kind of data. In the BLS and Indeed series, a value was flagged when it sat far outside the normal range of its own series. Salaries were checked against a fixed range of $20,000 to $1,000,000 a year. OEWS flagged any change of more than 20 percent from one year to the next. Most flags in the series turned out to be real events. Across all nonfarm jobs in the US, BLS counted about 13 million layoffs and discharges in March 2020, when COVID closed much of the economy. Nine of the 12 BLS flags fall between March and June 2020. More than 90 percent of the Indeed sector, state and metro flags fall between March 2020 and December 2021. These COVID-era values were kept in the data, because they record real events. Most of the 12 salary flags look like pay entered in the wrong unit, such as a Talent Coordinator role listed at $32 a year.
+
+A review of how labels changed also turned up a real problem in the rules. Seniority was read from each job title with a list of keyword rules. When a title matched more than one rule, the later rule won. The intern rule looked for the letters "intern" anywhere in a title. That meant it also matched words such as "International" and "Internal". In most of those titles, a later rule for manager or senior roles replaced the wrong label, which hid the mistake. The problem only showed up after a separate fix stopped later rules from replacing intern and new graduate labels. That fix was meant to stop "Associate Product Manager, New Grad" from being labelled as a lead role. Instead, 23 titles such as "International Tax Manager" were suddenly labelled as internships. The intern rule was changed to match only the whole word. That change also corrected 7 titles, such as "Software Engineer, International", that had been wrong from the start. A similar check found that the rule for the abbreviation "Sr" matched the letters inside "Israel" and "SRE". That rule was fixed the same way.
 
 ## Exploratory Data Visualizations
 
-#### 1. Job postings index: AI-exposed against control sectors
-[![](figures/thumbs/indeed_sector_divergence.png){.thumb}](figures/indeed_sector_divergence.png)
-<!-- PLACEHOLDER: two-sentence caption -->
+<!-- The cards sit in a raw HTML block: as plain markdown, Pandoc turns the
+indented <h4> and <p> into a code block and reads "1. " as a list. Captions
+here are HTML, so use <em> and <a> rather than markdown. -->
 
-#### 2. Job openings against online postings
-[![](figures/thumbs/jolts_vs_indeed.png){.thumb}](figures/jolts_vs_indeed.png)
-<!-- PLACEHOLDER: two-sentence caption -->
+::: {.figure-grid}
+```{=html}
+<div class="figure-card">
+  <a href="figures/indeed_sector_divergence.png">
+    <img src="figures/thumbs/indeed_sector_divergence.png"
+         alt="Line chart of the Indeed job postings index for AI-exposed and control sectors, 2020 to 2026, with the ChatGPT release marked. Both rise to a 2022 peak, then AI-exposed postings fall to about 70 while control sectors settle near 110.">
+  </a>
+  <div class="figure-card-body">
+    <h4>1. Job postings index: AI-exposed against control sectors</h4>
+    <p>Job postings in AI-exposed sectors fell roughly 69% from their mid-2022 peak and remain below their pre-pandemic level in 2026, while control sectors fell roughly 37% and recovered above theirs. The divergence begins several months before the ChatGPT release, indicating that generative AI cannot be the sole cause and that interest rate increases and the correction of pandemic-era overhiring also contributed.</p>
+  </div>
+</div>
 
-#### 3. Hires and quits in the information sector
-[![](figures/thumbs/jolts_hires_quits.png){.thumb}](figures/jolts_hires_quits.png)
-<!-- PLACEHOLDER: two-sentence caption -->
+<div class="figure-card">
+  <a href="figures/jolts_vs_indeed.png">
+    <img src="figures/thumbs/jolts_vs_indeed.png"
+         alt="Two stacked line charts, 2020 to 2026, with the ChatGPT release marked: information sector job openings in thousands on top and the Indeed postings index for AI-exposed sectors below. Both peak in 2022 and are lower afterwards.">
+  </a>
+  <div class="figure-card-body">
+    <h4>2. Job openings against online postings</h4>
+    <p>Job openings in the information sector and online postings in AI-exposed sectors both peak in mid-2022 and decline afterwards, confirming the trend in official government data as well as in commercial posting indices. Openings fall roughly 45% from peak while postings fall roughly 67%, indicating that employers reduced advertising more sharply than they reduced actual vacancies.</p>
+  </div>
+</div>
 
-#### 4. Employment by computer occupation
-[![](figures/thumbs/oews_employment_trend.png){.thumb}](figures/oews_employment_trend.png)
-<!-- PLACEHOLDER: two-sentence caption -->
+<div class="figure-card">
+  <a href="figures/jolts_hires_quits.png">
+    <img src="figures/thumbs/jolts_hires_quits.png"
+         alt="Line chart of monthly hires and quits in the information sector, 2015 to 2026, showing monthly values with three-month averages and the ChatGPT release marked. Hires drop sharply in 2020, peak near 125 thousand in late 2021 and fall back to 70 to 85 thousand; quits stay between about 30 and 55 thousand.">
+  </a>
+  <div class="figure-card-body">
+    <h4>3. Hires and quits in the information sector</h4>
+    <p>Hires in the information sector averaged 80,000 to 95,000 monthly through 2015 to 2019, peaked at 125,000 in 2021, and returned to roughly 75,000 by 2026 — close to the pre-pandemic range. Quits fell further, to 28,000 by 2026 against a 40,000 to 48,000 baseline, indicating a market where both employers and workers became less active rather than one where hiring simply collapsed.</p>
+  </div>
+</div>
 
-#### 5. Role families across company job postings
-[![](figures/thumbs/ats_role_family.png){.thumb}](figures/ats_role_family.png)
-<!-- PLACEHOLDER: two-sentence caption -->
+<div class="figure-card">
+  <a href="figures/oews_employment_trend.png">
+    <img src="figures/thumbs/oews_employment_trend.png"
+         alt="Line chart of employment in thousands for six computer occupations, 2019 to 2025. Software developers grow from about 1.37 million in 2021 to 1.69 million in 2025 and data scientists from about 105 to 260 thousand, while the other occupations stay roughly flat. Some series cover only part of the period.">
+  </a>
+  <div class="figure-card-body">
+    <h4>4. Employment by computer occupation</h4>
+    <p>Employment in software development rose from 1.36 million in 2021 to 1.69 million in 2025, and data science employment grew from 105,000 to 261,000 over the same period. Employment therefore expanded while job postings fell sharply, indicating that reduced advertising did not correspond to reduced headcount in these occupations.</p>
+  </div>
+</div>
 
-#### 6. Forward deployed and solutions postings by company
-[![](figures/thumbs/ats_fde_by_company.png){.thumb}](figures/ats_fde_by_company.png)
-<!-- PLACEHOLDER: two-sentence caption -->
+<div class="figure-card">
+  <a href="figures/ats_role_family.png">
+    <img src="figures/thumbs/ats_role_family.png"
+         alt="Horizontal bar chart of 4,294 company job postings by role family. Other leads with 1,781, followed by software engineering with 839 and sales and go-to-market with 603; recruiting is smallest with 59.">
+  </a>
+  <div class="figure-card-body">
+    <h4>5. Role families across company job postings</h4>
+    <p>Engineering roles account for 839 of 4,294 postings, while customer-facing technical roles — forward deployed and solutions combined — account for 572, close to two-thirds of the engineering total. The 245 forward deployed postings confirm the role exists at scale rather than being a label used by one or two firms.</p>
+  </div>
+</div>
 
-#### 7. Seniority mix within each role family
-[![](figures/thumbs/ats_seniority_by_family.png){.thumb}](figures/ats_seniority_by_family.png)
-<!-- PLACEHOLDER: two-sentence caption -->
+<div class="figure-card">
+  <a href="figures/ats_fde_by_company.png">
+    <img src="figures/thumbs/ats_fde_by_company.png"
+         alt="Grouped horizontal bar chart of forward deployed and solutions postings at 12 companies. Databricks has the most, with about 200 solutions and 100 forward deployed postings, followed by Palantir; most other companies have fewer than 20 of each.">
+  </a>
+  <div class="figure-card-body">
+    <h4>6. Forward deployed and solutions postings by company</h4>
+    <p>Databricks and Palantir account for 178 of 245 forward deployed postings, or 73% of the total, while the remaining ten companies contribute 67 between them. The ratio of forward deployed to solutions roles also differs sharply by company — Palantir posts more than twice as many forward deployed as solutions, while Databricks, Asana and Ramp show the reverse — suggesting the two titles are used interchangeably by some employers and distinctly by others.</p>
+  </div>
+</div>
 
-#### 8. Advertised salary by role family
-[![](figures/thumbs/ats_salary_by_family.png){.thumb}](figures/ats_salary_by_family.png)
-<!-- PLACEHOLDER: two-sentence caption -->
+<div class="figure-card">
+  <a href="figures/ats_seniority_by_family.png">
+    <img src="figures/thumbs/ats_seniority_by_family.png"
+         alt="Heatmap of the percentage of postings at each seniority level, from intern to lead, within 10 role families. Mid level is the largest share in most families, while product postings are mostly lead (73 percent) and solutions postings mostly staff (53 percent).">
+  </a>
+  <div class="figure-card-body">
+    <h4>7. Seniority mix within each role family</h4>
+    <p>Solutions roles are 53% staff level while forward deployed roles are only 4% staff, concentrating instead at mid (43%) and senior (29%). The two titles therefore differ in seniority profile as well as in name, which weakens the reading that they are interchangeable labels for the same work.</p>
+  </div>
+</div>
 
-#### 9. Description length and advertised salary
-[![](figures/thumbs/ats_desc_len_vs_salary.png){.thumb}](figures/ats_desc_len_vs_salary.png)
-<!-- PLACEHOLDER: two-sentence caption -->
+<div class="figure-card">
+  <a href="figures/ats_salary_by_family.png">
+    <img src="figures/thumbs/ats_salary_by_family.png"
+         alt="Box plots of advertised minimum annual salary in US dollars for 10 role families, ordered by median. Recruiting has the lowest median, at about $130k, and research the highest; most other families have medians between about $150k and $230k.">
+  </a>
+  <div class="figure-card-body">
+    <h4>8. Advertised salary by role family</h4>
+    <p>Research roles show the highest median advertised minimum at roughly $380,000, followed by software engineering, data and applied AI in a band around $220,000 to $230,000, while recruiting sits lowest at about $130,000. The unusually narrow forward deployed distribution reflects a single employer posting one standard band across its engineering roles rather than a genuine market pattern.</p>
+  </div>
+</div>
 
-#### 10. Work arrangement over time
-[![](figures/thumbs/hn_work_mode_over_time.png){.thumb}](figures/hn_work_mode_over_time.png)
-<!-- PLACEHOLDER: two-sentence caption -->
+<div class="figure-card">
+  <a href="figures/ats_desc_len_vs_salary.png">
+    <img src="figures/thumbs/ats_desc_len_vs_salary.png"
+         alt="Scatter plot of job description length in characters against advertised minimum annual salary for 1,459 postings. The fitted line is flat at about $210k and the correlation is r = 0.00.">
+  </a>
+  <div class="figure-card-body">
+    <h4>9. Description length and advertised salary</h4>
+    <p>Description length shows no relationship with advertised salary across 1,459 postings, with a correlation of 0.00 and a flat fitted line. Combined with the near-identical length distributions across role families, this indicates description length reflects employer writing conventions rather than the seniority, complexity or compensation of the role.</p>
+  </div>
+</div>
 
-#### 11. Most common locations in job postings
-[![](figures/thumbs/hn_top_locations.png){.thumb}](figures/hn_top_locations.png)
-<!-- PLACEHOLDER: two-sentence caption -->
+<div class="figure-card">
+  <a href="figures/hn_work_mode_over_time.png">
+    <img src="figures/thumbs/hn_work_mode_over_time.png"
+         alt="Stacked area chart of remote, hybrid and onsite shares among Hacker News postings that state a work arrangement, 2019 to 2026. Remote rises from about 30 percent in 2019 to above 80 percent in 2022, then falls to about 55 percent, while hybrid grows to about 17 percent.">
+  </a>
+  <div class="figure-card-body">
+    <h4>10. Work arrangement over time</h4>
+    <p>Remote postings rose from 30% of those stating a work arrangement in 2019 to a peak of 82% in 2022, then fell to 55% by 2026, while hybrid arrangements grew from almost nothing to 17% over the same period. The partial reversal suggests employers consolidated around hybrid rather than returning fully to onsite work.</p>
+  </div>
+</div>
+
+<div class="figure-card">
+  <a href="figures/hn_top_locations.png">
+    <img src="figures/thumbs/hn_top_locations.png"
+         alt="Horizontal bar chart of the 20 most common locations in Hacker News job postings. Remote leads with about 8,100 postings, followed by San Francisco with about 6,300, New York with about 3,600 and London with about 2,200.">
+  </a>
+  <div class="figure-card-body">
+    <h4>11. Most common locations in job postings</h4>
+    <p>Remote appears in 8,112 postings, more than any single city and 29% above San Francisco at 6,297, while five Bay Area locations together account for 6,657. Postings concentrate heavily in a handful of established technology hubs, with the top three locations covering more than the remaining seventeen combined.</p>
+  </div>
+</div>
+```
+:::

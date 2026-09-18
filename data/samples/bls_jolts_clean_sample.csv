@@ -1,0 +1,21 @@
+series_id,series_name,date,value,footnotes,is_outlier,value_suspect,year,quarter
+JTS510000000000000JOL,Information: job openings,2015-01-01,111,,False,False,2015,1
+JTS510000000000000JOL,Information: job openings,2015-02-01,130,,False,False,2015,1
+JTS510000000000000JOL,Information: job openings,2015-03-01,110,,False,False,2015,1
+JTS510000000000000JOL,Information: job openings,2015-04-01,109,,False,False,2015,2
+JTS510000000000000JOL,Information: job openings,2015-05-01,109,,False,False,2015,2
+JTS510000000000000JOL,Information: job openings,2015-06-01,113,,False,False,2015,2
+JTS510000000000000JOL,Information: job openings,2015-07-01,125,,False,False,2015,3
+JTS510000000000000JOL,Information: job openings,2015-08-01,116,,False,False,2015,3
+JTS510000000000000JOL,Information: job openings,2015-09-01,116,,False,False,2015,3
+JTS510000000000000JOL,Information: job openings,2015-10-01,112,,False,False,2015,4
+JTS510000000000000JOL,Information: job openings,2015-11-01,70,,False,False,2015,4
+JTS510000000000000JOL,Information: job openings,2015-12-01,111,,False,False,2015,4
+JTS510000000000000JOL,Information: job openings,2016-01-01,111,,False,False,2016,1
+JTS510000000000000JOL,Information: job openings,2016-02-01,94,,False,False,2016,1
+JTS510000000000000JOL,Information: job openings,2016-03-01,89,,False,False,2016,1
+JTS510000000000000JOL,Information: job openings,2016-04-01,84,,False,False,2016,2
+JTS510000000000000JOL,Information: job openings,2016-05-01,114,,False,False,2016,2
+JTS510000000000000JOL,Information: job openings,2016-06-01,90,,False,False,2016,2
+JTS510000000000000JOL,Information: job openings,2016-07-01,80,,False,False,2016,3
+JTS510000000000000JOL,Information: job openings,2016-08-01,79,,False,False,2016,3

@@ -1,6 +1,6 @@
 """Draw the raw and cleaned sample files as styled PNG tables for the website.
 
-Input: data/samples/. Output: four PNG tables in figures/samples/.
+Input: data/samples/. Output: ten PNG tables in figures/samples/.
 """
 
 import json
@@ -27,6 +27,21 @@ ATS_RAW = ("ats_raw", "ATS job postings: raw",
 ATS_CLEAN = ("ats_cleaned", "ATS job postings: cleaned",
              ["company_clean", "title", "seniority", "role_family", "salary_annual_min",
               "location_clean"])
+
+# The three numeric sources arrived tidy, so each cleaned table repeats the
+# raw numbers and adds the derived and flag columns.
+INDEED_RAW = ("indeed_raw", "Indeed Hiring Lab: raw",
+              ["date", "jobcountry", "indeed_job_postings_index", "variable", "display_name"])
+INDEED_CLEAN = ("indeed_cleaned", "Indeed Hiring Lab: cleaned",
+                ["date", "indeed_job_postings_index", "variable", "display_name", "sector_group",
+                 "is_outlier_indeed_job_postings_index"])
+BLS_RAW = ("bls_raw", "BLS JOLTS: raw", ["seriesID", "year", "period", "periodName", "value"])
+BLS_CLEAN = ("bls_cleaned", "BLS JOLTS: cleaned",
+             ["series_id", "series_name", "date", "value", "is_outlier", "value_suspect"])
+OEWS_RAW = ("oews_raw", "OEWS annual files: raw",
+            ["source_file", "occ_code", "occ_title", "tot_emp", "a_median", "a_mean"])
+OEWS_CLEAN = ("oews_cleaned", "OEWS annual files: cleaned",
+              ["occ_code", "occ_title", "year", "tot_emp", "a_median", "wage_topcoded"])
 
 
 def read_csv(name: str) -> pd.DataFrame:
@@ -104,14 +119,22 @@ def render(df: pd.DataFrame, name: str, title: str, columns: list[str]) -> Path:
 
 
 def main() -> None:
-    """Build the four sample table images."""
+    """Build the ten sample table images."""
     apply_style()
     hn_raw, hn_clean = matched(read_json("hn_raw_sample.json"),
                                read_csv("hn_cleaned_sample.csv"), "id")
     ats_raw, ats_clean = matched(read_csv("ats_raw_sample.csv"),
                                  read_csv("ats_final_sample.csv"), "jobId")
-    for df, spec in [(hn_raw, HN_RAW), (hn_clean, HN_CLEAN), (ats_raw, ATS_RAW),
-                     (ats_clean, ATS_CLEAN)]:
+    # make_samples.py writes the Indeed, BLS and OEWS pairs row for row, so
+    # those tables line up without matching on a key here.
+    pairs = [(hn_raw, HN_RAW), (hn_clean, HN_CLEAN), (ats_raw, ATS_RAW), (ats_clean, ATS_CLEAN),
+             (read_csv("indeed_sector_raw_sample.csv"), INDEED_RAW),
+             (read_csv("indeed_sector_clean_sample.csv"), INDEED_CLEAN),
+             (read_csv("bls_jolts_raw_sample.csv"), BLS_RAW),
+             (read_csv("bls_jolts_clean_sample.csv"), BLS_CLEAN),
+             (read_csv("oews_raw_sample.csv"), OEWS_RAW),
+             (read_csv("oews_clean_sample.csv"), OEWS_CLEAN)]
+    for df, spec in pairs:
         print(f"saved {render(df, *spec)}")
 
 

@@ -4,39 +4,47 @@ project:
 
 website:
   title: "AI job market impact"
-  description: "Generative AI and tech hiring, 2019-2026"
+  description: "Generative AI and tech hiring"
   search: true
-  navbar: {}
-  sidebar:
-    style: floating
-    contents:
-      - section: "Overview"
-        contents:
-          - text: "Home"
-            href: index.qmd
-          - introduction.qmd
-          - dataprep_eda.qmd
-      - section: "Unsupervised"
-        contents:
-          - clustering.qmd
-          - pca.qmd
-      - section: "Supervised"
-        contents:
-          - naivebayes.qmd
-          - dectrees.qmd
-          - svm.qmd
-          - regression.qmd
-          - nn.qmd
-      - section: "Closing"
-        contents:
-          - conclusions.qmd
-          - about.qmd
+  navbar:
+    collapse-below: xl
+    left:
+      - href: index.qmd
+        text: "Home"
+      - href: introduction.qmd
+        text: "Introduction"
+      - href: dataprep_eda.qmd
+        text: "Data Prep & EDA"
+      - text: "Unsupervised"
+        menu:
+          - href: clustering.qmd
+            text: "Clustering"
+          - href: pca.qmd
+            text: "PCA"
+      - text: "Supervised"
+        menu:
+          - href: naivebayes.qmd
+            text: "Naive Bayes"
+          - href: dectrees.qmd
+            text: "Decision Trees"
+          - href: svm.qmd
+            text: "SVMs"
+          - href: regression.qmd
+            text: "Regression"
+          - href: nn.qmd
+            text: "Neural Networks"
+      - href: conclusions.qmd
+        text: "Conclusions"
+      - href: about.qmd
+        text: "About Me"
+    right:
+      - icon: github
+        href: https://github.com/RahulHipparkar/ai-job-market-impact
 
 format:
   html:
     theme:
       light: [cosmo, styles.scss]
       dark: [darkly, styles-dark.scss]
-    toc: true
-    toc-location: right
-    toc-depth: 3
+    toc: false
+    page-layout: full

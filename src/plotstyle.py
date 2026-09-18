@@ -39,4 +39,4 @@ def save(fig, name):
     FIGDIR.mkdir(exist_ok=True)
     THUMBDIR.mkdir(exist_ok=True)
     fig.savefig(FIGDIR / f"{name}.png", bbox_inches="tight", dpi=150)
-    fig.savefig(THUMBDIR / f"{name}.png", bbox_inches="tight", dpi=50)
+    fig.savefig(THUMBDIR / f"{name}.png", bbox_inches="tight", dpi=80)

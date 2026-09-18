@@ -1,5 +1,78 @@
 ---
 title: "Was It AI, or Was It Interest Rates?"
-subtitle: "Separating generative AI from the rate shock and post-pandemic correction in tech hiring, 2019-2026"
+subtitle: "Generative AI and tech hiring"
+description: "Separating generative AI from the rate shock and post-pandemic correction in tech hiring, 2019-2026"
 toc: false
 ---
+
+Job postings in AI-exposed sectors fell by roughly 69 percent from their mid-2022 peak, while postings in control sectors fell by roughly 37 percent and recovered above their pre-pandemic level. This project asks how much of that gap generative AI explains, and how much belongs to higher interest rates and the correction of pandemic-era overhiring. It works from five data sources covering 2015 to 2026, including 56,334 job postings.
+
+::: {.key-numbers}
+```{=html}
+<div class="key-number">
+  <span class="key-number-value">56,334</span>
+  <span class="key-number-label">job postings collected</span>
+</div>
+
+<div class="key-number">
+  <span class="key-number-value">2015–2026</span>
+  <span class="key-number-label">years covered</span>
+</div>
+
+<div class="key-number">
+  <span class="key-number-value">5</span>
+  <span class="key-number-label">data sources</span>
+</div>
+
+<div class="key-number">
+  <span class="key-number-value">19</span>
+  <span class="key-number-label">companies in the job board sample</span>
+</div>
+```
+:::
+
+## The question
+
+<!-- PLACEHOLDER: 1 paragraph stating the research question -->
+
+## What this project covers
+
+- Data preparation and exploratory analysis — complete
+- Clustering and PCA — to come
+- Naive Bayes and decision trees — to come
+- Support vector machines — to come
+- Regression and neural networks — to come
+
+![](figures/indeed_sector_divergence.png){fig-alt="Line chart of the Indeed job postings index for AI-exposed and control sectors, 2020 to 2026, with the ChatGPT release marked. Both rise to a 2022 peak, then AI-exposed postings fall to about 70 while control sectors settle near 110."}
+
+<!-- PLACEHOLDER: one-sentence caption -->
+
+## Where to start
+
+::::: {.figure-grid}
+
+:::: {.figure-card}
+::: {.figure-card-body}
+#### [Introduction](introduction.qmd)
+
+<!-- PLACEHOLDER: one line on what this page holds -->
+:::
+::::
+
+:::: {.figure-card}
+::: {.figure-card-body}
+#### [Data preparation and exploratory analysis](dataprep_eda.qmd)
+
+<!-- PLACEHOLDER: one line on what this page holds -->
+:::
+::::
+
+:::: {.figure-card}
+::: {.figure-card-body}
+#### [Conclusions](conclusions.qmd)
+
+<!-- PLACEHOLDER: one line on what this page holds -->
+:::
+::::
+
+:::::
