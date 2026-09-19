@@ -1,5 +1,5 @@
 ---
-title: "DataPrep_EDA"
+title: "Data Prep & EDA"
 ---
 
 ## Data Sources
@@ -130,32 +130,65 @@ Small samples of the raw and cleaned data are stored in `data/samples/`:
 
 ## Raw and Cleaned Data
 
+::: {.sample-figure}
 ![](figures/samples/hn_raw.png)
-<!-- PLACEHOLDER: caption -->
 
+Six comments as the Firebase API returns them, with an id, the poster, a Unix timestamp, the thread they belong to, and the whole posting packed into one pipe-delimited text field.
+:::
+
+::: {.sample-figure}
 ![](figures/samples/hn_cleaned.png)
-<!-- PLACEHOLDER: caption -->
 
+The same six postings after parsing: the text field is split into company, role, location and work mode, the timestamp becomes a calendar date, company names are lowercased and stripped of legal suffixes, and locations that could not be read are left as NA.
+:::
+
+::: {.sample-figure}
 ![](figures/samples/ats_raw.png)
-<!-- PLACEHOLDER: caption -->
 
+Six job postings as the scraper returns them, with the company name in whatever case the job board used, a full timestamp down to the millisecond, and no salary interval on any of these rows.
+:::
+
+::: {.sample-figure}
 ![](figures/samples/ats_cleaned.png)
-<!-- PLACEHOLDER: caption -->
 
+The same six postings after cleaning: company names take their canonical spelling, seniority and role family are derived from the title, the salary is placed on an annual basis, and the location is reduced to a single canonical hub.
+:::
+
+::: {.sample-figure}
 ![](figures/samples/indeed_raw.png)
 
-![](figures/samples/indeed_cleaned.png)
-<!-- PLACEHOLDER: caption -->
+Six daily rows of the Indeed posting index for Software Development in the United States, where the index is set to 100 on 1 February 2020 and is not a count of postings.
+:::
 
+::: {.sample-figure}
+![](figures/samples/indeed_cleaned.png)
+
+The same six rows after cleaning: the country column is dropped because this file covers one country, the sector is tagged as AI-exposed or control, and an outlier flag is added, leaving the index values themselves unchanged.
+:::
+
+::: {.sample-figure}
 ![](figures/samples/bls_raw.png)
 
-![](figures/samples/bls_cleaned.png)
-<!-- PLACEHOLDER: caption -->
+Six monthly observations of one JOLTS series as the API returns them, with the year, the period code and the period name in separate fields and the series identified only by its code.
+:::
 
+::: {.sample-figure}
+![](figures/samples/bls_cleaned.png)
+
+The same six observations after cleaning: the year and period are folded into a single date, the series code is resolved to a readable name from the local catalog, and flags for outliers and impossible values are added.
+:::
+
+::: {.sample-figure}
 ![](figures/samples/oews_raw.png)
 
+Six rows for one occupation as they appear in the annual OEWS workbooks, one file per year, where the year itself is recoverable only from the file name.
+:::
+
+::: {.sample-figure}
 ![](figures/samples/oews_cleaned.png)
-<!-- PLACEHOLDER: caption -->
+
+The same six rows after cleaning: the year is lifted out of the file name into a column of its own, the seven annual workbooks are stacked into one table, and wages above the BLS top-code are flagged rather than dropped.
+:::
 
 ## Cleaning Pipeline
 

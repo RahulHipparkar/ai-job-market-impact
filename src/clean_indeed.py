@@ -15,9 +15,7 @@ US_DIR = Path(__file__).resolve().parent.parent / "data" / "raw" / "indeed" / "j
 PROCESSED_DIR = Path(__file__).resolve().parent.parent / "data" / "processed"
 REPORT_PATH = PROCESSED_DIR / "indeed_clean_report.txt"
 
-# The brief names 4 ai_exposed sectors; "Information Design & Documentation"
-# is not present in the current US sector file (see report) -- everything
-# not listed here defaults to "control".
+# Brief names 4 ai_exposed sectors, one absent from the US file; unlisted means control.
 SECTOR_GROUP = {
     "Software Development": "ai_exposed",
     "Data & Analytics": "ai_exposed",
@@ -131,9 +129,7 @@ def main() -> None:
     ai = clean(ai, "ai_share", ["date", "jobcountry"], ["jobcountry"], "ai_share_postings", report)
     ai = flag_range(ai, "ai_share_postings", 0, 100, report, " -- this is a % share, not the Feb2020=100 index")
 
-    # National US aggregate -- swept in by the US/*.csv glob but not in the
-    # requested output list; written to indeed_national.csv rather than
-    # silently dropped. Flag for review.
+    # Not in the requested outputs; written out rather than silently dropped.
     nat = load(US_DIR / "aggregate_job_postings_US.csv")
     report.append("\n=== indeed_national.csv (aggregate_job_postings_US.csv) -- NOT in requested outputs, kept anyway ===")
     nat = clean(nat, "national", ["date", "variable"], ["variable"], "indeed_job_postings_index_sa", report)
@@ -161,7 +157,6 @@ def main() -> None:
     report.append("NOTE: index is relative to Feb 2020 = 100 -- comparable across sectors/geographies "
                    "over time, but NOT a count of postings.")
 
-    # Metro
     metro = load(US_DIR / "metro_job_postings_us.csv")
     metro[["metro_name", "metro_state"]] = metro["metro"].str.split(", ", n=1, expand=True)
     report.append("\n=== indeed_metro.csv (metro_job_postings_us.csv) ===")
@@ -170,7 +165,6 @@ def main() -> None:
     metro = clean(metro, "metro", ["date", "cbsa_code"], ["cbsa_code"], "indeed_job_postings_index", report)
     metro = flag_range(metro, "indeed_job_postings_index", 0, 500, report, " -- Feb2020=100 index")
 
-    # State
     state = load(US_DIR / "state_job_postings_us.csv")
     report.append("\n=== indeed_state.csv (state_job_postings_us.csv) ===")
     state = clean(state, "state", ["date", "state"], ["state"], "indeed_job_postings_index", report)

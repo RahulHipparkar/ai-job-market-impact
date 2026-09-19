@@ -145,7 +145,6 @@ def main() -> None:
     df = pd.read_csv(IN_CSV, keep_default_na=True)
     lines = []
 
-    # recover missing work_mode / location from body text
     wm_before, loc_before = df["work_mode"].notna().mean(), df["location"].notna().mean()
     df["work_mode_source"] = df["work_mode"].notna().map({True: "header", False: None})
     df["location_source"] = df["location"].notna().map({True: "header", False: None})
@@ -162,12 +161,10 @@ def main() -> None:
         f"location fill rate: {loc_before:.1%} -> {df['location'].notna().mean():.1%}",
     ]
 
-    # normalise company names
     n_company_before = df["company"].nunique()
     df["company_clean"] = df["company"].map(normalize_company)
     lines.append(f"distinct companies: {n_company_before} -> {df['company_clean'].nunique()}")
 
-    # normalise locations
     n_loc_before = df["location"].nunique()
     norm = df["location"].map(normalize_location)
     df["location_clean"] = norm.map(lambda t: t[0])
@@ -177,7 +174,6 @@ def main() -> None:
     for name, count in df["location_clean"].value_counts().head(25).items():
         lines.append(f"  {name}: {count}")
 
-    # junk and outliers
     is_url_only = df["text_clean"].fillna("").str.match(URL_ONLY_RE)
     is_mod = df["text_clean"].fillna("").str.match(MODERATOR_RE)
     is_empty = df["text_clean"].fillna("").str.len() == 0
@@ -193,10 +189,9 @@ def main() -> None:
                   f"p95={desc['95%']:.0f} p99.5={desc['99.5%']:.0f} max={desc['max']:.0f}")
     lines.append(f"is_outlier_len rows (>p99.5): {df['is_outlier_len'].sum()}")
 
-    # text for modelling
     df["text_model"] = df["text_clean"].map(make_text_model)
 
-    # near-duplicate reposts (leakage risk: companies repost the same text across months)
+    # Reposts are a leakage risk: companies repost the same text across months.
     df = flag_reposts(df)
     lines.append(f"\nis_repost rows: {df['is_repost'].sum()} ({df['is_repost'].mean():.1%})")
     grp_sizes = df.loc[df["repost_group"].notna()].groupby("repost_group").size()
@@ -210,7 +205,6 @@ def main() -> None:
         lines.append(f"  {rows['company_clean'].iloc[0]} (repost_group={root_id}): "
                       f"{size} postings across {rows['month'].nunique()} months")
 
-    # discretisation
     non_junk = ~df["is_junk"]
     df["text_len_band"] = pd.NA
     band, len_bins = pd.qcut(df.loc[non_junk, "text_len"], 3, labels=["short", "medium", "long"], retbins=True)
@@ -223,13 +217,11 @@ def main() -> None:
                   "persistent=21+ (distinct months posted per company_clean)")
     lines.append("  " + df["posting_frequency_band"].value_counts(dropna=True).to_string().replace("\n", "\n  "))
 
-    # numeric scaling
     len_mean = df.loc[non_junk, "text_len"].mean()
     len_std = df.loc[non_junk, "text_len"].std(ddof=0)
     df["text_len_scaled"] = (df["text_len"] - len_mean) / len_std
     lines.append(f"\ntext_len_scaled: z-score fitted on non-junk rows only, mean={len_mean:.2f}, std={len_std:.2f}")
 
-    # output
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     SAMPLES_DIR.mkdir(parents=True, exist_ok=True)
     df.to_csv(OUT_CSV, index=False)

@@ -26,8 +26,7 @@ NON_CITY = {
     "united states", "remote", "north america", "south america", "europe", "asia",
     "emea", "apac", "uk", "usa", "us", "canada", "india", "worldwide", "global",
 }
-# Same mapping approach as clean_hn_stage2.py: first-match regex over the
-# common hubs, raw stripped string as fallback for everything else.
+# Same approach as clean_hn_stage2.py: first-match regex, raw string as fallback.
 LOCATION_MAP = [
     (re.compile(r"san francisco|sf bay area|\bbay area\b|mountain view|palo alto", re.I), "San Francisco, CA"),
     (re.compile(r"new york", re.I), "New York, NY"),
@@ -100,7 +99,6 @@ def main() -> None:
         n = df[c].isna().sum()
         report.append(f"  {c}: {n} ({n / len(df):.1%})")
 
-    # missing-value decisions
     df["has_salary"] = df["salary_annual_min"].notna()
     df["has_department"] = df["department"].notna()
     report.append(f"\nhas_salary: {df['has_salary'].sum()} True -- salary left null elsewhere, "
@@ -119,7 +117,6 @@ def main() -> None:
     report.append(f"\ncity fill rate: {city_before:.1%} -> {df['city'].notna().mean():.1%} (recovered from location)")
     report.append(f"region fill rate: {region_before:.1%} -> {df['region'].notna().mean():.1%} (recovered from location)")
 
-    # location normalisation
     n_before = df["location"].nunique()
     df["location_count"] = df["location"].fillna("").map(lambda s: len(SPLIT_RE.split(s)) if s else 0)
     df["is_multi_location"] = df["location_count"] > 1
@@ -130,7 +127,7 @@ def main() -> None:
     for name, count in df["location_clean"].value_counts().head(20).items():
         report.append(f"  {name}: {count}")
 
-    # near-duplicate flag (not dropped)
+    # Near-duplicate flag; rows are flagged, never dropped.
     title_norm = df["title"].map(normalize_title)
     desc_prefix = df["description_clean"].fillna("").str.slice(0, 300)
     group_size = df.groupby([df["company_clean"], title_norm, desc_prefix])["jobId"].transform("size")
@@ -143,7 +140,6 @@ def main() -> None:
     for _, r in examples.iterrows():
         report.append(f"  {r['company_clean']} -- {r['title']} (jobId={r['jobId']})")
 
-    # description length outliers
     desc = df["desc_len"]
     report.append("\ndesc_len distribution:")
     report.extend(f"  {line}" for line in desc.describe().to_string().splitlines())
@@ -157,7 +153,6 @@ def main() -> None:
     for t in df.loc[df["desc_too_long"], "title"].head(3):
         report.append(f"  long: {t}")
 
-    # discretisation
     df["desc_len_band"], desc_bins = pd.qcut(desc, 3, labels=["short", "medium", "long"], retbins=True)
     report.append(f"\ndesc_len_band boundaries: {[round(b) for b in desc_bins]}")
     report.append("  " + df["desc_len_band"].value_counts().to_string().replace("\n", "\n  "))
@@ -169,7 +164,7 @@ def main() -> None:
     report.append(f"salary_band boundaries: {[round(b) for b in sal_bins]}")
     report.append("  " + df["salary_band"].value_counts(dropna=True).to_string().replace("\n", "\n  "))
 
-    # seniority is derived in clean_ats.py; recorded here with the rule decisions
+    # seniority is derived in clean_ats.py; the rule decisions are recorded here.
     titles = df["title"].fillna("")
     n_junior_jr = titles.str.contains(r"\b(?:junior|jr)\b", case=False).sum()
     n_ladder = titles.str.contains(r"\b(?:L|IC|P)[1-9]\b", case=False).sum()
@@ -188,7 +183,6 @@ def main() -> None:
         "classified rows to mid."
     )
 
-    # output
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     SAMPLES_DIR.mkdir(parents=True, exist_ok=True)
     report_text = "\n".join(report)

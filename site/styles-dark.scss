@@ -375,6 +375,26 @@ main img {
   margin: 0;
 }
 
+// ::: {.sample-figure} pairs a raw/cleaned table image with its caption.
+// Markdown joins a line directly under an image into the image's own
+// paragraph, which leaves the caption flowing alongside the table; the
+// wrapper keeps them as two blocks. The id prefix is needed to outrank the
+// prose-measure cap set on paragraphs above.
+#quarto-document-content .sample-figure > p:first-child {
+  margin-bottom: 0;
+}
+
+#quarto-document-content .sample-figure > p + p {
+  clear: both;
+  max-width: none;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: $muted;
+  border-left: 2px solid $accent;
+  padding-left: 0.75rem;
+  margin: 0.75rem 0 2.25rem;
+}
+
 // ---------- key numbers ----------
 // ::: {.key-numbers} holding a .key-number block per figure: a large value
 // above a small label. Four across on desktop, two on tablet, one on phones.

@@ -14,8 +14,7 @@ RAW_DIR = Path(__file__).resolve().parent.parent / "data" / "raw" / "bls" / "oew
 PROCESSED_DIR = Path(__file__).resolve().parent.parent / "data" / "processed"
 REPORT_PATH = PROCESSED_DIR / "oews_trend_report.txt"
 
-# The task's label for 15-1245 doesn't match BLS's own title for it (see
-# report) -- BLS's occ_title is kept as the source of truth either way.
+# BLS's own occ_title wins; the brief's label for 15-1245 was wrong.
 TARGET_CODES = {
     "15-1252": "Software Developers",
     "15-2051": "Data Scientists",
@@ -27,8 +26,7 @@ TARGET_CODES = {
 KEEP = ["occ_code", "occ_title", "tot_emp", "a_median", "a_mean", "a_pct10", "a_pct90", "year"]
 NUMERIC = ["tot_emp", "a_median", "a_mean", "a_pct10", "a_pct90"]
 TOPCODE_WAGE = 239_200
-# YoY moves in this data run single digits to low teens; 20% comfortably
-# separates normal growth from a definitional break or a first-year series.
+# YoY here runs single digits to low teens, so 20% flags definitional breaks.
 YOY_FLAG_PCT = 20
 
 def load_year(path: Path) -> pd.DataFrame:
@@ -50,7 +48,6 @@ def main() -> None:
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     report = []
 
-    # 1. load and stack
     files = sorted(RAW_DIR.glob("national_M*_dl.xlsx"))
     frames = []
     report.append(f"=== load ({len(files)} files) ===")
@@ -61,7 +58,6 @@ def main() -> None:
     all_df = pd.concat(frames, ignore_index=True)
     report.append("row counts per year: " + ", ".join(f"{y}={n}" for y, n in all_df.groupby("year").size().items()))
 
-    # 2. filter to target occupations, report gaps (2018 SOC revision)
     report.append("\n=== target occupation coverage (2018 SOC revision breaks some codes) ===")
     for yr, grp in all_df.groupby("year"):
         found = sorted(set(grp["occ_code"]) & set(TARGET_CODES))
@@ -73,12 +69,10 @@ def main() -> None:
         if actual and actual != [expected_title]:
             report.append(f"  NOTE: {code} BLS title {actual} != brief's label {expected_title!r} -- BLS title kept")
 
-    # 3. keep fields
     missing_fields = [c for c in KEEP if c not in df.columns]
     report.append(f"\n=== fields ===\nmissing expected fields: {missing_fields or 'none'}")
     df = df[[c for c in KEEP if c in df.columns]].reset_index(drop=True)
 
-    # 4. cleaning
     report.append("\n=== suppression markers ('*' = withheld, '#' = wage above $239,200 topcode) ===")
     hash_any = pd.Series(False, index=df.index)
     for col in NUMERIC:

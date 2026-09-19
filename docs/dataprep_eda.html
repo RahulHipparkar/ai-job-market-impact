@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DataPrep_EDA – AI job market impact</title>
+<title>Data Prep &amp; EDA – AI job market impact</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -82,9 +82,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-19d37e3eb4747c52c10ac88d6c21bbac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-99fdcb4f18c7ae8a0c8051d4710164f0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-19d37e3eb4747c52c10ac88d6c21bbac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9084e66acd12eae0aa7de9a5ccb9a2e0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-2d8c5dbd272956421086809e24861dbd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-9084e66acd12eae0aa7de9a5ccb9a2e0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -383,7 +383,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">DataPrep_EDA</h1>
+<h1 class="title">Data Prep &amp; EDA</h1>
 </div>
 
 
@@ -679,16 +679,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="raw-and-cleaned-data" class="level2">
 <h2 class="anchored" data-anchor-id="raw-and-cleaned-data">Raw and Cleaned Data</h2>
-<p><img src="figures/samples/hn_raw.png" class="img-fluid"> <!-- PLACEHOLDER: caption --></p>
-<p><img src="figures/samples/hn_cleaned.png" class="img-fluid"> <!-- PLACEHOLDER: caption --></p>
-<p><img src="figures/samples/ats_raw.png" class="img-fluid"> <!-- PLACEHOLDER: caption --></p>
-<p><img src="figures/samples/ats_cleaned.png" class="img-fluid"> <!-- PLACEHOLDER: caption --></p>
+<div class="sample-figure">
+<p><img src="figures/samples/hn_raw.png" class="img-fluid"></p>
+<p>Six comments as the Firebase API returns them, with an id, the poster, a Unix timestamp, the thread they belong to, and the whole posting packed into one pipe-delimited text field.</p>
+</div>
+<div class="sample-figure">
+<p><img src="figures/samples/hn_cleaned.png" class="img-fluid"></p>
+<p>The same six postings after parsing: the text field is split into company, role, location and work mode, the timestamp becomes a calendar date, company names are lowercased and stripped of legal suffixes, and locations that could not be read are left as NA.</p>
+</div>
+<div class="sample-figure">
+<p><img src="figures/samples/ats_raw.png" class="img-fluid"></p>
+<p>Six job postings as the scraper returns them, with the company name in whatever case the job board used, a full timestamp down to the millisecond, and no salary interval on any of these rows.</p>
+</div>
+<div class="sample-figure">
+<p><img src="figures/samples/ats_cleaned.png" class="img-fluid"></p>
+<p>The same six postings after cleaning: company names take their canonical spelling, seniority and role family are derived from the title, the salary is placed on an annual basis, and the location is reduced to a single canonical hub.</p>
+</div>
+<div class="sample-figure">
 <p><img src="figures/samples/indeed_raw.png" class="img-fluid"></p>
-<p><img src="figures/samples/indeed_cleaned.png" class="img-fluid"> <!-- PLACEHOLDER: caption --></p>
+<p>Six daily rows of the Indeed posting index for Software Development in the United States, where the index is set to 100 on 1 February 2020 and is not a count of postings.</p>
+</div>
+<div class="sample-figure">
+<p><img src="figures/samples/indeed_cleaned.png" class="img-fluid"></p>
+<p>The same six rows after cleaning: the country column is dropped because this file covers one country, the sector is tagged as AI-exposed or control, and an outlier flag is added, leaving the index values themselves unchanged.</p>
+</div>
+<div class="sample-figure">
 <p><img src="figures/samples/bls_raw.png" class="img-fluid"></p>
-<p><img src="figures/samples/bls_cleaned.png" class="img-fluid"> <!-- PLACEHOLDER: caption --></p>
+<p>Six monthly observations of one JOLTS series as the API returns them, with the year, the period code and the period name in separate fields and the series identified only by its code.</p>
+</div>
+<div class="sample-figure">
+<p><img src="figures/samples/bls_cleaned.png" class="img-fluid"></p>
+<p>The same six observations after cleaning: the year and period are folded into a single date, the series code is resolved to a readable name from the local catalog, and flags for outliers and impossible values are added.</p>
+</div>
+<div class="sample-figure">
 <p><img src="figures/samples/oews_raw.png" class="img-fluid"></p>
-<p><img src="figures/samples/oews_cleaned.png" class="img-fluid"> <!-- PLACEHOLDER: caption --></p>
+<p>Six rows for one occupation as they appear in the annual OEWS workbooks, one file per year, where the year itself is recoverable only from the file name.</p>
+</div>
+<div class="sample-figure">
+<p><img src="figures/samples/oews_cleaned.png" class="img-fluid"></p>
+<p>The same six rows after cleaning: the year is lifted out of the file name into a column of its own, the seven annual workbooks are stacked into one table, and wages above the BLS top-code are flagged rather than dropped.</p>
+</div>
 </section>
 <section id="cleaning-pipeline" class="level2">
 <h2 class="anchored" data-anchor-id="cleaning-pipeline">Cleaning Pipeline</h2>

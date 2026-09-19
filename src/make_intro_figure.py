@@ -13,7 +13,7 @@ from plotstyle import PALETTE, apply_style, save
 JOLTS_CSV = Path(__file__).resolve().parent.parent / "data" / "processed" / "bls_jolts.csv"
 SERIES = "Total nonfarm: job openings"
 MUTED = "#6B6B66"
-# (date, label, which side of the line the label sits on)
+# (date, label, side of the line the label sits on)
 EVENTS = [
     ("2022-03-16", "First interest rate rise", "right"),
     ("2022-11-30", "ChatGPT released", "left"),

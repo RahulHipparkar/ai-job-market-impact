@@ -21,9 +21,7 @@ QUOTE_MAP = str.maketrans(
     {"‘": "'", "’": "'", "“": '"', "”": '"', "–": "-", "—": "-", "\xa0": " "}
 )
 
-# 19 companies span 3 ATS platforms with inconsistent casing ("openai",
-# "Scale AI", "harvey"). A hand mapping is more reliable than title-casing
-# rules, which would mangle "OpenAI" / "Scale AI".
+# Hand mapping: title-casing rules would mangle "OpenAI" and "Scale AI".
 COMPANY_MAP = {
     "airtable": "Airtable", "amplitude": "Amplitude", "anthropic": "Anthropic",
     "asana": "Asana", "databricks": "Databricks", "discord": "Discord",
@@ -34,18 +32,11 @@ COMPANY_MAP = {
     "sierra": "Sierra",
 }
 
-# Checked in order; later rules override earlier ones (last match wins), so
-# a title matching two rules resolves to the more senior one -- e.g.
-# "Senior Staff Engineer" matches senior then staff, and staff wins.
-# Exception: intern/new_grad are protected -- once either matches, no later
-# rule (junior/senior/staff/lead) can displace it, so e.g. "Associate Product
-# Manager, New Grad" resolves to new_grad rather than lead via "Manager".
-# sr./jr./intern/architects are word-boundary-anchored so they don't match
-# substrings inside unrelated words (e.g. "Israel", "QSR", "International",
-# "Internal", "Architecture"). lead and vp stay unanchored on purpose: their
-# embedded matches ("Leader", "RVP") are genuine lead-tier titles. Bare roman
-# numerals (I/II/III) were dropped: only 2 occurrences exist across 4,294
-# titles, and one of those was a false positive ("UK&I" = UK and Ireland).
+# Last match wins, so "Senior Staff Engineer" resolves to staff.
+# intern/new_grad are protected: no later rule can displace them.
+# sr./jr./intern/architects are \b-anchored to avoid "Israel", "Internal", "Architecture".
+# lead and vp stay unanchored: "Leader" and "RVP" are genuine lead-tier titles.
+# Roman numerals dropped: 2 hits in 4,294 titles, one a false positive ("UK&I").
 PROTECTED_SENIORITY = {"intern", "new_grad"}
 
 SENIORITY_RULES = [
@@ -57,9 +48,7 @@ SENIORITY_RULES = [
     ("lead", re.compile(r"(?i:lead|manager|head of|director|vp|chief)")),
 ]
 
-# Checked in order; first match wins, so forward_deployed must precede
-# solutions/software_eng or "Forward Deployed Software Engineer" would
-# fall into software_eng instead.
+# First match wins, so forward_deployed must precede solutions/software_eng.
 ROLE_RULES = [
     ("forward_deployed", re.compile(r"forward.?deploy|\bFDE\b", re.I)),
     ("solutions", re.compile(r"solutions? (eng|arch|consult)|delivery|deployment strateg|technical account", re.I)),
@@ -72,17 +61,12 @@ ROLE_RULES = [
     ("recruiting", re.compile(r"recruit|talent|people ops", re.I)),
 ]
 
-# salaryInterval is blank on most salaried rows. Below this, a bare number
-# reads as an hourly rate ($32-$150/hr); at or above, it reads as an
-# annual salary (tech comp starts ~$100k). 1,000 sits well below the
-# lowest observed annual figure and above the highest observed hourly one.
+# 1,000 splits hourly from annual: no observed salary falls between the two ranges.
 HOURLY_THRESHOLD = 1000
 HOURS_PER_YEAR = 2080
 SUSPECT_LOW, SUSPECT_HIGH = 20_000, 1_000_000
 
-# Explicit output allowlist. ATS scraping plumbing (companySlug, tags/N,
-# customFields/N, locations/1-15, requisitionId, scrapedAt, ...) is dropped
-# for cleanliness -- see the report for the full drop list.
+# Explicit allowlist; ATS plumbing columns are dropped (full list in the report).
 FINAL_COLUMNS = [
     "jobId", "ats", "company_clean", "companyName", "title", "seniority", "role_family",
     "description_clean", "desc_len",
@@ -160,8 +144,7 @@ def main() -> None:
     report.append(f"loaded: {n_loaded} rows from 4 files")
     report.extend(load_lines)
 
-    # Duplicate jobIds are all Batch B2 re-scrapes of rows already in the
-    # Companies B dataset; keep the freshest scrape per job.
+    # Duplicate jobIds are B2 re-scrapes; keep the freshest per job.
     df = df.sort_values("scrapedAt").drop_duplicates(subset="jobId", keep="last")
     report.append(f"after dedup on jobId: {len(df)} unique (dropped {n_loaded - len(df)} duplicates)")
     report.append("rows retained per source file after dedup:")

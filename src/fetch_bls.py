@@ -20,9 +20,7 @@ ENDPOINT = "https://api.bls.gov/publicAPI/v2/timeseries/data/"
 RAW_DIR = Path(__file__).resolve().parent.parent / "data" / "raw" / "bls"
 BATCH_SIZE = 50
 
-# JOLTS (monthly, seasonally adjusted) — job openings, hires, quits, and
-# layoffs measure labor-market churn, a ground-truth hiring-demand signal
-# independent of what actually gets posted online.
+# JOLTS churn is a hiring-demand signal independent of what gets posted online.
 JOLTS_SERIES = {
     "Total nonfarm: job openings": "JTS000000000000000JOL",
     "Total nonfarm: hires": "JTS000000000000000HIL",
@@ -38,17 +36,13 @@ JOLTS_SERIES = {
     "Professional and business services: layoffs and discharges": "JTS540099000000000LDL",
 }
 
-# CES (monthly, seasonally adjusted) — all-employee headcounts show
-# whether tech-adjacent sectors are actually growing payroll, the
-# baseline hiring signal job postings are meant to reflect.
+# CES payroll headcount is the baseline that job postings are meant to reflect.
 CES_SERIES = {
     "Information: all employees": "CES5000000001",
     "Computer systems design and related services: all employees": "CES6054150001",
 }
 
-# OEWS (annual) — employment level and median annual wage by detailed
-# occupation: ground truth for which tech roles are growing and what
-# they pay, to compare against posting-derived role/salary signals.
+# OEWS gives per-occupation employment and wages to check posting-derived signals against.
 OEWS_SERIES = {
     "Software Developers: employment": "OEUN000000000000015125201",
     "Software Developers: median annual wage": "OEUN000000000000015125213",

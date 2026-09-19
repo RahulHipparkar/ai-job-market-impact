@@ -86,42 +86,42 @@
   {
     "objectID": "nn.html#data",
     "href": "nn.html#data",
-    "title": "NN",
+    "title": "Neural Networks",
     "section": "Data",
     "text": "Data"
   },
   {
     "objectID": "nn.html#code",
     "href": "nn.html#code",
-    "title": "NN",
+    "title": "Neural Networks",
     "section": "Code",
     "text": "Code"
   },
   {
     "objectID": "nn.html#results",
     "href": "nn.html#results",
-    "title": "NN",
+    "title": "Neural Networks",
     "section": "Results",
     "text": "Results"
   },
   {
     "objectID": "naivebayes.html#data",
     "href": "naivebayes.html#data",
-    "title": "NaiveBayes",
+    "title": "Naive Bayes",
     "section": "Data",
     "text": "Data"
   },
   {
     "objectID": "naivebayes.html#code",
     "href": "naivebayes.html#code",
-    "title": "NaiveBayes",
+    "title": "Naive Bayes",
     "section": "Code",
     "text": "Code"
   },
   {
     "objectID": "naivebayes.html#results",
     "href": "naivebayes.html#results",
-    "title": "NaiveBayes",
+    "title": "Naive Bayes",
     "section": "Results",
     "text": "Results"
   },
@@ -191,77 +191,77 @@
   {
     "objectID": "dectrees.html#data",
     "href": "dectrees.html#data",
-    "title": "DecTrees",
+    "title": "Decision Trees",
     "section": "Data",
     "text": "Data"
   },
   {
     "objectID": "dectrees.html#code",
     "href": "dectrees.html#code",
-    "title": "DecTrees",
+    "title": "Decision Trees",
     "section": "Code",
     "text": "Code"
   },
   {
     "objectID": "dectrees.html#results",
     "href": "dectrees.html#results",
-    "title": "DecTrees",
+    "title": "Decision Trees",
     "section": "Results",
     "text": "Results"
   },
   {
     "objectID": "dataprep_eda.html",
     "href": "dataprep_eda.html",
-    "title": "DataPrep_EDA",
+    "title": "Data Prep & EDA",
     "section": "",
     "text": "Source\nType\nWhat it gives\nRecords\nDates covered\nLicence\nAccessed\n\n\n\n\nHacker News “Who is hiring?”\nAPI\nJob posts left as comments on the monthly “Ask HN: Who is hiring?” threads\n52,040 posts from 93 monthly threads\nJan 2019 to Sep 2026\nNo data licence published. Posts belong to their authors.\n2026-09-07\n\n\nATS job boards via Apify\nAPI\nJob posts from the hiring pages of 19 AI and software companies on Ashby, Greenhouse and Lever\n4,409 rows, 4,294 unique jobs\nDec 2009 to Sep 2026. 83% were posted in 2026.\nApify terms of use. Posts belong to the companies.\n2026-09-07\n\n\nIndeed Hiring Lab\nDownload\nDaily job postings index (Feb 2020 = 100) for the US by sector, state and metro area, plus the share of AI job posts in 9 countries\n1,801,661 rows in 5 files\nFeb 2020 to Aug 2026. AI share: Jan 2019 to Jul 2026.\nCC BY 4.0\n2026-09-08\n\n\nBLS\nAPI\nMonthly JOLTS openings, hires, quits and layoffs (12 series), CES employment (2 series) and one year of OEWS figures (8 series)\n1,956 rows in 22 series\nJan 2015 to Aug 2026\nPublic domain (US government data)\n2026-09-08\n\n\nOEWS annual files\nDownload\nYearly national employment and wages for every occupation\n9,670 rows in 7 files\n2019 to 2025, one file per year\nPublic domain (US government data)\n2026-09-07"
   },
   {
     "objectID": "dataprep_eda.html#data-sources",
     "href": "dataprep_eda.html#data-sources",
-    "title": "DataPrep_EDA",
+    "title": "Data Prep & EDA",
     "section": "",
     "text": "Source\nType\nWhat it gives\nRecords\nDates covered\nLicence\nAccessed\n\n\n\n\nHacker News “Who is hiring?”\nAPI\nJob posts left as comments on the monthly “Ask HN: Who is hiring?” threads\n52,040 posts from 93 monthly threads\nJan 2019 to Sep 2026\nNo data licence published. Posts belong to their authors.\n2026-09-07\n\n\nATS job boards via Apify\nAPI\nJob posts from the hiring pages of 19 AI and software companies on Ashby, Greenhouse and Lever\n4,409 rows, 4,294 unique jobs\nDec 2009 to Sep 2026. 83% were posted in 2026.\nApify terms of use. Posts belong to the companies.\n2026-09-07\n\n\nIndeed Hiring Lab\nDownload\nDaily job postings index (Feb 2020 = 100) for the US by sector, state and metro area, plus the share of AI job posts in 9 countries\n1,801,661 rows in 5 files\nFeb 2020 to Aug 2026. AI share: Jan 2019 to Jul 2026.\nCC BY 4.0\n2026-09-08\n\n\nBLS\nAPI\nMonthly JOLTS openings, hires, quits and layoffs (12 series), CES employment (2 series) and one year of OEWS figures (8 series)\n1,956 rows in 22 series\nJan 2015 to Aug 2026\nPublic domain (US government data)\n2026-09-08\n\n\nOEWS annual files\nDownload\nYearly national employment and wages for every occupation\n9,670 rows in 7 files\n2019 to 2025, one file per year\nPublic domain (US government data)\n2026-09-07"
   },
   {
     "objectID": "dataprep_eda.html#apis-used",
     "href": "dataprep_eda.html#apis-used",
-    "title": "DataPrep_EDA",
+    "title": "Data Prep & EDA",
     "section": "APIs Used",
     "text": "APIs Used\n\nHacker News Search API (Algolia)\n\nDocumentation: https://hn.algolia.com/api\nEndpoint: GET https://hn.algolia.com/api/v1/search_by_date\nUsed to find the monthly “Who is hiring?” threads.\n\ncurl \"https://hn.algolia.com/api/v1/search_by_date?query=Ask%20HN%3A%20Who%20is%20hiring&tags=story,author_whoishiring&hitsPerPage=100\"\n\n\nHacker News API (Firebase)\n\nDocumentation: https://github.com/HackerNews/API\nEndpoint: GET https://hacker-news.firebaseio.com/v0/item/{id}.json\nUsed to download each thread and every job post in it.\n\ncurl \"https://hacker-news.firebaseio.com/v0/item/18807017.json\"\n\n\nApify API\n\nDocumentation: https://docs.apify.com/api/v2/actor-run-sync-get-dataset-items-post\nEndpoint: POST https://api.apify.com/v2/acts/scrapesage~multi-ats-job-scraper/run-sync-get-dataset-items\nUsed to run the job board scraper and get the job posts back in the same request. It needs an Apify token.\n\ncurl -X POST \"https://api.apify.com/v2/acts/scrapesage~multi-ats-job-scraper/run-sync-get-dataset-items\" \\\n  -H \"Authorization: Bearer $APIFY_TOKEN\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n        \"companies\": [\"greenhouse:anthropic\", \"ashby:openai\"],\n        \"maxItems\": 4000,\n        \"maxItemsPerCompany\": 1000,\n        \"includeCompensation\": true,\n        \"includeDescription\": true,\n        \"includeRawData\": false,\n        \"onlyNewItems\": false,\n        \"proxyConfiguration\": {\"useApifyProxy\": true}\n      }'\nThe example uses the Group A run parameters. Group B used maxItems 1200 and maxItemsPerCompany 120. Both are passed to fetch_apify.py as --max-items and --max-per-company.\n\n\nBLS Public Data API (v2)\n\nDocumentation: https://www.bls.gov/developers/api_signature_v2.htm\nEndpoint: POST https://api.bls.gov/publicAPI/v2/timeseries/data/\nUsed to download the JOLTS, CES and OEWS series. A free registration key raises the request limits.\n\ncurl -X POST \"https://api.bls.gov/publicAPI/v2/timeseries/data/\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n        \"seriesid\": [\"JTS510000000000000JOL\"],\n        \"startyear\": \"2015\",\n        \"endyear\": \"2026\",\n        \"registrationkey\": \"YOUR_BLS_API_KEY\"\n      }'"
   },
   {
     "objectID": "dataprep_eda.html#raw-data-access",
     "href": "dataprep_eda.html#raw-data-access",
-    "title": "DataPrep_EDA",
+    "title": "Data Prep & EDA",
     "section": "Raw Data Access",
     "text": "Raw Data Access\n\n\n\n\nSource\nWhere it came from\nHow to get it again\n\n\n\n\nHacker News\n“Who is hiring?” threads\nfetch_hn.py\n\n\nATS job boards\nApify multi-ATS job scraper\nfetch_apify.py\n\n\nIndeed Hiring Lab\njob_postings_tracker and ai-tracker on GitHub\nClone the two repositories\n\n\nBLS\nBLS Public Data API\nfetch_bls.py\n\n\nOEWS annual files\nOEWS data tables\nDownload the national XLSX file for each year\n\n\n\n\nThe raw files are not stored in version control. They take up about 300 MB, which is too large for the repository. The fetch scripts in src/ download the Hacker News, job board and BLS data again. The Indeed and OEWS files have no fetch script, so they are downloaded from the links in the table. The job board script saves JSON, while the cleaning script reads CSV exports of the same data.\nSmall samples of the raw and cleaned data are stored in data/samples/:\n\nhn_raw_sample.json: 20 raw Hacker News posts\nhn_clean_sample.csv: the same 20 posts after the first cleaning step\nhn_parsed_sample.csv: the same 20 posts, sorted by date, as the second cleaning step reads them\nhn_cleaned_sample.csv: the same 20 posts after the second cleaning step\nats_raw_sample.csv: 20 raw job board rows\nats_clean_sample.csv: the same 20 rows after the first cleaning step\nats_final_sample.csv: the same 20 rows after the second cleaning step"
   },
   {
     "objectID": "dataprep_eda.html#code",
     "href": "dataprep_eda.html#code",
-    "title": "DataPrep_EDA",
+    "title": "Data Prep & EDA",
     "section": "Code",
     "text": "Code\n\n\n\n\nScript\nWhat it does\nLanguage\nMain packages\n\n\n\n\nfetch_hn.py\nFinds the monthly “Who is hiring?” threads and downloads every job post in them.\nPython 3.12\nhttpx, tqdm\n\n\nfetch_apify.py\nRuns the Apify job board scraper for one group of companies and saves the posts.\nPython 3.12\nrequests, python-dotenv\n\n\nfetch_bls.py\nDownloads the JOLTS, CES and OEWS series from the BLS API.\nPython 3.12\nrequests, python-dotenv\n\n\nclean_hn.py\nReads the raw Hacker News posts and splits each one into company, role, location and other fields.\nPython 3.12\npandas\n\n\nclean_hn_stage2.py\nFills in missing work mode and location, cleans company and place names, and flags junk and repeat posts.\nPython 3.12\npandas\n\n\nclean_ats.py\nJoins the four job board files, drops duplicate jobs, and adds seniority and role family.\nPython 3.12\npandas\n\n\nclean_ats_stage2.py\nRecovers city and region, groups locations, and flags near duplicates and unusual description lengths.\nPython 3.12\npandas\n\n\nclean_indeed.py\nReshapes the Indeed files into one row per date and series, and flags gaps, duplicates and outliers.\nPython 3.12\npandas\n\n\nclean_bls.py\nTurns the BLS API responses into tables, and flags gaps, duplicates and outliers.\nPython 3.12\npandas\n\n\nclean_oews_files.py\nPulls six occupations out of the yearly OEWS files and builds one table for 2019 to 2025.\nPython 3.12\npandas, openpyxl\n\n\nplotstyle.py\nHolds the shared chart colours and style, and saves each figure with a thumbnail.\nPython 3.12\nmatplotlib\n\n\nmake_samples.py\nPulls matching raw and cleaned sample rows for the Indeed, BLS and OEWS sources.\nPython 3.12\npandas, openpyxl\n\n\nmake_sample_images.py\nDraws the raw and cleaned sample files as table images for this page.\nPython 3.12\npandas, matplotlib\n\n\nmake_intro_figure.py\nDraws the US job openings chart for the Introduction page.\nPython 3.12\npandas, matplotlib"
   },
   {
     "objectID": "dataprep_eda.html#raw-and-cleaned-data",
     "href": "dataprep_eda.html#raw-and-cleaned-data",
-    "title": "DataPrep_EDA",
+    "title": "Data Prep & EDA",
     "section": "Raw and Cleaned Data",
-    "text": "Raw and Cleaned Data"
+    "text": "Raw and Cleaned Data\n\n\nSix comments as the Firebase API returns them, with an id, the poster, a Unix timestamp, the thread they belong to, and the whole posting packed into one pipe-delimited text field.\n\n\n\nThe same six postings after parsing: the text field is split into company, role, location and work mode, the timestamp becomes a calendar date, company names are lowercased and stripped of legal suffixes, and locations that could not be read are left as NA.\n\n\n\nSix job postings as the scraper returns them, with the company name in whatever case the job board used, a full timestamp down to the millisecond, and no salary interval on any of these rows.\n\n\n\nThe same six postings after cleaning: company names take their canonical spelling, seniority and role family are derived from the title, the salary is placed on an annual basis, and the location is reduced to a single canonical hub.\n\n\n\nSix daily rows of the Indeed posting index for Software Development in the United States, where the index is set to 100 on 1 February 2020 and is not a count of postings.\n\n\n\nThe same six rows after cleaning: the country column is dropped because this file covers one country, the sector is tagged as AI-exposed or control, and an outlier flag is added, leaving the index values themselves unchanged.\n\n\n\nSix monthly observations of one JOLTS series as the API returns them, with the year, the period code and the period name in separate fields and the series identified only by its code.\n\n\n\nThe same six observations after cleaning: the year and period are folded into a single date, the series code is resolved to a readable name from the local catalog, and flags for outliers and impossible values are added.\n\n\n\nSix rows for one occupation as they appear in the annual OEWS workbooks, one file per year, where the year itself is recoverable only from the file name.\n\n\n\nThe same six rows after cleaning: the year is lifted out of the file name into a column of its own, the seven annual workbooks are stacked into one table, and wages above the BLS top-code are flagged rather than dropped."
   },
   {
     "objectID": "dataprep_eda.html#cleaning-pipeline",
     "href": "dataprep_eda.html#cleaning-pipeline",
-    "title": "DataPrep_EDA",
+    "title": "Data Prep & EDA",
     "section": "Cleaning Pipeline",
     "text": "Cleaning Pipeline\n\n\n\n\n\n\n\n\n\n\n\nSource\nRows in\nRows out\nWhat was removed\nWhat was flagged\n\n\n\n\nHacker News\n52,040\n48,296\n3,744 deleted or dead comments\n233 junk posts, 17,538 reposts, 242 very long posts\n\n\nATS job boards\n4,409\n4,294\n115 duplicate job IDs. 5 empty columns and 38 scraper-only columns.\n933 near duplicates, 12 suspect salaries, 43 very short and 43 very long descriptions\n\n\nIndeed Hiring Lab\n1,801,661\n1,801,661\nNothing\n9,010 outliers (more than 3 standard deviations from their series mean), 12 values outside the 0 to 500 range\n\n\nBLS\n1,956\n1,956\nNothing\n12 JOLTS outliers\n\n\nOEWS annual files\n9,670\n33\nRows for all occupations outside the six studied\n1 top-coded wage, 3 year-over-year changes above 20%\n\n\n\n\nEvery source went through the same seven cleaning steps in the same order. The steps were loading and deduplication, text and field cleaning, field extraction, missing values, normalisation, outliers, and discretisation. Not every step applied to every source. The Indeed, BLS and OEWS files arrived as tidy tables of numbers, so they had no text to clean and no fields to pull out. Only the Hacker News and job board data were sorted into bands, such as short, medium and long posts. Rows were removed for only two cleaning reasons. The job board exports held 115 repeat copies of the same jobs, identical except for the time they were collected. Only the newest copy of each was kept. Hacker News had 3,744 comments marked as deleted or dead, and almost all of them were too short to hold a real job post. The OEWS files were also cut down to the six occupations the project follows. Every other row stayed in. Rows that looked wrong, unusual or repeated were marked with a flag. That way, each analysis can decide for itself what to leave out.\nSome values are still missing on purpose. Of the 4,294 job board postings, 2,773 list no salary. All 2,244 postings from companies that use Greenhouse are in that group, because Greenhouse has no salary field at all. The other 529 are Ashby and Lever postings that left pay out. Filling these gaps with a guess would invent pay that was never offered, so they were left empty and marked with a flag. City names were read from the job board location text, which raised city coverage from 35 to 92 percent. Some Hacker News posts gave no work arrangement in their first line. For those, the rest of the text was searched, which raised coverage from 39 to 91 percent. Values found this way are marked, so they can be told apart from values in the first line.\nOutliers were checked with a different method for each source, because each source holds a different kind of data. In the BLS and Indeed series, a value was flagged when it sat far outside the normal range of its own series. Salaries were checked against a fixed range of $20,000 to $1,000,000 a year. OEWS flagged any change of more than 20 percent from one year to the next. Most flags in the series turned out to be real events. Across all nonfarm jobs in the US, BLS counted about 13 million layoffs and discharges in March 2020, when COVID closed much of the economy. Nine of the 12 BLS flags fall between March and June 2020. More than 90 percent of the Indeed sector, state and metro flags fall between March 2020 and December 2021. These COVID-era values were kept in the data, because they record real events. Most of the 12 salary flags look like pay entered in the wrong unit, such as a Talent Coordinator role listed at $32 a year.\nA review of how labels changed also turned up a real problem in the rules. Seniority was read from each job title with a list of keyword rules. When a title matched more than one rule, the later rule won. The intern rule looked for the letters “intern” anywhere in a title. That meant it also matched words such as “International” and “Internal”. In most of those titles, a later rule for manager or senior roles replaced the wrong label, which hid the mistake. The problem only showed up after a separate fix stopped later rules from replacing intern and new graduate labels. That fix was meant to stop “Associate Product Manager, New Grad” from being labelled as a lead role. Instead, 23 titles such as “International Tax Manager” were suddenly labelled as internships. The intern rule was changed to match only the whole word. That change also corrected 7 titles, such as “Software Engineer, International”, that had been wrong from the start. A similar check found that the rule for the abbreviation “Sr” matched the letters inside “Israel” and “SRE”. That rule was fixed the same way."
   },
   {
     "objectID": "dataprep_eda.html#exploratory-data-visualizations",
     "href": "dataprep_eda.html#exploratory-data-visualizations",
-    "title": "DataPrep_EDA",
+    "title": "Data Prep & EDA",
     "section": "Exploratory Data Visualizations",
     "text": "Exploratory Data Visualizations\n\n\n\n  \n    \n  \n  \n    1. Job postings index: AI-exposed against control sectors\n    Job postings in AI-exposed sectors fell roughly 69% from their mid-2022 peak and remain below their pre-pandemic level in 2026, while control sectors fell roughly 37% and recovered above theirs. The divergence begins several months before the ChatGPT release, indicating that generative AI cannot be the sole cause and that interest rate increases and the correction of pandemic-era overhiring also contributed.\n  \n\n\n\n  \n    \n  \n  \n    2. Job openings against online postings\n    Job openings in the information sector and online postings in AI-exposed sectors both peak in mid-2022 and decline afterwards, confirming the trend in official government data as well as in commercial posting indices. Openings fall roughly 45% from peak while postings fall roughly 67%, indicating that employers reduced advertising more sharply than they reduced actual vacancies.\n  \n\n\n\n  \n    \n  \n  \n    3. Hires and quits in the information sector\n    Hires in the information sector averaged 80,000 to 95,000 monthly through 2015 to 2019, peaked at 125,000 in 2021, and returned to roughly 75,000 by 2026 — close to the pre-pandemic range. Quits fell further, to 28,000 by 2026 against a 40,000 to 48,000 baseline, indicating a market where both employers and workers became less active rather than one where hiring simply collapsed.\n  \n\n\n\n  \n    \n  \n  \n    4. Employment by computer occupation\n    Employment in software development rose from 1.36 million in 2021 to 1.69 million in 2025, and data science employment grew from 105,000 to 261,000 over the same period. Employment therefore expanded while job postings fell sharply, indicating that reduced advertising did not correspond to reduced headcount in these occupations.\n  \n\n\n\n  \n    \n  \n  \n    5. Role families across company job postings\n    Engineering roles account for 839 of 4,294 postings, while customer-facing technical roles — forward deployed and solutions combined — account for 572, close to two-thirds of the engineering total. The 245 forward deployed postings confirm the role exists at scale rather than being a label used by one or two firms.\n  \n\n\n\n  \n    \n  \n  \n    6. Forward deployed and solutions postings by company\n    Databricks and Palantir account for 178 of 245 forward deployed postings, or 73% of the total, while the remaining ten companies contribute 67 between them. The ratio of forward deployed to solutions roles also differs sharply by company — Palantir posts more than twice as many forward deployed as solutions, while Databricks, Asana and Ramp show the reverse — suggesting the two titles are used interchangeably by some employers and distinctly by others.\n  \n\n\n\n  \n    \n  \n  \n    7. Seniority mix within each role family\n    Solutions roles are 53% staff level while forward deployed roles are only 4% staff, concentrating instead at mid (43%) and senior (29%). The two titles therefore differ in seniority profile as well as in name, which weakens the reading that they are interchangeable labels for the same work.\n  \n\n\n\n  \n    \n  \n  \n    8. Advertised salary by role family\n    Research roles show the highest median advertised minimum at roughly $380,000, followed by software engineering, data and applied AI in a band around $220,000 to $230,000, while recruiting sits lowest at about $130,000. The unusually narrow forward deployed distribution reflects a single employer posting one standard band across its engineering roles rather than a genuine market pattern.\n  \n\n\n\n  \n    \n  \n  \n    9. Description length and advertised salary\n    Description length shows no relationship with advertised salary across 1,459 postings, with a correlation of 0.00 and a flat fitted line. Combined with the near-identical length distributions across role families, this indicates description length reflects employer writing conventions rather than the seniority, complexity or compensation of the role.\n  \n\n\n\n  \n    \n  \n  \n    10. Work arrangement over time\n    Remote postings rose from 30% of those stating a work arrangement in 2019 to a peak of 82% in 2022, then fell to 55% by 2026, while hybrid arrangements grew from almost nothing to 17% over the same period. The partial reversal suggests employers consolidated around hybrid rather than returning fully to onsite work.\n  \n\n\n\n  \n    \n  \n  \n    11. Most common locations in job postings\n    Remote appears in 8,112 postings, more than any single city and 29% above San Francisco at 6,297, while five Bay Area locations together account for 6,657. Postings concentrate heavily in a handful of established technology hubs, with the top three locations covering more than the remaining seventeen combined."
   },

@@ -16,7 +16,7 @@ OUT_DIR = FIGDIR / "samples"
 MAX_ROWS, MAX_COLS, MAX_CHARS = 6, 6, 40
 TEXT, EDGE = "#1C1C1A", "#DEDEDA"
 FONT_SIZE, DPI = 9, 150
-PAD_IN, ROW_IN, TITLE_IN = 0.08, 0.3, 0.5  # sizes in inches
+PAD_IN, ROW_IN, TITLE_IN = 0.08, 0.3, 0.5
 
 # (output name, title, columns) per image; rows are matched on the id column
 HN_RAW = ("hn_raw", "Hacker News: raw", ["id", "by", "time", "thread_month", "parent", "text"])
@@ -28,8 +28,7 @@ ATS_CLEAN = ("ats_cleaned", "ATS job postings: cleaned",
              ["company_clean", "title", "seniority", "role_family", "salary_annual_min",
               "location_clean"])
 
-# The three numeric sources arrived tidy, so each cleaned table repeats the
-# raw numbers and adds the derived and flag columns.
+# The three numeric sources arrived tidy: cleaned repeats raw, plus derived and flag columns.
 INDEED_RAW = ("indeed_raw", "Indeed Hiring Lab: raw",
               ["date", "jobcountry", "indeed_job_postings_index", "variable", "display_name"])
 INDEED_CLEAN = ("indeed_cleaned", "Indeed Hiring Lab: cleaned",
@@ -125,8 +124,7 @@ def main() -> None:
                                read_csv("hn_cleaned_sample.csv"), "id")
     ats_raw, ats_clean = matched(read_csv("ats_raw_sample.csv"),
                                  read_csv("ats_final_sample.csv"), "jobId")
-    # make_samples.py writes the Indeed, BLS and OEWS pairs row for row, so
-    # those tables line up without matching on a key here.
+    # make_samples.py writes those pairs row for row, so no key matching is needed here.
     pairs = [(hn_raw, HN_RAW), (hn_clean, HN_CLEAN), (ats_raw, ATS_RAW), (ats_clean, ATS_CLEAN),
              (read_csv("indeed_sector_raw_sample.csv"), INDEED_RAW),
              (read_csv("indeed_sector_clean_sample.csv"), INDEED_CLEAN),

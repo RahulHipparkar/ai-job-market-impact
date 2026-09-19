@@ -21,7 +21,7 @@ PROCESSED_DIR = ROOT / "data" / "processed"
 SAMPLES_DIR = ROOT / "data" / "samples"
 N_ROWS = 20
 
-# One series per source, picked to match what the figures on the site show.
+# One series per source, matching the figures on the site.
 INDEED_SECTOR, INDEED_VARIABLE = "Software Development", "total postings"
 JOLTS_SERIES = "JTS510000000000000JOL"  # Information: job openings
 
@@ -48,8 +48,7 @@ def bls_samples() -> tuple[pd.DataFrame, pd.DataFrame]:
     clean = pd.read_csv(PROCESSED_DIR / "bls_jolts.csv")
     clean = clean[clean["series_id"] == JOLTS_SERIES].head(N_ROWS).reset_index(drop=True)
 
-    # The raw pull is nested (series[].data[]); flatten it without renaming
-    # anything, so the sample holds the fields as the API returned them.
+    # Flatten series[].data[] without renaming, so the sample keeps the API's own fields.
     payload = json.loads(latest_bls_file("jolts_*.json").read_text())[0]
     raw = pd.DataFrame([{"seriesID": s["seriesID"], "year": d["year"], "period": d["period"],
                          "periodName": d["periodName"], "latest": d.get("latest", ""),
