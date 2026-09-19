@@ -50,8 +50,8 @@ curl -X POST "https://api.apify.com/v2/acts/scrapesage~multi-ats-job-scraper/run
   -H "Content-Type: application/json" \
   -d '{
         "companies": ["greenhouse:anthropic", "ashby:openai"],
-        "maxItems": 200,
-        "maxItemsPerCompany": 50,
+        "maxItems": 4000,
+        "maxItemsPerCompany": 1000,
         "includeCompensation": true,
         "includeDescription": true,
         "includeRawData": false,
@@ -59,6 +59,8 @@ curl -X POST "https://api.apify.com/v2/acts/scrapesage~multi-ats-job-scraper/run
         "proxyConfiguration": {"useApifyProxy": true}
       }'
 ```
+
+The example uses the Group A run parameters. Group B used `maxItems` 1200 and `maxItemsPerCompany` 120. Both are passed to [fetch_apify.py](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/fetch_apify.py) as `--max-items` and `--max-per-company`.
 
 ### BLS Public Data API (v2)
 

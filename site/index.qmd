@@ -1,6 +1,5 @@
 ---
 title: "Was It AI, or Was It Interest Rates?"
-subtitle: "Generative AI and tech hiring"
 description: "Separating generative AI from the rate shock and post-pandemic correction in tech hiring, 2019-2026"
 toc: false
 ---
@@ -30,10 +29,6 @@ Job postings in AI-exposed sectors fell by roughly 69 percent from their mid-202
 </div>
 ```
 :::
-
-## The question
-
-<!-- PLACEHOLDER: 1 paragraph stating the research question -->
 
 ## What this project covers
 

@@ -48,3 +48,4 @@ format:
       dark: [darkly, styles-dark.scss]
     toc: false
     page-layout: full
+    code-overflow: wrap

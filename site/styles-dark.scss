@@ -615,10 +615,18 @@ td.num, th.num {
 
 // Inline code (white-space: pre) and bare URLs have no break points, so a
 // long endpoint or link pushes the page wider on a phone; let them break.
-// Code blocks already scroll inside their own box: Quarto sets
-// div.sourceCode to overflow-x: auto.
 #quarto-document-content :not(pre) > code {
   white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+// Code blocks wrap instead of scrolling: `code-overflow: wrap` in _quarto.yml
+// sets white-space: pre-wrap on pre > code.sourceCode (it changes that rule
+// directly rather than adding a class). Wrapping alone breaks at spaces, and
+// a bare URL is a single unbroken token (the Algolia endpoint is 130
+// characters), so it would still run past the edge of the block. Let those
+// break mid-token so no line is cut off at any width.
+#quarto-document-content pre > code.sourceCode {
   overflow-wrap: anywhere;
 }
 
