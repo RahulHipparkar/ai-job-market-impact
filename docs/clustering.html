@@ -301,16 +301,20 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Decision Trees</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./svm.html">
- <span class="dropdown-text">SVMs</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="./regression.html">
  <span class="dropdown-text">Regression</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./nn.html">
- <span class="dropdown-text">Neural Networks</span></a>
+    <a class="dropdown-item" href="./adaboost.html">
+ <span class="dropdown-text">AdaBoost</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./gradientboosting.html">
+ <span class="dropdown-text">Gradient Boosting</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./xgboost.html">
+ <span class="dropdown-text">XGBoost</span></a>
   </li>  
     </ul>
   </li>
@@ -367,15 +371,273 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Clustering is a way of finding groups in data without being told what the groups are. The method looks at how similar items are to each other and puts similar items together. No labels are given, so the groups come from the data alone. This makes clustering a tool for discovery. It can show patterns that nobody set out to look for.</p>
+<p>There are two main kinds of clustering. Partitional clustering splits the data into a fixed number of groups, called k, which is chosen in advance. This project uses k-means. It places k centre points, assigns every item to its nearest centre, and then moves each centre to the middle of its group. It repeats this until the centres stop moving. Hierarchical clustering does not need k at the start. It begins with every item in a group of its own and keeps joining the two closest groups until only one group is left. The result is a tree, called a dendrogram, that can be cut at any height to give a set of groups.</p>
+<p>Both methods need a way to measure how far apart two items are. Here the items are job postings, turned into word weights. The hierarchical clustering uses cosine similarity. It compares which words two postings use and how strongly, no matter how long each posting is. Groups are joined with complete linkage, which means two groups only count as close if even their least similar postings are close. K-means uses ordinary straight-line distance, called Euclidean distance. Every posting is scaled to the same size first, so this ranks pairs of postings in the same order as cosine similarity does.</p>
+<p>In this project, clustering is run on 3,718 job postings from AI companies. The goal is to see which groups of jobs appear when the method reads only the job descriptions. Each posting already has a role family, such as software engineering, sales or forward deployed engineering, which was taken from its job title. That label is kept aside during clustering. It is only brought back afterwards, to check whether the groups the method found match the job types or something else.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/clustering_concept_methods.png" class="img-fluid figure-img" alt="Two panels using the same 15 made-up points. Left: a scatter plot with the points coloured into three groups by k-means, each with a black cross at its centre. Right: a dendrogram of the same points, with a dashed line showing where to cut the tree to get three groups."></p>
+<figcaption>The same 15 made-up points grouped in two ways. K-means splits them into a set number of groups around centre points. Hierarchical clustering builds a tree of merges, which can be cut at any height to give groups.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/clustering_concept_distance.png" class="img-fluid figure-img" alt="Three arrows from the origin on a chart of how often two words are used. Posting A is short and Posting B is long, and both point in the same direction. Posting C points in a different direction. Labels show a straight-line distance of 4.5 and an angle of 0 degrees between A and B, and a straight-line distance of 2.2 and an angle of 45 degrees between A and C."></p>
+<figcaption>Postings A and B use words in the same mix, but B is longer. They are far apart in straight-line distance, yet the angle between them is 0, so cosine treats them as alike. Posting C is closer to A in straight-line distance but uses a different mix of words. This is why cosine suits text.</figcaption>
+</figure>
+</div>
 </section>
-<section id="data" class="level2">
-<h2 class="anchored" data-anchor-id="data">Data</h2>
+<section id="data-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="data-preparation">Data Preparation</h2>
+<p>Clustering works by measuring distances, and distances can only be measured between numbers. So the input has to be a table of numbers, with one row for each posting and one column for each feature. It also has to be unlabeled. If the role family were part of the input, the method would simply sort postings by the answer instead of finding groups on its own. For this reason the role family was removed before clustering and only used later to check the results.</p>
+<p>The data started with 4,294 postings. Of these, 933 belonged to 357 groups of near copies, where a company posted the same job, with the same title and the same opening text, more than once. Only the first copy of each job was kept, and the other 576 copies were removed, so that repeated text could not form fake groups. That left 3,718 postings. Each description was then turned into numbers with a method called TF-IDF. Every posting becomes a row and every word becomes a column. A word gets a high weight in a posting when it is used often in that posting but is rare across all postings. Common English words such as “the” and “and” were dropped. So were words that appear in fewer than 5 postings or in more than 80% of them. This left about 7,800 word columns.</p>
+<p>A first test showed a problem. Each company repeats the same blocks of text in all of its postings, such as its mission statement, its benefits and its legal notices. These blocks were so strong that the clusters grouped postings by company rather than by job. So a second version of the data was made. Any sentence that appears in at least 10% of one company’s postings, and in at least 3 of them, was removed, and so were company names. This cut the typical description roughly in half, from about 6,300 to about 3,300 characters, and left 7,495 word columns. Both versions were clustered, and both are shown in the results below.</p>
+<div class="sample-figure">
+<p><img src="figures/samples/clustering_input_sample.png" class="img-fluid" alt="Table of 10 job postings by 12 terms, each cell a TF-IDF weight between 0 and about 0.25, with many zeros. There is no label column."></p>
+<p>Ten postings and twelve of the 7,495 word columns from the version with company text removed. Each number is a TF-IDF weight. Many cells are zero, because each posting uses only a small share of all the words. There is no label column, only numbers.</p>
+</div>
+<p><strong>Data files</strong></p>
+<ul>
+<li>Raw data: job postings collected from company job boards with the <a href="https://apify.com/scrapesage/multi-ats-job-scraper">Apify multi-ATS job scraper</a>, using <a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/fetch_apify.py">fetch_apify.py</a>. The full raw files are about 64 MB and are not stored in the repository, so a <a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/ats_raw_sample.csv">20-row raw sample</a> is linked instead.</li>
+<li>Clean data: <a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/processed/ats_final.csv">ats_final.csv</a>, the 4,294 cleaned postings this page starts from, before near copies are removed.</li>
+<li>Clustering input sample: <a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/clustering_input_sample.csv">clustering_input_sample.csv</a>, shown in the table above.</li>
+</ul>
 </section>
 <section id="code" class="level2">
 <h2 class="anchored" data-anchor-id="code">Code</h2>
+<div class="table-wrap">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>File</th>
+<th>What it does</th>
+<th>Language</th>
+<th>Main packages</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/text_clusters.py">text_clusters.py</a></td>
+<td>Builds the TF-IDF matrix, removes text that a company repeats in every posting, runs k-means and hierarchical clustering, and runs truncated SVD.</td>
+<td>Python 3.12</td>
+<td>scikit-learn, scipy, pandas, numpy</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/text_clusters.py">k-means in text_clusters.py</a></td>
+<td>Runs k-means for every k from 2 to 15 with five random starts, scores each k by inertia, silhouette and stability, and fits the final model (<code>kmeans_sweep</code>, <code>fit_kmeans</code>).</td>
+<td>Python 3.12</td>
+<td>scikit-learn</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/text_clusters.py">Hierarchical clustering in text_clusters.py</a></td>
+<td>Computes cosine distances, builds the complete-linkage tree, cuts it into k clusters, and scores every cut (<code>cosine_distances</code>, <code>cosine_linkage</code>, <code>cut_k</code>, <code>hier_k_scan</code>).</td>
+<td>Python 3.12</td>
+<td>scipy, scikit-learn</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/cluster_plots.py">cluster_plots.py</a></td>
+<td>Draws the clustering and SVD charts: the choice of k, silhouette diagrams, heatmaps, dendrograms, explained variance and projections.</td>
+<td>Python 3.12</td>
+<td>matplotlib, seaborn, scipy, scikit-learn</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/notebooks/02_clustering_pca.ipynb">02_clustering_pca.ipynb</a></td>
+<td>Runs the clustering and PCA steps from start to end and saves every figure, the cluster labels and a results report.</td>
+<td>Python 3.12 (Jupyter)</td>
+<td>pandas, scikit-learn, scipy, matplotlib</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/make_clustering_concept_figures.py">make_clustering_concept_figures.py</a></td>
+<td>Draws the two explanatory figures in the Overview from small made-up data.</td>
+<td>Python 3.12</td>
+<td>matplotlib, scipy, scikit-learn</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/make_module2_samples.py">make_module2_samples.py</a></td>
+<td>Saves the small samples of the clustering and PCA input shown on these pages, and draws them as table images.</td>
+<td>Python 3.12</td>
+<td>pandas, numpy, matplotlib</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <section id="results" class="level2">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
+<p>Clustering was run on two versions of the TF-IDF table: the raw descriptions, and the version with company boilerplate removed. For each version, k-means was fitted for every k from 2 to 15 with five random starts, and a complete-linkage tree was built on cosine distance. The numbers below refer to the figures further down the page.</p>
+<section id="which-values-of-k-were-compared" class="level3">
+<h3 class="anchored" data-anchor-id="which-values-of-k-were-compared">Which values of k were compared</h3>
+<p>The silhouette score, inertia and stability across random starts were measured for every k from 2 to 15. Four values, k = 3, 4, 8 and 14, were then fitted and compared side by side, with their cluster sizes and silhouette plots (figures 2 and 6). These four include the k finally chosen for each version: k = 14 for the raw descriptions and k = 4 once boilerplate was removed.</p>
+</section>
+<section id="what-the-silhouette-score-says-about-the-best-k" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-silhouette-score-says-about-the-best-k">What the silhouette score says about the best k</h3>
+<p>On the raw descriptions, the average silhouette score rises with k and is highest at k = 14 and k = 15, which tie at 0.173 (figure 1). Of every k close to that top, k = 14 also gives the most repeatable clusters across random starts, so it was chosen. Among the four values compared, the silhouette rises from 0.077 at k = 3 to 0.185 at k = 14.</p>
+<p>Once company boilerplate is removed, the silhouette score is below 0.03 at every k (figure 5). It is highest at k = 15, the top of the range tested, so it does not point to a clear best k. Here k = 4 was chosen instead, as the largest k whose clusters stay the same across random starts. The low scores mean the groups overlap heavily: between 24% and 37% of postings sit closer to another cluster than to their own (figure 6).</p>
+</section>
+<section id="silhouette-plots" class="level3">
+<h3 class="anchored" data-anchor-id="silhouette-plots">Silhouette plots</h3>
+<p>Figures 2, 3, 6 and 7 show the silhouette value of every posting, grouped by cluster. On the raw descriptions (figure 3), only one cluster, a mix of smaller companies, has any postings with negative values. With boilerplate removed (figure 7), the sales and customer-facing technical clusters hold together, while the engineering cluster and the legal and finance cluster have many negative values.</p>
+</section>
+<section id="how-hierarchical-clustering-compares-with-k-means" class="level3">
+<h3 class="anchored" data-anchor-id="how-hierarchical-clustering-compares-with-k-means">How hierarchical clustering compares with k-means</h3>
+<p>On the raw descriptions the two methods agree fairly well, with an adjusted Rand index of 0.70 (figure 11). Both group postings by company: the hierarchical clusters H6 and H9 sit entirely inside the OpenAI and Databricks k-means clusters. The tree keeps the original distances well, with a cophenetic correlation of 0.85.</p>
+<p>With boilerplate removed, agreement drops to 0.21 (figure 14). The tree splits the postings into two large groups, engineering (1,809 postings) and everything else (1,892), plus two tiny groups of 11 and 6 postings. K-means goes further and also separates sales, customer-facing technical work and a legal and finance group. The tree’s cophenetic correlation is 0.54, so it only roughly reflects the distances between postings.</p>
+</section>
+<section id="what-k-the-hierarchical-tree-suggests" class="level3">
+<h3 class="anchored" data-anchor-id="what-k-the-hierarchical-tree-suggests">What k the hierarchical tree suggests</h3>
+<p>The gaps between merge heights in the tree are all very small, so the dendrogram on its own does not mark a clear place to cut. Scoring every possible cut with the silhouette score gives a clearer answer. On the raw descriptions the best cut is k = 14 (figure 9), the same k chosen for k-means. With boilerplate removed, the silhouette of the cuts is almost flat. It is highest at k = 7, with the same value at k = 4 (figure 12), which matches the k chosen for k-means, while the k-means silhouette itself keeps rising up to k = 15.</p>
+<!-- The cards sit in a raw HTML block, as on the Data Prep page. Captions
+here are HTML, so use <p>, <em> and <a> rather than markdown. -->
+<div class="figure-grid">
+<div class="figure-card">
+  <a href="figures/ats_kmeans_k_sweep_raw.png">
+    <img src="figures/thumbs/ats_kmeans_k_sweep_raw.png" alt="Two line charts against the number of clusters k, from 2 to 15, for k-means on the raw job descriptions. Left: inertia falls steadily as k grows. Right: the silhouette score rises, dips at k = 13 and is highest at k = 14 and k = 15, which tie. A dashed line marks the chosen k = 14.">
+  </a>
+  <div class="figure-card-body">
+    <h4 class="anchored">1. Choosing k for k-means (raw descriptions)</h4>
+    <p>Inertia has no clear elbow. The silhouette score is highest at k = 14 and k = 15, which tie at 0.173, and of every k within the seed-to-seed spread of that top, k = 14 is also the most stable across random starts (0.901), so it was chosen. The dip at k = 13 is a poor fit rather than real structure, since inertia rises there (2,285 to 2,292).</p>
+  </div>
+</div>
+
+<div class="figure-card">
+  <a href="figures/ats_kmeans_silhouette_compare_raw.png">
+    <img src="figures/thumbs/ats_kmeans_silhouette_compare_raw.png" alt="Four silhouette diagrams side by side for k-means with k = 3, 4, 8 and 14 on the raw job descriptions. Each has one band per cluster with postings sorted by silhouette value and a dashed line at the mean. The means are 0.077, 0.098, 0.144 and 0.185.">
+  </a>
+  <div class="figure-card-body">
+    <h4 class="anchored">2. Silhouette values at k = 3, 4, 8 and 14 (raw descriptions)</h4>
+    <p>The average silhouette rises from 0.077 at k = 3 to 0.185 at k = 14, and the share of postings with negative values falls to 2.9%, so k = 14 is the best of the four.</p>
+  </div>
+</div>
+
+<div class="figure-card">
+  <a href="figures/ats_kmeans_silhouette_raw.png">
+    <img src="figures/thumbs/ats_kmeans_silhouette_raw.png" alt="Silhouette diagram for k-means with k = 14 on the raw job descriptions, with one band per cluster from K0 to K13. Most values are above zero, part of cluster K1 is below zero, and a dashed line marks the mean of 0.185.">
+  </a>
+  <div class="figure-card-body">
+    <h4 class="anchored">3. Silhouette values for the chosen k = 14 (raw descriptions)</h4>
+    <p>Most postings fit their own cluster well: K1, a mix of smaller companies, is the only cluster with any negative values (36% of its postings, mean 0.01), while small single-company clusters such as Ramp (K4, 0.41) and Figma (K3, 0.38) score highest.</p>
+  </div>
+</div>
+
+<div class="figure-card">
+  <a href="figures/ats_kmeans_role_family_raw.png">
+    <img src="figures/thumbs/ats_kmeans_role_family_raw.png" alt="Heatmap of the 14 k-means clusters against 10 role families on the raw job descriptions. Each cell shows the percent of the cluster's postings in that role family. The column for the other family has the highest share in 12 of the 14 rows.">
+  </a>
+  <div class="figure-card-body">
+    <h4 class="anchored">4. Role family mix of each k-means cluster (raw descriptions)</h4>
+    <p>No cluster lines up with a role family: "other" is the largest group in 12 of the 14 clusters. Instead, the clusters follow employers, and 12 of them hold postings from a single company, because each company repeats the same boilerplate text in every posting.</p>
+  </div>
+</div>
+
+<div class="figure-card">
+  <a href="figures/ats_kmeans_k_sweep_stripped.png">
+    <img src="figures/thumbs/ats_kmeans_k_sweep_stripped.png" alt="Two line charts against the number of clusters k, from 2 to 15, for k-means after company boilerplate is removed. Left: inertia falls steadily as k grows. Right: the silhouette score stays below 0.03 at every k, dips at k = 4 and then rises toward k = 15. A dashed line marks the chosen k = 4.">
+  </a>
+  <div class="figure-card-body">
+    <h4 class="anchored">5. Choosing k for k-means (company boilerplate removed)</h4>
+    <p>Silhouette is below 0.03 at every k, so it cannot pick a k; k = 4 was chosen as the largest k whose clusters stay the same across random starts (agreement 0.88, falling to 0.75 at k = 5).</p>
+  </div>
+</div>
+
+<div class="figure-card">
+  <a href="figures/ats_kmeans_silhouette_compare_stripped.png">
+    <img src="figures/thumbs/ats_kmeans_silhouette_compare_stripped.png" alt="Four silhouette diagrams side by side for k-means with k = 3, 4, 8 and 14 after company boilerplate is removed. Each has one band per cluster and a dashed line at the mean. The means are 0.016, 0.011, 0.017 and 0.025, and every panel has many values below zero.">
+  </a>
+  <div class="figure-card-body">
+    <h4 class="anchored">6. Silhouette values at k = 3, 4, 8 and 14 (company boilerplate removed)</h4>
+    <p>Across the four k values compared, the average silhouette stays between 0.011 and 0.025, and 24% to 37% of postings have negative values, so none of them gives well-separated groups.</p>
+  </div>
+</div>
+
+<div class="figure-card">
+  <a href="figures/ats_kmeans_silhouette_stripped.png">
+    <img src="figures/thumbs/ats_kmeans_silhouette_stripped.png" alt="Silhouette diagram for k-means with k = 4 after company boilerplate is removed, with one band per cluster from K0 to K3. Clusters K0 and K2 have many values below zero, and a dashed line marks the mean of 0.011.">
+  </a>
+  <div class="figure-card-body">
+    <h4 class="anchored">7. Silhouette values for the chosen k = 4 (company boilerplate removed)</h4>
+    <p>The customer-technical (K1) and sales (K3) clusters hold together, while engineering (K2) and the legal and finance cluster (K0) are weak, with 34% and 69% of their postings negative.</p>
+  </div>
+</div>
+
+<div class="figure-card">
+  <a href="figures/ats_kmeans_role_family_stripped.png">
+    <img src="figures/thumbs/ats_kmeans_role_family_stripped.png" alt="Heatmap of the 4 k-means clusters against 10 role families after company boilerplate is removed. Each cell shows the percent of the cluster's postings in that role family. One cluster is mostly sales, one is mostly software engineering, and one is mostly solutions and forward deployed roles.">
+  </a>
+  <div class="figure-card-body">
+    <h4 class="anchored">8. Role family mix of each k-means cluster (company boilerplate removed)</h4>
+    <p>With boilerplate removed, the clusters follow job types: K3 is 68% sales, K2 is 45% software engineering, and K1 is mainly solutions (43%) and forward_deployed (17%) postings.</p>
+  </div>
+</div>
+
+<div class="figure-card">
+  <a href="figures/ats_hier_k_scan_raw.png">
+    <img src="figures/thumbs/ats_hier_k_scan_raw.png" alt="Two charts against the number of clusters k, from 2 to 15, for the complete-linkage tree on the raw job descriptions. Left: bars show the gap in merge height above each cut, tallest at k = 5. Right: the silhouette of each cut, highest at k = 14. A dashed line marks the k-means choice of k = 14.">
+  </a>
+  <div class="figure-card-body">
+    <h4 class="anchored">9. Which k the hierarchical tree suggests (raw descriptions)</h4>
+    <p>The merge gaps are all tiny, so the dendrogram itself does not point to one k, but the cut silhouette is highest at k = 14 (0.192), the same k chosen for k-means.</p>
+  </div>
+</div>
+
+<div class="figure-card">
+  <a href="figures/ats_hier_dendrogram_raw.png">
+    <img src="figures/thumbs/ats_hier_dendrogram_raw.png" alt="Dendrogram of the last 30 merges of a complete-linkage tree built on cosine distance between the raw job descriptions. Each leaf is labelled with its cluster, its most common role family and its size. A dashed line marks the cut into 14 clusters.">
+  </a>
+  <div class="figure-card-body">
+    <h4 class="anchored">10. Hierarchical clustering dendrogram (raw descriptions)</h4>
+    <p>The branches follow companies rather than jobs; for example, H9 is 716 Databricks postings and H6 is 694 OpenAI postings. The cophenetic correlation of 0.85 means the tree keeps the original distances well; average linkage scores higher (0.93) but was not used, because it puts 2,943 of the 3,718 postings into just two clusters.</p>
+  </div>
+</div>
+
+<div class="figure-card">
+  <a href="figures/ats_hier_vs_kmeans_raw.png">
+    <img src="figures/thumbs/ats_hier_vs_kmeans_raw.png" alt="Heatmap of posting counts for the 14 hierarchical clusters against the 14 k-means clusters on the raw job descriptions. The title gives an adjusted Rand index of 0.70.">
+  </a>
+  <div class="figure-card-body">
+    <h4 class="anchored">11. Hierarchical clusters against k-means clusters (raw descriptions)</h4>
+    <p>The two methods agree fairly well (ARI = 0.70). Two large hierarchical clusters sit entirely inside one k-means cluster each: H6 (694 postings) inside the OpenAI cluster K8, and H9 (716) inside the Databricks cluster K7. Others are merged, with H3 combining Anthropic (517), Scale AI (199) and Cohere (134).</p>
+  </div>
+</div>
+
+<div class="figure-card">
+  <a href="figures/ats_hier_k_scan_stripped.png">
+    <img src="figures/thumbs/ats_hier_k_scan_stripped.png" alt="Two charts against the number of clusters k, from 2 to 15, for the complete-linkage tree after company boilerplate is removed. Left: bars show the gap in merge height above each cut, tallest at k = 6. Right: the silhouette of each cut, highest at k = 7 and almost the same at k = 4. A dashed line marks the k-means choice of k = 4.">
+  </a>
+  <div class="figure-card-body">
+    <h4 class="anchored">12. Which k the hierarchical tree suggests (company boilerplate removed)</h4>
+    <p>The cut silhouette is almost flat, with its highest value at k = 7 and an equal value at k = 4 (both 0.025), which matches the k chosen for k-means; the k-means silhouette is instead highest at k = 15, the top of the range tested.</p>
+  </div>
+</div>
+
+<div class="figure-card">
+  <a href="figures/ats_hier_dendrogram_stripped.png">
+    <img src="figures/thumbs/ats_hier_dendrogram_stripped.png" alt="Dendrogram of the last 30 merges of a complete-linkage tree built on cosine distance after company boilerplate is removed. Each leaf is labelled with its cluster, its most common role family and its size. A dashed line marks the cut into 4 clusters.">
+  </a>
+  <div class="figure-card-body">
+    <h4 class="anchored">13. Hierarchical clustering dendrogram (company boilerplate removed)</h4>
+    <p>The tree really splits postings into two groups: H1 (1,809 postings) is the engineering group, H0 (1,892) mixes sales, solutions and forward_deployed postings, and the other two clusters are tiny (11 and 6 postings).</p>
+  </div>
+</div>
+
+<div class="figure-card">
+  <a href="figures/ats_hier_vs_kmeans_stripped.png">
+    <img src="figures/thumbs/ats_hier_vs_kmeans_stripped.png" alt="Heatmap of posting counts for the 4 hierarchical clusters against the 4 k-means clusters after company boilerplate is removed. The title gives an adjusted Rand index of 0.21.">
+  </a>
+  <div class="figure-card-body">
+    <h4 class="anchored">14. Hierarchical clusters against k-means clusters (company boilerplate removed)</h4>
+    <p>Agreement is low (ARI = 0.21): hierarchical clustering mainly separates engineering (H1 holds 1,247 of 1,496 K2 postings) from everything else, while k-means also splits out sales, customer-technical and legal/finance groups.</p>
+  </div>
+</div>
+</div>
+</section>
+</section>
+<section id="conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
+<p>The clearest lesson is that job postings at AI companies are written mostly in the company’s own voice. On the raw descriptions, 12 of the 14 clusters each hold postings from a single employer, and the clusters match the company far more closely than the type of job. Mission statements, benefits and legal notices are repeated in every posting and drown out the description of the work itself. Any study of hiring that reads posting text has to remove this boilerplate first, or it will measure employers instead of jobs.</p>
+<p>Once the boilerplate is removed, the descriptions do sort into kinds of work: engineering, sales, customer-facing technical work, and a broad business group covering roles such as legal, finance and operations. These groups match the role families much better than before, but they still overlap a great deal. Silhouette scores stay below 0.03, and about a third of postings sit closer to another group than to their own. Jobs at these companies blend into each other more than their titles suggest.</p>
+<p>This matters most for forward deployed engineers. Their descriptions do not form a group of their own. The customer-facing technical cluster holds 78% of solutions postings and 52% of forward deployed postings, while another 42% of forward deployed postings fall in the engineering cluster. In the words companies use, the role sits between solutions work and engineering, and closer to solutions than its “engineer” title suggests. Customer-facing technical work as a whole does stand out as a group of its own, with 493 of the 3,718 postings.</p>
+<p>Finally, the two methods only agree fairly well on the raw text (an adjusted Rand index of 0.70), where the company signal is easy to find. On the cleaned text, the hierarchical tree mainly separates engineering from everything else, while k-means also splits out sales and customer-facing work. The split between engineering and non-engineering jobs is the one result that both methods support.</p>
 
 
 </section>

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Separating generative AI from the rate shock and post-pandemic correction in tech hiring, 2019-2026">
+<meta name="description" content="Separating AI from the rate shock and post-pandemic correction in tech hiring, 2019-2026">
 
 <title>Was It AI, or Was It Interest Rates? – AI job market impact</title>
 <style>
@@ -302,16 +302,20 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Decision Trees</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./svm.html">
- <span class="dropdown-text">SVMs</span></a>
-  </li>  
-        <li>
     <a class="dropdown-item" href="./regression.html">
  <span class="dropdown-text">Regression</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./nn.html">
- <span class="dropdown-text">Neural Networks</span></a>
+    <a class="dropdown-item" href="./adaboost.html">
+ <span class="dropdown-text">AdaBoost</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./gradientboosting.html">
+ <span class="dropdown-text">Gradient Boosting</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./xgboost.html">
+ <span class="dropdown-text">XGBoost</span></a>
   </li>  
     </ul>
   </li>
@@ -354,7 +358,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Separating generative AI from the rate shock and post-pandemic correction in tech hiring, 2019-2026
+    Separating AI from the rate shock and post-pandemic correction in tech hiring, 2019-2026
   </div>
 </div>
 
@@ -371,7 +375,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Job postings in AI-exposed sectors fell by roughly 69 percent from their mid-2022 peak, while postings in control sectors fell by roughly 37 percent and recovered above their pre-pandemic level. This project asks how much of that gap generative AI explains, and how much belongs to higher interest rates and the correction of pandemic-era overhiring. It works from five data sources covering 2015 to 2026, including 56,334 job postings.</p>
+<p>From their peak in March 2022 to August 2026, job postings in AI-exposed sectors fell by roughly 67 percent, while postings in control sectors fell by roughly 36 percent and recovered above their pre-pandemic level. This project asks how much of that gap AI explains, and how much belongs to higher interest rates and the correction of pandemic-era overhiring. It works from five data sources covering 2019 to 2026, including 56,334 job postings.</p>
 <div class="key-numbers">
 <div class="key-number">
   <span class="key-number-value">56,334</span>
@@ -379,7 +383,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 <div class="key-number">
-  <span class="key-number-value">2015–2026</span>
+  <span class="key-number-value">2019–2026</span>
   <span class="key-number-label">years covered</span>
 </div>
 
@@ -397,13 +401,17 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="what-this-project-covers">What this project covers</h2>
 <ul>
 <li>Data preparation and exploratory analysis — complete</li>
-<li>Clustering and PCA — to come</li>
+<li>Clustering and PCA — complete</li>
 <li>Naive Bayes and decision trees — to come</li>
-<li>Support vector machines — to come</li>
-<li>Regression and neural networks — to come</li>
+<li>Regression — to come</li>
+<li>AdaBoost, gradient boosting and XGBoost — to come</li>
 </ul>
-<p><img src="figures/indeed_sector_divergence.png" class="img-fluid" alt="Line chart of the Indeed job postings index for AI-exposed and control sectors, 2020 to 2026, with the ChatGPT release marked. Both rise to a 2022 peak, then AI-exposed postings fall to about 70 while control sectors settle near 110."></p>
-<!-- PLACEHOLDER: one-sentence caption -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/indeed_sector_divergence.png" class="img-fluid figure-img" alt="Line chart of the Indeed job postings index for AI-exposed and control sectors, 2020 to 2026, with the ChatGPT release marked. Both rise to a 2022 peak, then AI-exposed postings fall to about 70 while control sectors settle near 110."></p>
+<figcaption>Monthly average of Indeed’s job postings index for the three AI-exposed sectors and the 44 control sectors, February 2020 to August 2026 (1 February 2020 = 100); the dashed line marks the release of ChatGPT. Source: <a href="https://github.com/hiring-lab/job_postings_tracker">Indeed Hiring Lab</a>.</figcaption>
+</figure>
+</div>
 </section>
 <section id="where-to-start" class="level2">
 <h2 class="anchored" data-anchor-id="where-to-start">Where to start</h2>
@@ -411,19 +419,16 @@ ul.task-list li input[type="checkbox"] {
 <div class="figure-card">
 <section id="introduction" class="level4 figure-card-body">
 <h4 class="anchored" data-anchor-id="introduction"><a href="./introduction.html">Introduction</a></h4>
-<!-- PLACEHOLDER: one line on what this page holds -->
 </section>
 </div>
 <div class="figure-card">
 <section id="data-preparation-and-exploratory-analysis" class="level4 figure-card-body">
 <h4 class="anchored" data-anchor-id="data-preparation-and-exploratory-analysis"><a href="./dataprep_eda.html">Data preparation and exploratory analysis</a></h4>
-<!-- PLACEHOLDER: one line on what this page holds -->
 </section>
 </div>
 <div class="figure-card">
 <section id="conclusions" class="level4 figure-card-body">
 <h4 class="anchored" data-anchor-id="conclusions"><a href="./conclusions.html">Conclusions</a></h4>
-<!-- PLACEHOLDER: one line on what this page holds -->
 </section>
 </div>
 </div>

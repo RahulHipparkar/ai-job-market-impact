@@ -227,7 +227,7 @@ here are HTML, so use <em> and <a> rather than markdown. -->
   </a>
   <div class="figure-card-body">
     <h4>1. Job postings index: AI-exposed against control sectors</h4>
-    <p>Job postings in AI-exposed sectors fell roughly 69% from their mid-2022 peak and remain below their pre-pandemic level in 2026, while control sectors fell roughly 37% and recovered above theirs. The divergence begins several months before the ChatGPT release, indicating that generative AI cannot be the sole cause and that interest rate increases and the correction of pandemic-era overhiring also contributed.</p>
+    <p>Between their March 2022 peak and August 2026, job postings in AI-exposed sectors fell roughly 67% and remain below their pre-pandemic level, while control sectors fell roughly 36% and recovered above theirs. The divergence begins several months before the ChatGPT release, indicating that AI cannot be the sole cause and that interest rate increases and the correction of pandemic-era overhiring also contributed.</p>
   </div>
 </div>
 
@@ -238,7 +238,7 @@ here are HTML, so use <em> and <a> rather than markdown. -->
   </a>
   <div class="figure-card-body">
     <h4>2. Job openings against online postings</h4>
-    <p>Job openings in the information sector and online postings in AI-exposed sectors both peak in mid-2022 and decline afterwards, confirming the trend in official government data as well as in commercial posting indices. Openings fall roughly 45% from peak while postings fall roughly 67%, indicating that employers reduced advertising more sharply than they reduced actual vacancies.</p>
+    <p>Job openings in the information sector and online postings in AI-exposed sectors both peak in spring 2022 and decline afterwards, confirming the trend in official government data as well as in commercial posting indices. Openings fall roughly 63% from peak while postings fall roughly 67%. The two falls are similar in size, so the online postings and the official count of vacancies tell the same story.</p>
   </div>
 </div>
 

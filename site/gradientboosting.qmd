@@ -1,5 +1,5 @@
 ---
-title: "SVMs"
+title: "GradientBoosting"
 ---
 
 ## Overview

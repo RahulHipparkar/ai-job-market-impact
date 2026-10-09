@@ -1,0 +1,330 @@
+DATA
+  rows before dedup: 4294
+  near-duplicate groups: 357 (933 rows flagged is_near_dup)
+  group size distribution (copies per group: number of groups):
+    2: 242
+    3: 66
+    4: 24
+    5: 15
+    6: 3
+    7: 2
+    8: 1
+    9: 2
+    10: 1
+    12: 1
+  removed as extra copies: 576
+  rows after dedup: 3718
+  is_junk: column not present in ats_final.csv, nothing to drop
+  raw: TF-IDF 3,718 x 7,816, vocabulary 7,816, density 4.62%
+  stripped: TF-IDF 3,718 x 7,495, vocabulary 7,495, density 2.65%
+  TF-IDF parameters: {'min_df': 5, 'max_df': 0.8, 'stop_words': 'english'}
+  boilerplate rule (stripped variant): sentence in >= 10% of a company's postings and >= 3 of them; company names removed
+
+======================================================================
+TEXT VARIANT: raw (raw descriptions)
+======================================================================
+chosen k = 14: mean silhouette (5 seeds) is highest at k=14 (0.1732, tied with k=15 to 4 dp); of all k within one seed SD of the top (10, 11, 12, 14, 15), k=14 is the most stable (ARI 0.901); the k=13 dip is a poor local optimum (inertia rises 2,285 -> 2,292)
+silhouette of final k-means fit (seed 0): 0.1850
+k sweep (silhouette = mean of 5 seeds; stability = mean pairwise ARI):
+        inertia  silhouette  silhouette_sd  stability_ari
+  k                                                      
+  2   3061.4006      0.0554         0.0000         1.0000
+  3   2907.9162      0.0768         0.0000         1.0000
+  4   2771.3368      0.0977         0.0000         1.0000
+  5   2688.4443      0.1091         0.0005         0.8246
+  6   2629.1439      0.1211         0.0009         0.8169
+  7   2565.7618      0.1305         0.0028         0.7683
+  8   2489.9457      0.1448         0.0007         0.8938
+  9   2438.6208      0.1497         0.0018         0.8982
+  10  2371.0978      0.1615         0.0045         0.8861
+  11  2337.5749      0.1626         0.0122         0.8533
+  12  2284.9932      0.1698         0.0139         0.8939
+  13  2292.3764      0.1522         0.0046         0.8068
+  14  2227.6275      0.1732         0.0146         0.9011
+  15  2208.9202      0.1732         0.0215         0.8518
+k-means compared at k = [3, 4, 8, 14] (silhouette of the seed-0 fit):
+      silhouette  pct_negative_silhouette  smallest  largest                                                                  sizes  nmi_company  nmi_role_family  ari_role_family
+  k                                                                                                                                                                               
+  3        0.077                    6.105       747     2220                                                       [2220, 751, 747]        0.550            0.055            0.028
+  4        0.098                    6.267       544     1676                                                  [1676, 751, 747, 544]        0.675            0.059            0.022
+  8        0.144                    6.267       120     1056                              [1056, 751, 747, 544, 205, 164, 131, 120]        0.835            0.064            0.021
+  14       0.185                    2.905        48      751  [751, 748, 545, 297, 207, 205, 164, 147, 135, 131, 120, 120, 100, 48]        0.961            0.080            0.024
+k-means cluster sizes (chosen k): [545, 297, 147, 120, 120, 205, 164, 751, 748, 48, 135, 207, 131, 100]
+k-means cluster x role_family (row %):
+  role_family  software_eng  sales_gtm  solutions  forward_deployed  product  applied_ai  research  data  recruiting  other
+  K9 (n=48)            45.8        2.1        0.0               0.0     10.4         0.0       0.0   4.2         0.0   37.5
+  K10 (n=135)           9.6       44.4        1.5               0.0      3.0         0.7       0.0   0.0         2.2   38.5
+  K5 (n=205)           18.0       15.6        1.5               0.0      4.4         0.0       0.5   1.5         2.4   56.1
+  K8 (n=748)           22.1        4.5        2.4               2.3      2.4         4.9       2.4   3.2         0.5   55.2
+  K4 (n=120)           14.2       15.0        6.7               0.8      3.3         1.7       0.0   1.7         3.3   53.3
+  K0 (n=545)           18.5       16.1        1.5               0.4      3.1         4.8       6.4   1.8         1.1   46.2
+  K13 (n=100)          17.0       15.0        6.0               1.0     10.0         0.0       0.0   3.0         2.0   46.0
+  K11 (n=207)          19.8        3.9        2.9               7.2      6.3         3.9       7.2   1.4         1.4   45.9
+  K1 (n=297)           21.2       13.8        6.4               2.0      5.4         2.4       0.3   2.4         1.3   44.8
+  K12 (n=131)          10.7       13.7        8.4              13.7      2.3         1.5       3.1   3.1         1.5   42.0
+  K3 (n=120)            8.3       32.5        5.0               0.8      9.2         0.8       0.0   2.5         3.3   37.5
+  K6 (n=164)           22.6       28.0        0.6               0.0     10.4         0.0       0.0   0.0         4.3   34.1
+  K2 (n=147)           24.5        0.7        8.2              27.9      4.1         0.0       0.0   0.0         2.0   32.7
+  K7 (n=751)           19.7       18.4       23.3               8.1      2.4         0.8       0.5   0.7         0.3   25.8
+role_family x k-means cluster (counts):
+                     K0   K1  K2  K3  K4   K5  K6   K7   K8  K9  K10  K11  K12  K13
+  role_family                                                                      
+  applied_ai         26    7   0   1   2    0   0    6   37   0    1    8    2    0
+  data               10    7   0   3   2    3   0    5   24   2    0    3    4    3
+  forward_deployed    2    6  41   1   1    0   0   61   17   0    0   15   18    1
+  other             252  133  48  45  64  115  56  194  413  18   52   95   55   46
+  product            17   16   6  11   4    9  17   18   18   5    4   13    3   10
+  recruiting          6    4   3   4   4    5   7    2    4   0    3    3    2    2
+  research           35    1   0   0   0    1   0    4   18   0    0   15    4    0
+  sales_gtm          88   41   1  39  18   32  46  138   34   1   60    8   18   15
+  software_eng      101   63  36  10  17   37  37  148  165  22   13   41   14   17
+  solutions           8   19  12   6   8    3   1  175   18   0    2    6   11    6
+k-means agreement: {'nmi_company': 0.961, 'nmi_role_family': 0.08, 'ari_role_family': 0.024}
+Hierarchical: cosine distance, complete linkage
+  cophenetic correlation = 0.8537
+  cluster sizes (cut at k = 14): [571, 9, 66, 902, 18, 222, 694, 49, 41, 716, 20, 270, 92, 48]
+  for comparison, average linkage at k = 14: sizes [1595, 1348, 210, 134, 120, 108, 68, 48, 33, 23, 15, 9, 6, 1], cophenetic 0.9269
+  hierarchical vs k-means ARI = 0.6963
+  agreement: {'nmi_company': 0.773, 'nmi_role_family': 0.083, 'ari_role_family': 0.018}
+k suggested by the tree (merge gap, cosine silhouette of each cut):
+      merge_gap  silhouette_cosine  largest_cluster
+  k                                                
+  2      0.0013             0.0960             3709
+  3      0.0021             0.0573             3581
+  4      0.0002             0.0887             2595
+  5      0.0036             0.0834             2595
+  6      0.0026             0.0679             2595
+  7      0.0002             0.0932             1662
+  8      0.0021             0.1214             1662
+  9      0.0013             0.1299             1662
+  10     0.0003             0.1281             1596
+  11     0.0021             0.1275             1596
+  12     0.0002             0.1657              902
+  13     0.0010             0.1839              902
+  14     0.0010             0.1916              902
+  15     0.0007             0.1861              850
+k suggested, hierarchical vs k-means:
+                                     raw
+  hierarchical: largest merge gap      5
+  hierarchical: best cut silhouette   14
+  k-means: best mean silhouette       14
+  k-means: chosen k                   14
+hierarchical cluster x role_family (row %):
+  role_family  software_eng  sales_gtm  solutions  forward_deployed  product  applied_ai  research  data  recruiting  other
+  H13 (n=48)           45.8        2.1        0.0               0.0     10.4         0.0       0.0   4.2         0.0   37.5
+  H4 (n=18)            44.4        0.0        0.0               0.0      0.0        22.2       5.6   5.6         0.0   22.2
+  H12 (n=92)           14.1       64.1        0.0               0.0      0.0         1.1       0.0   0.0         1.1   19.6
+  H1 (n=9)             11.1       44.4       11.1              22.2      0.0         0.0       0.0   0.0         0.0   11.1
+  H9 (n=716)           19.3       19.1       24.3               8.5      2.5         0.7       0.6   0.7         0.3   24.0
+  H10 (n=20)            0.0        0.0        0.0               0.0      0.0         0.0       0.0   0.0        20.0   80.0
+  H2 (n=66)             9.1        1.5       10.6               0.0      0.0         0.0       0.0   0.0         0.0   78.8
+  H5 (n=222)           15.8       14.4        1.4               0.0      4.1         0.0       0.5   1.8         2.3   59.9
+  H6 (n=694)           22.8        4.6        1.9               2.4      2.6         5.3       2.6   3.3         0.6   53.9
+  H7 (n=49)            40.8        0.0        0.0               2.0      0.0         4.1       0.0   4.1         0.0   49.0
+  H11 (n=270)          17.8       15.2        8.1               1.5      5.2         1.5       0.0   1.5         2.2   47.0
+  H3 (n=902)           17.5       12.5        3.0               3.9      3.7         4.0       6.0   2.0         1.2   46.2
+  H8 (n=41)            19.5       19.5        0.0               0.0     19.5         0.0       0.0   0.0         0.0   41.5
+  H0 (n=571)           18.6       19.4        4.9               7.5      8.1         0.2       0.0   1.2         2.8   37.3
+hierarchical x k-means (counts):
+        K6   K3   K2   K0  K13   K5   K8  K11   K1   K7  K12   K4  K10  K9
+  H0   164  120  144    3   97    0    0    3   33    5    0    0    2   0
+  H1     0    0    0    0    0    0    0    0    8    1    0    0    0   0
+  H2     0    0    3   22    0    2   10    1   14    7    2    0    5   0
+  H3     0    0    0  517    1    1   33  199    9    8  129    0    5   0
+  H4     0    0    0    1    1    0    0    0    6   10    0    0    0   0
+  H5     0    0    0    2    1  199    8    1    9    1    0    0    1   0
+  H6     0    0    0    0    0    0  694    0    0    0    0    0    0   0
+  H7     0    0    0    0    0    2    3    2   37    2    0    0    3   0
+  H8     0    0    0    0    0    0    0    1   40    0    0    0    0   0
+  H9     0    0    0    0    0    0    0    0    0  716    0    0    0   0
+  H10    0    0    0    0    0    1    0    0   14    1    0    0    4   0
+  H11    0    0    0    0    0    0    0    0  127    0    0  120   23   0
+  H12    0    0    0    0    0    0    0    0    0    0    0    0   92   0
+  H13    0    0    0    0    0    0    0    0    0    0    0    0    0  48
+TruncatedSVD explained variance (%), components 1-100 (cumulative 57.13%):
+    1- 10: 1.111  6.762  5.218  3.570  2.507  2.363  2.283  2.140  2.080  1.721
+   11- 20: 1.525  1.197  1.112  0.926  0.846  0.757  0.741  0.704  0.677  0.627
+   21- 30: 0.600  0.592  0.541  0.525  0.504  0.468  0.428  0.396  0.380  0.369
+   31- 40: 0.348  0.333  0.328  0.328  0.315  0.304  0.299  0.295  0.290  0.283
+   41- 50: 0.271  0.264  0.263  0.257  0.250  0.239  0.238  0.233  0.226  0.223
+   51- 60: 0.220  0.213  0.212  0.208  0.206  0.205  0.201  0.199  0.191  0.187
+   61- 70: 0.185  0.182  0.180  0.179  0.176  0.173  0.171  0.170  0.169  0.162
+   71- 80: 0.161  0.160  0.158  0.157  0.153  0.151  0.149  0.148  0.146  0.144
+   81- 90: 0.142  0.140  0.139  0.137  0.136  0.135  0.133  0.131  0.130  0.128
+   91-100: 0.128  0.126  0.125  0.124  0.121  0.119  0.117  0.115  0.114  0.114
+
+======================================================================
+TEXT VARIANT: stripped (company boilerplate removed)
+======================================================================
+chosen k = 4: silhouette < 0.03 at every k so it cannot discriminate; k=4 is the largest k with seed stability ARI >= 0.85 (0.88; falls to 0.75 at k=5, 0.69 at k=6)
+silhouette of final k-means fit (seed 0): 0.0106
+k sweep (silhouette = mean of 5 seeds; stability = mean pairwise ARI):
+        inertia  silhouette  silhouette_sd  stability_ari
+  k                                                      
+  2   3333.7157      0.0153         0.0000         0.9987
+  3   3298.3304      0.0156         0.0000         0.9911
+  4   3266.8315      0.0102         0.0003         0.8790
+  5   3239.8303      0.0123         0.0003         0.7474
+  6   3219.4199      0.0141         0.0003         0.6943
+  7   3201.3896      0.0157         0.0010         0.6274
+  8   3183.5954      0.0172         0.0008         0.5888
+  9   3167.2974      0.0177         0.0014         0.5188
+  10  3152.6129      0.0198         0.0008         0.6191
+  11  3140.1223      0.0206         0.0018         0.4699
+  12  3117.3369      0.0225         0.0017         0.5281
+  13  3107.6946      0.0220         0.0039         0.5352
+  14  3093.0824      0.0242         0.0008         0.4483
+  15  3081.5486      0.0268         0.0008         0.5265
+k-means compared at k = [3, 4, 8, 14] (silhouette of the seed-0 fit):
+      silhouette  pct_negative_silhouette  smallest  largest                                                               sizes  nmi_company  nmi_role_family  ari_role_family
+  k                                                                                                                                                                            
+  3        0.016                   24.233       920     1606                                                   [1606, 1192, 920]        0.054            0.272            0.191
+  4        0.011                   34.723       493     1496                                              [1496, 1111, 618, 493]        0.060            0.338            0.236
+  8        0.017                   37.466        71     1026                           [1026, 1010, 461, 433, 421, 190, 106, 71]        0.090            0.317            0.225
+  14       0.025                   34.911        16      620  [620, 554, 493, 431, 405, 304, 261, 222, 147, 128, 70, 39, 28, 16]        0.122            0.347            0.167
+k-means cluster sizes (chosen k): [1111, 493, 1496, 618]
+k-means cluster x role_family (row %):
+  role_family  software_eng  sales_gtm  solutions  forward_deployed  product  applied_ai  research  data  recruiting  other
+  K2 (n=1496)          45.1        0.5        1.3               4.6      8.4         3.0       5.1   3.3         0.0   28.8
+  K3 (n=618)            0.0       67.8        1.3               0.5      0.0         0.8       0.0   0.3         0.0   29.3
+  K1 (n=493)            0.0        3.0       43.4              17.0      2.2         7.9       0.0   0.2         0.0   26.2
+  K0 (n=1111)           4.1        8.8        3.1               0.6      1.4         0.1       0.2   1.3         4.4   76.1
+role_family x k-means cluster (counts):
+                     K0   K1   K2   K3
+  role_family                         
+  applied_ai          1   39   45    5
+  data               14    1   49    2
+  forward_deployed    7   84   69    3
+  other             845  129  431  181
+  product            15   11  125    0
+  recruiting         49    0    0    0
+  research            2    0   76    0
+  sales_gtm          98   15    7  419
+  software_eng       46    0  675    0
+  solutions          34  214   19    8
+k-means agreement: {'nmi_company': 0.06, 'nmi_role_family': 0.338, 'ari_role_family': 0.236}
+Hierarchical: cosine distance, complete linkage
+  cophenetic correlation = 0.5445
+  cluster sizes (cut at k = 4): [1892, 1809, 11, 6]
+  for comparison, average linkage at k = 4: sizes [3704, 9, 3, 2], cophenetic 0.6748
+  hierarchical vs k-means ARI = 0.2124
+  agreement: {'nmi_company': 0.032, 'nmi_role_family': 0.121, 'ari_role_family': 0.068}
+k suggested by the tree (merge gap, cosine silhouette of each cut):
+      merge_gap  silhouette_cosine  largest_cluster
+  k                                                
+  2      0.0000             0.0233             1909
+  3      0.0000             0.0243             1892
+  4      0.0000             0.0248             1892
+  5      0.0008             0.0237             1892
+  6      0.0011             0.0222             1838
+  7      0.0006             0.0248             1838
+  8      0.0010             0.0215             1838
+  9      0.0004             0.0236             1838
+  10     0.0005             0.0195             1264
+  11     0.0006             0.0201             1264
+  12     0.0008             0.0217             1264
+  13     0.0009             0.0222             1264
+  14     0.0010             0.0218             1264
+  15     0.0004             0.0247             1264
+k suggested, hierarchical vs k-means:
+                                     stripped
+  hierarchical: largest merge gap           6
+  hierarchical: best cut silhouette         7
+  k-means: best mean silhouette            15
+  k-means: chosen k                         4
+hierarchical cluster x role_family (row %):
+  role_family  software_eng  sales_gtm  solutions  forward_deployed  product  applied_ai  research  data  recruiting  other
+  H2 (n=11)             9.1       36.4        9.1              18.2      0.0         0.0       0.0   0.0         0.0   27.3
+  H3 (n=6)              0.0        0.0       50.0               0.0      0.0         0.0       0.0   0.0         0.0   50.0
+  H0 (n=1892)           5.5       24.7       12.4               5.1      3.6         2.6       0.1   0.6         2.5   42.9
+  H1 (n=1809)          34.0        3.8        2.0               3.6      4.6         2.3       4.2   3.0         0.1   42.5
+hierarchical x k-means (counts):
+       K0    K2   K1   K3
+  H0  614   248  468  562
+  H1  481  1247   25   56
+  H2   11     0    0    0
+  H3    5     1    0    0
+TruncatedSVD explained variance (%), components 1-100 (cumulative 36.99%):
+    1- 10: 0.711  2.393  1.496  1.193  1.055  0.971  0.849  0.828  0.819  0.783
+   11- 20: 0.693  0.645  0.624  0.596  0.582  0.566  0.550  0.505  0.500  0.494
+   21- 30: 0.487  0.463  0.446  0.437  0.417  0.403  0.392  0.388  0.383  0.370
+   31- 40: 0.364  0.350  0.348  0.341  0.333  0.327  0.322  0.320  0.319  0.308
+   41- 50: 0.302  0.299  0.293  0.285  0.279  0.277  0.275  0.272  0.265  0.264
+   51- 60: 0.257  0.252  0.251  0.246  0.244  0.239  0.235  0.233  0.228  0.225
+   61- 70: 0.222  0.221  0.218  0.214  0.212  0.211  0.210  0.209  0.205  0.202
+   71- 80: 0.201  0.198  0.198  0.194  0.193  0.192  0.191  0.187  0.186  0.184
+   81- 90: 0.182  0.180  0.179  0.177  0.175  0.175  0.172  0.170  0.169  0.168
+   91-100: 0.166  0.165  0.163  0.161  0.161  0.159  0.159  0.158  0.157  0.153
+
+======================================================================
+INDEED SECTOR PCA (total postings, monthly means, standardised per sector)
+======================================================================
+matrix: 47 sectors x 79 months
+sectors loading positively on PC1: 47 of 47
+explained variance (%) per component:
+  PC 1: 82.102   cumulative  82.10
+  PC 2: 12.302   cumulative  94.40
+  PC 3:  2.351   cumulative  96.75
+  PC 4:  1.179   cumulative  97.93
+  PC 5:  0.662   cumulative  98.59
+  PC 6:  0.327   cumulative  98.92
+  PC 7:  0.262   cumulative  99.18
+  PC 8:  0.175   cumulative  99.36
+  PC 9:  0.130   cumulative  99.49
+  PC10:  0.086   cumulative  99.58
+  PC11:  0.077   cumulative  99.65
+  PC12:  0.072   cumulative  99.72
+  PC13:  0.049   cumulative  99.77
+  PC14:  0.041   cumulative  99.81
+  PC15:  0.029   cumulative  99.84
+  PC16:  0.023   cumulative  99.87
+  PC17:  0.021   cumulative  99.89
+  PC18:  0.020   cumulative  99.91
+  PC19:  0.011   cumulative  99.92
+  PC20:  0.010   cumulative  99.93
+  PC21:  0.009   cumulative  99.94
+  PC22:  0.008   cumulative  99.95
+  PC23:  0.007   cumulative  99.95
+  PC24:  0.006   cumulative  99.96
+  PC25:  0.006   cumulative  99.97
+  PC26:  0.005   cumulative  99.97
+  PC27:  0.004   cumulative  99.97
+  PC28:  0.003   cumulative  99.98
+  PC29:  0.003   cumulative  99.98
+  PC30:  0.003   cumulative  99.98
+  PC31:  0.002   cumulative  99.99
+  PC32:  0.002   cumulative  99.99
+  PC33:  0.002   cumulative  99.99
+  PC34:  0.002   cumulative  99.99
+  PC35:  0.001   cumulative  99.99
+  PC36:  0.001   cumulative  99.99
+  PC37:  0.001   cumulative 100.00
+  PC38:  0.001   cumulative 100.00
+  PC39:  0.001   cumulative 100.00
+  PC40:  0.001   cumulative 100.00
+  PC41:  0.001   cumulative 100.00
+  PC42:  0.000   cumulative 100.00
+  PC43:  0.000   cumulative 100.00
+  PC44:  0.000   cumulative 100.00
+  PC45:  0.000   cumulative 100.00
+  PC46:  0.000   cumulative 100.00
+  PC47:  0.000   cumulative 100.00
+residual shift after removing PC1 (Dec 2022 onward vs before), ai_exposed:
+                         sector_group  mean_pre  mean_post  shift  shift_in_pre_sd  rank_abs_shift
+  display_name                                                                                    
+  Data & Analytics         ai_exposed     0.537     -0.406 -0.943           -3.429               5
+  IT Systems & Solutions   ai_exposed     0.469     -0.354 -0.823           -2.746              12
+  Software Development     ai_exposed     0.581     -0.439 -1.019           -3.269               8
+largest 10 residual shifts:
+                                          sector_group  mean_pre  mean_post  shift  shift_in_pre_sd  rank_abs_shift
+  display_name                                                                                                     
+  Social Science                               control    -0.526      0.397  0.923            5.663               1
+  Therapy                                      control    -0.903      0.682  1.585            4.075               2
+  Community & Social Service                   control    -0.237      0.179  0.417            3.770               3
+  IT Infrastructure, Operations & Support      control     0.480     -0.363 -0.843           -3.569               4
+  Data & Analytics                          ai_exposed     0.537     -0.406 -0.943           -3.429               5
+  Physicians & Surgeons                        control    -0.920      0.695  1.615            3.378               6
+  Media & Communications                       control     0.453     -0.342 -0.795           -3.337               7
+  Software Development                      ai_exposed     0.581     -0.439 -1.019           -3.269               8
+  Scientific Research & Development            control     0.424     -0.320 -0.744           -3.246               9
+  Civil Engineering                            control    -0.774      0.585  1.358            2.979              10

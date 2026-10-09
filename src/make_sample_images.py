@@ -79,10 +79,11 @@ def text_inches(fig: plt.Figure, text: str, bold: bool) -> float:
     return width
 
 
-def render(df: pd.DataFrame, name: str, title: str, columns: list[str]) -> Path:
+def render(df: pd.DataFrame, name: str, title: str, columns: list[str],
+           max_rows: int = MAX_ROWS, max_cols: int = MAX_COLS) -> Path:
     """Draw one styled table and save it as a PNG in figures/samples/."""
-    columns = columns[:MAX_COLS]
-    cells = [[truncate(v) for v in row] for row in df[columns].head(MAX_ROWS).itertuples(index=False)]
+    columns = columns[:max_cols]
+    cells = [[truncate(v) for v in row] for row in df[columns].head(max_rows).itertuples(index=False)]
 
     fig = plt.figure(dpi=DPI)
     widths = [max([text_inches(fig, col, bold=True)]

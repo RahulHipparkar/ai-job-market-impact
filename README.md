@@ -1,14 +1,20 @@
 # AI job market impact
 
-Separating generative AI from interest rates and the post-pandemic correction as explanations for the fall in tech job postings, 2015 to 2026.
+Separating AI from interest rates and the post-pandemic correction as explanations for the fall in tech job postings, 2019 to 2026.
 
 ## The question
 
-Job postings in AI-exposed sectors fell by roughly 69 percent from their mid-2022 peak, while postings in control sectors fell by roughly 37 percent and recovered above their pre-pandemic level. This project asks how much of that gap generative AI explains, and how much belongs to higher interest rates and the correction of pandemic-era overhiring. It works from five data sources covering 2015 to 2026.
+From their peak in March 2022 to August 2026, job postings in AI-exposed sectors fell by roughly 67 percent, while postings in control sectors fell by roughly 36 percent and recovered above their pre-pandemic level. This project asks how much of that gap AI explains, and how much belongs to higher interest rates and the correction of pandemic-era overhiring. It works from five data sources covering 2019 to 2026.
 
 ## Live site
 
 https://rahulhipparkar.github.io/ai-job-market-impact/
+
+## Status
+
+- Data preparation and exploratory analysis — complete
+- Clustering (k-means and hierarchical) and PCA — complete
+- Supervised methods (Naive Bayes, decision trees, regression, AdaBoost, gradient boosting and XGBoost) — to come
 
 ## Data sources
 
@@ -34,12 +40,12 @@ Issues are flagged in columns rather than dropped. Each cleaning script writes a
 
 ```
 data/       raw, interim and processed tables, plus small committed samples
-src/        fetch and clean scripts, and the shared plot style
-notebooks/  01_data_prep_eda.ipynb, the exploratory pass
+src/        fetch and clean scripts, clustering and PCA modules, figure and sample scripts, and the shared plot style
+notebooks/  01_data_prep_eda.ipynb, the exploratory pass, and 02_clustering_pca.ipynb, clustering and PCA
 figures/    charts and thumbnails used by the site
 site/       Quarto source for the website
 docs/       rendered site, served by GitHub Pages
-results/    empty placeholder for model output
+results/    text reports written by the analysis notebooks
 ```
 
 ## Running it
@@ -80,9 +86,22 @@ python src/clean_oews_files.py
 
 Then run `notebooks/01_data_prep_eda.ipynb`. The sample tables and figures on the site are rebuilt with `make_samples.py`, `make_sample_images.py` and `make_intro_figure.py`, and the site itself with `quarto render` from `site/`.
 
+Then run `notebooks/02_clustering_pca.ipynb` with the `ai-job-market` kernel. It reads `data/processed/ats_final.csv` and `data/processed/indeed_sector.csv`, and writes the cluster labels for each posting to `data/processed/ats_clusters.csv`, a text report to `results/clustering_report.txt`, and its charts to `figures/`. It uses three modules:
+
+- `src/text_clusters.py` — TF-IDF, k-means, hierarchical clustering and SVD helpers for the job board postings, run on the description text as-is and with each company's boilerplate removed.
+- `src/cluster_plots.py` — the charts the notebook draws once for each of those two text versions.
+- `src/sector_pca.py` — PCA on the Indeed sector panel, to isolate the shock common to every sector.
+
+The Module 2 sample tables and explanatory figures on the site come from four more scripts:
+
+- `src/make_module2_samples.py` — writes samples of the clustering and PCA inputs to `data/samples/` and draws them as PNG tables.
+- `src/make_clustering_concept_figures.py` — the two explanatory figures on the Clustering page, drawn from small made-up data.
+- `src/make_pca_concept_figures.py` — the two explanatory figures on the PCA page, drawn from small made-up data.
+- `src/make_intro_postings_figure.py` — the software development postings chart on the Introduction page.
+
 ## What is not in the repository
 
-`data/raw/` and `data/interim/` are gitignored, along with three processed files that are too large to track: `hn_postings.csv` (125 MB), `hn_clean.csv` (177 MB) and `indeed_metro.csv` (112 MB). The fetch and clean scripts regenerate all of them. Small raw and cleaned samples of every source are committed in `data/samples/`, so the shape of the data can be seen without downloading anything.
+`data/raw/` and `data/interim/` are gitignored, along with three processed files that are too large to track: `hn_postings.csv` (125 MB), `hn_clean.csv` (177 MB) and `indeed_metro.csv` (112 MB). The fetch and clean scripts regenerate all of them. Small raw and cleaned samples of every source are committed in `data/samples/`, so the shape of the data can be seen without downloading anything. Among them, `ats_raw_sample.csv` and `indeed_sector_raw_sample.csv` are the 20-row raw samples linked from the Clustering and PCA pages, and `clustering_input_sample.csv` and `pca_input_sample.csv` show ten rows of the matrices the clustering and PCA are run on.
 
 ## Course
 

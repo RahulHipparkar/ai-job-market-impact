@@ -1,213 +1,45 @@
 [
   {
-    "objectID": "pca.html#data",
-    "href": "pca.html#data",
-    "title": "PCA",
+    "objectID": "adaboost.html#data",
+    "href": "adaboost.html#data",
+    "title": "AdaBoost",
     "section": "Data",
     "text": "Data"
   },
   {
-    "objectID": "pca.html#code",
-    "href": "pca.html#code",
-    "title": "PCA",
+    "objectID": "adaboost.html#code",
+    "href": "adaboost.html#code",
+    "title": "AdaBoost",
     "section": "Code",
     "text": "Code"
   },
   {
-    "objectID": "pca.html#results",
-    "href": "pca.html#results",
-    "title": "PCA",
+    "objectID": "adaboost.html#results",
+    "href": "adaboost.html#results",
+    "title": "AdaBoost",
     "section": "Results",
     "text": "Results"
   },
   {
-    "objectID": "regression.html#data",
-    "href": "regression.html#data",
-    "title": "Regression",
-    "section": "Data",
-    "text": "Data"
-  },
-  {
-    "objectID": "regression.html#code",
-    "href": "regression.html#code",
-    "title": "Regression",
-    "section": "Code",
-    "text": "Code"
-  },
-  {
-    "objectID": "regression.html#results",
-    "href": "regression.html#results",
-    "title": "Regression",
-    "section": "Results",
-    "text": "Results"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "Introduction",
     "section": "",
-    "text": "Rahul Hipparkar\n  Data science master's student at CU Boulder. I build machine learning and language model systems."
+    "text": "On September 4, 2026, software development job postings on Indeed stood about 24 percent below their level in February 2020. In early 2022, the same postings had been more than twice as high as in February 2020 (Indeed, via FRED). That rise and fall raises a simple question: what slowed tech hiring down? Three explanations compete: higher interest rates, new AI tools that can do some of the work, and a reset after tech companies hired too many people during the pandemic. Signs of all three appeared in 2022. In March 2022, the Federal Reserve began raising interest rates from near zero. By July 2023, its main rate had reached 5.25 to 5.5 percent (Federal Reserve, 2022; 2023). In late November 2022, OpenAI released ChatGPT. About two months later, it had 100 million users a month, a pace faster than TikTok or Instagram (TIME). In the same month as ChatGPT’s release, Meta let go of more than 11,000 employees (Meta). The slowdown also reached the wider economy. Job openings across the United States peaked at about 12.3 million in March 2022. By July 2026, that number had fallen to 7.3 million (U.S. Bureau of Labor Statistics).\n\n\n\nMonthly job openings in the United States, 2015 to 2026. Source: U.S. Bureau of Labor Statistics.\n\n\nThe answer matters because each explanation points to a different future. If higher interest rates caused the slowdown, hiring could pick up again as borrowing gets cheaper. If AI tools now do work that people used to do, some of those jobs may not return. If companies simply hired too many people during the pandemic, the drop may be a one-time reset. Meta’s cut in November 2022 came to about 13 percent of its staff. Its chief executive, Mark Zuckerberg, wrote that online shopping had returned to its earlier trends after the pandemic (Meta). More than 191,000 workers at U.S. tech companies lost their jobs in 2023 alone (Crunchbase News). People at the start of their careers may face the hardest path. In early 2026, only 4.5 percent of software development job postings on Indeed were for entry-level roles, while 69.3 percent were for senior roles (Indeed Hiring Lab). Between November 2022 and June 2026, employment of workers aged 22 to 25 fell about 11 percent in the jobs most open to AI. Over the same period, employment of workers the same age in jobs less open to AI grew about 10 percent. That leaves young workers in the jobs most open to AI about 19 percent behind their peers (Stanford update, August 2026). Students choosing a subject, colleges planning courses and employers planning teams all need to know which explanation fits.\nResearchers have already started to study this question. Their early findings point in different directions. In August 2025, Stanford researchers reported a 13 percent drop in employment for workers aged 22 to 25 in the jobs most open to AI. They measured that drop against young workers in jobs less open to AI. The figure also takes account of wider hiring changes at the same companies (Stanford working paper, August 2025). The 19 percent gap in the August 2026 update comes from a simpler comparison that leaves those company changes out. The same update found no widespread job losses across the economy linked to AI (Stanford update, August 2026). In October 2025, the Budget Lab at Yale reported that the wider job market showed no clear disruption in the 33 months after ChatGPT’s release (The Budget Lab at Yale). Indeed Hiring Lab found that software development postings grew by almost 15 percent after late February 2025, when a popular AI coding tool launched. Over the same period, all job postings fell by 7 percent. Between May 2025 and May 2026, senior roles made up 71 percent of the growth in software development postings (Indeed Hiring Lab). Most of this work looks at the whole economy or at broad groups of jobs. Less is known about the AI companies themselves and the jobs they post. Interest rates and AI changed in the same year, so their effects are hard to tell apart. There is still room to compare the timing of each change, follow the job postings of individual companies, and check online postings against government counts. The research questions below follow from these open gaps.\nThe change in tech hiring has also not been the same for every kind of job. The Indeed Hiring Lab numbers above already show this: only 4.5 percent of software development postings were for entry-level roles against 69.3 percent for senior roles, and senior roles made up 71 percent of the recent growth. Some of that growth has also come from work that was rare until recently. Between May 2025 and May 2026, 37 percent of the growth in software development postings came from jobs with AI in their title (Indeed Hiring Lab). One of the fastest-growing of these jobs is the forward deployed engineer, who works directly with a customer to build and set up AI tools inside that customer’s business. According to the Financial Times, monthly listings for the role rose more than 800 percent between January and September 2025. OpenAI, Anthropic and Cohere are among the AI companies building teams of these engineers, and AI companies are also hiring solutions engineers and other technical staff who work across building the product, selling it and setting it up for customers (PYMNTS, citing the Financial Times). These jobs mix engineering with working alongside customers, so they do not fit neatly into older job groups. Less is known about how common such roles are at AI companies, how many of their openings are for people starting out, and how much pay these companies offer for each kind of role. Which of the three explanations fits best may depend on which jobs are being looked at. The total number of postings cannot settle this on its own, because every explanation predicts the same thing: fewer postings. Telling them apart means looking at when each kind of job began to fall, which jobs fell most, and whether jobs open to AI fell further than the wider swing explains. That is the question this project asks: was it AI, or was it interest rates?\n\n\n\nSoftware development job postings on Indeed, shown as a monthly average of a daily index where 1 February 2020 = 100. Source: Indeed Hiring Lab."
   },
   {
-    "objectID": "about.html#about",
-    "href": "about.html#about",
-    "title": "About Me",
-    "section": "About",
-    "text": "About\nI am working on an M.S. in Data Science at the University of Colorado Boulder, from 2025 to 2027. Before that I spent about three and a half years at Eviden as a data scientist, where I built LLM tools that automated parts of financial audit review, the FastAPI services behind them, SQL pipelines, and an anomaly detection system for spotting odd transactions. This summer I am a data scientist intern at Summer Atlantic Capital, working on a risk scoring model for compliance checks and an LLM module that explains in plain language why a score came out the way it did. Further back, I studied computer engineering at Savitribai Phule Pune University.\nThe idea for this project came out of an earlier one. I built a resume-to-job matching platform that pulled live job listings from LinkedIn and Indeed, and spending that much time inside posting data left me wondering what actually happened to tech hiring after 2022. The claim that AI is behind the slowdown is everywhere, but interest rates rose and pandemic-era overhiring unwound in the same window, so all three explanations fit the shape of the drop. That seemed worth digging into with real data rather than taking any of them on faith."
-  },
-  {
-    "objectID": "about.html#what-i-work-on",
-    "href": "about.html#what-i-work-on",
-    "title": "About Me",
-    "section": "What I work on",
-    "text": "What I work on\n\n Machine learning and applied statistics\n Large language models and multi-agent systems\n Data pipelines and backend services\n Cloud infrastructure and MLOps"
-  },
-  {
-    "objectID": "about.html#background",
-    "href": "about.html#background",
-    "title": "About Me",
-    "section": "Background",
-    "text": "Background\n\nEducation\n\nM.S. Data Science, University of Colorado Boulder (2025 to 2027); B.E. Computer Engineering, Savitribai Phule Pune University\n\nExperience\n\nData Scientist Intern, Summer Atlantic Capital; Associate Consultant, Eviden\n\nTeaching\n\nCourse Assistant, STAT 5000/5010; Grader, MATH 2001\n\nBased in\n\nBoulder, Colorado"
-  },
-  {
-    "objectID": "about.html#outside-work",
-    "href": "about.html#outside-work",
-    "title": "About Me",
-    "section": "Outside work",
-    "text": "Outside work\nI run on the Boulder Creek Path whenever I can. It is the best part of my day, and a fair amount of my thinking about a stuck problem happens somewhere along that trail."
-  },
-  {
-    "objectID": "about.html#elsewhere",
-    "href": "about.html#elsewhere",
-    "title": "About Me",
-    "section": "Elsewhere",
-    "text": "Elsewhere\n\n GitHub\n LinkedIn\n Portfolio"
-  },
-  {
-    "objectID": "nn.html#data",
-    "href": "nn.html#data",
-    "title": "Neural Networks",
-    "section": "Data",
-    "text": "Data"
-  },
-  {
-    "objectID": "nn.html#code",
-    "href": "nn.html#code",
-    "title": "Neural Networks",
-    "section": "Code",
-    "text": "Code"
-  },
-  {
-    "objectID": "nn.html#results",
-    "href": "nn.html#results",
-    "title": "Neural Networks",
-    "section": "Results",
-    "text": "Results"
-  },
-  {
-    "objectID": "naivebayes.html#data",
-    "href": "naivebayes.html#data",
-    "title": "Naive Bayes",
-    "section": "Data",
-    "text": "Data"
-  },
-  {
-    "objectID": "naivebayes.html#code",
-    "href": "naivebayes.html#code",
-    "title": "Naive Bayes",
-    "section": "Code",
-    "text": "Code"
-  },
-  {
-    "objectID": "naivebayes.html#results",
-    "href": "naivebayes.html#results",
-    "title": "Naive Bayes",
-    "section": "Results",
-    "text": "Results"
-  },
-  {
-    "objectID": "clustering.html#data",
-    "href": "clustering.html#data",
-    "title": "Clustering",
-    "section": "Data",
-    "text": "Data"
-  },
-  {
-    "objectID": "clustering.html#code",
-    "href": "clustering.html#code",
-    "title": "Clustering",
-    "section": "Code",
-    "text": "Code"
-  },
-  {
-    "objectID": "clustering.html#results",
-    "href": "clustering.html#results",
-    "title": "Clustering",
-    "section": "Results",
-    "text": "Results"
-  },
-  {
-    "objectID": "svm.html#data",
-    "href": "svm.html#data",
-    "title": "SVMs",
-    "section": "Data",
-    "text": "Data"
-  },
-  {
-    "objectID": "svm.html#code",
-    "href": "svm.html#code",
-    "title": "SVMs",
-    "section": "Code",
-    "text": "Code"
-  },
-  {
-    "objectID": "svm.html#results",
-    "href": "svm.html#results",
-    "title": "SVMs",
-    "section": "Results",
-    "text": "Results"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Was It AI, or Was It Interest Rates?",
+    "objectID": "introduction.html#overview",
+    "href": "introduction.html#overview",
+    "title": "Introduction",
     "section": "",
-    "text": "Job postings in AI-exposed sectors fell by roughly 69 percent from their mid-2022 peak, while postings in control sectors fell by roughly 37 percent and recovered above their pre-pandemic level. This project asks how much of that gap generative AI explains, and how much belongs to higher interest rates and the correction of pandemic-era overhiring. It works from five data sources covering 2015 to 2026, including 56,334 job postings."
+    "text": "On September 4, 2026, software development job postings on Indeed stood about 24 percent below their level in February 2020. In early 2022, the same postings had been more than twice as high as in February 2020 (Indeed, via FRED). That rise and fall raises a simple question: what slowed tech hiring down? Three explanations compete: higher interest rates, new AI tools that can do some of the work, and a reset after tech companies hired too many people during the pandemic. Signs of all three appeared in 2022. In March 2022, the Federal Reserve began raising interest rates from near zero. By July 2023, its main rate had reached 5.25 to 5.5 percent (Federal Reserve, 2022; 2023). In late November 2022, OpenAI released ChatGPT. About two months later, it had 100 million users a month, a pace faster than TikTok or Instagram (TIME). In the same month as ChatGPT’s release, Meta let go of more than 11,000 employees (Meta). The slowdown also reached the wider economy. Job openings across the United States peaked at about 12.3 million in March 2022. By July 2026, that number had fallen to 7.3 million (U.S. Bureau of Labor Statistics).\n\n\n\nMonthly job openings in the United States, 2015 to 2026. Source: U.S. Bureau of Labor Statistics.\n\n\nThe answer matters because each explanation points to a different future. If higher interest rates caused the slowdown, hiring could pick up again as borrowing gets cheaper. If AI tools now do work that people used to do, some of those jobs may not return. If companies simply hired too many people during the pandemic, the drop may be a one-time reset. Meta’s cut in November 2022 came to about 13 percent of its staff. Its chief executive, Mark Zuckerberg, wrote that online shopping had returned to its earlier trends after the pandemic (Meta). More than 191,000 workers at U.S. tech companies lost their jobs in 2023 alone (Crunchbase News). People at the start of their careers may face the hardest path. In early 2026, only 4.5 percent of software development job postings on Indeed were for entry-level roles, while 69.3 percent were for senior roles (Indeed Hiring Lab). Between November 2022 and June 2026, employment of workers aged 22 to 25 fell about 11 percent in the jobs most open to AI. Over the same period, employment of workers the same age in jobs less open to AI grew about 10 percent. That leaves young workers in the jobs most open to AI about 19 percent behind their peers (Stanford update, August 2026). Students choosing a subject, colleges planning courses and employers planning teams all need to know which explanation fits.\nResearchers have already started to study this question. Their early findings point in different directions. In August 2025, Stanford researchers reported a 13 percent drop in employment for workers aged 22 to 25 in the jobs most open to AI. They measured that drop against young workers in jobs less open to AI. The figure also takes account of wider hiring changes at the same companies (Stanford working paper, August 2025). The 19 percent gap in the August 2026 update comes from a simpler comparison that leaves those company changes out. The same update found no widespread job losses across the economy linked to AI (Stanford update, August 2026). In October 2025, the Budget Lab at Yale reported that the wider job market showed no clear disruption in the 33 months after ChatGPT’s release (The Budget Lab at Yale). Indeed Hiring Lab found that software development postings grew by almost 15 percent after late February 2025, when a popular AI coding tool launched. Over the same period, all job postings fell by 7 percent. Between May 2025 and May 2026, senior roles made up 71 percent of the growth in software development postings (Indeed Hiring Lab). Most of this work looks at the whole economy or at broad groups of jobs. Less is known about the AI companies themselves and the jobs they post. Interest rates and AI changed in the same year, so their effects are hard to tell apart. There is still room to compare the timing of each change, follow the job postings of individual companies, and check online postings against government counts. The research questions below follow from these open gaps.\nThe change in tech hiring has also not been the same for every kind of job. The Indeed Hiring Lab numbers above already show this: only 4.5 percent of software development postings were for entry-level roles against 69.3 percent for senior roles, and senior roles made up 71 percent of the recent growth. Some of that growth has also come from work that was rare until recently. Between May 2025 and May 2026, 37 percent of the growth in software development postings came from jobs with AI in their title (Indeed Hiring Lab). One of the fastest-growing of these jobs is the forward deployed engineer, who works directly with a customer to build and set up AI tools inside that customer’s business. According to the Financial Times, monthly listings for the role rose more than 800 percent between January and September 2025. OpenAI, Anthropic and Cohere are among the AI companies building teams of these engineers, and AI companies are also hiring solutions engineers and other technical staff who work across building the product, selling it and setting it up for customers (PYMNTS, citing the Financial Times). These jobs mix engineering with working alongside customers, so they do not fit neatly into older job groups. Less is known about how common such roles are at AI companies, how many of their openings are for people starting out, and how much pay these companies offer for each kind of role. Which of the three explanations fits best may depend on which jobs are being looked at. The total number of postings cannot settle this on its own, because every explanation predicts the same thing: fewer postings. Telling them apart means looking at when each kind of job began to fall, which jobs fell most, and whether jobs open to AI fell further than the wider swing explains. That is the question this project asks: was it AI, or was it interest rates?\n\n\n\nSoftware development job postings on Indeed, shown as a monthly average of a daily index where 1 February 2020 = 100. Source: Indeed Hiring Lab."
   },
   {
-    "objectID": "index.html#what-this-project-covers",
-    "href": "index.html#what-this-project-covers",
-    "title": "Was It AI, or Was It Interest Rates?",
-    "section": "What this project covers",
-    "text": "What this project covers\n\nData preparation and exploratory analysis — complete\nClustering and PCA — to come\nNaive Bayes and decision trees — to come\nSupport vector machines — to come\nRegression and neural networks — to come"
-  },
-  {
-    "objectID": "index.html#where-to-start",
-    "href": "index.html#where-to-start",
-    "title": "Was It AI, or Was It Interest Rates?",
-    "section": "Where to start",
-    "text": "Where to start\n\n\n\nIntroduction\n\n\n\n\n\nData preparation and exploratory analysis\n\n\n\n\n\nConclusions"
-  },
-  {
-    "objectID": "dectrees.html#data",
-    "href": "dectrees.html#data",
-    "title": "Decision Trees",
-    "section": "Data",
-    "text": "Data"
-  },
-  {
-    "objectID": "dectrees.html#code",
-    "href": "dectrees.html#code",
-    "title": "Decision Trees",
-    "section": "Code",
-    "text": "Code"
-  },
-  {
-    "objectID": "dectrees.html#results",
-    "href": "dectrees.html#results",
-    "title": "Decision Trees",
-    "section": "Results",
-    "text": "Results"
+    "objectID": "introduction.html#research-questions",
+    "href": "introduction.html#research-questions",
+    "title": "Introduction",
+    "section": "Research Questions",
+    "text": "Research Questions\n\nHow much did tech job postings rise and fall between 2019 and 2026, and how does that compare with other kinds of jobs?\nDid tech job postings start to fall before or after ChatGPT was released in late November 2022?\nHow closely does the fall in tech job postings line up with the interest rate rises that began in March 2022?\nDo government counts of job openings, hires and quits tell the same story as online job postings?\nHas the number of people working in software and data jobs kept growing, even as job postings fell?\nWhat kinds of roles do AI companies post most often, and how many of them are customer-facing technical roles?\nHow many openings at AI companies are for entry-level workers compared with senior workers?\nHow much pay do AI companies advertise for different kinds of roles?\nHow has the share of remote, hybrid and in-office jobs changed from 2019 to 2026?\nWhich cities appear most often in tech job postings, and how does remote work compare with them?"
   },
   {
     "objectID": "dataprep_eda.html",
@@ -263,27 +95,258 @@
     "href": "dataprep_eda.html#exploratory-data-visualizations",
     "title": "Data Prep & EDA",
     "section": "Exploratory Data Visualizations",
-    "text": "Exploratory Data Visualizations\n\n\n\n  \n    \n  \n  \n    1. Job postings index: AI-exposed against control sectors\n    Job postings in AI-exposed sectors fell roughly 69% from their mid-2022 peak and remain below their pre-pandemic level in 2026, while control sectors fell roughly 37% and recovered above theirs. The divergence begins several months before the ChatGPT release, indicating that generative AI cannot be the sole cause and that interest rate increases and the correction of pandemic-era overhiring also contributed.\n  \n\n\n\n  \n    \n  \n  \n    2. Job openings against online postings\n    Job openings in the information sector and online postings in AI-exposed sectors both peak in mid-2022 and decline afterwards, confirming the trend in official government data as well as in commercial posting indices. Openings fall roughly 45% from peak while postings fall roughly 67%, indicating that employers reduced advertising more sharply than they reduced actual vacancies.\n  \n\n\n\n  \n    \n  \n  \n    3. Hires and quits in the information sector\n    Hires in the information sector averaged 80,000 to 95,000 monthly through 2015 to 2019, peaked at 125,000 in 2021, and returned to roughly 75,000 by 2026 — close to the pre-pandemic range. Quits fell further, to 28,000 by 2026 against a 40,000 to 48,000 baseline, indicating a market where both employers and workers became less active rather than one where hiring simply collapsed.\n  \n\n\n\n  \n    \n  \n  \n    4. Employment by computer occupation\n    Employment in software development rose from 1.36 million in 2021 to 1.69 million in 2025, and data science employment grew from 105,000 to 261,000 over the same period. Employment therefore expanded while job postings fell sharply, indicating that reduced advertising did not correspond to reduced headcount in these occupations.\n  \n\n\n\n  \n    \n  \n  \n    5. Role families across company job postings\n    Engineering roles account for 839 of 4,294 postings, while customer-facing technical roles — forward deployed and solutions combined — account for 572, close to two-thirds of the engineering total. The 245 forward deployed postings confirm the role exists at scale rather than being a label used by one or two firms.\n  \n\n\n\n  \n    \n  \n  \n    6. Forward deployed and solutions postings by company\n    Databricks and Palantir account for 178 of 245 forward deployed postings, or 73% of the total, while the remaining ten companies contribute 67 between them. The ratio of forward deployed to solutions roles also differs sharply by company — Palantir posts more than twice as many forward deployed as solutions, while Databricks, Asana and Ramp show the reverse — suggesting the two titles are used interchangeably by some employers and distinctly by others.\n  \n\n\n\n  \n    \n  \n  \n    7. Seniority mix within each role family\n    Solutions roles are 53% staff level while forward deployed roles are only 4% staff, concentrating instead at mid (43%) and senior (29%). The two titles therefore differ in seniority profile as well as in name, which weakens the reading that they are interchangeable labels for the same work.\n  \n\n\n\n  \n    \n  \n  \n    8. Advertised salary by role family\n    Research roles show the highest median advertised minimum at roughly $380,000, followed by software engineering, data and applied AI in a band around $220,000 to $230,000, while recruiting sits lowest at about $130,000. The unusually narrow forward deployed distribution reflects a single employer posting one standard band across its engineering roles rather than a genuine market pattern.\n  \n\n\n\n  \n    \n  \n  \n    9. Description length and advertised salary\n    Description length shows no relationship with advertised salary across 1,459 postings, with a correlation of 0.00 and a flat fitted line. Combined with the near-identical length distributions across role families, this indicates description length reflects employer writing conventions rather than the seniority, complexity or compensation of the role.\n  \n\n\n\n  \n    \n  \n  \n    10. Work arrangement over time\n    Remote postings rose from 30% of those stating a work arrangement in 2019 to a peak of 82% in 2022, then fell to 55% by 2026, while hybrid arrangements grew from almost nothing to 17% over the same period. The partial reversal suggests employers consolidated around hybrid rather than returning fully to onsite work.\n  \n\n\n\n  \n    \n  \n  \n    11. Most common locations in job postings\n    Remote appears in 8,112 postings, more than any single city and 29% above San Francisco at 6,297, while five Bay Area locations together account for 6,657. Postings concentrate heavily in a handful of established technology hubs, with the top three locations covering more than the remaining seventeen combined."
+    "text": "Exploratory Data Visualizations\n\n\n\n  \n    \n  \n  \n    1. Job postings index: AI-exposed against control sectors\n    Between their March 2022 peak and August 2026, job postings in AI-exposed sectors fell roughly 67% and remain below their pre-pandemic level, while control sectors fell roughly 36% and recovered above theirs. The divergence begins several months before the ChatGPT release, indicating that AI cannot be the sole cause and that interest rate increases and the correction of pandemic-era overhiring also contributed.\n  \n\n\n\n  \n    \n  \n  \n    2. Job openings against online postings\n    Job openings in the information sector and online postings in AI-exposed sectors both peak in spring 2022 and decline afterwards, confirming the trend in official government data as well as in commercial posting indices. Openings fall roughly 63% from peak while postings fall roughly 67%. The two falls are similar in size, so the online postings and the official count of vacancies tell the same story.\n  \n\n\n\n  \n    \n  \n  \n    3. Hires and quits in the information sector\n    Hires in the information sector averaged 80,000 to 95,000 monthly through 2015 to 2019, peaked at 125,000 in 2021, and returned to roughly 75,000 by 2026 — close to the pre-pandemic range. Quits fell further, to 28,000 by 2026 against a 40,000 to 48,000 baseline, indicating a market where both employers and workers became less active rather than one where hiring simply collapsed.\n  \n\n\n\n  \n    \n  \n  \n    4. Employment by computer occupation\n    Employment in software development rose from 1.36 million in 2021 to 1.69 million in 2025, and data science employment grew from 105,000 to 261,000 over the same period. Employment therefore expanded while job postings fell sharply, indicating that reduced advertising did not correspond to reduced headcount in these occupations.\n  \n\n\n\n  \n    \n  \n  \n    5. Role families across company job postings\n    Engineering roles account for 839 of 4,294 postings, while customer-facing technical roles — forward deployed and solutions combined — account for 572, close to two-thirds of the engineering total. The 245 forward deployed postings confirm the role exists at scale rather than being a label used by one or two firms.\n  \n\n\n\n  \n    \n  \n  \n    6. Forward deployed and solutions postings by company\n    Databricks and Palantir account for 178 of 245 forward deployed postings, or 73% of the total, while the remaining ten companies contribute 67 between them. The ratio of forward deployed to solutions roles also differs sharply by company — Palantir posts more than twice as many forward deployed as solutions, while Databricks, Asana and Ramp show the reverse — suggesting the two titles are used interchangeably by some employers and distinctly by others.\n  \n\n\n\n  \n    \n  \n  \n    7. Seniority mix within each role family\n    Solutions roles are 53% staff level while forward deployed roles are only 4% staff, concentrating instead at mid (43%) and senior (29%). The two titles therefore differ in seniority profile as well as in name, which weakens the reading that they are interchangeable labels for the same work.\n  \n\n\n\n  \n    \n  \n  \n    8. Advertised salary by role family\n    Research roles show the highest median advertised minimum at roughly $380,000, followed by software engineering, data and applied AI in a band around $220,000 to $230,000, while recruiting sits lowest at about $130,000. The unusually narrow forward deployed distribution reflects a single employer posting one standard band across its engineering roles rather than a genuine market pattern.\n  \n\n\n\n  \n    \n  \n  \n    9. Description length and advertised salary\n    Description length shows no relationship with advertised salary across 1,459 postings, with a correlation of 0.00 and a flat fitted line. Combined with the near-identical length distributions across role families, this indicates description length reflects employer writing conventions rather than the seniority, complexity or compensation of the role.\n  \n\n\n\n  \n    \n  \n  \n    10. Work arrangement over time\n    Remote postings rose from 30% of those stating a work arrangement in 2019 to a peak of 82% in 2022, then fell to 55% by 2026, while hybrid arrangements grew from almost nothing to 17% over the same period. The partial reversal suggests employers consolidated around hybrid rather than returning fully to onsite work.\n  \n\n\n\n  \n    \n  \n  \n    11. Most common locations in job postings\n    Remote appears in 8,112 postings, more than any single city and 29% above San Francisco at 6,297, while five Bay Area locations together account for 6,657. Postings concentrate heavily in a handful of established technology hubs, with the top three locations covering more than the remaining seventeen combined."
   },
   {
-    "objectID": "introduction.html",
-    "href": "introduction.html",
-    "title": "Introduction",
+    "objectID": "dectrees.html#data",
+    "href": "dectrees.html#data",
+    "title": "Decision Trees",
+    "section": "Data",
+    "text": "Data"
+  },
+  {
+    "objectID": "dectrees.html#code",
+    "href": "dectrees.html#code",
+    "title": "Decision Trees",
+    "section": "Code",
+    "text": "Code"
+  },
+  {
+    "objectID": "dectrees.html#results",
+    "href": "dectrees.html#results",
+    "title": "Decision Trees",
+    "section": "Results",
+    "text": "Results"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Was It AI, or Was It Interest Rates?",
     "section": "",
-    "text": "On September 4, 2026, software development job postings on Indeed stood about 24 percent below their level in February 2020 (Indeed, via FRED). In early 2022, the same postings had been more than twice as high as in February 2020 (Indeed, via FRED). That rise and fall raises a simple question: what slowed tech hiring down? Three explanations compete: higher interest rates, new AI tools that can do some of the work, and a reset after tech companies hired too many people during the pandemic. Signs of all three appeared in 2022. In March 2022, the Federal Reserve began raising interest rates from near zero (Federal Reserve). By July 2023, its main rate had reached 5.25 to 5.5 percent (Federal Reserve). In late November 2022, OpenAI released ChatGPT (TIME). About two months later, it had 100 million users a month, a pace faster than TikTok or Instagram (TIME). In the same month as ChatGPT’s release, Meta let go of more than 11,000 employees (Meta). The slowdown also reached the wider economy. Job openings across the United States peaked at about 12.3 million in March 2022 (U.S. Bureau of Labor Statistics). By July 2026, that number had fallen to 7.3 million (U.S. Bureau of Labor Statistics).\n\n\n\nMonthly job openings in the United States, 2015 to 2026. Source: U.S. Bureau of Labor Statistics.\n\n\nThe answer matters because each explanation points to a different future. If higher interest rates caused the slowdown, hiring could pick up again as borrowing gets cheaper. If AI tools now do work that people used to do, some of those jobs may not return. If companies simply hired too many people during the pandemic, the drop may be a one-time reset. Meta’s cut in November 2022 came to about 13 percent of its staff (Meta). Its chief executive, Mark Zuckerberg, wrote that online shopping had returned to its earlier trends after the pandemic (Meta). More than 191,000 workers at U.S. tech companies lost their jobs in 2023 alone (Crunchbase News). People at the start of their careers may face the hardest path. In early 2026, only 4.5 percent of software development job postings on Indeed were for entry-level roles, while 69.3 percent were for senior roles (Indeed Hiring Lab). Between November 2022 and June 2026, employment of workers aged 22 to 25 fell about 11 percent in the jobs most open to AI (Stanford update, August 2026). Over the same period, employment of workers the same age in jobs less open to AI grew about 10 percent (Stanford update, August 2026). That leaves young workers in the jobs most open to AI about 19 percent behind their peers (Stanford update, August 2026). Students choosing a subject, colleges planning courses and employers planning teams all need to know which explanation fits.\nResearchers have already started to study this question. Their early findings point in different directions. In August 2025, Stanford researchers reported a 13 percent drop in employment for workers aged 22 to 25 in the jobs most open to AI (Stanford working paper, August 2025). They measured that drop against young workers in jobs less open to AI (Stanford working paper, August 2025). The figure also takes account of wider hiring changes at the same companies (Stanford working paper, August 2025). The 19 percent gap in the August 2026 update comes from a simpler comparison that leaves those company changes out (Stanford update, August 2026). The same update found no widespread job losses across the economy linked to AI (Stanford update, August 2026). In October 2025, the Budget Lab at Yale reported that the wider job market showed no clear disruption in the 33 months after ChatGPT’s release (The Budget Lab at Yale). Indeed Hiring Lab found that software development postings grew by almost 15 percent after late February 2025, when a popular AI coding tool launched (Indeed Hiring Lab). Over the same period, all job postings fell by 7 percent (Indeed Hiring Lab). Between May 2025 and May 2026, senior roles made up 71 percent of the growth in software development postings (Indeed Hiring Lab). Most of this work looks at the whole economy or at broad groups of jobs. Less is known about the AI companies themselves and the jobs they post. Interest rates and AI changed in the same year, so their effects are hard to tell apart. There is still room to compare the timing of each change, follow the job postings of individual companies, and check online postings against government counts. The research questions below follow from these open gaps."
+    "text": "From their peak in March 2022 to August 2026, job postings in AI-exposed sectors fell by roughly 67 percent, while postings in control sectors fell by roughly 36 percent and recovered above their pre-pandemic level. This project asks how much of that gap AI explains, and how much belongs to higher interest rates and the correction of pandemic-era overhiring. It works from five data sources covering 2019 to 2026, including 56,334 job postings."
   },
   {
-    "objectID": "introduction.html#overview",
-    "href": "introduction.html#overview",
-    "title": "Introduction",
+    "objectID": "index.html#what-this-project-covers",
+    "href": "index.html#what-this-project-covers",
+    "title": "Was It AI, or Was It Interest Rates?",
+    "section": "What this project covers",
+    "text": "What this project covers\n\nData preparation and exploratory analysis — complete\nClustering and PCA — complete\nNaive Bayes and decision trees — to come\nRegression — to come\nAdaBoost, gradient boosting and XGBoost — to come\n\n\n\n\nMonthly average of Indeed’s job postings index for the three AI-exposed sectors and the 44 control sectors, February 2020 to August 2026 (1 February 2020 = 100); the dashed line marks the release of ChatGPT. Source: Indeed Hiring Lab."
+  },
+  {
+    "objectID": "index.html#where-to-start",
+    "href": "index.html#where-to-start",
+    "title": "Was It AI, or Was It Interest Rates?",
+    "section": "Where to start",
+    "text": "Where to start\n\n\n\nIntroduction\n\n\n\n\nData preparation and exploratory analysis\n\n\n\n\nConclusions"
+  },
+  {
+    "objectID": "gradientboosting.html#data",
+    "href": "gradientboosting.html#data",
+    "title": "GradientBoosting",
+    "section": "Data",
+    "text": "Data"
+  },
+  {
+    "objectID": "gradientboosting.html#code",
+    "href": "gradientboosting.html#code",
+    "title": "GradientBoosting",
+    "section": "Code",
+    "text": "Code"
+  },
+  {
+    "objectID": "gradientboosting.html#results",
+    "href": "gradientboosting.html#results",
+    "title": "GradientBoosting",
+    "section": "Results",
+    "text": "Results"
+  },
+  {
+    "objectID": "clustering.html",
+    "href": "clustering.html",
+    "title": "Clustering",
     "section": "",
-    "text": "On September 4, 2026, software development job postings on Indeed stood about 24 percent below their level in February 2020 (Indeed, via FRED). In early 2022, the same postings had been more than twice as high as in February 2020 (Indeed, via FRED). That rise and fall raises a simple question: what slowed tech hiring down? Three explanations compete: higher interest rates, new AI tools that can do some of the work, and a reset after tech companies hired too many people during the pandemic. Signs of all three appeared in 2022. In March 2022, the Federal Reserve began raising interest rates from near zero (Federal Reserve). By July 2023, its main rate had reached 5.25 to 5.5 percent (Federal Reserve). In late November 2022, OpenAI released ChatGPT (TIME). About two months later, it had 100 million users a month, a pace faster than TikTok or Instagram (TIME). In the same month as ChatGPT’s release, Meta let go of more than 11,000 employees (Meta). The slowdown also reached the wider economy. Job openings across the United States peaked at about 12.3 million in March 2022 (U.S. Bureau of Labor Statistics). By July 2026, that number had fallen to 7.3 million (U.S. Bureau of Labor Statistics).\n\n\n\nMonthly job openings in the United States, 2015 to 2026. Source: U.S. Bureau of Labor Statistics.\n\n\nThe answer matters because each explanation points to a different future. If higher interest rates caused the slowdown, hiring could pick up again as borrowing gets cheaper. If AI tools now do work that people used to do, some of those jobs may not return. If companies simply hired too many people during the pandemic, the drop may be a one-time reset. Meta’s cut in November 2022 came to about 13 percent of its staff (Meta). Its chief executive, Mark Zuckerberg, wrote that online shopping had returned to its earlier trends after the pandemic (Meta). More than 191,000 workers at U.S. tech companies lost their jobs in 2023 alone (Crunchbase News). People at the start of their careers may face the hardest path. In early 2026, only 4.5 percent of software development job postings on Indeed were for entry-level roles, while 69.3 percent were for senior roles (Indeed Hiring Lab). Between November 2022 and June 2026, employment of workers aged 22 to 25 fell about 11 percent in the jobs most open to AI (Stanford update, August 2026). Over the same period, employment of workers the same age in jobs less open to AI grew about 10 percent (Stanford update, August 2026). That leaves young workers in the jobs most open to AI about 19 percent behind their peers (Stanford update, August 2026). Students choosing a subject, colleges planning courses and employers planning teams all need to know which explanation fits.\nResearchers have already started to study this question. Their early findings point in different directions. In August 2025, Stanford researchers reported a 13 percent drop in employment for workers aged 22 to 25 in the jobs most open to AI (Stanford working paper, August 2025). They measured that drop against young workers in jobs less open to AI (Stanford working paper, August 2025). The figure also takes account of wider hiring changes at the same companies (Stanford working paper, August 2025). The 19 percent gap in the August 2026 update comes from a simpler comparison that leaves those company changes out (Stanford update, August 2026). The same update found no widespread job losses across the economy linked to AI (Stanford update, August 2026). In October 2025, the Budget Lab at Yale reported that the wider job market showed no clear disruption in the 33 months after ChatGPT’s release (The Budget Lab at Yale). Indeed Hiring Lab found that software development postings grew by almost 15 percent after late February 2025, when a popular AI coding tool launched (Indeed Hiring Lab). Over the same period, all job postings fell by 7 percent (Indeed Hiring Lab). Between May 2025 and May 2026, senior roles made up 71 percent of the growth in software development postings (Indeed Hiring Lab). Most of this work looks at the whole economy or at broad groups of jobs. Less is known about the AI companies themselves and the jobs they post. Interest rates and AI changed in the same year, so their effects are hard to tell apart. There is still room to compare the timing of each change, follow the job postings of individual companies, and check online postings against government counts. The research questions below follow from these open gaps."
+    "text": "Clustering is a way of finding groups in data without being told what the groups are. The method looks at how similar items are to each other and puts similar items together. No labels are given, so the groups come from the data alone. This makes clustering a tool for discovery. It can show patterns that nobody set out to look for.\nThere are two main kinds of clustering. Partitional clustering splits the data into a fixed number of groups, called k, which is chosen in advance. This project uses k-means. It places k centre points, assigns every item to its nearest centre, and then moves each centre to the middle of its group. It repeats this until the centres stop moving. Hierarchical clustering does not need k at the start. It begins with every item in a group of its own and keeps joining the two closest groups until only one group is left. The result is a tree, called a dendrogram, that can be cut at any height to give a set of groups.\nBoth methods need a way to measure how far apart two items are. Here the items are job postings, turned into word weights. The hierarchical clustering uses cosine similarity. It compares which words two postings use and how strongly, no matter how long each posting is. Groups are joined with complete linkage, which means two groups only count as close if even their least similar postings are close. K-means uses ordinary straight-line distance, called Euclidean distance. Every posting is scaled to the same size first, so this ranks pairs of postings in the same order as cosine similarity does.\nIn this project, clustering is run on 3,718 job postings from AI companies. The goal is to see which groups of jobs appear when the method reads only the job descriptions. Each posting already has a role family, such as software engineering, sales or forward deployed engineering, which was taken from its job title. That label is kept aside during clustering. It is only brought back afterwards, to check whether the groups the method found match the job types or something else.\n\n\n\nThe same 15 made-up points grouped in two ways. K-means splits them into a set number of groups around centre points. Hierarchical clustering builds a tree of merges, which can be cut at any height to give groups.\n\n\n\n\n\nPostings A and B use words in the same mix, but B is longer. They are far apart in straight-line distance, yet the angle between them is 0, so cosine treats them as alike. Posting C is closer to A in straight-line distance but uses a different mix of words. This is why cosine suits text."
   },
   {
-    "objectID": "introduction.html#research-questions",
-    "href": "introduction.html#research-questions",
-    "title": "Introduction",
-    "section": "Research Questions",
-    "text": "Research Questions\n\nHow much did tech job postings rise and fall between 2019 and 2026, and how does that compare with other kinds of jobs?\nDid tech job postings start to fall before or after ChatGPT was released in late November 2022?\nHow closely does the fall in tech job postings line up with the interest rate rises that began in March 2022?\nDo government counts of job openings, hires and quits tell the same story as online job postings?\nHas the number of people working in software and data jobs kept growing, even as job postings fell?\nWhat kinds of roles do AI companies post most often, and how many of them are customer-facing technical roles?\nHow many openings at AI companies are for entry-level workers compared with senior workers?\nHow much pay do AI companies advertise for different kinds of roles?\nHow has the share of remote, hybrid and in-office jobs changed from 2019 to 2026?\nWhich cities appear most often in tech job postings, and how does remote work compare with them?"
+    "objectID": "clustering.html#overview",
+    "href": "clustering.html#overview",
+    "title": "Clustering",
+    "section": "",
+    "text": "Clustering is a way of finding groups in data without being told what the groups are. The method looks at how similar items are to each other and puts similar items together. No labels are given, so the groups come from the data alone. This makes clustering a tool for discovery. It can show patterns that nobody set out to look for.\nThere are two main kinds of clustering. Partitional clustering splits the data into a fixed number of groups, called k, which is chosen in advance. This project uses k-means. It places k centre points, assigns every item to its nearest centre, and then moves each centre to the middle of its group. It repeats this until the centres stop moving. Hierarchical clustering does not need k at the start. It begins with every item in a group of its own and keeps joining the two closest groups until only one group is left. The result is a tree, called a dendrogram, that can be cut at any height to give a set of groups.\nBoth methods need a way to measure how far apart two items are. Here the items are job postings, turned into word weights. The hierarchical clustering uses cosine similarity. It compares which words two postings use and how strongly, no matter how long each posting is. Groups are joined with complete linkage, which means two groups only count as close if even their least similar postings are close. K-means uses ordinary straight-line distance, called Euclidean distance. Every posting is scaled to the same size first, so this ranks pairs of postings in the same order as cosine similarity does.\nIn this project, clustering is run on 3,718 job postings from AI companies. The goal is to see which groups of jobs appear when the method reads only the job descriptions. Each posting already has a role family, such as software engineering, sales or forward deployed engineering, which was taken from its job title. That label is kept aside during clustering. It is only brought back afterwards, to check whether the groups the method found match the job types or something else.\n\n\n\nThe same 15 made-up points grouped in two ways. K-means splits them into a set number of groups around centre points. Hierarchical clustering builds a tree of merges, which can be cut at any height to give groups.\n\n\n\n\n\nPostings A and B use words in the same mix, but B is longer. They are far apart in straight-line distance, yet the angle between them is 0, so cosine treats them as alike. Posting C is closer to A in straight-line distance but uses a different mix of words. This is why cosine suits text."
+  },
+  {
+    "objectID": "clustering.html#data-preparation",
+    "href": "clustering.html#data-preparation",
+    "title": "Clustering",
+    "section": "Data Preparation",
+    "text": "Data Preparation\nClustering works by measuring distances, and distances can only be measured between numbers. So the input has to be a table of numbers, with one row for each posting and one column for each feature. It also has to be unlabeled. If the role family were part of the input, the method would simply sort postings by the answer instead of finding groups on its own. For this reason the role family was removed before clustering and only used later to check the results.\nThe data started with 4,294 postings. Of these, 933 belonged to 357 groups of near copies, where a company posted the same job, with the same title and the same opening text, more than once. Only the first copy of each job was kept, and the other 576 copies were removed, so that repeated text could not form fake groups. That left 3,718 postings. Each description was then turned into numbers with a method called TF-IDF. Every posting becomes a row and every word becomes a column. A word gets a high weight in a posting when it is used often in that posting but is rare across all postings. Common English words such as “the” and “and” were dropped. So were words that appear in fewer than 5 postings or in more than 80% of them. This left about 7,800 word columns.\nA first test showed a problem. Each company repeats the same blocks of text in all of its postings, such as its mission statement, its benefits and its legal notices. These blocks were so strong that the clusters grouped postings by company rather than by job. So a second version of the data was made. Any sentence that appears in at least 10% of one company’s postings, and in at least 3 of them, was removed, and so were company names. This cut the typical description roughly in half, from about 6,300 to about 3,300 characters, and left 7,495 word columns. Both versions were clustered, and both are shown in the results below.\n\n\nTen postings and twelve of the 7,495 word columns from the version with company text removed. Each number is a TF-IDF weight. Many cells are zero, because each posting uses only a small share of all the words. There is no label column, only numbers.\n\nData files\n\nRaw data: job postings collected from company job boards with the Apify multi-ATS job scraper, using fetch_apify.py. The full raw files are about 64 MB and are not stored in the repository, so a 20-row raw sample is linked instead.\nClean data: ats_final.csv, the 4,294 cleaned postings this page starts from, before near copies are removed.\nClustering input sample: clustering_input_sample.csv, shown in the table above."
+  },
+  {
+    "objectID": "clustering.html#code",
+    "href": "clustering.html#code",
+    "title": "Clustering",
+    "section": "Code",
+    "text": "Code\n\n\n\n\nFile\nWhat it does\nLanguage\nMain packages\n\n\n\n\ntext_clusters.py\nBuilds the TF-IDF matrix, removes text that a company repeats in every posting, runs k-means and hierarchical clustering, and runs truncated SVD.\nPython 3.12\nscikit-learn, scipy, pandas, numpy\n\n\nk-means in text_clusters.py\nRuns k-means for every k from 2 to 15 with five random starts, scores each k by inertia, silhouette and stability, and fits the final model (kmeans_sweep, fit_kmeans).\nPython 3.12\nscikit-learn\n\n\nHierarchical clustering in text_clusters.py\nComputes cosine distances, builds the complete-linkage tree, cuts it into k clusters, and scores every cut (cosine_distances, cosine_linkage, cut_k, hier_k_scan).\nPython 3.12\nscipy, scikit-learn\n\n\ncluster_plots.py\nDraws the clustering and SVD charts: the choice of k, silhouette diagrams, heatmaps, dendrograms, explained variance and projections.\nPython 3.12\nmatplotlib, seaborn, scipy, scikit-learn\n\n\n02_clustering_pca.ipynb\nRuns the clustering and PCA steps from start to end and saves every figure, the cluster labels and a results report.\nPython 3.12 (Jupyter)\npandas, scikit-learn, scipy, matplotlib\n\n\nmake_clustering_concept_figures.py\nDraws the two explanatory figures in the Overview from small made-up data.\nPython 3.12\nmatplotlib, scipy, scikit-learn\n\n\nmake_module2_samples.py\nSaves the small samples of the clustering and PCA input shown on these pages, and draws them as table images.\nPython 3.12\npandas, numpy, matplotlib"
+  },
+  {
+    "objectID": "clustering.html#results",
+    "href": "clustering.html#results",
+    "title": "Clustering",
+    "section": "Results",
+    "text": "Results\nClustering was run on two versions of the TF-IDF table: the raw descriptions, and the version with company boilerplate removed. For each version, k-means was fitted for every k from 2 to 15 with five random starts, and a complete-linkage tree was built on cosine distance. The numbers below refer to the figures further down the page.\n\nWhich values of k were compared\nThe silhouette score, inertia and stability across random starts were measured for every k from 2 to 15. Four values, k = 3, 4, 8 and 14, were then fitted and compared side by side, with their cluster sizes and silhouette plots (figures 2 and 6). These four include the k finally chosen for each version: k = 14 for the raw descriptions and k = 4 once boilerplate was removed.\n\n\nWhat the silhouette score says about the best k\nOn the raw descriptions, the average silhouette score rises with k and is highest at k = 14 and k = 15, which tie at 0.173 (figure 1). Of every k close to that top, k = 14 also gives the most repeatable clusters across random starts, so it was chosen. Among the four values compared, the silhouette rises from 0.077 at k = 3 to 0.185 at k = 14.\nOnce company boilerplate is removed, the silhouette score is below 0.03 at every k (figure 5). It is highest at k = 15, the top of the range tested, so it does not point to a clear best k. Here k = 4 was chosen instead, as the largest k whose clusters stay the same across random starts. The low scores mean the groups overlap heavily: between 24% and 37% of postings sit closer to another cluster than to their own (figure 6).\n\n\nSilhouette plots\nFigures 2, 3, 6 and 7 show the silhouette value of every posting, grouped by cluster. On the raw descriptions (figure 3), only one cluster, a mix of smaller companies, has any postings with negative values. With boilerplate removed (figure 7), the sales and customer-facing technical clusters hold together, while the engineering cluster and the legal and finance cluster have many negative values.\n\n\nHow hierarchical clustering compares with k-means\nOn the raw descriptions the two methods agree fairly well, with an adjusted Rand index of 0.70 (figure 11). Both group postings by company: the hierarchical clusters H6 and H9 sit entirely inside the OpenAI and Databricks k-means clusters. The tree keeps the original distances well, with a cophenetic correlation of 0.85.\nWith boilerplate removed, agreement drops to 0.21 (figure 14). The tree splits the postings into two large groups, engineering (1,809 postings) and everything else (1,892), plus two tiny groups of 11 and 6 postings. K-means goes further and also separates sales, customer-facing technical work and a legal and finance group. The tree’s cophenetic correlation is 0.54, so it only roughly reflects the distances between postings.\n\n\nWhat k the hierarchical tree suggests\nThe gaps between merge heights in the tree are all very small, so the dendrogram on its own does not mark a clear place to cut. Scoring every possible cut with the silhouette score gives a clearer answer. On the raw descriptions the best cut is k = 14 (figure 9), the same k chosen for k-means. With boilerplate removed, the silhouette of the cuts is almost flat. It is highest at k = 7, with the same value at k = 4 (figure 12), which matches the k chosen for k-means, while the k-means silhouette itself keeps rising up to k = 15.\n\n\n\n  \n    \n  \n  \n    1. Choosing k for k-means (raw descriptions)\n    Inertia has no clear elbow. The silhouette score is highest at k = 14 and k = 15, which tie at 0.173, and of every k within the seed-to-seed spread of that top, k = 14 is also the most stable across random starts (0.901), so it was chosen. The dip at k = 13 is a poor fit rather than real structure, since inertia rises there (2,285 to 2,292).\n  \n\n\n\n  \n    \n  \n  \n    2. Silhouette values at k = 3, 4, 8 and 14 (raw descriptions)\n    The average silhouette rises from 0.077 at k = 3 to 0.185 at k = 14, and the share of postings with negative values falls to 2.9%, so k = 14 is the best of the four.\n  \n\n\n\n  \n    \n  \n  \n    3. Silhouette values for the chosen k = 14 (raw descriptions)\n    Most postings fit their own cluster well: K1, a mix of smaller companies, is the only cluster with any negative values (36% of its postings, mean 0.01), while small single-company clusters such as Ramp (K4, 0.41) and Figma (K3, 0.38) score highest.\n  \n\n\n\n  \n    \n  \n  \n    4. Role family mix of each k-means cluster (raw descriptions)\n    No cluster lines up with a role family: \"other\" is the largest group in 12 of the 14 clusters. Instead, the clusters follow employers, and 12 of them hold postings from a single company, because each company repeats the same boilerplate text in every posting.\n  \n\n\n\n  \n    \n  \n  \n    5. Choosing k for k-means (company boilerplate removed)\n    Silhouette is below 0.03 at every k, so it cannot pick a k; k = 4 was chosen as the largest k whose clusters stay the same across random starts (agreement 0.88, falling to 0.75 at k = 5).\n  \n\n\n\n  \n    \n  \n  \n    6. Silhouette values at k = 3, 4, 8 and 14 (company boilerplate removed)\n    Across the four k values compared, the average silhouette stays between 0.011 and 0.025, and 24% to 37% of postings have negative values, so none of them gives well-separated groups.\n  \n\n\n\n  \n    \n  \n  \n    7. Silhouette values for the chosen k = 4 (company boilerplate removed)\n    The customer-technical (K1) and sales (K3) clusters hold together, while engineering (K2) and the legal and finance cluster (K0) are weak, with 34% and 69% of their postings negative.\n  \n\n\n\n  \n    \n  \n  \n    8. Role family mix of each k-means cluster (company boilerplate removed)\n    With boilerplate removed, the clusters follow job types: K3 is 68% sales, K2 is 45% software engineering, and K1 is mainly solutions (43%) and forward_deployed (17%) postings.\n  \n\n\n\n  \n    \n  \n  \n    9. Which k the hierarchical tree suggests (raw descriptions)\n    The merge gaps are all tiny, so the dendrogram itself does not point to one k, but the cut silhouette is highest at k = 14 (0.192), the same k chosen for k-means.\n  \n\n\n\n  \n    \n  \n  \n    10. Hierarchical clustering dendrogram (raw descriptions)\n    The branches follow companies rather than jobs; for example, H9 is 716 Databricks postings and H6 is 694 OpenAI postings. The cophenetic correlation of 0.85 means the tree keeps the original distances well; average linkage scores higher (0.93) but was not used, because it puts 2,943 of the 3,718 postings into just two clusters.\n  \n\n\n\n  \n    \n  \n  \n    11. Hierarchical clusters against k-means clusters (raw descriptions)\n    The two methods agree fairly well (ARI = 0.70). Two large hierarchical clusters sit entirely inside one k-means cluster each: H6 (694 postings) inside the OpenAI cluster K8, and H9 (716) inside the Databricks cluster K7. Others are merged, with H3 combining Anthropic (517), Scale AI (199) and Cohere (134).\n  \n\n\n\n  \n    \n  \n  \n    12. Which k the hierarchical tree suggests (company boilerplate removed)\n    The cut silhouette is almost flat, with its highest value at k = 7 and an equal value at k = 4 (both 0.025), which matches the k chosen for k-means; the k-means silhouette is instead highest at k = 15, the top of the range tested.\n  \n\n\n\n  \n    \n  \n  \n    13. Hierarchical clustering dendrogram (company boilerplate removed)\n    The tree really splits postings into two groups: H1 (1,809 postings) is the engineering group, H0 (1,892) mixes sales, solutions and forward_deployed postings, and the other two clusters are tiny (11 and 6 postings).\n  \n\n\n\n  \n    \n  \n  \n    14. Hierarchical clusters against k-means clusters (company boilerplate removed)\n    Agreement is low (ARI = 0.21): hierarchical clustering mainly separates engineering (H1 holds 1,247 of 1,496 K2 postings) from everything else, while k-means also splits out sales, customer-technical and legal/finance groups."
+  },
+  {
+    "objectID": "clustering.html#conclusions",
+    "href": "clustering.html#conclusions",
+    "title": "Clustering",
+    "section": "Conclusions",
+    "text": "Conclusions\nThe clearest lesson is that job postings at AI companies are written mostly in the company’s own voice. On the raw descriptions, 12 of the 14 clusters each hold postings from a single employer, and the clusters match the company far more closely than the type of job. Mission statements, benefits and legal notices are repeated in every posting and drown out the description of the work itself. Any study of hiring that reads posting text has to remove this boilerplate first, or it will measure employers instead of jobs.\nOnce the boilerplate is removed, the descriptions do sort into kinds of work: engineering, sales, customer-facing technical work, and a broad business group covering roles such as legal, finance and operations. These groups match the role families much better than before, but they still overlap a great deal. Silhouette scores stay below 0.03, and about a third of postings sit closer to another group than to their own. Jobs at these companies blend into each other more than their titles suggest.\nThis matters most for forward deployed engineers. Their descriptions do not form a group of their own. The customer-facing technical cluster holds 78% of solutions postings and 52% of forward deployed postings, while another 42% of forward deployed postings fall in the engineering cluster. In the words companies use, the role sits between solutions work and engineering, and closer to solutions than its “engineer” title suggests. Customer-facing technical work as a whole does stand out as a group of its own, with 493 of the 3,718 postings.\nFinally, the two methods only agree fairly well on the raw text (an adjusted Rand index of 0.70), where the company signal is easy to find. On the cleaned text, the hierarchical tree mainly separates engineering from everything else, while k-means also splits out sales and customer-facing work. The split between engineering and non-engineering jobs is the one result that both methods support."
+  },
+  {
+    "objectID": "naivebayes.html#data",
+    "href": "naivebayes.html#data",
+    "title": "Naive Bayes",
+    "section": "Data",
+    "text": "Data"
+  },
+  {
+    "objectID": "naivebayes.html#code",
+    "href": "naivebayes.html#code",
+    "title": "Naive Bayes",
+    "section": "Code",
+    "text": "Code"
+  },
+  {
+    "objectID": "naivebayes.html#results",
+    "href": "naivebayes.html#results",
+    "title": "Naive Bayes",
+    "section": "Results",
+    "text": "Results"
+  },
+  {
+    "objectID": "xgboost.html#data",
+    "href": "xgboost.html#data",
+    "title": "XGBoost",
+    "section": "Data",
+    "text": "Data"
+  },
+  {
+    "objectID": "xgboost.html#code",
+    "href": "xgboost.html#code",
+    "title": "XGBoost",
+    "section": "Code",
+    "text": "Code"
+  },
+  {
+    "objectID": "xgboost.html#results",
+    "href": "xgboost.html#results",
+    "title": "XGBoost",
+    "section": "Results",
+    "text": "Results"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "Rahul Hipparkar\n  Data science master's student at CU Boulder. I build machine learning and language model systems."
+  },
+  {
+    "objectID": "about.html#about",
+    "href": "about.html#about",
+    "title": "About Me",
+    "section": "About",
+    "text": "About\nI am working on an M.S. in Data Science at the University of Colorado Boulder, from 2025 to 2027. Before that I spent about three and a half years at Eviden as a data scientist, where I built LLM tools that automated parts of financial audit review, the FastAPI services behind them, SQL pipelines, and an anomaly detection system for spotting odd transactions. This summer I am a data scientist intern at Summer Atlantic Capital, working on a risk scoring model for compliance checks and an LLM module that explains in plain language why a score came out the way it did. Further back, I studied computer engineering at Savitribai Phule Pune University.\nThe idea for this project came out of an earlier one. I built a resume-to-job matching platform that pulled live job listings from LinkedIn and Indeed, and spending that much time inside posting data left me wondering what actually happened to tech hiring after 2022. The claim that AI is behind the slowdown is everywhere, but interest rates rose and pandemic-era overhiring unwound in the same window, so all three explanations fit the shape of the drop. That seemed worth digging into with real data rather than taking any of them on faith."
+  },
+  {
+    "objectID": "about.html#what-i-work-on",
+    "href": "about.html#what-i-work-on",
+    "title": "About Me",
+    "section": "What I work on",
+    "text": "What I work on\n\n Machine learning and applied statistics\n Large language models and multi-agent systems\n Data pipelines and backend services\n Cloud infrastructure and MLOps"
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About Me",
+    "section": "Background",
+    "text": "Background\n\nEducation\n\nM.S. Data Science, University of Colorado Boulder (2025 to 2027); B.E. Computer Engineering, Savitribai Phule Pune University\n\nExperience\n\nData Scientist Intern, Summer Atlantic Capital; Associate Consultant, Eviden\n\nTeaching\n\nCourse Assistant, STAT 5000/5010; Grader, MATH 2001\n\nBased in\n\nBoulder, Colorado"
+  },
+  {
+    "objectID": "about.html#outside-work",
+    "href": "about.html#outside-work",
+    "title": "About Me",
+    "section": "Outside work",
+    "text": "Outside work\nI run on the Boulder Creek Path whenever I can. It is the best part of my day, and a fair amount of my thinking about a stuck problem happens somewhere along that trail."
+  },
+  {
+    "objectID": "about.html#elsewhere",
+    "href": "about.html#elsewhere",
+    "title": "About Me",
+    "section": "Elsewhere",
+    "text": "Elsewhere\n\n GitHub\n LinkedIn\n Portfolio"
+  },
+  {
+    "objectID": "regression.html#data",
+    "href": "regression.html#data",
+    "title": "Regression",
+    "section": "Data",
+    "text": "Data"
+  },
+  {
+    "objectID": "regression.html#code",
+    "href": "regression.html#code",
+    "title": "Regression",
+    "section": "Code",
+    "text": "Code"
+  },
+  {
+    "objectID": "regression.html#results",
+    "href": "regression.html#results",
+    "title": "Regression",
+    "section": "Results",
+    "text": "Results"
+  },
+  {
+    "objectID": "pca.html",
+    "href": "pca.html",
+    "title": "PCA",
+    "section": "",
+    "text": "Principal component analysis, or PCA, is a way to turn data with many columns into a few new columns that keep most of the information. It looks for the directions in which the data varies the most. The first principal component is the one direction that captures the most variation. The second captures the most of what is left, and so on. Each component is a mix of the original columns.\nThese directions come from the eigenvectors of the data’s covariance matrix, which is a table of how each pair of columns moves together. Each eigenvector gives one direction. Its eigenvalue tells how much of the variation lies along that direction. Sorting the eigenvalues from largest to smallest ranks the components from most to least important. Keeping only the first few and dropping the rest is called dimensionality reduction.\nThis matters because data with many columns is hard to work with. It cannot be drawn on a chart. With many columns, points tend to look about equally far apart, so distances say less about which points are truly alike. Many columns may also repeat the same signal or carry only noise, and models need much more data to learn from them. Reducing the data to a few components makes patterns easier to see and separates the main signal from the noise.\nThis project uses PCA in two places. The first is the job posting word weights from the Clustering page, which have more than 7,000 columns. Here PCA shows whether the postings form clear groups when squeezed down to two dimensions. For this text data a version called truncated SVD is used, because it works directly on tables that are mostly zeros. The second is Indeed’s job postings index for 47 sectors. Here PCA separates the movement that all sectors share, such as the drop in 2020 and the peak in 2022, from movement that belongs to only a few sectors. That makes it possible to ask whether software development still looks unusual once the shared movement is taken out.\n\n\n\nPCA on 200 made-up points with two related features. The eigenvectors give the two directions, PC1 and PC2, and the eigenvalues say how much of the spread lies along each one. Keeping only PC1 reduces the data from two columns to one while keeping 92% of the variance.\n\n\n\n\n\nDistances between 300 random points, shown as a multiple of the average distance. With 2 dimensions the distances vary widely. With 1,000 dimensions almost every pair is about the same distance apart, so “near” and “far” lose their meaning. Reducing the number of dimensions helps bring that contrast back."
+  },
+  {
+    "objectID": "pca.html#overview",
+    "href": "pca.html#overview",
+    "title": "PCA",
+    "section": "",
+    "text": "Principal component analysis, or PCA, is a way to turn data with many columns into a few new columns that keep most of the information. It looks for the directions in which the data varies the most. The first principal component is the one direction that captures the most variation. The second captures the most of what is left, and so on. Each component is a mix of the original columns.\nThese directions come from the eigenvectors of the data’s covariance matrix, which is a table of how each pair of columns moves together. Each eigenvector gives one direction. Its eigenvalue tells how much of the variation lies along that direction. Sorting the eigenvalues from largest to smallest ranks the components from most to least important. Keeping only the first few and dropping the rest is called dimensionality reduction.\nThis matters because data with many columns is hard to work with. It cannot be drawn on a chart. With many columns, points tend to look about equally far apart, so distances say less about which points are truly alike. Many columns may also repeat the same signal or carry only noise, and models need much more data to learn from them. Reducing the data to a few components makes patterns easier to see and separates the main signal from the noise.\nThis project uses PCA in two places. The first is the job posting word weights from the Clustering page, which have more than 7,000 columns. Here PCA shows whether the postings form clear groups when squeezed down to two dimensions. For this text data a version called truncated SVD is used, because it works directly on tables that are mostly zeros. The second is Indeed’s job postings index for 47 sectors. Here PCA separates the movement that all sectors share, such as the drop in 2020 and the peak in 2022, from movement that belongs to only a few sectors. That makes it possible to ask whether software development still looks unusual once the shared movement is taken out.\n\n\n\nPCA on 200 made-up points with two related features. The eigenvectors give the two directions, PC1 and PC2, and the eigenvalues say how much of the spread lies along each one. Keeping only PC1 reduces the data from two columns to one while keeping 92% of the variance.\n\n\n\n\n\nDistances between 300 random points, shown as a multiple of the average distance. With 2 dimensions the distances vary widely. With 1,000 dimensions almost every pair is about the same distance apart, so “near” and “far” lose their meaning. Reducing the number of dimensions helps bring that contrast back."
+  },
+  {
+    "objectID": "pca.html#data-preparation",
+    "href": "pca.html#data-preparation",
+    "title": "PCA",
+    "section": "Data Preparation",
+    "text": "Data Preparation\nPCA needs a table of numbers with no labels and no missing values. The columns also need to be on a similar scale. PCA looks for the directions with the most variation, so a column with large values would take over just because of its size. To avoid this, each column is usually standardised so that it has a mean of zero and a standard deviation of one.\nFor the sector analysis, the data is Indeed’s daily job postings index for 47 US sectors, where 100 stands for the level on 1 February 2020. Only total postings were used. The daily values were averaged into months, which gives a table of 47 sectors by 79 months, from February 2020 to August 2026. Each sector’s series was then standardised. Some sectors swing much more than others, and without this step those sectors would dominate the result. After standardising, a value of 2 means that month was two standard deviations above that sector’s own average.\nFor the text analysis, the input is the same TF-IDF table used for clustering, in both of its versions. It is already numeric, and each posting is already scaled to the same size, so no extra scaling was needed. Labels such as role family and company were kept out of the fit and only used afterwards to colour the plots.\n\n\nTen of the 47 sectors over the twelve months of 2022, after each sector was standardised. The three AI-exposed sectors, Data & Analytics, IT Systems & Solutions and Software Development, are shown with seven control sectors picked at random. A value above zero means that month was above the sector’s own average, and every value shown here is above zero.\n\nData files\n\nRaw data: Indeed Hiring Lab’s job postings index, the file US/job_postings_by_sector_US.csv in the job_postings_tracker repository on GitHub. The full raw files are not stored in this repository, so a 20-row raw sample is linked instead.\nClean data: indeed_sector.csv, the cleaned daily index for all 47 sectors that the PCA table is built from.\nText data for the SVD figures: ats_final.csv, the same cleaned job postings used on the Clustering page.\nPCA input sample: pca_input_sample.csv, shown in the table above."
+  },
+  {
+    "objectID": "pca.html#code",
+    "href": "pca.html#code",
+    "title": "PCA",
+    "section": "Code",
+    "text": "Code\n\n\n\n\nFile\nWhat it does\nLanguage\nMain packages\n\n\n\n\nsector_pca.py\nBuilds the standardised sector-by-month matrix from the Indeed data, fits PCA, and removes the first component from each sector.\nPython 3.12\nscikit-learn, pandas, numpy\n\n\ntext_clusters.py\nBuilds the TF-IDF matrix, removes text that a company repeats in every posting, runs k-means and hierarchical clustering, and runs truncated SVD.\nPython 3.12\nscikit-learn, scipy, pandas, numpy\n\n\nTruncated SVD in text_clusters.py\nRuns truncated SVD on the TF-IDF table and lists the words with the largest loadings on each component (fit_svd, top_loadings).\nPython 3.12\nscikit-learn\n\n\ncluster_plots.py\nDraws the clustering and SVD charts: the choice of k, silhouette diagrams, heatmaps, dendrograms, explained variance and projections.\nPython 3.12\nmatplotlib, seaborn, scipy, scikit-learn\n\n\n02_clustering_pca.ipynb\nRuns the clustering and PCA steps from start to end and saves every figure, the cluster labels and a results report.\nPython 3.12 (Jupyter)\npandas, scikit-learn, scipy, matplotlib\n\n\nmake_pca_concept_figures.py\nDraws the two explanatory figures in the Overview from small made-up data.\nPython 3.12\nmatplotlib, scipy, scikit-learn\n\n\nmake_module2_samples.py\nSaves the small samples of the clustering and PCA input shown on these pages, and draws them as table images.\nPython 3.12\npandas, numpy, matplotlib"
+  },
+  {
+    "objectID": "pca.html#results",
+    "href": "pca.html#results",
+    "title": "PCA",
+    "section": "Results",
+    "text": "Results\nPCA was used in two places, and the numbered figures further down the page show both.\n\nHow much each reduction keeps\nOn the job posting text, truncated SVD reduced about 7,500 to 7,800 word columns to 100 components. Those 100 keep 57% of the variance for the raw descriptions and 37% once company boilerplate is removed, and the first 10 keep only 30% and 11% (figures 1 and 4). Text spreads its variation over many small directions, so no handful of components sums it up.\nThe Indeed sector table reduces far better. The first component alone explains 82.1% of the variance and the second 12.3%, so two components hold 94% of the movement in all 47 sectors (figure 7).\n\n\nHow to read the relationship between variables and components\nEach principal component is a weighted mix of the original variables, and those weights are called loadings. A large positive loading means the variable rises when the component’s score rises. A large negative loading means the variable moves the opposite way. A loading near zero means the variable has little to do with that component. Looking at the variables with the biggest loadings at each end of a component shows what that component stands for.\nIndeed sectors. Here each loading is the correlation between a sector’s own series and the component, so it runs from −1 to 1. All 47 sectors load positively on PC1, from 0.47 for Physicians & Surgeons to 0.99 for Management, so PC1 is the movement that every sector shares. PC2 sets two groups against each other. The sectors at each end are:\n\n\n\n\nEnd of PC2\nSector\nPC1 loading\nPC2 loading\n\n\n\n\nTop\nPhysicians & Surgeons\n0.473\n0.829\n\n\nTop\nTherapy\n0.526\n0.804\n\n\nTop\nCivil Engineering\n0.654\n0.734\n\n\nTop\nDental\n0.772\n0.521\n\n\nBottom\nIT Infrastructure, Operations & Support\n0.889\n−0.425\n\n\nBottom\nIT Systems & Solutions\n0.880\n−0.430\n\n\nBottom\nMarketing\n0.880\n−0.435\n\n\nBottom\nData & Analytics\n0.854\n−0.489\n\n\nBottom\nSoftware Development\n0.816\n−0.538\n\n\n\n\nA sector near the top of PC2 moved more like healthcare than the average sector did. A sector near the bottom moved like office and tech work. Figure 9 places every sector by these two loadings.\nJob posting text. Here each loading is the weight of one word in a component. The table lists the ten words with the largest weights at each end of the first three components, for the version with company boilerplate removed.\n\n\n\n\n\n\n\n\n\nComponent\nPositive end\nNegative end\n\n\n\n\n1\ndata, technical, ai, product, customer, sales, customers, engineering, systems, work\nnone (every weight is positive)\n\n\n2\nsales, account, customer, business, accounts, enterprise, revenue, strategic, value, executive\nsystems, infrastructure, security, research, production, engineering, design, model, reliability, engineers\n\n\n3\ndata, customer, customers, technical, spark, solutions, architecture, big, science, platform\nlegal, marketing, partner, security, operations, accounting, programs, finance, commercial, market\n\n\n\n\nComponent 1 has only positive weights, because truncated SVD does not centre the data, so it describes the average posting. Component 2 runs from sales words at one end to engineering words at the other. A posting’s score on it shows how much it reads like a sales job rather than an engineering job, which is why sales postings sit at the top of figure 5 and software engineering and research postings at the bottom. Component 3 sets customer-facing data and solutions words against legal, marketing and finance words. On the raw descriptions the same reading turns up company names instead: component 2 runs from Databricks words such as “databricks”, “platform” and “lakebase” to OpenAI and Anthropic words, which is why the raw postings form one arm per company in figure 2.\n\n\nWhat the sector components show over time\nPC1 of the sector table is the hiring cycle that every sector shares. It falls to its lowest point in May 2020, peaks in March 2022, and then falls every month from June 2022 to June 2023 (figure 7). Removing PC1 from each sector leaves only the movement that is special to that sector (figure 8). For the AI-exposed group, the average of what is left drops from 0.464 standard deviations in 2022 to −0.625 in 2023, then recovers only partly, to −0.174 by 2026. The control group stays within 0.08 of zero in every year.\n\n\n\n  \n    \n  \n  \n    1. Explained variance of truncated SVD (raw descriptions)\n    Variance is spread thinly: 10 components explain 30% and 100 explain 57%. Component 1 explains only 1.1% because truncated SVD does not centre the data.\n  \n\n\n\n  \n    \n  \n  \n    2. Postings on the first two SVD components, by role family (raw descriptions)\n    Postings form three arms, one per large company (Databricks, OpenAI, Anthropic), and every role family appears on all three, so position shows the employer, not the job.\n  \n\n\n\n  \n    \n  \n  \n    3. Postings on the first two SVD components, by k-means cluster (raw descriptions)\n    The three large company clusters, Databricks (K7), OpenAI (K8) and Anthropic (K0), each fill one arm, while the eleven smaller clusters overlap near zero.\n  \n\n\n\n  \n    \n  \n  \n    4. Explained variance of truncated SVD (company boilerplate removed)\n    Without boilerplate, variance is even more spread out: 10 components explain 11% and 100 explain 37%.\n  \n\n\n\n  \n    \n  \n  \n    5. Postings on the first two SVD components, by role family (company boilerplate removed)\n    Role families now separate: sales sits at the top, software engineering and research at the bottom, and solutions to the upper right, with forward_deployed in between.\n  \n\n\n\n  \n    \n  \n  \n    6. Postings on the first two SVD components, by k-means cluster (company boilerplate removed)\n    The sales (K3) and engineering (K2) clusters are clearly apart, while the customer-technical (K1) and legal/finance (K0) clusters overlap with the others.\n  \n\n\n\n  \n    \n  \n  \n    7. First principal component of the Indeed sector panel\n    One shared pattern explains 82% of the movement in all 47 sectors. It peaks in March 2022 (11.06) and falls every month from June, reaching 7.88 in November. ChatGPT only came out on 30 November, so nearly all of this fall came before it, and much of the drop in postings hit the whole job market.\n  \n\n\n\n  \n    \n  \n  \n    8. Sector postings with the first component removed\n    Even with the shared pattern removed, the AI-exposed group's mean residual drops from 0.464 in 2022 to −0.625 in 2023 and only partly recovers (−0.461, −0.274, −0.174 through 2026), while the control group stays near zero. Only three sectors fell further than Software Development, and two of them are control sectors (IT Infrastructure, Operations & Support and Media & Communications), so it is unusual but not unique.\n  \n\n\n\n  \n    \n  \n  \n    9. Indeed sectors on the first two principal components\n    All sectors load positively on PC1. On PC2, the top is mostly healthcare (Physicians & Surgeons, Therapy and Dental, with Civil Engineering third), while Software Development and Data & Analytics are the two lowest of all 47 and IT Systems & Solutions is close behind, next to Marketing, Media and IT Infrastructure."
+  },
+  {
+    "objectID": "pca.html#conclusions",
+    "href": "pca.html#conclusions",
+    "title": "PCA",
+    "section": "Conclusions",
+    "text": "Conclusions\nThe fall in tech job postings after 2022 was mostly part of a wider swing that hit every sector. One component explains 82% of the movement in all 47 sectors. It peaked in March 2022 and was falling every month from June, months before ChatGPT came out at the end of November. On timing alone, the slowdown fits wider forces, such as the interest rate rises that began in March 2022, better than it fits the arrival of AI tools.\nThe AI-exposed sectors did fall further than that shared swing explains. With the first component removed, their average dropped to −0.625 standard deviations in 2023 and was still below zero in 2026, while the control sectors stayed close to zero. That extra fall was not unique to them, though. Only three sectors fell further than Software Development once the shared swing was removed, and two of them were control sectors: IT Infrastructure, Operations & Support and Media & Communications. The third, Data & Analytics, is itself AI-exposed. The second component groups these sectors together with Marketing. So the extra decline was shared by a wider band of office and tech work, not only by the three sectors most exposed to AI. PCA can show this pattern, but not what caused it.\nThe job posting text tells a different story about dimensions. Even 100 components keep only 37% to 57% of the variance, so postings do not boil down to a few themes. Component 1 only describes the average posting, so the components that tell postings apart start at component 2. On the raw text they separate companies. Once the company boilerplate is removed, component 2 separates sales work from engineering work. That matches the Clustering page: the clearest line through these jobs runs between selling and building."
   }
 ]
