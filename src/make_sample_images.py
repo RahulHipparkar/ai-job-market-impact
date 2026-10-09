@@ -4,6 +4,7 @@ Input: data/samples/. Output: ten PNG tables in figures/samples/.
 """
 
 import json
+import textwrap
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -17,6 +18,7 @@ MAX_ROWS, MAX_COLS, MAX_CHARS = 6, 6, 40
 TEXT, EDGE = "#1C1C1A", "#DEDEDA"
 FONT_SIZE, DPI = 9, 150
 PAD_IN, ROW_IN, TITLE_IN = 0.08, 0.3, 0.5
+LINE_IN = 0.17  # extra height per wrapped line
 
 # (output name, title, columns) per image; rows are matched on the id column
 HN_RAW = ("hn_raw", "Hacker News: raw", ["id", "by", "time", "thread_month", "parent", "text"])
@@ -65,10 +67,10 @@ def matched(raw: pd.DataFrame, clean: pd.DataFrame, key: str) -> tuple[pd.DataFr
     return take(raw, key, ids), take(clean, key, ids)
 
 
-def truncate(value: str) -> str:
-    """Collapse whitespace, show blanks as NA, and cut text to 40 characters."""
+def truncate(value: str, max_chars: int = MAX_CHARS) -> str:
+    """Collapse whitespace, show blanks as NA, and cut text to max_chars characters."""
     text = " ".join(str(value).split()) or "NA"
-    return text if len(text) <= MAX_CHARS else text[: MAX_CHARS - 1] + "…"
+    return text if len(text) <= max_chars else text[: max_chars - 1] + "…"
 
 
 def text_inches(fig: plt.Figure, text: str, bold: bool) -> float:
@@ -80,16 +82,26 @@ def text_inches(fig: plt.Figure, text: str, bold: bool) -> float:
 
 
 def render(df: pd.DataFrame, name: str, title: str, columns: list[str],
-           max_rows: int = MAX_ROWS, max_cols: int = MAX_COLS) -> Path:
-    """Draw one styled table and save it as a PNG in figures/samples/."""
+           max_rows: int = MAX_ROWS, max_cols: int = MAX_COLS, max_chars: int = MAX_CHARS,
+           wrap_chars: int | None = None) -> Path:
+    """Draw one styled table and save it as a PNG in figures/samples/.
+
+    wrap_chars, if given, wraps long cells onto several lines of at most that many
+    characters, and every body row grows to fit the longest cell.
+    """
     columns = columns[:max_cols]
-    cells = [[truncate(v) for v in row] for row in df[columns].head(max_rows).itertuples(index=False)]
+    cells = [[truncate(v, max_chars) for v in row]
+             for row in df[columns].head(max_rows).itertuples(index=False)]
+    if wrap_chars:
+        cells = [[textwrap.fill(v, wrap_chars) for v in row] for row in cells]
+    lines = max(v.count("\n") + 1 for row in cells for v in row)
 
     fig = plt.figure(dpi=DPI)
     widths = [max([text_inches(fig, col, bold=True)]
                   + [text_inches(fig, row[i], bold=False) for row in cells]) + 2 * PAD_IN
               for i, col in enumerate(columns)]
-    total_w, body_h = sum(widths), ROW_IN * (len(cells) + 1)
+    body_row = ROW_IN + LINE_IN * (lines - 1)
+    total_w, body_h = sum(widths), ROW_IN + body_row * len(cells)
     fig.set_size_inches(total_w, body_h + TITLE_IN)
 
     ax = fig.add_axes((0, 0, 1, body_h / (body_h + TITLE_IN)))
@@ -101,6 +113,7 @@ def render(df: pd.DataFrame, name: str, title: str, columns: list[str],
     for (row, col), cell in table.get_celld().items():
         cell.set_edgecolor(EDGE)
         cell.PAD = PAD_IN / widths[col]
+        cell.set_height(ROW_IN if row == 0 else body_row)
         if row == 0:
             cell.set_facecolor(PALETTE[0])
             cell.get_text().set_color("white")

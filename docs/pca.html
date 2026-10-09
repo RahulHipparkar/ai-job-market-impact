@@ -394,15 +394,20 @@ ul.task-list li input[type="checkbox"] {
 <p>For the sector analysis, the data is Indeed’s daily job postings index for 47 US sectors, where 100 stands for the level on 1 February 2020. Only total postings were used. The daily values were averaged into months, which gives a table of 47 sectors by 79 months, from February 2020 to August 2026. Each sector’s series was then standardised. Some sectors swing much more than others, and without this step those sectors would dominate the result. After standardising, a value of 2 means that month was two standard deviations above that sector’s own average.</p>
 <p>For the text analysis, the input is the same TF-IDF table used for clustering, in both of its versions. It is already numeric, and each posting is already scaled to the same size, so no extra scaling was needed. Labels such as role family and company were kept out of the fit and only used afterwards to colour the plots.</p>
 <div class="sample-figure">
+<p><img src="figures/samples/pca_before_sample.png" class="img-fluid" alt="Table of the same 10 Indeed sectors by the 12 months of 2022, each cell a raw monthly posting index value between about 118 and 229, where 100 is the level on 1 February 2020."></p>
+<p>Before: the same ten sectors and twelve months as raw Indeed index values, where 100 is each sector’s level on 1 February 2020. Each sector’s series is then standardised to mean 0 and standard deviation 1 over all its months, shown in the next table.</p>
+</div>
+<div class="sample-figure">
 <p><img src="figures/samples/pca_input_sample.png" class="img-fluid" alt="Table of 10 Indeed sectors by the 12 months of 2022, each cell a standardised posting index value, mostly between 0.5 and 2.4."></p>
-<p>Ten of the 47 sectors over the twelve months of 2022, after each sector was standardised. The three AI-exposed sectors, Data &amp; Analytics, IT Systems &amp; Solutions and Software Development, are shown with seven control sectors picked at random. A value above zero means that month was above the sector’s own average, and every value shown here is above zero.</p>
+<p>After: ten of the 47 sectors over the twelve months of 2022, after each sector was standardised. The three AI-exposed sectors, Data &amp; Analytics, IT Systems &amp; Solutions and Software Development, are shown with seven control sectors picked at random. A value above zero means that month was above the sector’s own average, and every value shown here is above zero.</p>
 </div>
 <p><strong>Data files</strong></p>
 <ul>
 <li>Raw data: Indeed Hiring Lab’s job postings index, the file <code>US/job_postings_by_sector_US.csv</code> in the <a href="https://github.com/hiring-lab/job_postings_tracker">job_postings_tracker</a> repository on GitHub. The full raw files are not stored in this repository, so a <a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/indeed_sector_raw_sample.csv">20-row raw sample</a> is linked instead.</li>
 <li>Clean data: <a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/processed/indeed_sector.csv">indeed_sector.csv</a>, the cleaned daily index for all 47 sectors that the PCA table is built from.</li>
 <li>Text data for the SVD figures: <a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/processed/ats_final.csv">ats_final.csv</a>, the same cleaned job postings used on the Clustering page.</li>
-<li>PCA input sample: <a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/pca_input_sample.csv">pca_input_sample.csv</a>, shown in the table above.</li>
+<li>Before-transformation sample: <a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/pca_before_sample.csv">pca_before_sample.csv</a>, the same sectors and months as raw index values, shown in the first table above.</li>
+<li>PCA input sample: <a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/pca_input_sample.csv">pca_input_sample.csv</a>, shown in the second table above.</li>
 </ul>
 </section>
 <section id="code" class="level2">

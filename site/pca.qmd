@@ -25,9 +25,15 @@ For the sector analysis, the data is Indeed's daily job postings index for 47 US
 For the text analysis, the input is the same TF-IDF table used for clustering, in both of its versions. It is already numeric, and each posting is already scaled to the same size, so no extra scaling was needed. Labels such as role family and company were kept out of the fit and only used afterwards to colour the plots.
 
 ::: {.sample-figure}
+![](figures/samples/pca_before_sample.png){fig-alt="Table of the same 10 Indeed sectors by the 12 months of 2022, each cell a raw monthly posting index value between about 118 and 229, where 100 is the level on 1 February 2020."}
+
+Before: the same ten sectors and twelve months as raw Indeed index values, where 100 is each sector's level on 1 February 2020. Each sector's series is then standardised to mean 0 and standard deviation 1 over all its months, shown in the next table.
+:::
+
+::: {.sample-figure}
 ![](figures/samples/pca_input_sample.png){fig-alt="Table of 10 Indeed sectors by the 12 months of 2022, each cell a standardised posting index value, mostly between 0.5 and 2.4."}
 
-Ten of the 47 sectors over the twelve months of 2022, after each sector was standardised. The three AI-exposed sectors, Data & Analytics, IT Systems & Solutions and Software Development, are shown with seven control sectors picked at random. A value above zero means that month was above the sector's own average, and every value shown here is above zero.
+After: ten of the 47 sectors over the twelve months of 2022, after each sector was standardised. The three AI-exposed sectors, Data & Analytics, IT Systems & Solutions and Software Development, are shown with seven control sectors picked at random. A value above zero means that month was above the sector's own average, and every value shown here is above zero.
 :::
 
 **Data files**
@@ -35,7 +41,8 @@ Ten of the 47 sectors over the twelve months of 2022, after each sector was stan
 - Raw data: Indeed Hiring Lab's job postings index, the file `US/job_postings_by_sector_US.csv` in the [job_postings_tracker](https://github.com/hiring-lab/job_postings_tracker) repository on GitHub. The full raw files are not stored in this repository, so a [20-row raw sample](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/indeed_sector_raw_sample.csv) is linked instead.
 - Clean data: [indeed_sector.csv](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/processed/indeed_sector.csv), the cleaned daily index for all 47 sectors that the PCA table is built from.
 - Text data for the SVD figures: [ats_final.csv](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/processed/ats_final.csv), the same cleaned job postings used on the Clustering page.
-- PCA input sample: [pca_input_sample.csv](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/pca_input_sample.csv), shown in the table above.
+- Before-transformation sample: [pca_before_sample.csv](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/pca_before_sample.csv), the same sectors and months as raw index values, shown in the first table above.
+- PCA input sample: [pca_input_sample.csv](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/pca_input_sample.csv), shown in the second table above.
 
 ## Code
 

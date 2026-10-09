@@ -25,16 +25,23 @@ The data started with 4,294 postings. Of these, 933 belonged to 357 groups of ne
 A first test showed a problem. Each company repeats the same blocks of text in all of its postings, such as its mission statement, its benefits and its legal notices. These blocks were so strong that the clusters grouped postings by company rather than by job. So a second version of the data was made. Any sentence that appears in at least 10% of one company's postings, and in at least 3 of them, was removed, and so were company names. This cut the typical description roughly in half, from about 6,300 to about 3,300 characters, and left 7,495 word columns. Both versions were clustered, and both are shown in the results below.
 
 ::: {.sample-figure}
+![](figures/samples/clustering_before_sample.png){fig-alt="Table of 10 job postings with four columns: company, job title, role family, and the first 120 characters of the description text. Several descriptions open with the same company introduction, such as three Anthropic postings that all begin About Anthropic."}
+
+Before: ten job postings as they arrive, each a company, a job title, a role family and a block of description text (only the first 120 characters are shown). Company boilerplate is then removed, the role family is set aside, and TF-IDF turns every posting into a row of word weights, shown in the next table.
+:::
+
+::: {.sample-figure}
 ![](figures/samples/clustering_input_sample.png){fig-alt="Table of 10 job postings by 12 terms, each cell a TF-IDF weight between 0 and about 0.25, with many zeros. There is no label column."}
 
-Ten postings and twelve of the 7,495 word columns from the version with company text removed. Each number is a TF-IDF weight. Many cells are zero, because each posting uses only a small share of all the words. There is no label column, only numbers.
+After: the same ten postings and twelve of the 7,495 word columns from the version with company text removed. Each number is a TF-IDF weight. Many cells are zero, because each posting uses only a small share of all the words. There is no label column, only numbers.
 :::
 
 **Data files**
 
 - Raw data: job postings collected from company job boards with the [Apify multi-ATS job scraper](https://apify.com/scrapesage/multi-ats-job-scraper), using [fetch_apify.py](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/fetch_apify.py). The full raw files are about 64 MB and are not stored in the repository, so a [20-row raw sample](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/ats_raw_sample.csv) is linked instead.
 - Clean data: [ats_final.csv](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/processed/ats_final.csv), the 4,294 cleaned postings this page starts from, before near copies are removed.
-- Clustering input sample: [clustering_input_sample.csv](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/clustering_input_sample.csv), shown in the table above.
+- Before-transformation sample: [clustering_before_sample.csv](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/clustering_before_sample.csv), the ten postings as text, shown in the first table above.
+- Clustering input sample: [clustering_input_sample.csv](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/clustering_input_sample.csv), shown in the second table above.
 
 ## Code
 
