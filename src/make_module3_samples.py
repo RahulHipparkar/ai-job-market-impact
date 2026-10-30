@@ -32,6 +32,7 @@ from plotstyle import apply_style
 N_ROWS, N_COLS = 10, 8
 DESCRIPTION_CHARS = 120
 JOB_ID_CHARS = 8  # jobId characters shown in the decision-tree PNG tables
+NOT_IN = "none are in the {} set"  # train/test titles name the other set; main() asserts it
 ID_COLS = ["jobId", "role_family"]
 
 
@@ -121,14 +122,13 @@ def main() -> None:
                           max_chars=DESCRIPTION_CHARS, wrap_chars=DESCRIPTION_CHARS // 2 + 6))
 
     train_sample, test_sample, n_terms = split_samples(df, masked, train, test)
-    for name, part, rows, other in [("nb_train_sample", train_sample, train, "test"),
-                                    ("nb_test_sample", test_sample, test, "training")]:
+    print(f"TF-IDF vocabulary: {n_terms:,} terms (fitted on training rows only); tables show {N_COLS}")
+    for name, part, rows, side, other in [("nb_train_sample", train_sample, train, "training", "test"),
+                                          ("nb_test_sample", test_sample, test, "test", "training")]:
         part.to_csv(SAMPLES_DIR / f"{name}.csv", index=False)
-        side = "training" if name == "nb_train_sample" else "test"
         print("saved", render(formatted(part), name,
-                              f"Naive Bayes {side} set: {N_ROWS} of {len(rows):,} rows, TF-IDF "
-                              f"({N_COLS} of {n_terms:,} terms, fitted on training rows only); "
-                              f"jobIds shared with the {other} set: {len(overlap)}",
+                              f"Naive Bayes {side} set: {N_ROWS} of {len(rows):,} rows, "
+                              f"TF-IDF of the masked text; {NOT_IN.format(other)}",
                               list(part.columns), max_rows=N_ROWS, max_cols=len(part.columns)))
     shown = set(train_sample["jobId"]) & set(test_sample["jobId"])
     print(f"jobId overlap between the two sample tables: {len(shown)}")
@@ -140,11 +140,11 @@ def main() -> None:
              (f"Decision tree input: {N_ROWS} of {len(df):,} postings, tabular features before encoding, "
               "with the role_family label")),
             ("dt_train_sample", train,
-             (f"Decision tree training set: {N_ROWS} of {len(train):,} rows, tabular features; "
-              f"jobIds shared with the test set: {len(overlap)}")),
+             (f"Decision tree training set: {N_ROWS} of {len(train):,} rows, tabular features "
+              f"before encoding; {NOT_IN.format('test')}")),
             ("dt_test_sample", test,
-             (f"Decision tree test set: {N_ROWS} of {len(test):,} rows, tabular features; "
-              f"jobIds shared with the training set: {len(overlap)}"))]:
+             (f"Decision tree test set: {N_ROWS} of {len(test):,} rows, tabular features "
+              f"before encoding; {NOT_IN.format('training')}"))]:
         part = tabular_sample(df, positions)
         part.to_csv(SAMPLES_DIR / f"{name}.csv", index=False)
         tables[name] = (tabular_formatted(part), title)
