@@ -1,0 +1,510 @@
+DATA
+  rows before dedup: 4294
+  near-duplicate groups: 357 (933 rows flagged is_near_dup)
+  group size distribution (copies per group: number of groups):
+    2: 242
+    3: 66
+    4: 24
+    5: 15
+    6: 3
+    7: 2
+    8: 1
+    9: 2
+    10: 1
+    12: 1
+  removed as extra copies: 576
+  rows after dedup: 3718
+  is_junk: column not present in ats_final.csv, nothing to drop
+  three-class subset: 1159 rows
+    forward_deployed: 163
+    solutions: 275
+    software_eng: 721
+
+ROLE-PHRASE MASKING
+  phrases: ['forward deployed', 'forward-deployed', 'fde', 'solutions architect', 'solutions engineer', 'solution architect', 'field engineer', 'field engineering', 'software engineer', 'software engineering', 'deployment strategist', 'deployment engineer', 'fdse', 'fdses', 'forward deployed software engineer', 'forward deployed software engineers', 'sa', 'sas', 'dsa', 'dsas', 'delivery solutions architect', 'delivery solutions architects', 'ssa', 'ssas'] (plus the posting's own title)
+  rows changed: 865 of 1159
+  median characters removed: 38 on changed rows (1.14%), 21 over all rows
+  title rule on description reproduces label: raw 896/1159, stripped 878/1159, masked 680/1159
+  postings containing each phrase (stripped text, exact whole tokens, before masking):
+                                         postings  forward_deployed  solutions  software_eng                                                                                                                                                                                            companies
+    phrase                                                                                                                                                                                                                                                                                       
+    forward deployed                          188               128         29            31                                                  Databricks 60, Palantir 55, Scale AI 24, OpenAI 20, Cohere 10, Anthropic 5, Vercel 4, Sierra 3, Ramp 2, Amplitude 2, Perplexity 1, Figma 1, Asana 1
+    forward-deployed                          188               128         29            31                                                  Databricks 60, Palantir 55, Scale AI 24, OpenAI 20, Cohere 10, Anthropic 5, Vercel 4, Sierra 3, Ramp 2, Amplitude 2, Perplexity 1, Figma 1, Asana 1
+    fde                                        82                64         16             2                                                                                  Databricks 56, OpenAI 6, Palantir 5, Cohere 5, Anthropic 3, Scale AI 2, Vercel 2, Perplexity 1, Ramp 1, Amplitude 1
+    solutions architect                       123                13        110             0                                                                                                           Databricks 108, Cohere 4, OpenAI 3, Vercel 3, Airtable 2, Perplexity 1, Asana 1, Webflow 1
+    solutions engineer                         29                 3         26             0                                                                                     Databricks 17, Scale AI 2, Cohere 2, Asana 2, Anthropic 1, OpenAI 1, Perplexity 1, Webflow 1, Linear 1, Vercel 1
+    solution architect                         15                 0         15             0                                                                                                                                                                              Databricks 14, Vercel 1
+    field engineer                              2                 0          2             0                                                                                                                                                                                             Vercel 2
+    field engineering                          99                12         87             0                                                                                                                                                                 Databricks 93, Vercel 5, Anthropic 1
+    software engineer                         320                14          7           299  Databricks 82, OpenAI 66, Palantir 32, Anthropic 30, Scale AI 24, Harvey 23, Discord 14, Vercel 10, Asana 9, Amplitude 7, Webflow 6, Sierra 4, Cohere 4, Ramp 4, Perplexity 3, Stripe 1, Airtable 1
+    software engineering                      361                90         19           252     Palantir 75, Databricks 63, OpenAI 59, Anthropic 37, Scale AI 33, Harvey 20, Perplexity 13, Discord 11, Stripe 9, Asana 9, Sierra 6, Cohere 6, Ramp 6, Vercel 5, Figma 4, Amplitude 4, Webflow 1
+    deployment strategist                      23                 3         20             0                                                                                                                                                  Palantir 15, Databricks 4, Scale AI 3, Perplexity 1
+    deployment engineer                         0                 0          0             0                                                                                                                                                                                                     
+    fdse                                       25                24          0             1                                                                                                                                                                                          Palantir 25
+    fdses                                      12                11          0             1                                                                                                                                                                                          Palantir 12
+    forward deployed software engineer         10                 9          0             1                                                                                                                                                                                          Palantir 10
+    forward deployed software engineers         6                 6          0             0                                                                                                                                                                                           Palantir 6
+    sa                                         41                 0         41             0                                                                                                                                                                    Databricks 35, Vercel 5, Cohere 1
+    sas                                        17                 0         17             0                                                                                                                                                                              Databricks 15, Cohere 2
+    dsa                                        24                 0         24             0                                                                                                                                                                                        Databricks 24
+    dsas                                       25                 0         25             0                                                                                                                                                                                        Databricks 25
+    delivery solutions architect               22                 0         22             0                                                                                                                                                                                        Databricks 22
+    delivery solutions architects               3                 0          3             0                                                                                                                                                                                         Databricks 3
+    ssa                                        10                 0         10             0                                                                                                                                                                                        Databricks 10
+    ssas                                       20                 0         20             0                                                                                                                                                                                        Databricks 20
+
+SPLIT
+  test_size = 0.2, random_state = 42, stratified
+                    train  test
+  role_family                  
+  forward_deployed    130    33
+  solutions           220    55
+  software_eng        577   144
+  total               927   232
+  jobId overlap: 0
+  LIMITATION: The Module 2 boilerplate sentences were found across all 3,718 postings, including the rows now in the test set, so the stripped and masked variants use a list that saw the test text. Only which sentences to drop was learned this way; the vectoriser and the models are fitted on training rows only.
+
+FEATURES (fitted on training rows only)
+  parameters: {'min_df': 5, 'max_df': 0.8, 'stop_words': 'english', 'token_pattern': '(?u)\\b(?=\\w*[^\\W\\d_])\\w\\w+\\b'}
+  raw      TF-IDF       : train 927 x 4,212, test 232 x 4,212, vocabulary 4,212; letterless tokens 0; 182, 208, 247, 250, 301 in vocabulary: []
+  raw      binary counts: train 927 x 4,212, test 232 x 4,212, vocabulary 4,212; letterless tokens 0; 182, 208, 247, 250, 301 in vocabulary: []
+  stripped TF-IDF       : train 927 x 3,641, test 232 x 3,641, vocabulary 3,641; letterless tokens 0; 182, 208, 247, 250, 301 in vocabulary: []
+  stripped binary counts: train 927 x 3,641, test 232 x 3,641, vocabulary 3,641; letterless tokens 0; 182, 208, 247, 250, 301 in vocabulary: []
+  masked   TF-IDF       : train 927 x 3,631, test 232 x 3,631, vocabulary 3,631; letterless tokens 0; 182, 208, 247, 250, 301 in vocabulary: []
+  masked   binary counts: train 927 x 3,631, test 232 x 3,631, vocabulary 3,631; letterless tokens 0; 182, 208, 247, 250, 301 in vocabulary: []
+
+RESULTS (test set, n = 232)
+
+--- raw (raw descriptions) x MultinomialNB ---
+features: train 927 x 4212, test 232 x 4212
+5-fold stratified CV on the training rows (accuracy, mean +/- sd over folds):
+  alpha 0.01 : 0.8587 +/- 0.0427
+  alpha 0.05 : 0.8533 +/- 0.0460
+  alpha 0.1  : 0.8522 +/- 0.0458
+  alpha 0.5  : 0.8403 +/- 0.0432
+  alpha 1.0  : 0.8500 +/- 0.0322
+selected alpha: 0.01
+TEST ACCURACY at selected alpha 0.01: 0.8362
+majority-class baseline (software_eng): 0.6207
+confusion matrix (rows = true, columns = predicted):
+  predicted         forward_deployed  solutions  software_eng
+  true                                                       
+  forward_deployed                21          3             9
+  solutions                        6         35            14
+  software_eng                     6          0           138
+classification report:
+                    precision    recall  f1-score   support
+  
+  forward_deployed      0.636     0.636     0.636        33
+         solutions      0.921     0.636     0.753        55
+      software_eng      0.857     0.958     0.905       144
+  
+          accuracy                          0.836       232
+         macro avg      0.805     0.744     0.765       232
+      weighted avg      0.841     0.836     0.831       232
+for comparison, alpha = 1.0 (sklearn default): test accuracy 0.8190
+  confusion matrix (rows = true, columns = predicted):
+    predicted         forward_deployed  solutions  software_eng
+    true                                                       
+    forward_deployed                15          6            12
+    solutions                        5         35            15
+    software_eng                     4          0           140
+  classification report:
+                      precision    recall  f1-score   support
+    
+    forward_deployed      0.625     0.455     0.526        33
+           solutions      0.854     0.636     0.729        55
+        software_eng      0.838     0.972     0.900       144
+    
+            accuracy                          0.819       232
+           macro avg      0.772     0.688     0.719       232
+        weighted avg      0.812     0.819     0.807       232
+
+--- raw (raw descriptions) x BernoulliNB ---
+features: train 927 x 4212, test 232 x 4212
+5-fold stratified CV on the training rows (accuracy, mean +/- sd over folds):
+  alpha 0.01 : 0.7713 +/- 0.0274
+  alpha 0.05 : 0.7508 +/- 0.0371
+  alpha 0.1  : 0.7379 +/- 0.0395
+  alpha 0.5  : 0.7185 +/- 0.0288
+  alpha 1.0  : 0.7088 +/- 0.0307
+selected alpha: 0.01
+TEST ACCURACY at selected alpha 0.01: 0.7371
+majority-class baseline (software_eng): 0.6207
+confusion matrix (rows = true, columns = predicted):
+  predicted         forward_deployed  solutions  software_eng
+  true                                                       
+  forward_deployed                18          6             9
+  solutions                        7         36            12
+  software_eng                     7         20           117
+classification report:
+                    precision    recall  f1-score   support
+  
+  forward_deployed      0.562     0.545     0.554        33
+         solutions      0.581     0.655     0.615        55
+      software_eng      0.848     0.812     0.830       144
+  
+          accuracy                          0.737       232
+         macro avg      0.664     0.671     0.666       232
+      weighted avg      0.744     0.737     0.740       232
+for comparison, alpha = 1.0 (sklearn default): test accuracy 0.6940
+  confusion matrix (rows = true, columns = predicted):
+    predicted         forward_deployed  solutions  software_eng
+    true                                                       
+    forward_deployed                17          6            10
+    solutions                        9         36            10
+    software_eng                     7         29           108
+  classification report:
+                      precision    recall  f1-score   support
+    
+    forward_deployed      0.515     0.515     0.515        33
+           solutions      0.507     0.655     0.571        55
+        software_eng      0.844     0.750     0.794       144
+    
+            accuracy                          0.694       232
+           macro avg      0.622     0.640     0.627       232
+        weighted avg      0.717     0.694     0.702       232
+
+--- stripped (company boilerplate removed) x MultinomialNB ---
+features: train 927 x 3641, test 232 x 3641
+5-fold stratified CV on the training rows (accuracy, mean +/- sd over folds):
+  alpha 0.01 : 0.9288 +/- 0.0318
+  alpha 0.05 : 0.9407 +/- 0.0272
+  alpha 0.1  : 0.9418 +/- 0.0289
+  alpha 0.5  : 0.9213 +/- 0.0316
+  alpha 1.0  : 0.8921 +/- 0.0287
+selected alpha: 0.1
+TEST ACCURACY at selected alpha 0.1: 0.9181
+majority-class baseline (software_eng): 0.6207
+confusion matrix (rows = true, columns = predicted):
+  predicted         forward_deployed  solutions  software_eng
+  true                                                       
+  forward_deployed                24          5             4
+  solutions                        3         46             6
+  software_eng                     1          0           143
+classification report:
+                    precision    recall  f1-score   support
+  
+  forward_deployed      0.857     0.727     0.787        33
+         solutions      0.902     0.836     0.868        55
+      software_eng      0.935     0.993     0.963       144
+  
+          accuracy                          0.918       232
+         macro avg      0.898     0.852     0.873       232
+      weighted avg      0.916     0.918     0.915       232
+for comparison, alpha = 1.0 (sklearn default): test accuracy 0.8664
+  confusion matrix (rows = true, columns = predicted):
+    predicted         forward_deployed  solutions  software_eng
+    true                                                       
+    forward_deployed                17          6            10
+    solutions                        2         41            12
+    software_eng                     1          0           143
+  classification report:
+                      precision    recall  f1-score   support
+    
+    forward_deployed      0.850     0.515     0.642        33
+           solutions      0.872     0.745     0.804        55
+        software_eng      0.867     0.993     0.926       144
+    
+            accuracy                          0.866       232
+           macro avg      0.863     0.751     0.790       232
+        weighted avg      0.866     0.866     0.856       232
+
+--- stripped (company boilerplate removed) x BernoulliNB ---
+features: train 927 x 3641, test 232 x 3641
+5-fold stratified CV on the training rows (accuracy, mean +/- sd over folds):
+  alpha 0.01 : 0.9267 +/- 0.0316
+  alpha 0.05 : 0.9321 +/- 0.0340
+  alpha 0.1  : 0.9342 +/- 0.0309
+  alpha 0.5  : 0.9386 +/- 0.0320
+  alpha 1.0  : 0.9332 +/- 0.0396
+selected alpha: 0.5
+TEST ACCURACY at selected alpha 0.5: 0.9353
+majority-class baseline (software_eng): 0.6207
+confusion matrix (rows = true, columns = predicted):
+  predicted         forward_deployed  solutions  software_eng
+  true                                                       
+  forward_deployed                25          5             3
+  solutions                        0         49             6
+  software_eng                     1          0           143
+classification report:
+                    precision    recall  f1-score   support
+  
+  forward_deployed      0.962     0.758     0.847        33
+         solutions      0.907     0.891     0.899        55
+      software_eng      0.941     0.993     0.966       144
+  
+          accuracy                          0.935       232
+         macro avg      0.937     0.881     0.904       232
+      weighted avg      0.936     0.935     0.933       232
+for comparison, alpha = 1.0 (sklearn default): test accuracy 0.9310
+  confusion matrix (rows = true, columns = predicted):
+    predicted         forward_deployed  solutions  software_eng
+    true                                                       
+    forward_deployed                24          5             4
+    solutions                        0         49             6
+    software_eng                     1          0           143
+  classification report:
+                      precision    recall  f1-score   support
+    
+    forward_deployed      0.960     0.727     0.828        33
+           solutions      0.907     0.891     0.899        55
+        software_eng      0.935     0.993     0.963       144
+    
+            accuracy                          0.931       232
+           macro avg      0.934     0.870     0.897       232
+        weighted avg      0.932     0.931     0.929       232
+
+--- masked (boilerplate removed, role phrases masked) x MultinomialNB ---
+features: train 927 x 3631, test 232 x 3631
+5-fold stratified CV on the training rows (accuracy, mean +/- sd over folds):
+  alpha 0.01 : 0.9278 +/- 0.0336
+  alpha 0.05 : 0.9321 +/- 0.0344
+  alpha 0.1  : 0.9332 +/- 0.0327
+  alpha 0.5  : 0.9148 +/- 0.0307
+  alpha 1.0  : 0.8857 +/- 0.0284
+selected alpha: 0.1
+TEST ACCURACY at selected alpha 0.1: 0.9138
+majority-class baseline (software_eng): 0.6207
+confusion matrix (rows = true, columns = predicted):
+  predicted         forward_deployed  solutions  software_eng
+  true                                                       
+  forward_deployed                23          5             5
+  solutions                        3         46             6
+  software_eng                     1          0           143
+classification report:
+                    precision    recall  f1-score   support
+  
+  forward_deployed      0.852     0.697     0.767        33
+         solutions      0.902     0.836     0.868        55
+      software_eng      0.929     0.993     0.960       144
+  
+          accuracy                          0.914       232
+         macro avg      0.894     0.842     0.865       232
+      weighted avg      0.911     0.914     0.911       232
+for comparison, alpha = 1.0 (sklearn default): test accuracy 0.8621
+  confusion matrix (rows = true, columns = predicted):
+    predicted         forward_deployed  solutions  software_eng
+    true                                                       
+    forward_deployed                15          7            11
+    solutions                        1         42            12
+    software_eng                     1          0           143
+  classification report:
+                      precision    recall  f1-score   support
+    
+    forward_deployed      0.882     0.455     0.600        33
+           solutions      0.857     0.764     0.808        55
+        software_eng      0.861     0.993     0.923       144
+    
+            accuracy                          0.862       232
+           macro avg      0.867     0.737     0.777       232
+        weighted avg      0.863     0.862     0.849       232
+
+--- masked (boilerplate removed, role phrases masked) x BernoulliNB ---
+features: train 927 x 3631, test 232 x 3631
+5-fold stratified CV on the training rows (accuracy, mean +/- sd over folds):
+  alpha 0.01 : 0.9267 +/- 0.0316
+  alpha 0.05 : 0.9310 +/- 0.0329
+  alpha 0.1  : 0.9310 +/- 0.0349
+  alpha 0.5  : 0.9353 +/- 0.0345
+  alpha 1.0  : 0.9321 +/- 0.0389
+selected alpha: 0.5
+TEST ACCURACY at selected alpha 0.5: 0.9353
+majority-class baseline (software_eng): 0.6207
+confusion matrix (rows = true, columns = predicted):
+  predicted         forward_deployed  solutions  software_eng
+  true                                                       
+  forward_deployed                25          5             3
+  solutions                        0         49             6
+  software_eng                     1          0           143
+classification report:
+                    precision    recall  f1-score   support
+  
+  forward_deployed      0.962     0.758     0.847        33
+         solutions      0.907     0.891     0.899        55
+      software_eng      0.941     0.993     0.966       144
+  
+          accuracy                          0.935       232
+         macro avg      0.937     0.881     0.904       232
+      weighted avg      0.936     0.935     0.933       232
+for comparison, alpha = 1.0 (sklearn default): test accuracy 0.9310
+  confusion matrix (rows = true, columns = predicted):
+    predicted         forward_deployed  solutions  software_eng
+    true                                                       
+    forward_deployed                24          5             4
+    solutions                        0         49             6
+    software_eng                     1          0           143
+  classification report:
+                      precision    recall  f1-score   support
+    
+    forward_deployed      0.960     0.727     0.828        33
+           solutions      0.907     0.891     0.899        55
+        software_eng      0.935     0.993     0.963       144
+    
+            accuracy                          0.931       232
+           macro avg      0.934     0.870     0.897       232
+        weighted avg      0.932     0.931     0.929       232
+
+ACCURACY SUMMARY
+alpha selected by 5-fold stratified CV on the training rows:
+            MultinomialNB  BernoulliNB
+  raw                0.01         0.01
+  stripped           0.10         0.50
+  masked             0.10         0.50
+HEADLINE test accuracy at the selected alpha:
+            MultinomialNB  BernoulliNB
+  raw              0.8362       0.7371
+  stripped         0.9181       0.9353
+  masked           0.9138       0.9353
+  majority-class baseline (software_eng): 0.6207
+for comparison, test accuracy at alpha = 1.0 (sklearn default):
+            MultinomialNB  BernoulliNB
+  raw              0.8190        0.694
+  stripped         0.8664        0.931
+  masked           0.8621        0.931
+CV accuracy on the training rows (mean, sd over folds):
+                         cv_mean                                   cv_sd                                
+  alpha                     0.01    0.05    0.10    0.50    1.00    0.01    0.05    0.10    0.50    1.00
+  variant  model                                                                                        
+  masked   BernoulliNB    0.9267  0.9310  0.9310  0.9353  0.9321  0.0316  0.0329  0.0349  0.0345  0.0389
+           MultinomialNB  0.9278  0.9321  0.9332  0.9148  0.8857  0.0336  0.0344  0.0327  0.0307  0.0284
+  raw      BernoulliNB    0.7713  0.7508  0.7379  0.7185  0.7088  0.0274  0.0371  0.0395  0.0288  0.0307
+           MultinomialNB  0.8587  0.8533  0.8522  0.8403  0.8500  0.0427  0.0460  0.0458  0.0432  0.0322
+  stripped BernoulliNB    0.9267  0.9321  0.9342  0.9386  0.9332  0.0316  0.0340  0.0309  0.0320  0.0396
+           MultinomialNB  0.9288  0.9407  0.9418  0.9213  0.8921  0.0318  0.0272  0.0289  0.0316  0.0287
+SENSITIVITY ONLY, test accuracy by alpha (not used to choose alpha):
+                          alpha=0.1  alpha=0.5  alpha=1.0
+  variant  model                                         
+  raw      MultinomialNB     0.8276     0.8103     0.8190
+           BernoulliNB       0.7241     0.7026     0.6940
+  stripped MultinomialNB     0.9181     0.9052     0.8664
+           BernoulliNB       0.9310     0.9353     0.9310
+  masked   MultinomialNB     0.9138     0.9009     0.8621
+           BernoulliNB       0.9310     0.9353     0.9310
+
+MULTINOMIALNB (alpha = 0.1), MASKED VARIANT: top 15 words by log P(word | class)
+  forward_deployed: customer (-4.700), data (-5.059), customers (-5.090), ai (-5.126), end (-5.253), work (-5.377), engineering (-5.440), delivery (-5.517), production (-5.520), projects (-5.579), product (-5.600), solutions (-5.632), impact (-5.743), applications (-5.777), deployment (-5.817)
+  solutions: data (-4.689), customer (-4.761), customers (-5.052), sales (-5.089), account (-5.305), platform (-5.540), product (-5.550), solutions (-5.589), strategy (-5.692), ai (-5.697), engineering (-5.704), accounts (-5.735), business (-5.773), architecture (-5.776), complex (-5.823)
+  software_eng: infrastructure (-5.013), data (-5.173), ai (-5.326), product (-5.454), scale (-5.615), platform (-5.653), security (-5.680), building (-5.691), engineering (-5.730), work (-5.757), design (-5.797), products (-5.813), end (-5.927), performance (-5.932), engineers (-5.933)
+
+LOG-PROBABILITY LEAD OVER THE NEXT MOST LIKELY CLASS (masked MultinomialNB; training rows; df = training postings of the class containing the word, cos = distinct companies among them)
+training postings per company and class:
+  role_family    forward_deployed  solutions  software_eng
+  company_clean                                           
+  Databricks                   48        146           116
+  OpenAI                       11         14           131
+  Anthropic                     3          8            87
+  Palantir                     37         11            30
+  Scale AI                     12          4            35
+  Cohere                       15          6            15
+  Harvey                        0          2            30
+  Sierra                        0          0            32
+  Perplexity                    1          0            23
+  Vercel                        1          6            13
+  Asana                         1          4            12
+  Discord                       0          0            17
+  Ramp                          0          7            10
+  Figma                         1          5             7
+  Airtable                      0          4             2
+  Stripe                        0          0             6
+  Webflow                       0          1             5
+  Amplitude                     0          0             6
+  Linear                        0          2             0
+  distinct companies per class: {'forward_deployed': 10, 'solutions': 14, 'software_eng': 18}
+vocabulary words eligible, and meeting the company-breadth floor:
+                                  forward_deployed  solutions  software_eng
+  vocabulary                                  3631       3631          3631
+  in class (df >= 1)                          2201       2717          3469
+  in class, companies >= 3                     745       1235          2721
+  favouring the class (lead > 0)               894       1031          1705
+  favouring, companies >= 3                    304        531          1448
+COMPANY-BREADTH list (>= 3 distinct companies; the list in nb_lead_words_masked.png):
+  forward_deployed: delivered (+2.26, df 35, 4 cos), embed (+2.04, df 48, 8 cos), country (+2.01, df 7, 3 cos), measurable (+2.00, df 45, 4 cos), exceed (+1.95, df 10, 3 cos), empathy (+1.76, df 26, 3 cos), stakes (+1.71, df 42, 5 cos), codify (+1.70, df 12, 4 cos), priorities (+1.68, df 58, 7 cos), externally (+1.64, df 25, 4 cos), secret (+1.63, df 19, 4 cos), actionable (+1.61, df 29, 5 cos), client (+1.59, df 52, 4 cos), hired (+1.59, df 5, 3 cos), healthcare (+1.58, df 24, 6 cos)
+  solutions: champions (+3.21, df 48, 3 cos), demo (+2.95, df 53, 6 cos), workshops (+2.92, df 74, 8 cos), demonstrations (+2.92, df 22, 4 cos), prospects (+2.80, df 16, 4 cos), proofs (+2.73, df 53, 3 cos), makers (+2.68, df 27, 4 cos), demos (+2.60, df 52, 9 cos), presentations (+2.46, df 24, 6 cos), win (+2.44, df 30, 4 cos), compelling (+2.40, df 23, 6 cos), specialist (+2.34, df 25, 4 cos), consumption (+2.34, df 51, 3 cos), selling (+2.32, df 42, 4 cos), account (+2.31, df 129, 9 cos)
+  software_eng: query (+2.78, df 37, 11 cos), fleet (+2.71, df 54, 10 cos), compute (+2.54, df 112, 13 cos), thousands (+2.53, df 65, 14 cos), experiences (+2.49, df 113, 16 cos), device (+2.48, df 34, 9 cos), bs (+2.45, df 60, 3 cos), detection (+2.43, df 69, 14 cos), researchers (+2.42, df 75, 7 cos), especially (+2.39, df 57, 13 cos), surfaces (+2.37, df 45, 11 cos), caching (+2.35, df 28, 8 cos), silicon (+2.31, df 23, 3 cos), cluster (+2.31, df 34, 9 cos), chatgpt (+2.30, df 43, 4 cos)
+DOCUMENT-FREQUENCY list (>= 10 training postings of the class):
+  forward_deployed: conflicts (+3.37, df 26, 1 cos), immersion (+3.37, df 26, 1 cos), bootstrap (+3.26, df 26, 1 cos), coder (+3.14, df 18, 2 cos), billable (+2.95, df 30, 1 cos), wrangling (+2.94, df 14, 1 cos), wildfire (+2.90, df 15, 1 cos), experiential (+2.89, df 13, 1 cos), teachers (+2.89, df 13, 1 cos), entrepreneur (+2.76, df 10, 1 cos), food (+2.70, df 11, 1 cos), saving (+2.69, df 11, 1 cos), relations (+2.65, df 32, 2 cos), adaptability (+2.53, df 27, 2 cos), white (+2.52, df 28, 2 cos)
+  solutions: champions (+3.21, df 48, 3 cos), ex (+3.04, df 15, 2 cos), specialization (+3.04, df 24, 2 cos), demo (+2.95, df 53, 6 cos), workshops (+2.92, df 74, 8 cos), demonstrations (+2.92, df 22, 4 cos), screen (+2.88, df 19, 1 cos), prospects (+2.80, df 16, 4 cos), archetype (+2.76, df 15, 1 cos), territory (+2.76, df 33, 2 cos), seminars (+2.73, df 27, 1 cos), proofs (+2.73, df 53, 3 cos), oltp (+2.72, df 24, 1 cos), makers (+2.68, df 27, 4 cos), deeper (+2.66, df 23, 2 cos)
+  software_eng: query (+2.78, df 37, 11 cos), fleet (+2.71, df 54, 10 cos), compute (+2.54, df 112, 13 cos), thousands (+2.53, df 65, 14 cos), experiences (+2.49, df 113, 16 cos), device (+2.48, df 34, 9 cos), bs (+2.45, df 60, 3 cos), detection (+2.43, df 69, 14 cos), researchers (+2.42, df 75, 7 cos), especially (+2.39, df 57, 13 cos), surfaces (+2.37, df 45, 11 cos), caching (+2.35, df 28, 8 cos), silicon (+2.31, df 23, 3 cos), cluster (+2.31, df 34, 9 cos), chatgpt (+2.30, df 43, 4 cos)
+DIAGNOSTIC, UNFILTERED list (no floor; this is the list that surfaced fdse and the pay-band numbers):
+  forward_deployed: conflicts (+3.37, df 26, 1 cos), immersion (+3.37, df 26, 1 cos), bootstrap (+3.26, df 26, 1 cos), coder (+3.14, df 18, 2 cos), billable (+2.95, df 30, 1 cos), wrangling (+2.94, df 14, 1 cos), entrusted (+2.94, df 6, 1 cos), wildfire (+2.90, df 15, 1 cos), experiential (+2.89, df 13, 1 cos), teachers (+2.89, df 13, 1 cos), entrepreneur (+2.76, df 10, 1 cos), flexing (+2.73, df 5, 1 cos), food (+2.70, df 11, 1 cos), calm (+2.69, df 9, 2 cos), aspire (+2.69, df 9, 1 cos)
+  solutions: champions (+3.21, df 48, 3 cos), ex (+3.04, df 15, 2 cos), specialization (+3.04, df 24, 2 cos), demo (+2.95, df 53, 6 cos), workshops (+2.92, df 74, 8 cos), demonstrations (+2.92, df 22, 4 cos), screen (+2.88, df 19, 1 cos), prospects (+2.80, df 16, 4 cos), archetype (+2.76, df 15, 1 cos), territory (+2.76, df 33, 2 cos), seminars (+2.73, df 27, 1 cos), proofs (+2.73, df 53, 3 cos), oltp (+2.72, df 24, 1 cos), makers (+2.68, df 27, 4 cos), deeper (+2.66, df 23, 2 cos)
+  software_eng: query (+2.78, df 37, 11 cos), fleet (+2.71, df 54, 10 cos), compute (+2.54, df 112, 13 cos), thousands (+2.53, df 65, 14 cos), experiences (+2.49, df 113, 16 cos), device (+2.48, df 34, 9 cos), bs (+2.45, df 60, 3 cos), detection (+2.43, df 69, 14 cos), researchers (+2.42, df 75, 7 cos), especially (+2.39, df 57, 13 cos), surfaces (+2.37, df 45, 11 cos), caching (+2.35, df 28, 8 cos), silicon (+2.31, df 23, 3 cos), cluster (+2.31, df 34, 9 cos), chatgpt (+2.30, df 43, 4 cos)
+
+PAY-BAND NUMBER TOKENS (still in the text; excluded from the vocabulary by the token pattern)
+  '182': 25 postings (train 18, test 7)
+    by class: {'forward_deployed': 19, 'solutions': 1, 'software_eng': 5}
+    by company: {'Databricks': 25}
+    [Databricks | forward_deployed | AI Engineer - FDE (Forward Deployed Engineer) - U.S. Federal Sector] ...nce every 4-8 weeks to see customers (as needed) $182,000-$250,208 USD...
+    [Databricks | solutions | Deployment Strategist] ...s, and the ability/interest to travel up to 50%. $182,000-$250,208 USD $182,000-$250,208 USD $182,000-$...
+    [Databricks | forward_deployed | Sr. Delivery Partner Manager, FDE] ...,000-$214,500 USD $140,400-$193,050 USD $132,600-$182,400 USD $124,800-$171,600 USD...
+  '208': 22 postings (train 17, test 5)
+    by class: {'forward_deployed': 17, 'solutions': 1, 'software_eng': 4}
+    by company: {'Databricks': 18, 'Vercel': 4}
+    [Databricks | forward_deployed | AI Engineer - FDE (Forward Deployed Engineer) - U.S. Federal Sector] ... weeks to see customers (as needed) $182,000-$250,208 USD...
+    [Databricks | solutions | Deployment Strategist] ...ility/interest to travel up to 50%. $182,000-$250,208 USD $182,000-$250,208 USD $182,000-$250,208 USD $...
+    [Databricks | forward_deployed | Sr. Forward Deployed Engineer] ...ers 20% of the time • Certification $182,000-$250,208 USD $182,000-$250,208 USD $182,000-$250,208 USD $...
+  '247': 36 postings (train 29, test 7)
+    by class: {'forward_deployed': 0, 'solutions': 31, 'software_eng': 5}
+    by company: {'Databricks': 36}
+    [Databricks | solutions | Delivery Solutions Architect - Communications, Media, Entertainment & Games] ...Ability to travel up to 30% when needed $180,000-$247,500 USD...
+    [Databricks | solutions | Delivery Solutions Architect - Digital Native Business] ...ence • Can travel up to 30% when needed $180,000-$247,500 USD...
+    [Databricks | solutions | Delivery Solutions Architect - Financial Services] ...ence • Can travel up to 30% when needed $180,000-$247,500 USD...
+  '250': 34 postings (train 27, test 7)
+    by class: {'forward_deployed': 18, 'solutions': 2, 'software_eng': 14}
+    by company: {'Databricks': 24, 'Scale AI': 5, 'Harvey': 2, 'Palantir': 1, 'OpenAI': 1, 'Airtable': 1}
+    [Palantir | software_eng | Privacy and Civil Liberties Software Engineer, Internship] ...ary range for this position is estimated to be $6,250/month....
+    [OpenAI | solutions | Lead, Corporate Technical Accounting and Strategic Transactions] ...r. - Apply relevant guidance across ASC 205, 230, 250, and 260; ASC 320, 321, 323, and 326; ASC 350, in...
+    [Scale AI | forward_deployed | Forward Deployed Engineer, GenAI] ...ce with cloud-based infrastructure. $179,400-$224,250 USD...
+  '301': 25 postings (train 21, test 4)
+    by class: {'forward_deployed': 0, 'solutions': 25, 'software_eng': 0}
+    by company: {'Databricks': 25}
+    [Databricks | solutions | Delivery Solutions Architect - Retail] ...ence • Can travel up to 30% when needed $219,100-$301,300 USD...
+    [Databricks | solutions | Senior Solutions Architect - Consumer Product Goods] ... Nice to have: Certification LI #Remote $219,100-$301,300 USD...
+    [Databricks | solutions | Solutions Architect - Global Telecommunications] ...h! Presentation → Reference Check #CMEG $219,100-$301,300 USD $219,100-$301,300 USD $219,100-$301,300 U...
+  postings containing the band '$182,000-$250,208 USD': 18 ({'forward_deployed': 17, 'solutions': 1}; companies ['Databricks'])
+    repeats per posting: median 4
+
+DIAGNOSTIC: masked-variant test accuracy by company
+              n_test  forward_deployed  solutions  software_eng  accuracy MultinomialNB (alpha = 0.1)  accuracy BernoulliNB (alpha = 0.5)  software_eng share
+  company                                                                                                                                                    
+  Databricks      75                13         30            32                                 0.933                               0.933               0.427
+  OpenAI          45                 6          5            34                                 0.933                               0.933               0.756
+  Anthropic       14                 0          0            14                                 1.000                               1.000               1.000
+  Palantir        14                 5          2             7                                 0.857                               0.857               0.500
+  Scale AI        11                 3          2             6                                 0.727                               0.909               0.545
+  Harvey           9                 0          2             7                                 1.000                               1.000               0.778
+  Ramp             9                 1          1             7                                 0.889                               0.889               0.778
+  Cohere           8                 3          5             0                                 0.750                               1.000               0.000
+  Stripe           7                 0          0             7                                 1.000                               1.000               1.000
+  Asana            7                 0          2             5                                 1.000                               1.000               0.714
+  Vercel           7                 1          1             5                                 0.857                               1.000               0.714
+  Sierra           6                 0          1             5                                 0.833                               0.833               0.833
+  Discord          5                 0          0             5                                 1.000                               1.000               1.000
+  Amplitude        5                 1          0             4                                 0.800                               0.800               0.800
+  Figma            4                 0          1             3                                 1.000                               1.000               0.750
+  Webflow          3                 0          2             1                                 0.667                               0.667               0.333
+  Airtable         2                 0          1             1                                 1.000                               1.000               0.500
+  Perplexity       1                 0          0             1                                 1.000                               1.000               1.000
+
+10 MOST CONFIDENTLY WRONG TEST POSTINGS (masked text, first 150 characters)
+  1. true software_eng -> predicted forward_deployed (p = 0.9991) | Palantir | Year at Palantir - Software Engineer, Internship | jobId 655f9937-a4ce-4e7d-80e2-a6659af07329
+     "Year We've had surging demand from undergrads who want to get into the arena faster. You've told us you can't sit in lectures while the biggest story "
+  2. true solutions -> predicted software_eng (p = 0.9967) | Webflow | Staff DevOps Engineer, Delivery Loop | jobId 7942745
+     "We're hiring a Staff , Developer Productivity to define and drive the future of how engineers build, test, and deliver software. In this role, you'll "
+  3. true solutions -> predicted software_eng (p = 0.9777) | Databricks | Sr Technical Solutions Engineering | jobId 8589172002
+     'Founded by engineers - and customer obsessed - we leap at every opportunity to solve technical challenges, from designing next-gen UI/UX for interfaci'
+  4. true forward_deployed -> predicted software_eng (p = 0.9760) | OpenAI | Forward Deployed Security Engineer | jobId 89d61ae8-1ce1-4187-9edd-da8029979e41
+     'Security is at the foundation of mission to ensure that artificial general intelligence benefits all of humanity. The Security team protects technolog'
+  5. true forward_deployed -> predicted solutions (p = 0.9684) | Databricks | Senior Field Technical Program Manager, FDE | jobId 8554840002
+     'CSQ427R33 At , our core principles are at the heart of everything we do; creating a culture of proactiveness and a customer-centric mindset guides us '
+  6. true forward_deployed -> predicted solutions (p = 0.9524) | Palantir | Deployment Strategist - Korea Forward Deployed | jobId 1a53939d-8ffa-4570-b31a-6d0bc53fdb59
+     "NOTE: Although this position is in support of our US Government work, this role is located in Seoul, South Korea. What We're About At its core, the ro"
+  7. true forward_deployed -> predicted solutions (p = 0.9007) | Databricks | Sr. Delivery Partner Manager, FDE | jobId 8611106002
+     'CSQ427R47 At we work on some of the most complex distributed processing and machine learning problems in the world and our customers challenge us with'
+  8. true forward_deployed -> predicted software_eng (p = 0.8903) | Scale AI | Staff Frontier Agents Engineer (Forward Deployed Engineering) | jobId 4694865005
+     "About is the data foundation for AI, helping organizations build and deploy reliable production AI applications. We partner with the world's leading e"
+  9. true solutions -> predicted software_eng (p = 0.8668) | OpenAI | Support Program Manager, Support Delivery | jobId 862ffe2a-8261-4c46-8ed4-5178567ac7e0
+     "User Operations team shepherds our customer's adoption of AI and ensures that our customers' product experience is nothing short of exceptional. We ar"
+  10. true solutions -> predicted software_eng (p = 0.7486) | OpenAI | Commissioning Program Manager, Infrastructure Delivery | jobId 8626eb56-6e29-427d-9e12-d1a8078b8e4d
+     'Industrial Compute organization is building the infrastructure required to support the next generation of frontier AI systems. Through a combination o'

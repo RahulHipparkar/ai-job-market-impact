@@ -1,0 +1,842 @@
+DATA
+  rows 1159, train 927, test 232, jobId overlap 0
+  never used as features: role_family (the target); title (the label is parsed from it); seniority (parsed from the title by the same keyword rule); is_near_dup (near-duplicate flag; its key includes the normalised title)
+  tree1 (all tabular features): ['department', 'company_clean', 'location_clean', 'workplaceType', 'salary_annual_min', 'salary_annual_max', 'desc_len', 'location_count', 'is_multi_location']
+  tree2 (department removed): ['company_clean', 'location_clean', 'workplaceType', 'salary_annual_min', 'salary_annual_max', 'desc_len', 'location_count', 'is_multi_location']
+  tree3 (department and company removed): ['location_clean', 'workplaceType', 'salary_annual_min', 'salary_annual_max', 'desc_len', 'location_count', 'is_multi_location']
+  tree4 (masked text TF-IDF): masked-text TF-IDF
+
+MISSING VALUES (% of rows) AND HANDLING
+                     all rows  train   test  distinct values
+  department             0.00   0.00   0.00              122
+  company_clean          0.00   0.00   0.00               19
+  location_clean         0.09   0.00   0.43               92
+  workplaceType         62.12  62.57  60.34                3
+  salary_annual_min     68.77  69.15  67.24               68
+  salary_annual_max     68.77  69.15  67.24               67
+  desc_len               0.00   0.00   0.00             1013
+  location_count         0.00   0.00   0.00               10
+  is_multi_location      0.00   0.00   0.00                2
+  categorical: missing -> its own category 'missing', then one-hot (fitted on training rows; unseen test categories -> all-zero columns)
+  numeric: median imputation (fitted on training rows); one indicator 'salary missing' (salary min and max are missing on the same rows)
+  test rows with a category unseen in training: {'department': 16, 'company_clean': 0, 'location_clean': 7, 'workplaceType': 0}
+  suspect salaries set to missing: 4; non-USD salaries kept: {'GBP': 11}
+
+FEATURES AFTER ENCODING
+  tree1: 222
+  tree2: 115
+  tree3: 96
+  tree4: 3631
+
+DEPTH SELECTION (CV accuracy, mean over folds)
+  max_depth             1       2       3       4       5       6       8      10      12      15      20    none
+  tree  criterion                                                                                                
+  tree1 entropy    0.6376  0.7044  0.7508  0.7788  0.7810  0.8295  0.8468  0.8565  0.8792  0.8802  0.8878  0.8867
+        gini       0.6376  0.7163  0.7605  0.7810  0.7907  0.8274  0.8468  0.8576  0.8845  0.8878  0.8888  0.8910
+  tree2 entropy    0.6224  0.6947  0.7324  0.7281  0.7540  0.7766  0.7907  0.7939  0.7950  0.7799  0.7831  0.7831
+        gini       0.6224  0.6925  0.7259  0.7281  0.7486  0.7734  0.7950  0.7950  0.8015  0.7939  0.7907  0.7896
+  tree3 entropy    0.6224  0.5922  0.6494  0.6731  0.6623  0.6817  0.7141  0.7292  0.7292  0.7206  0.7335  0.7270
+        gini       0.6224  0.5965  0.6386  0.6753  0.6655  0.6763  0.7130  0.7292  0.7325  0.7238  0.7174  0.7249
+  tree4 entropy    0.7962  0.8641  0.8706  0.8846  0.8900  0.8943  0.8857  0.8911  0.8922  0.8922  0.8922  0.8922
+        gini       0.7962  0.8706  0.8749  0.8932  0.8965  0.9008  0.9018  0.9008  0.9029  0.9019  0.8911  0.8911
+
+SUMMARY (test set, n = 232)
+  majority-class baseline (software_eng): 0.6207
+                  max_depth (CV) fitted depth leaves features train accuracy test accuracy train - test  macro F1
+  tree  criterion                                                                                                
+  tree1 gini                none           35    118      222            1.0      0.922414     0.077586  0.895533
+        entropy               20           20     92      222       0.979504      0.887931     0.091573  0.853476
+  tree2 gini                  12           12    131      115        0.93959      0.767241     0.172349  0.648304
+        entropy               12           12    133      115       0.934196       0.75431     0.179886  0.633159
+  tree3 gini                  12           12    133       96       0.899676       0.75431     0.145366  0.624168
+        entropy               20           20    235       96       0.989213      0.715517     0.273695  0.622117
+  tree4 gini                  12           12     37     3631       0.990291      0.887931      0.10236  0.857069
+        entropy                6            6     34     3631       0.980583       0.87931     0.101272  0.835646
+
+TREE 4 VERSUS MASKED NAIVE BAYES (same masked-text TF-IDF features)
+  tree 4 (masked text TF-IDF), criterion = gini: test accuracy 0.8879
+  tree 4 (masked text TF-IDF), criterion = entropy: test accuracy 0.8793
+  masked MultinomialNB (alpha = 0.1): 0.9138
+  masked BernoulliNB (alpha = 0.5): 0.9353
+
+--- tree1 (all tabular features) x criterion = gini ---
+features after encoding: 222
+5-fold stratified CV on the training rows (accuracy, mean +/- sd; mean training-fold accuracy):
+  max_depth 1    : 0.6376 +/- 0.0299   (train folds 0.6389)
+  max_depth 2    : 0.7163 +/- 0.0312   (train folds 0.7152)
+  max_depth 3    : 0.7605 +/- 0.0320   (train folds 0.7611)
+  max_depth 4    : 0.7810 +/- 0.0349   (train folds 0.7883)
+  max_depth 5    : 0.7907 +/- 0.0421   (train folds 0.8053)
+  max_depth 6    : 0.8274 +/- 0.0391   (train folds 0.8412)
+  max_depth 8    : 0.8468 +/- 0.0330   (train folds 0.8770)
+  max_depth 10   : 0.8576 +/- 0.0350   (train folds 0.8991)
+  max_depth 12   : 0.8845 +/- 0.0315   (train folds 0.9237)
+  max_depth 15   : 0.8878 +/- 0.0295   (train folds 0.9442)
+  max_depth 20   : 0.8888 +/- 0.0425   (train folds 0.9717)
+  max_depth none : 0.8910 +/- 0.0433   (train folds 1.0000)
+selected max_depth: none (fitted depth 35, 118 leaves)
+TRAIN ACCURACY: 1.0000   TEST ACCURACY: 0.9224   gap: 0.0776   macro F1: 0.8955
+majority-class baseline (software_eng): 0.6207
+confusion matrix (rows = true, columns = predicted):
+  predicted         forward_deployed  solutions  software_eng
+  true                                                       
+  forward_deployed                26          2             5
+  solutions                        1         49             5
+  software_eng                     2          3           139
+classification report:
+                    precision    recall  f1-score   support
+  
+  forward_deployed      0.897     0.788     0.839        33
+         solutions      0.907     0.891     0.899        55
+      software_eng      0.933     0.965     0.949       144
+  
+          accuracy                          0.922       232
+         macro avg      0.912     0.881     0.896       232
+      weighted avg      0.922     0.922     0.921       232
+
+--- tree1 (all tabular features) x criterion = entropy ---
+features after encoding: 222
+5-fold stratified CV on the training rows (accuracy, mean +/- sd; mean training-fold accuracy):
+  max_depth 1    : 0.6376 +/- 0.0299   (train folds 0.6389)
+  max_depth 2    : 0.7044 +/- 0.0240   (train folds 0.7055)
+  max_depth 3    : 0.7508 +/- 0.0254   (train folds 0.7535)
+  max_depth 4    : 0.7788 +/- 0.0339   (train folds 0.7856)
+  max_depth 5    : 0.7810 +/- 0.0345   (train folds 0.7896)
+  max_depth 6    : 0.8295 +/- 0.0383   (train folds 0.8463)
+  max_depth 8    : 0.8468 +/- 0.0438   (train folds 0.8816)
+  max_depth 10   : 0.8565 +/- 0.0396   (train folds 0.9094)
+  max_depth 12   : 0.8792 +/- 0.0325   (train folds 0.9296)
+  max_depth 15   : 0.8802 +/- 0.0316   (train folds 0.9528)
+  max_depth 20   : 0.8878 +/- 0.0425   (train folds 0.9817)
+  max_depth none : 0.8867 +/- 0.0391   (train folds 1.0000)
+selected max_depth: 20 (fitted depth 20, 92 leaves)
+TRAIN ACCURACY: 0.9795   TEST ACCURACY: 0.8879   gap: 0.0916   macro F1: 0.8535
+majority-class baseline (software_eng): 0.6207
+confusion matrix (rows = true, columns = predicted):
+  predicted         forward_deployed  solutions  software_eng
+  true                                                       
+  forward_deployed                25          2             6
+  solutions                        1         45             9
+  software_eng                     5          3           136
+classification report:
+                    precision    recall  f1-score   support
+  
+  forward_deployed      0.806     0.758     0.781        33
+         solutions      0.900     0.818     0.857        55
+      software_eng      0.901     0.944     0.922       144
+  
+          accuracy                          0.888       232
+         macro avg      0.869     0.840     0.853       232
+      weighted avg      0.887     0.888     0.887       232
+
+--- tree2 (department removed) x criterion = gini ---
+features after encoding: 115
+5-fold stratified CV on the training rows (accuracy, mean +/- sd; mean training-fold accuracy):
+  max_depth 1    : 0.6224 +/- 0.0010   (train folds 0.6224)
+  max_depth 2    : 0.6925 +/- 0.0156   (train folds 0.6955)
+  max_depth 3    : 0.7259 +/- 0.0405   (train folds 0.7354)
+  max_depth 4    : 0.7281 +/- 0.0452   (train folds 0.7689)
+  max_depth 5    : 0.7486 +/- 0.0334   (train folds 0.8045)
+  max_depth 6    : 0.7734 +/- 0.0387   (train folds 0.8314)
+  max_depth 8    : 0.7950 +/- 0.0434   (train folds 0.8784)
+  max_depth 10   : 0.7950 +/- 0.0336   (train folds 0.9083)
+  max_depth 12   : 0.8015 +/- 0.0301   (train folds 0.9393)
+  max_depth 15   : 0.7939 +/- 0.0227   (train folds 0.9690)
+  max_depth 20   : 0.7907 +/- 0.0268   (train folds 0.9954)
+  max_depth none : 0.7896 +/- 0.0296   (train folds 1.0000)
+selected max_depth: 12 (fitted depth 12, 131 leaves)
+TRAIN ACCURACY: 0.9396   TEST ACCURACY: 0.7672   gap: 0.1723   macro F1: 0.6483
+majority-class baseline (software_eng): 0.6207
+confusion matrix (rows = true, columns = predicted):
+  predicted         forward_deployed  solutions  software_eng
+  true                                                       
+  forward_deployed                12          9            12
+  solutions                        5         33            17
+  software_eng                     6          5           133
+classification report:
+                    precision    recall  f1-score   support
+  
+  forward_deployed      0.522     0.364     0.429        33
+         solutions      0.702     0.600     0.647        55
+      software_eng      0.821     0.924     0.869       144
+  
+          accuracy                          0.767       232
+         macro avg      0.682     0.629     0.648       232
+      weighted avg      0.750     0.767     0.754       232
+
+--- tree2 (department removed) x criterion = entropy ---
+features after encoding: 115
+5-fold stratified CV on the training rows (accuracy, mean +/- sd; mean training-fold accuracy):
+  max_depth 1    : 0.6224 +/- 0.0010   (train folds 0.6224)
+  max_depth 2    : 0.6947 +/- 0.0138   (train folds 0.6947)
+  max_depth 3    : 0.7324 +/- 0.0390   (train folds 0.7295)
+  max_depth 4    : 0.7281 +/- 0.0446   (train folds 0.7621)
+  max_depth 5    : 0.7540 +/- 0.0392   (train folds 0.7980)
+  max_depth 6    : 0.7766 +/- 0.0476   (train folds 0.8320)
+  max_depth 8    : 0.7907 +/- 0.0445   (train folds 0.8792)
+  max_depth 10   : 0.7939 +/- 0.0478   (train folds 0.9107)
+  max_depth 12   : 0.7950 +/- 0.0391   (train folds 0.9350)
+  max_depth 15   : 0.7799 +/- 0.0437   (train folds 0.9676)
+  max_depth 20   : 0.7831 +/- 0.0314   (train folds 0.9976)
+  max_depth none : 0.7831 +/- 0.0314   (train folds 1.0000)
+selected max_depth: 12 (fitted depth 12, 133 leaves)
+TRAIN ACCURACY: 0.9342   TEST ACCURACY: 0.7543   gap: 0.1799   macro F1: 0.6332
+majority-class baseline (software_eng): 0.6207
+confusion matrix (rows = true, columns = predicted):
+  predicted         forward_deployed  solutions  software_eng
+  true                                                       
+  forward_deployed                11         12            10
+  solutions                        5         36            14
+  software_eng                     8          8           128
+classification report:
+                    precision    recall  f1-score   support
+  
+  forward_deployed      0.458     0.333     0.386        33
+         solutions      0.643     0.655     0.649        55
+      software_eng      0.842     0.889     0.865       144
+  
+          accuracy                          0.754       232
+         macro avg      0.648     0.626     0.633       232
+      weighted avg      0.740     0.754     0.745       232
+
+--- tree3 (department and company removed) x criterion = gini ---
+features after encoding: 96
+5-fold stratified CV on the training rows (accuracy, mean +/- sd; mean training-fold accuracy):
+  max_depth 1    : 0.6224 +/- 0.0010   (train folds 0.6224)
+  max_depth 2    : 0.5965 +/- 0.0373   (train folds 0.6311)
+  max_depth 3    : 0.6386 +/- 0.0472   (train folds 0.6758)
+  max_depth 4    : 0.6753 +/- 0.0620   (train folds 0.7058)
+  max_depth 5    : 0.6655 +/- 0.0605   (train folds 0.7195)
+  max_depth 6    : 0.6763 +/- 0.0605   (train folds 0.7468)
+  max_depth 8    : 0.7130 +/- 0.0565   (train folds 0.8074)
+  max_depth 10   : 0.7292 +/- 0.0534   (train folds 0.8576)
+  max_depth 12   : 0.7325 +/- 0.0244   (train folds 0.9018)
+  max_depth 15   : 0.7238 +/- 0.0422   (train folds 0.9434)
+  max_depth 20   : 0.7174 +/- 0.0391   (train folds 0.9779)
+  max_depth none : 0.7249 +/- 0.0392   (train folds 1.0000)
+selected max_depth: 12 (fitted depth 12, 133 leaves)
+TRAIN ACCURACY: 0.8997   TEST ACCURACY: 0.7543   gap: 0.1454   macro F1: 0.6242
+majority-class baseline (software_eng): 0.6207
+confusion matrix (rows = true, columns = predicted):
+  predicted         forward_deployed  solutions  software_eng
+  true                                                       
+  forward_deployed                10         10            13
+  solutions                        7         35            13
+  software_eng                     5          9           130
+classification report:
+                    precision    recall  f1-score   support
+  
+  forward_deployed      0.455     0.303     0.364        33
+         solutions      0.648     0.636     0.642        55
+      software_eng      0.833     0.903     0.867       144
+  
+          accuracy                          0.754       232
+         macro avg      0.645     0.614     0.624       232
+      weighted avg      0.736     0.754     0.742       232
+
+--- tree3 (department and company removed) x criterion = entropy ---
+features after encoding: 96
+5-fold stratified CV on the training rows (accuracy, mean +/- sd; mean training-fold accuracy):
+  max_depth 1    : 0.6224 +/- 0.0010   (train folds 0.6224)
+  max_depth 2    : 0.5922 +/- 0.0258   (train folds 0.6284)
+  max_depth 3    : 0.6494 +/- 0.0592   (train folds 0.6715)
+  max_depth 4    : 0.6731 +/- 0.0665   (train folds 0.7004)
+  max_depth 5    : 0.6623 +/- 0.0675   (train folds 0.7166)
+  max_depth 6    : 0.6817 +/- 0.0589   (train folds 0.7503)
+  max_depth 8    : 0.7141 +/- 0.0460   (train folds 0.8045)
+  max_depth 10   : 0.7292 +/- 0.0389   (train folds 0.8581)
+  max_depth 12   : 0.7292 +/- 0.0312   (train folds 0.8986)
+  max_depth 15   : 0.7206 +/- 0.0332   (train folds 0.9361)
+  max_depth 20   : 0.7335 +/- 0.0271   (train folds 0.9822)
+  max_depth none : 0.7270 +/- 0.0241   (train folds 1.0000)
+selected max_depth: 20 (fitted depth 20, 235 leaves)
+TRAIN ACCURACY: 0.9892   TEST ACCURACY: 0.7155   gap: 0.2737   macro F1: 0.6221
+majority-class baseline (software_eng): 0.6207
+confusion matrix (rows = true, columns = predicted):
+  predicted         forward_deployed  solutions  software_eng
+  true                                                       
+  forward_deployed                15          8            10
+  solutions                        8         33            14
+  software_eng                    12         14           118
+classification report:
+                    precision    recall  f1-score   support
+  
+  forward_deployed      0.429     0.455     0.441        33
+         solutions      0.600     0.600     0.600        55
+      software_eng      0.831     0.819     0.825       144
+  
+          accuracy                          0.716       232
+         macro avg      0.620     0.625     0.622       232
+      weighted avg      0.719     0.716     0.717       232
+
+--- tree4 (masked text TF-IDF) x criterion = gini ---
+features after encoding: 3631
+5-fold stratified CV on the training rows (accuracy, mean +/- sd; mean training-fold accuracy):
+  max_depth 1    : 0.7962 +/- 0.0232   (train folds 0.7983)
+  max_depth 2    : 0.8706 +/- 0.0318   (train folds 0.8781)
+  max_depth 3    : 0.8749 +/- 0.0249   (train folds 0.9121)
+  max_depth 4    : 0.8932 +/- 0.0246   (train folds 0.9431)
+  max_depth 5    : 0.8965 +/- 0.0269   (train folds 0.9612)
+  max_depth 6    : 0.9008 +/- 0.0251   (train folds 0.9714)
+  max_depth 8    : 0.9018 +/- 0.0286   (train folds 0.9814)
+  max_depth 10   : 0.9008 +/- 0.0246   (train folds 0.9889)
+  max_depth 12   : 0.9029 +/- 0.0267   (train folds 0.9941)
+  max_depth 15   : 0.9019 +/- 0.0199   (train folds 0.9987)
+  max_depth 20   : 0.8911 +/- 0.0225   (train folds 1.0000)
+  max_depth none : 0.8911 +/- 0.0225   (train folds 1.0000)
+selected max_depth: 12 (fitted depth 12, 37 leaves)
+TRAIN ACCURACY: 0.9903   TEST ACCURACY: 0.8879   gap: 0.1024   macro F1: 0.8571
+majority-class baseline (software_eng): 0.6207
+confusion matrix (rows = true, columns = predicted):
+  predicted         forward_deployed  solutions  software_eng
+  true                                                       
+  forward_deployed                27          4             2
+  solutions                        1         45             9
+  software_eng                     5          5           134
+classification report:
+                    precision    recall  f1-score   support
+  
+  forward_deployed      0.818     0.818     0.818        33
+         solutions      0.833     0.818     0.826        55
+      software_eng      0.924     0.931     0.927       144
+  
+          accuracy                          0.888       232
+         macro avg      0.859     0.856     0.857       232
+      weighted avg      0.888     0.888     0.888       232
+
+--- tree4 (masked text TF-IDF) x criterion = entropy ---
+features after encoding: 3631
+5-fold stratified CV on the training rows (accuracy, mean +/- sd; mean training-fold accuracy):
+  max_depth 1    : 0.7962 +/- 0.0232   (train folds 0.7983)
+  max_depth 2    : 0.8641 +/- 0.0313   (train folds 0.8727)
+  max_depth 3    : 0.8706 +/- 0.0262   (train folds 0.9000)
+  max_depth 4    : 0.8846 +/- 0.0130   (train folds 0.9320)
+  max_depth 5    : 0.8900 +/- 0.0161   (train folds 0.9587)
+  max_depth 6    : 0.8943 +/- 0.0168   (train folds 0.9776)
+  max_depth 8    : 0.8857 +/- 0.0180   (train folds 0.9943)
+  max_depth 10   : 0.8911 +/- 0.0220   (train folds 0.9997)
+  max_depth 12   : 0.8922 +/- 0.0200   (train folds 1.0000)
+  max_depth 15   : 0.8922 +/- 0.0200   (train folds 1.0000)
+  max_depth 20   : 0.8922 +/- 0.0200   (train folds 1.0000)
+  max_depth none : 0.8922 +/- 0.0200   (train folds 1.0000)
+selected max_depth: 6 (fitted depth 6, 34 leaves)
+TRAIN ACCURACY: 0.9806   TEST ACCURACY: 0.8793   gap: 0.1013   macro F1: 0.8356
+majority-class baseline (software_eng): 0.6207
+confusion matrix (rows = true, columns = predicted):
+  predicted         forward_deployed  solutions  software_eng
+  true                                                       
+  forward_deployed                25          5             3
+  solutions                        2         45             8
+  software_eng                     7          3           134
+classification report:
+                    precision    recall  f1-score   support
+  
+  forward_deployed      0.735     0.758     0.746        33
+         solutions      0.849     0.818     0.833        55
+      software_eng      0.924     0.931     0.927       144
+  
+          accuracy                          0.879       232
+         macro avg      0.836     0.835     0.836       232
+      weighted avg      0.879     0.879     0.879       232
+
+FEATURE IMPORTANCE, tree1 (gini), summed per input column:
+  department: 0.5877
+  location_clean: 0.2054
+  company_clean: 0.0888
+  desc_len: 0.0707
+  salary_annual_min: 0.0318
+  workplaceType: 0.0092
+  location_count: 0.0044
+  is_multi_location: 0.0020
+  salary missing (indicator): 0.0000
+  salary_annual_max: 0.0000
+  top 15 encoded columns:
+  location_clean = San Francisco, CA: 0.1672
+  department = Field Engineering - Other: 0.1093
+  department = Professional Services Operations: 0.0853
+  desc_len: 0.0707
+  department = Delta: 0.0644
+  company_clean = Databricks: 0.0608
+  department = Engineering - Pipeline: 0.0374
+  salary_annual_min: 0.0318
+  department = Forward Deployed Engineering: 0.0300
+  department = Sales: 0.0287
+  department = Echo: 0.0241
+  department = Executive Engineering - Pipeline: 0.0239
+  department = Engineering & Infra: 0.0168
+  department = Engineering: 0.0157
+  department = Compute: 0.0127
+
+FEATURE IMPORTANCE, tree2 (gini), summed per input column:
+  location_clean: 0.4160
+  desc_len: 0.2831
+  company_clean: 0.1752
+  salary_annual_min: 0.0460
+  salary_annual_max: 0.0366
+  workplaceType: 0.0334
+  salary missing (indicator): 0.0065
+  location_count: 0.0031
+  is_multi_location: 0.0000
+  top 15 encoded columns:
+  desc_len: 0.2831
+  location_clean = San Francisco, CA: 0.2040
+  company_clean = Databricks: 0.0645
+  location_clean = Bengaluru, India: 0.0579
+  location_clean = New York, NY: 0.0464
+  salary_annual_min: 0.0460
+  salary_annual_max: 0.0366
+  location_clean = Washington, DC: 0.0312
+  company_clean = Palantir: 0.0204
+  workplaceType = onsite: 0.0161
+  company_clean = Scale AI: 0.0137
+  company_clean = Cohere: 0.0132
+  location_clean = Seattle, WA: 0.0128
+  location_clean = Toronto, Canada: 0.0117
+  location_clean = Canada: 0.0112
+
+FEATURE IMPORTANCE, tree3 (gini), summed per input column:
+  location_clean: 0.4486
+  desc_len: 0.3430
+  salary_annual_min: 0.0909
+  workplaceType: 0.0527
+  salary_annual_max: 0.0476
+  is_multi_location: 0.0081
+  salary missing (indicator): 0.0050
+  location_count: 0.0041
+  top 15 encoded columns:
+  desc_len: 0.3430
+  location_clean = San Francisco, CA: 0.2297
+  salary_annual_min: 0.0909
+  salary_annual_max: 0.0476
+  location_clean = Bengaluru, India: 0.0377
+  location_clean = New York, NY: 0.0373
+  location_clean = Washington, DC: 0.0249
+  workplaceType = missing: 0.0232
+  location_clean = Remote: 0.0176
+  location_clean = London, UK: 0.0156
+  workplaceType = remote: 0.0148
+  workplaceType = hybrid: 0.0147
+  location_clean = Canada: 0.0138
+  location_clean = Toronto, Canada: 0.0132
+  location_clean = Reykjavík: 0.0126
+
+WORKED EXAMPLE, tree 1 (gini): root split
+  node 0 (depth 0): split on 'location_clean = San Francisco, CA' <= 0.5
+    (one-hot feature: left = postings without this value, right = postings with it)
+    class counts in the order ['forward_deployed', 'solutions', 'software_eng']:
+      parent (node 0): [130, 220, 577]  n = 927
+      left   (node 1): [116, 203, 236]  n = 555
+      right  (node 154): [14, 17, 341]  n = 372
+    GINI
+      parent: 1 - [(130/927)^2 + (220/927)^2 + (577/927)^2] = 1 - 0.4634 = 0.5366
+      left  : 1 - [(116/555)^2 + (203/555)^2 + (236/555)^2] = 1 - 0.3583 = 0.6417
+      right : 1 - [(14/372)^2 + (17/372)^2 + (341/372)^2] = 1 - 0.8438 = 0.1562
+      after the split (weighted): (555/927) x 0.6417 + (372/927) x 0.1562 = 0.4469
+      decrease = 0.5366 - 0.4469 = 0.0897
+    ENTROPY (bits)
+      parent: -[(130/927)log2(130/927) + (220/927)log2(220/927) + (577/927)log2(577/927)] = 1.3157
+      left  : -[(116/555)log2(116/555) + (203/555)log2(203/555) + (236/555)log2(236/555)] = 1.5273
+      right : -[(14/372)log2(14/372) + (17/372)log2(17/372) + (341/372)log2(341/372)] = 0.4966
+      after the split (weighted): (555/927) x 1.5273 + (372/927) x 0.4966 = 1.1137
+      decrease = 1.3157 - 1.1137 = 0.2019   <- information gain
+
+WORKED EXAMPLE, tree 1 (gini): internal split (node 2, the depth-2 internal node with the most training postings)
+  node 2 (depth 2): split on 'department = Professional Services Operations' <= 0.5
+    (one-hot feature: left = postings without this value, right = postings with it)
+    class counts in the order ['forward_deployed', 'solutions', 'software_eng']:
+      parent (node 2): [116, 128, 236]  n = 480
+      left   (node 3): [73, 125, 236]  n = 434
+      right  (node 140): [43, 3, 0]  n = 46
+    GINI
+      parent: 1 - [(116/480)^2 + (128/480)^2 + (236/480)^2] = 1 - 0.3712 = 0.6288
+      left  : 1 - [(73/434)^2 + (125/434)^2 + (236/434)^2] = 1 - 0.4069 = 0.5931
+      right : 1 - [(43/46)^2 + (3/46)^2 + (0/46)^2] = 1 - 0.8781 = 0.1219
+      after the split (weighted): (434/480) x 0.5931 + (46/480) x 0.1219 = 0.5479
+      decrease = 0.6288 - 0.5479 = 0.0808
+    ENTROPY (bits)
+      parent: -[(116/480)log2(116/480) + (128/480)log2(128/480) + (236/480)log2(236/480)] = 1.5072
+      left  : -[(73/434)log2(73/434) + (125/434)log2(125/434) + (236/434)log2(236/434)] = 1.4277
+      right : -[(43/46)log2(43/46) + (3/46)log2(3/46) + 0] = 0.3478
+      after the split (weighted): (434/480) x 1.4277 + (46/480) x 0.3478 = 1.3242
+      decrease = 1.5072 - 1.3242 = 0.1830   <- information gain
+
+DIAGNOSTIC: department x class (all 1,159 postings)
+  departments: 122
+  postings in a department that is >= 90% one class: 1023 of 1159 (88.3%)
+  postings in a department that is 100% one class: 535
+  role_family                                      forward_deployed  solutions  software_eng    n  top class share
+  department                                                                                                      
+  Engineering                                                     3          1           137  141            0.972
+  Engineering - Pipeline                                          0          2            95   97            0.979
+  Field Engineering - Other                                       0         89             0   89            1.000
+  Applied AI                                                      3          2            60   65            0.923
+  Professional Services Operations                               58          4             0   62            0.935
+  Scaling                                                         0          3            55   58            0.948
+  Delta                                                          33          0             0   33            1.000
+  Software Engineering - Infrastructure                           0          0            32   32            1.000
+  Engineering & Design - Product                                  0          0            31   31            1.000
+  Dev                                                             0          0            30   30            1.000
+  Security                                                        1          0            24   25            0.960
+  Delivery Solutions Architects                                   0         24             0   24            1.000
+  Field Engineering - FE Direct Regulated                         0         23             0   23            1.000
+  Engineering & Infra                                            14          0             6   20            0.700
+  Sales                                                           1         15             0   16            0.938
+  Finance                                                         0          7             9   16            0.562
+  Executive Engineering - Pipeline                                0          0            16   16            1.000
+  Echo                                                            2         13             0   15            0.867
+  Forward Deployed Engineering                                   15          0             0   15            1.000
+  Product Engineering                                             0          0            14   14            1.000
+  Field Engineering                                               1         12             0   13            0.923
+  Public Sector Engineering                                       1          0            10   11            0.909
+  AI Research & Engineering                                       0          0            10   10            1.000
+  Enterprise Engineering                                          6          0             4   10            0.600
+  User Operations                                                 0          7             3   10            0.700
+  Horizontals EPD                                                 0          0            10   10            1.000
+  Foundations Engineering                                         0          0            10   10            1.000
+  Field Engineering - FE Direct Enterprise                        0         10             0   10            1.000
+  AI Products                                                     0          0             9    9            1.000
+  Research                                                        0          0             9    9            1.000
+  Consumer Devices                                                0          0             8    8            1.000
+  Safeguards (Trust & Safety)                                     0          0             7    7            1.000
+  Core Product & Platform                                         0          0             7    7            1.000
+  IT                                                              0          1             5    6            0.833
+  Product Development                                             4          0             2    6            0.667
+  Platform & Infrastructure                                       0          0             6    6            1.000
+  Product Management & Program Management                         0          5             1    6            0.833
+  Field Engineering - FE Direct Emerging                          0          6             0    6            1.000
+  Developers                                                      0          0             6    6            1.000
+  Revenue                                                         0          6             0    6            1.000
+  Technical Program Management                                    0          0             6    6            1.000
+  Applications Platform Engineering                               0          0             6    6            1.000
+  Gen AI Engineering                                              1          0             5    6            0.833
+  Customer Success & Services                                     0          5             0    5            1.000
+  Support                                                         0          2             3    5            0.600
+  Compute                                                         0          5             0    5            1.000
+  Modeling                                                        3          0             2    5            0.600
+  AI GTM                                                          1          4             0    5            0.800
+  Professional Services                                           2          3             0    5            0.600
+  Business Development                                            2          0             2    4            0.500
+  GPS Engineering                                                 3          0             1    4            0.750
+  Core Tech Engineering                                           0          0             4    4            1.000
+  Solution Architects                                             0          4             0    4            1.000
+  AI Research & Systems                                           0          0             4    4            1.000
+  Data                                                            0          0             3    3            1.000
+  Search                                                          0          0             3    3            1.000
+  Inference                                                       0          0             3    3            1.000
+  Legal                                                           0          0             3    3            1.000
+  Go To Market                                                    0          2             1    3            0.667
+  Enterprise Product                                              3          0             0    3            1.000
+  Business Operations                                             0          1             2    3            0.667
+  People                                                          0          1             2    3            0.667
+  Customer Success                                                0          3             0    3            1.000
+  Integration, Data, Engineering and Applications                 0          0             2    2            1.000
+  Infrastructure                                                  0          0             2    2            1.000
+  Information Security                                            0          0             2    2            1.000
+  IT & Corporate Security                                         0          0             2    2            1.000
+  Safety Systems                                                  0          0             2    2            1.000
+  OpenAI for Gov                                                  1          1             0    2            0.500
+  Product                                                         0          0             2    2            1.000
+  Public Sector                                                   0          2             0    2            1.000
+  University                                                      0          0             2    2            1.000
+  Public Sector Business Development                              0          2             0    2            1.000
+   Field Engineering - Indirect                                   1          1             0    2            0.500
+  GTM                                                             0          2             0    2            1.000
+  Exec Engineering                                                0          0             2    2            1.000
+  Engineering : Blades                                            0          0             2    2            1.000
+  Engineering : Data                                              0          0             2    2            1.000
+  Enterprise Sales                                                0          2             0    2            1.000
+  Data Science & Engineering                                      0          0             2    2            1.000
+  8412 Billing Products                                           0          0             1    1            1.000
+  Technical Education                                             0          0             1    1            1.000
+  Data Quality (Contract)                                         0          0             1    1            1.000
+  API Platform                                                    0          0             1    1            1.000
+  9001 Privy - R&D                                                0          0             1    1            1.000
+  8612 Security Infrastructure                                    0          0             1    1            1.000
+  8127 Core Infrastructure                                        0          0             1    1            1.000
+  8582 Optimized Checkout - Eng                                   0          0             1    1            1.000
+  University Recruiting                                           0          0             1    1            1.000
+  8560 Bank Connections - Eng                                     0          0             1    1            1.000
+  8556 LPM Core - Eng                                             0          0             1    1            1.000
+  Security Engineering                                            0          0             1    1            1.000
+  8551 OAP - Eng                                                  0          0             1    1            1.000
+  Data Science                                                    0          0             1    1            1.000
+  Sovereign AI                                                    1          0             0    1            1.000
+  Strategic Finance                                               0          0             1    1            1.000
+  8516 Payments Global                                            0          0             1    1            1.000
+  Tech                                                            0          0             1    1            1.000
+  8217 Risk Engineering                                           0          0             1    1            1.000
+  8546 Treasury for Platforms - Eng                               0          0             1    1            1.000
+  Data, Technology & Systems                                      0          0             1    1            1.000
+  Public Sector Product                                           1          0             0    1            1.000
+  Partnerships                                                    0          1             0    1            1.000
+  Field Engineering - FE Invested DSA                             0          1             0    1            1.000
+  8122 Data Foundations                                           0          0             1    1            1.000
+  Field Engineering - Enablement                                  0          1             0    1            1.000
+  Field Engineering - BIF                                         1          0             0    1            1.000
+  Internships                                                     0          0             1    1            1.000
+  Engineering : Statsig                                           0          0             1    1            1.000
+  Engineering : SR and GS                                         0          0             1    1            1.000
+  Operations                                                      0          1             0    1            1.000
+  Engineering : Infrastructure                                    0          0             1    1            1.000
+  Field Readiness & CoE                                           0          1             0    1            1.000
+  Physical AI Engineering                                         0          0             1    1            1.000
+  Engineering : Growth                                            0          0             1    1            1.000
+  Engineering : FDE                                               1          0             0    1            1.000
+  Engineering : Digital Analytics                                 0          0             1    1            1.000
+  Product Management                                              0          0             1    1            1.000
+  Engineering : AI Foundation                                     0          0             1    1            1.000
+  Early Career                                                    0          0             1    1            1.000
+  Design                                                          0          0             1    1            1.000
+  Weavy - Figma Weave                                             0          0             1    1            1.000
+
+DIAGNOSTIC: company_clean x class (all 1,159 postings)
+  role_family    forward_deployed  solutions  software_eng    n
+  company_clean                                                
+  Databricks                   61        176           148  385
+  OpenAI                       17         19           165  201
+  Anthropic                     3          8           101  112
+  Palantir                     42         13            37   92
+  Scale AI                     15          6            41   62
+  Cohere                       18         11            15   44
+  Harvey                        0          4            37   41
+  Sierra                        0          1            37   38
+  Vercel                        2          7            18   27
+  Ramp                          1          8            17   26
+  Perplexity                    1          0            24   25
+  Asana                         1          6            17   24
+  Discord                       0          0            22   22
+  Figma                         1          6            10   17
+  Stripe                        0          0            13   13
+  Amplitude                     1          0            10   11
+  Webflow                       0          3             6    9
+  Airtable                      0          5             3    8
+  Linear                        0          2             0    2
+
+DIAGNOSTIC: tree 1 test-set decisions and department (share of the 232 test postings)
+                                                 gini   entropy
+  only department splits on the path           0.0000    0.0000
+  at least one department split on the path    1.0000    1.0000
+  final split before the leaf is department    0.5345    0.6121
+  mean share of path splits on department      0.6942    0.6087
+  test postings                              232.0000  232.0000
+
+CHECK: DEPARTMENT PROVENANCE (scraped ATS field; not derived in the pipeline)
+  postings with a raw row for their jobId: 1159 of 1159
+  department identical to the raw scraped value: 1159 of 1159
+  department equal to the title: 0
+  department text containing the full title: 9
+  department name containing a role phrase (employer-assigned): 221 {'forward_deployed': 18, 'solutions': 171, 'software_eng': 32}
+
+CHECK: EMPLOYER IDENTIFIABLE FROM TREE 3 FEATURES
+tree 3 features -> company_clean
+  labels in training rows: 19 (smallest has 2 rows); test rows whose label never occurs in training: 0
+  CV accuracy by max_depth: 1: 0.4897, 2: 0.5782, 3: 0.6117, 4: 0.6645, 5: 0.7012, 6: 0.7174, 8: 0.7379, 10: 0.7486, 12: 0.7422, 15: 0.7443, 20: 0.7454, none: 0.7476
+  selected max_depth: 10; train accuracy 0.9061; TEST ACCURACY 0.7155; majority baseline (Databricks) 0.3233
+  importance summed per input column: desc_len 0.2741, location_clean 0.1739, salary missing (indicator) 0.1653, workplaceType 0.1528, salary_annual_min 0.1116, salary_annual_max 0.0748, location_count 0.0298, is_multi_location 0.0176
+  per company (test rows, recall):
+              n_test  recall
+  label                     
+  Databricks      75   0.827
+  OpenAI          45   0.867
+  Anthropic       14   0.929
+  Palantir        14   1.000
+  Scale AI        11   0.273
+  Harvey           9   0.333
+  Ramp             9   0.778
+  Cohere           8   0.375
+  Stripe           7   0.429
+  Asana            7   0.143
+  Vercel           7   0.714
+  Sierra           6   1.000
+  Discord          5   0.800
+  Amplitude        5   0.400
+  Figma            4   0.000
+  Webflow          3   0.000
+  Airtable         2   0.500
+  Perplexity       1   0.000
+  desc_len per company (all postings):
+                 count  median   25%    75%   IQR
+  company_clean                                  
+  Databricks       385    5194  4502   5937  1435
+  OpenAI           201    6206  5514   7228  1714
+  Anthropic        112    7664  7121   8674  1552
+  Palantir          92    7443  6308   8340  2031
+  Scale AI          62    6255  5530   7322  1791
+  Cohere            44    6105  5445   6977  1531
+  Harvey            41    5420  4402   5814  1412
+  Sierra            38    7609  6645   7760  1115
+  Vercel            27    4813  4180   6853  2673
+  Ramp              26    5730  5177   6656  1478
+  Perplexity        25    3203  2574   3723  1149
+  Asana             24    6187  5682   6626   943
+  Discord           22    4660  4226   4901   675
+  Figma             17    6868  5670   7754  2084
+  Stripe            13    3533  2975   3920   945
+  Amplitude         11    9411  8421  11286  2865
+  Webflow            9    8406  7379   8940  1561
+  Airtable           8    6367  5903   6453   550
+  Linear             2    5264  5167   5360   193
+  10 most common locations, share from the largest company:
+                     postings     largest  largest n  share
+  location_clean                                           
+  San Francisco, CA       470      OpenAI        163  0.347
+  New York, NY             93    Palantir         26  0.280
+  London, UK               88  Databricks         22  0.250
+  Washington, DC           58    Palantir         24  0.414
+  Remote                   55  Databricks         21  0.382
+  Bengaluru, India         54  Databricks         49  0.907
+  Singapore                22  Databricks         14  0.636
+  United States            22  Databricks         17  0.773
+  Tokyo, Japan             20  Databricks         13  0.650
+  Toronto, Canada          19  Databricks          8  0.421
+  location_clean x company_clean (all postings):
+  company_clean                 Airtable  Amplitude  Anthropic  Asana  Cohere  Databricks  Discord  Figma  Harvey  Linear  OpenAI  Palantir  Perplexity  Ramp  Scale AI  Sierra  Stripe  Vercel  Webflow
+  location_clean                                                                                                                                                                                        
+  San Francisco, CA                    4         10         84      1       3          51       21     12      25       0     163         2          22     1        24      27       1      19        0
+  New York, NY                         2          0          3      6       1          11        0      0       7       0       5        26           0    20        11       0       0       1        0
+  London, UK                           0          0         11      2       3          22        0      2       1       1       5        13           0     1        14       8       0       4        1
+  Washington, DC                       0          0          0      0       1          23        0      0       0       0       5        24           0     0         5       0       0       0        0
+  Remote                               2          1          9      0       0          21        1      0       0       0       6         0           0     4         0       0       0       3        8
+  Bengaluru, India                     0          0          0      0       0          49        0      1       4       0       0         0           0     0         0       0       0       0        0
+  Singapore                            0          0          0      0       3          14        0      0       0       0       2         0           0     0         0       3       0       0        0
+  United States                        0          0          0      0       5          17        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Tokyo, Japan                         0          0          0      0       1          13        0      1       0       0       2         3           0     0         0       0       0       0        0
+  Toronto, Canada                      0          0          0      2       4           8        0      0       3       0       0         0           0     0         0       0       2       0        0
+  Amsterdam, Netherlands               0          0          0      0       0          17        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Seattle, WA                          0          0          0      0       0           0        0      0       0       0       8         6           0     0         0       0       0       0        0
+  Paris, France                        0          0          1      0       0           7        0      0       0       0       0         3           0     0         0       0       0       0        0
+  Seoul, South Korea                   0          0          0      0       0           4        0      0       0       0       1         4           0     0         0       0       0       0        0
+  Belgrade, Serbia                     0          0          0      0       0           9        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Sydney, Australia                    0          0          2      0       0           3        0      0       1       0       1         2           0     0         0       0       0       0        0
+  Canada                               0          0          0      0       5           1        0      0       0       0       0         0           0     0         0       0       1       0        0
+  Chicago, IL                          0          0          0      0       0           6        0      0       0       0       0         1           0     0         0       0       0       0        0
+  Maryland                             0          0          0      0       0           7        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Berlin, Germany                      0          0          0      0       0           7        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Warsaw, Poland                       0          0          0      6       0           0        0      0       0       0       0         1           0     0         0       0       0       0        0
+  Dublin, Ireland                      0          0          0      2       0           0        0      0       0       0       3         0           0     0         0       0       2       0        0
+  Munich, Germany                      0          0          0      0       0           6        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Central - United States              0          0          0      0       0           6        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Reykjavík                            0          0          0      5       0           0        0      0       0       0       0         0           0     0         0       0       0       0        0
+  United Kingdom                       0          0          0      0       4           0        0      0       0       0       0         0           0     0         0       0       1       0        0
+  Stockholm, Sweden                    0          0          0      0       0           5        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Madrid                               0          0          0      0       0           4        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Northeast - United States            0          0          0      0       0           4        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Atlanta, Georgia                     0          0          0      0       0           4        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Ottawa                               0          0          0      0       4           0        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Sao Paulo, Brazil                    0          0          0      0       0           4        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Mumbai, India                        0          0          0      0       0           3        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Melbourne, Australia                 0          0          0      0       0           3        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Korea                                0          0          0      0       3           0        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Los Angeles, CA                      0          0          0      0       0           2        0      0       0       0       0         0           0     0         1       0       0       0        0
+  Aarhus, Denmark                      0          0          0      0       0           3        0      0       0       0       0         0           0     0         0       0       0       0        0
+  McLean, Virginia                     0          0          0      0       0           3        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Honolulu, HI                         0          0          0      0       0           0        0      0       0       0       0         3           0     0         0       0       0       0        0
+  Georgia                              0          0          0      0       0           3        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Austin, TX                           0          0          0      0       0           1        0      0       0       0       0         0           0     0         2       0       0       0        0
+  Belgrade                             0          0          0      0       0           0        0      0       0       0       0         0           3     0         0       0       0       0        0
+  Europe                               0          0          0      0       3           0        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Boston, MA                           0          0          1      0       0           2        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Doha, Qatar                          0          0          0      0       0           0        0      0       0       0       0         0           0     0         3       0       0       0        0
+  India                                0          0          0      0       0           2        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Nevada                               0          0          0      0       0           2        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Western Australia, Australia         0          0          0      0       0           2        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Virginia                             0          0          0      0       0           2        0      0       0       0       0         0           0     0         0       0       0       0        0
+  US                                   0          0          0      0       0           0        0      0       0       0       0         0           0     0         0       0       2       0        0
+  Dallas, Texas                        0          0          0      0       0           2        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Delaware                             0          0          0      0       0           2        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Denver, Colorado                     0          0          0      0       0           2        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Queensland, Australia                0          0          0      0       0           2        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Illinois                             0          0          0      0       0           2        0      0       0       0       0         0           0     0         0       0       0       0        0
+  France                               0          0          0      0       2           0        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Milan, Italy                         0          0          0      0       0           2        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Madrid, Spain                        0          0          0      0       0           0        0      0       0       0       0         2           0     0         0       0       0       0        0
+  NYC-Privy                            0          0          0      0       0           0        0      0       0       0       0         0           0     0         0       0       1       0        0
+  Berkeley, California                 0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Stockholm                            0          0          0      0       1           0        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Brazil                               0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Sweden                               0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Mexico City                          0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Tel Aviv, Israel                     0          0          0      0       0           0        0      1       0       0       0         0           0     0         0       0       0       0        0
+  Florida                              0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Finland                              0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Budapest, Hungary                    0          0          0      0       0           0        0      0       0       0       0         0           0     0         1       0       0       0        0
+  Auckland, New Zealand                0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Arizona                              0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Argentina                            0          0          0      0       0           0        0      0       0       0       0         0           0     0         1       0       0       0        0
+  West Coast - United States           0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Zürich, Switzerland                  0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Brisbane, Australia                  0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Charlotte, North Carolina            0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  New Jersey                           0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Colorado                             0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  NYC, Sea, SF, Tor                    0          0          0      0       0           0        0      0       0       0       0         0           0     0         0       0       1       0        0
+  North America                        0          0          0      0       0           0        0      0       0       1       0         0           0     0         0       0       0       0        0
+  Denver, CO                           0          0          0      0       0           0        0      0       0       0       0         1           0     0         0       0       0       0        0
+  Ontario, CAN                         0          0          1      0       0           0        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Oslo, Norway                         0          0          0      0       0           0        0      0       0       0       0         1           0     0         0       0       0       0        0
+  Denmark                              0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Delhi, India                         0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Philadelphia, Pennsylvania           0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Pune, India                          0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Japan                                0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Raleigh, North Carolina              0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Dubai                                0          0          0      0       1           0        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Riyadh, Saudi Arabia                 0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Costa Rica                           0          0          0      0       0           1        0      0       0       0       0         0           0     0         0       0       0       0        0
+  Sao Paulo                            0          0          0      0       0           0        0      0       0       0       0         0           0     0         0       0       1       0        0
+  missing                              0          0          0      0       0           0        0      0       0       0       0         0           0     0         0       0       1       0        0
+
+CHECK: DEPARTMENT IDENTIFIABLE FROM TREE 2 FEATURES
+tree 2 features -> department
+  labels in training rows: 107 (smallest has 1 rows); test rows whose label never occurs in training: 16
+  CV accuracy by max_depth: 1: 0.1791, 2: 0.2610, 3: 0.3020, 4: 0.3495, 5: 0.3927, 6: 0.4197, 8: 0.4790, 10: 0.4822, 12: 0.4854, 15: 0.4800, 20: 0.4941, none: 0.4876
+  selected max_depth: 20; train accuracy 0.9773; TEST ACCURACY 0.4440; majority baseline (Engineering) 0.1552
+  importance summed per input column: desc_len 0.4200, company_clean 0.1928, location_clean 0.1892, workplaceType 0.0611, salary_annual_max 0.0500, salary_annual_min 0.0426, location_count 0.0339, is_multi_location 0.0089, salary missing (indicator) 0.0016
+  per department, 20 largest in the test rows (recall):
+                                           n_test  recall
+  label                                                  
+  Engineering                                  36   0.667
+  Engineering - Pipeline                       20   0.750
+  Scaling                                      15   0.333
+  Field Engineering - Other                    14   0.643
+  Professional Services Operations             14   0.357
+  Applied AI                                   10   0.500
+  Software Engineering - Infrastructure         7   0.143
+  Dev                                           6   0.333
+  Finance                                       6   0.167
+  Security                                      5   0.200
+  Product Engineering                           5   0.600
+  Field Engineering - FE Direct Regulated       4   0.250
+  Delta                                         4   1.000
+  Forward Deployed Engineering                  4   1.000
+  Delivery Solutions Architects                 3   0.333
+  Echo                                          3   1.000
+  Field Engineering                             3   0.333
+  Foundations Engineering                       3   0.333
+  Executive Engineering - Pipeline              3   0.667
+  Core Product & Platform                       3   0.000
+  10 most common locations, share from the largest department:
+                     postings                           largest  largest n  share
+  location_clean                                                                 
+  San Francisco, CA       470                       Engineering         77  0.164
+  New York, NY             93                       Engineering         27  0.290
+  London, UK               88         Field Engineering - Other         15  0.170
+  Washington, DC           58                             Delta         10  0.172
+  Remote                   55  Professional Services Operations          8  0.145
+  Bengaluru, India         54            Engineering - Pipeline         34  0.630
+  Singapore                22         Field Engineering - Other          9  0.409
+  United States            22     Delivery Solutions Architects          5  0.227
+  Tokyo, Japan             20         Field Engineering - Other          7  0.350
+  Toronto, Canada          19            Engineering - Pipeline          5  0.263
+
+CHECK: GINI AGAINST ENTROPY AT THE GINI-SELECTED DEPTH (secondary; the tuned table is the main one)
+                  max_depth (gini-selected) fitted depth train accuracy test accuracy  macro F1
+  tree  criterion                                                                              
+  tree1 gini                           none           35            1.0      0.922414  0.895533
+        entropy                        none           27            1.0      0.900862  0.876126
+  tree2 gini                             12           12        0.93959      0.767241  0.648304
+        entropy                          12           12       0.934196       0.75431  0.633159
+  tree3 gini                             12           12       0.899676       0.75431  0.624168
+        entropy                          12           12       0.886731      0.711207  0.617764
+  tree4 gini                             12           12       0.990291      0.887931  0.857069
+        entropy                          12           10            1.0      0.887931  0.850364

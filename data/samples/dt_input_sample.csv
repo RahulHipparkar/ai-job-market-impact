@@ -1,0 +1,11 @@
+jobId,role_family,department,company_clean,location_clean,workplaceType,salary_annual_min,salary_annual_max,desc_len,location_count,is_multi_location
+3d06b4bc-6a7b-4f73-b5c5-4544354e3d0f,software_eng,Business Development,Palantir,"Warsaw, Poland",onsite,,,11949,1,0
+1b6f1d82-d459-4dea-8bc2-8d2ffe6f881a,forward_deployed,Delta,Palantir,"Paris, France",onsite,,,13404,1,0
+0a838e66-1ab0-4fc4-b4d3-4671c0352278,software_eng,Dev,Palantir,"New York, NY",hybrid,145000.0,155000.0,8319,1,0
+5367026008,software_eng,People,Anthropic,"San Francisco, CA",,,,7537,1,0
+11c51b12-3ba0-4a7a-a0d2-ed0661324dc3,software_eng,Scaling,OpenAI,"San Francisco, CA",,293000.0,385000.0,8882,1,0
+362a91cc-8e64-4922-a650-68161de60daa,solutions,User Operations,OpenAI,"Washington, DC",hybrid,284000.0,315000.0,7827,1,0
+8517068002,solutions,Field Engineering - Other,Databricks,"London, UK",,,,5518,1,0
+8721003002,solutions,Field Engineering - Other,Databricks,"Munich, Germany",,,,5014,1,0
+b774c88e-5d8f-48d3-aed7-948f2e4292b7,software_eng,Engineering,Harvey,"New York, NY",hybrid,238000.0,290000.0,3580,1,0
+94ccf41e-d3e1-41aa-9569-c3bcbffc4184,software_eng,Search,Perplexity,Belgrade,,,,1671,1,0

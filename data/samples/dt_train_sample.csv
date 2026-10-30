@@ -1,0 +1,11 @@
+jobId,role_family,department,company_clean,location_clean,workplaceType,salary_annual_min,salary_annual_max,desc_len,location_count,is_multi_location
+8567849002,solutions,Field Engineering - Other,Databricks,"Berlin, Germany",,,,5589,2,1
+5211498008,software_eng,Software Engineering - Infrastructure,Anthropic,"London, UK",,,,7392,1,0
+8730197002,software_eng,Engineering : Statsig,Amplitude,"San Francisco, CA",,,,10856,1,0
+8642087002,software_eng,Product Engineering,Discord,"San Francisco, CA",,,,3945,1,0
+4644742005,forward_deployed,Enterprise Product,Scale AI,"London, UK",,,,4791,1,0
+8569633002,solutions,Field Engineering - Other,Databricks,Colorado,remote,,,5907,3,1
+8720252002,solutions,Field Engineering - Other,Databricks,"Amsterdam, Netherlands",,,,5878,1,0
+8768938002,solutions,Field Engineering - Other,Databricks,"Amsterdam, Netherlands",,,,4398,1,0
+9248eab6-74e0-4940-98eb-ca09b17da532,software_eng,Scaling,OpenAI,"San Francisco, CA",hybrid,266000.0,445000.0,6318,1,0
+1fec5ecd-5b7b-45bc-bc8c-ac7184565551,software_eng,Scaling,OpenAI,"San Francisco, CA",,230000.0,342000.0,6254,1,0
