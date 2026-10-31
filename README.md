@@ -14,7 +14,8 @@ https://rahulhipparkar.github.io/ai-job-market-impact/
 
 - Data preparation and exploratory analysis — complete
 - Clustering (k-means and hierarchical) and PCA — complete
-- Supervised methods (Naive Bayes, decision trees, regression, AdaBoost, gradient boosting and XGBoost) — to come
+- Naive Bayes (multinomial and Bernoulli) and decision trees — complete
+- Regression, AdaBoost, gradient boosting, XGBoost and the conclusions — to come
 
 ## Data sources
 
@@ -40,8 +41,9 @@ Issues are flagged in columns rather than dropped. Each cleaning script writes a
 
 ```
 data/       raw, interim and processed tables, plus small committed samples
-src/        fetch and clean scripts, clustering and PCA modules, figure and sample scripts, and the shared plot style
-notebooks/  01_data_prep_eda.ipynb, the exploratory pass, and 02_clustering_pca.ipynb, clustering and PCA
+src/        fetch and clean scripts, clustering, PCA, Naive Bayes and decision tree modules, figure and sample scripts, and the shared plot style
+notebooks/  01_data_prep_eda.ipynb, the exploratory pass, 02_clustering_pca.ipynb, clustering and PCA,
+            and 03_naive_bayes_dt.ipynb, Naive Bayes and decision trees
 figures/    charts and thumbnails used by the site
 site/       Quarto source for the website
 docs/       rendered site, served by GitHub Pages
@@ -99,9 +101,19 @@ The Module 2 sample tables and explanatory figures on the site come from four mo
 - `src/make_pca_concept_figures.py` — the two explanatory figures on the PCA page, drawn from small made-up data.
 - `src/make_intro_postings_figure.py` — the software development postings chart on the Introduction page.
 
+Then run `notebooks/03_naive_bayes_dt.ipynb` with the same kernel. It does not need the output of the first two notebooks. It reads `data/processed/ats_final.csv`, plus the raw job board exports in `data/raw/ats/` that `clean_ats.py` reads, for one check on the department column. It writes `results/nb_report.txt`, `results/dt_report.txt` and its charts to `figures/`. It uses two modules:
+
+- `src/text_nb.py` — Naive Bayes on the posting text for three role families (forward deployed, solutions and software engineering), run on the raw descriptions, with company boilerplate removed, and with each posting's title and role phrases also masked, on one shared training and test split.
+- `src/role_dt.py` — decision trees on the same postings and split, with four feature sets: all tabular columns, department removed, department and company removed, and the masked description text.
+
+The Module 3 sample tables and explanatory figures on the site come from two more scripts, which can run before or after the notebook:
+
+- `src/make_module3_samples.py` — writes samples of the Naive Bayes and decision tree inputs, and of each side of the training and test split, to `data/samples/` and draws them as PNG tables.
+- `src/make_module3_concept_figures.py` — the two explanatory figures on each of the Naive Bayes and Decision Trees pages, drawn from small made-up data.
+
 ## What is not in the repository
 
-`data/raw/` and `data/interim/` are gitignored, along with three processed files that are too large to track: `hn_postings.csv` (125 MB), `hn_clean.csv` (177 MB) and `indeed_metro.csv` (112 MB). The fetch and clean scripts regenerate all of them. Small raw and cleaned samples of every source are committed in `data/samples/`, so the shape of the data can be seen without downloading anything. Among them, `ats_raw_sample.csv` and `indeed_sector_raw_sample.csv` are the 20-row raw samples linked from the Clustering and PCA pages, and `clustering_input_sample.csv` and `pca_input_sample.csv` show ten rows of the matrices the clustering and PCA are run on.
+`data/raw/` and `data/interim/` are gitignored, along with three processed files that are too large to track: `hn_postings.csv` (125 MB), `hn_clean.csv` (177 MB) and `indeed_metro.csv` (112 MB). The fetch and clean scripts regenerate all of them. Small raw and cleaned samples of every source are committed in `data/samples/`, so the shape of the data can be seen without downloading anything. Among them, `ats_raw_sample.csv` and `indeed_sector_raw_sample.csv` are the 20-row raw samples linked from the Clustering, PCA, Naive Bayes and Decision Trees pages. `clustering_input_sample.csv` and `pca_input_sample.csv` show ten rows of the matrices the clustering and PCA are run on, and `clustering_before_sample.csv` and `pca_before_sample.csv` show the same rows before TF-IDF and standardising. `nb_input_sample.csv`, `nb_train_sample.csv` and `nb_test_sample.csv` show ten rows each of the Naive Bayes input and of its training and test sets, and `dt_input_sample.csv`, `dt_train_sample.csv` and `dt_test_sample.csv` do the same for the decision trees.
 
 ## Course
 
