@@ -1,0 +1,11 @@
+jobId,company_clean,department,location_clean,workplaceType,role_family,desc_len,salary_mid,salary_source
+fbca0358-083a-4222-bdbb-3bd729b48382,Palantir,Delta,"Washington, DC",onsite,forward_deployed,7545,140000.0,structured
+8aec0fba-0ac9-48a5-8f54-f2d8465d6698,Palantir,Dev,"Washington, DC",hybrid,software_eng,7599,167500.0,structured
+5357951008,Anthropic,Finance,"San Francisco, CA",,software_eng,8288,210000.0,text
+a58add97-1968-4d5c-b504-ab62bea12df3,OpenAI,Scaling,"San Francisco, CA",,software_eng,4797,360000.0,structured
+7b90b83c-ec28-4e65-a235-6675e37b91c3,OpenAI,Forward Deployed Engineering,"Seattle, WA",hybrid,forward_deployed,5307,239000.0,structured
+17daedbd-b3fb-4e8c-a17c-8bbc9ec1d0b5,OpenAI,Scaling,"San Francisco, CA",,software_eng,5315,307500.0,structured
+8463063002,Databricks,Professional Services Operations,United States,,solutions,6082,216104.0,text
+8657488002,Databricks,Professional Services Operations,Remote,remote,forward_deployed,7070,216104.0,text
+b4f45d7f-6a88-40d5-83a6-e4db27f3e402,Harvey,Engineering,"San Francisco, CA",hybrid,software_eng,3694,241700.0,structured
+808dd9dc-8c79-4435-9e07-badc3f8c0d01,Harvey,Finance,"San Francisco, CA",hybrid,solutions,6963,280000.0,structured

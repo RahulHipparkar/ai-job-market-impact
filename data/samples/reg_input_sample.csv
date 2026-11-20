@@ -1,0 +1,11 @@
+jobId,company_clean,department,location_clean,workplaceType,role_family,desc_len,salary_mid,salary_source
+0fccbe95-2520-4df3-8600-7897656c06a2,Palantir,Delta,"Honolulu, HI",hybrid,forward_deployed,7306,167500.0,structured
+7177acab-5c64-4005-9b28-93f33b3e172a,Palantir,Dev,"New York, NY",hybrid,software_eng,10416,167500.0,structured
+5234538008,Anthropic,Finance,"San Francisco, CA",,software_eng,10759,342500.0,text
+5397005008,Anthropic,Engineering & Design - Product,"San Francisco, CA",,software_eng,7067,445000.0,text
+77bc0b3a-35c1-4ecf-99c7-1b3b19d959ca,OpenAI,Applied AI,"San Francisco, CA",,software_eng,5248,325500.0,structured
+1bb1f351-41a2-43a5-bac1-259859886cb3,OpenAI,Applied AI,"San Francisco, CA",onsite,software_eng,8129,335500.0,structured
+4569678005,Scale AI,Applications Platform Engineering,"San Francisco, CA",,software_eng,4948,283500.0,text
+8488399002,Databricks,Professional Services Operations,"San Francisco, CA",,forward_deployed,6470,216104.0,text
+10900071-f75f-49da-bff7-7e9db5e9b1f9,Harvey,Engineering,"New York, NY",hybrid,software_eng,3520,230000.0,structured
+504ba806-2e23-47f4-887f-b4aa777faae5,Harvey,Engineering,"San Francisco, CA",hybrid,software_eng,7540,285500.0,structured

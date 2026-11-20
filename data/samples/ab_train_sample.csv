@@ -1,0 +1,11 @@
+jobId,role_family,salary_annual_min,salary_annual_max,desc_len,location_count,is_multi_location,salary missing,workplaceType = missing,"location_clean = San Francisco, CA",company_clean = Databricks,workplaceType = hybrid
+8567849002,solutions,226000.0,380000.0,5589.0,2.0,1.0,1.0,1.0,0.0,1.0,0.0
+5211498008,software_eng,226000.0,380000.0,7392.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0
+8730197002,software_eng,226000.0,380000.0,10856.0,1.0,0.0,1.0,1.0,1.0,0.0,0.0
+8642087002,software_eng,226000.0,380000.0,3945.0,1.0,0.0,1.0,1.0,1.0,0.0,0.0
+4644742005,forward_deployed,226000.0,380000.0,4791.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0
+8569633002,solutions,226000.0,380000.0,5907.0,3.0,1.0,1.0,0.0,0.0,1.0,0.0
+8720252002,solutions,226000.0,380000.0,5878.0,1.0,0.0,1.0,1.0,0.0,1.0,0.0
+8768938002,solutions,226000.0,380000.0,4398.0,1.0,0.0,1.0,1.0,0.0,1.0,0.0
+9248eab6-74e0-4940-98eb-ca09b17da532,software_eng,266000.0,445000.0,6318.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0
+1fec5ecd-5b7b-45bc-bc8c-ac7184565551,software_eng,230000.0,342000.0,6254.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0

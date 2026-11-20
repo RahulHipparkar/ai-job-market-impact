@@ -1,0 +1,11 @@
+jobId,company_clean,department,location_clean,workplaceType,role_family,desc_len,salary_mid,salary_source
+96a0ce26-cf84-4fa8-934b-acc4363620b2,Palantir,Product Development,"Washington, DC",onsite,forward_deployed,8707,167500.0,structured
+cbe90327-3e6e-451c-a54c-1d3cbcef5aeb,Palantir,Delta,"Washington, DC",onsite,forward_deployed,7588,140000.0,structured
+5364336008,Anthropic,Finance,"San Francisco, CA",,software_eng,7126,375000.0,text
+5363469008,Anthropic,Engineering & Design - Product,"San Francisco, CA",,software_eng,6168,362500.0,text
+e602cd50-002d-4ace-bb30-19db0afcf635,OpenAI,Scaling,"San Francisco, CA",hybrid,software_eng,9773,292000.0,structured
+e6981259-c1d0-46de-8376-56bde28cfb10,OpenAI,Applied AI,"San Francisco, CA",hybrid,software_eng,7405,396000.0,structured
+4363623005,Scale AI,Public Sector Engineering,"San Francisco, CA",,software_eng,7323,221720.0,text
+8646549002,Databricks,Delivery Solutions Architects,United States,,solutions,7184,260200.0,text
+04e17f81-d0a7-4f83-8526-ec4c9532ddcc,Harvey,Engineering,"San Francisco, CA",hybrid,software_eng,3979,230000.0,structured
+d629fa64-599d-435c-b4ef-a925299ddac8,Harvey,Product,"San Francisco, CA",hybrid,software_eng,5660,256800.0,structured

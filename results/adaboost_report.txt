@@ -1,0 +1,201 @@
+ADABOOST: role family (forward_deployed / solutions / software_eng)
+Module 3 subset (1,159 postings), Module 3 split (927 training, 232 test); fitted on training rows only, scored once on the test rows. Never used as features: title, seniority, is_near_dup.
+
+====================================================================================================
+1. MULTI-ZONE RESIDUAL CHECK (linear regression, all-features fit)
+residual = actual minus predicted midpoint, all-features fit; an overstated multi-zone salary shows up as a positive residual (the fit predicts less than the recorded top-zone value)
+  test rows: multi-zone n 3, mean -10,903, median -9,195 | single-zone n 149, mean -3,572, median +763 | difference in means -7,330; Welch t-test p = 0.410, Mann-Whitney p = 0.562, permutation p = 0.735
+  training rows, out of fold (10 x 5-fold): multi-zone n 22, mean -15,538, median -14,443 | single-zone n 563, mean -1,054, median -303 | difference in means -14,484; Welch t-test p = 0.206, Mann-Whitney p = 0.114, permutation p = 0.129
+  training rows, out of fold, text salaries at Amplitude, Databricks, Scale AI, Webflow only: multi-zone n 22, mean -15,538, median -14,443 | single-zone n 153, mean -37, median -842 | difference in means -15,502; Welch t-test p = 0.183, Mann-Whitney p = 0.081, permutation p = 0.064
+    Amplitude text salaries only: too few rows (multi-zone 2, single-zone 0)
+    Databricks text salaries only: multi-zone n 7, mean -10,790, median -11,168 | single-zone n 130, mean -228, median -961 | difference in means -10,563; Welch t-test p = 0.707, Mann-Whitney p = 0.562, permutation p = 0.421
+    Scale AI text salaries only: multi-zone n 11, mean -3,273, median -11,220 | single-zone n 23, mean +1,042, median +4,427 | difference in means -4,315; Welch t-test p = 0.765, Mann-Whitney p = 0.632, permutation p = 0.795
+    Webflow text salaries only: too few rows (multi-zone 2, single-zone 0)
+  multi-zone test rows: Databricks, Central - United States: actual 185,250, residual -23,665; Airtable, San Francisco, CA: actual 237,050, residual +152; Webflow, Remote: actual 194,000, residual -9,195
+how much the rule can add, on the 25 multi-zone rows (picked midpoint minus the midpoints of the zones listed beside it): vs their average, mean +21,552 (9.0%), median +23,869; vs the lowest zone mean +42,998 (17.8%). That is the most the rule can overstate a posting that belongs in a lower zone.
+
+====================================================================================================
+2. ADABOOST ON TREE 1'S TABULAR FEATURES
+features: tree 1's nine columns department, company_clean, location_clean, workplaceType, salary_annual_min, salary_annual_max, desc_len, location_count, is_multi_location; encoded by role_dt.tabular_encoder inside the pipeline, so every CV fold refits it
+base estimator: decision stump; grid learning_rate [0.05, 0.1, 0.25, 0.5, 1.0, 1.5] x n_estimators [10, 25, 50, 100, 200, 300, 500, 750, 1000, 1500], stratified 5-fold CV on the 927 training rows, accuracy
+
+mean CV accuracy (rows n_estimators, columns learning_rate):
+learning_rate   0.05   0.10   0.25   0.50   1.00   1.50
+n_estimators                                           
+10            0.6376 0.6797 0.6839 0.7227 0.7508 0.8091
+25            0.6602 0.7033 0.7324 0.7616 0.7961 0.8619
+50            0.6839 0.7120 0.7551 0.8037 0.8457 0.8727
+100           0.7033 0.7497 0.7821 0.8285 0.8587 0.8802
+200           0.7497 0.7562 0.8091 0.8479 0.8781 0.8856
+300           0.7508 0.7821 0.8328 0.8630 0.8888 0.8835
+500           0.7605 0.7918 0.8403 0.8802 0.8921 0.8748
+750           0.7821 0.8263 0.8576 0.8835 0.8942 0.8640
+1000          0.7875 0.8371 0.8759 0.8878 0.8888 0.8575
+1500          0.8242 0.8425 0.8781 0.8910 0.8780 0.8543
+CV accuracy, sd across the 5 folds (rows n_estimators, columns learning_rate):
+learning_rate   0.05   0.10   0.25   0.50   1.00   1.50
+n_estimators                                           
+10            0.0299 0.0319 0.0389 0.0363 0.0263 0.0472
+25            0.0317 0.0246 0.0355 0.0278 0.0330 0.0321
+50            0.0389 0.0343 0.0241 0.0167 0.0315 0.0387
+100           0.0246 0.0261 0.0328 0.0364 0.0384 0.0283
+200           0.0261 0.0224 0.0260 0.0456 0.0363 0.0284
+300           0.0263 0.0328 0.0349 0.0410 0.0360 0.0306
+500           0.0163 0.0332 0.0443 0.0372 0.0307 0.0357
+750           0.0328 0.0278 0.0344 0.0347 0.0314 0.0612
+1000          0.0286 0.0389 0.0376 0.0358 0.0364 0.0413
+1500          0.0315 0.0427 0.0380 0.0354 0.0522 0.0408
+training-fold accuracy (for the gap) (rows n_estimators, columns learning_rate):
+learning_rate   0.05   0.10   0.25   0.50   1.00   1.50
+n_estimators                                           
+10            0.6389 0.6890 0.6880 0.7225 0.7505 0.7972
+25            0.6737 0.7033 0.7309 0.7629 0.7996 0.8643
+50            0.6880 0.7128 0.7581 0.8058 0.8487 0.8821
+100           0.7033 0.7508 0.7824 0.8352 0.8751 0.9018
+200           0.7508 0.7584 0.8223 0.8587 0.8948 0.9107
+300           0.7516 0.7821 0.8398 0.8778 0.9064 0.9188
+500           0.7648 0.8050 0.8546 0.8924 0.9105 0.9242
+750           0.7821 0.8325 0.8692 0.8991 0.9169 0.9129
+1000          0.7983 0.8420 0.8883 0.9059 0.9226 0.8986
+1500          0.8301 0.8546 0.8954 0.9097 0.9194 0.9010
+each curve over every round count:
+  learning_rate 0.05: peak 0.8242 at 1375 rounds; within 0.005 of the peak from 1375 rounds; at 1500 rounds 0.8242 (training folds 0.8301)
+  learning_rate 0.1: peak 0.8425 at 1491 rounds; within 0.005 of the peak from 1050 rounds; at 1500 rounds 0.8425 (training folds 0.8546)
+  learning_rate 0.25: peak 0.8792 at 1038 rounds; within 0.005 of the peak from 971 rounds; at 1500 rounds 0.8781 (training folds 0.8954)
+  learning_rate 0.5: peak 0.8910 at 1153 rounds; within 0.005 of the peak from 691 rounds; at 1500 rounds 0.8910 (training folds 0.9097)
+  learning_rate 1: peak 0.8986 at 770 rounds; within 0.005 of the peak from 322 rounds; at 1500 rounds 0.8780 (training folds 0.9194)
+  learning_rate 1.5: peak 0.8921 at 152 rounds; within 0.005 of the peak from 110 rounds; at 1500 rounds 0.8543 (training folds 0.9010)
+
+SELECTED: learning_rate 1, n_estimators 750 (CV accuracy 0.8942); final model fitted on all 927 training rows with 750 stumps
+
+TEST SET (232 postings)
+AdaBoost (tabular): test accuracy 0.8664, macro F1 0.8234, train accuracy 0.9213, gap 0.0549
+confusion matrix (rows true, columns predicted):
+predicted  FD  Sol  SWE
+true                   
+FD         23    3    7
+Sol         1   36   18
+SWE         0    2  142
+    precision recall     F1  support
+FD     0.9583 0.6970 0.8070       33
+Sol    0.8780 0.6545 0.7500       55
+SWE    0.8503 0.9861 0.9132      144
+
+feature importance (share of the weighted impurity decrease across all stumps); 61 of 222 encoded columns are used by at least one stump
+by input column: department 0.778, company_clean 0.092, location_clean 0.076, salary_annual_min 0.024, desc_len 0.017, salary_annual_max 0.012
+top 15 encoded columns:
+department = Forward Deployed Engineering       0.0820
+department = Professional Services Operations   0.0641
+department = Field Engineering - BIF            0.0419
+location_clean = Brazil                         0.0409
+department = Delta                              0.0394
+department = Engineering & Infra                0.0386
+department = Engineering                        0.0365
+department =  Field Engineering - Indirect      0.0350
+department = Echo                               0.0293
+department = Engineering - Pipeline             0.0286
+department = Field Engineering - Other          0.0281
+department = Dev                                0.0244
+department = Modeling                           0.0243
+salary_annual_min                               0.0239
+department = Enterprise Sales                   0.0231
+
+====================================================================================================
+3. ADABOOST AGAINST TREE 1 (gini, no depth limit, all tabular features)
+tree 1 (refitted; matches the published 0.9224): test accuracy 0.9224, macro F1 0.8955, train accuracy 1.0000, gap 0.0776
+confusion matrix (rows true, columns predicted):
+predicted  FD  Sol  SWE
+true                   
+FD         26    2    5
+Sol         1   49    5
+SWE         2    3  139
+    precision recall     F1  support
+FD     0.8966 0.7879 0.8387       33
+Sol    0.9074 0.8909 0.8991       55
+SWE    0.9329 0.9653 0.9488      144
+
+         test accuracy macro F1 recall FD recall Sol recall SWE train accuracy    gap correct (of 232)
+AdaBoost        0.8664   0.8234    0.6970     0.6545     0.9861         0.9213 0.0549              201
+tree 1          0.9224   0.8955    0.7879     0.8909     0.9653         1.0000 0.0776              214
+AdaBoost vs tree 1: 25 test postings separate them; right only by AdaBoost 6, only by tree 1 19; net -13 postings = -5.60 accuracy points (one posting = 0.43); exact McNemar p = 0.015
+  by role family (right only by AdaBoost vs only by tree 1): FD 0 vs 3; Sol 1 vs 14; SWE 5 vs 2
+(exact McNemar p: the chance of a split at least this uneven among the postings the two models disagree on, if neither model were better)
+
+the same two models on the five Module 3 training folds (CV accuracy; both settings were chosen on these folds): AdaBoost 0.8942 +/- 0.0314; tree 1 0.8910 +/- 0.0433
+  fold by fold (AdaBoost minus tree 1): +0.0430, -0.0269, -0.0108, -0.0054, +0.0162; AdaBoost ahead in 2 of 5 folds
+
+====================================================================================================
+4. ADABOOST ON THE MASKED TEXT (second comparison)
+smaller grid to keep it cheap: learning_rate [0.25, 0.5, 1.0] x n_estimators [25, 50, 100, 200, 300, 500, 750, 1000]; the vectoriser is refitted inside every fold
+
+mean CV accuracy (rows n_estimators, columns learning_rate):
+learning_rate   0.25   0.50   1.00
+n_estimators                      
+25            0.8458 0.8954 0.9041
+50            0.8878 0.9138 0.9202
+100           0.9170 0.9256 0.9267
+200           0.9245 0.9299 0.9385
+300           0.9332 0.9353 0.9375
+500           0.9332 0.9375 0.9396
+750           0.9396 0.9440 0.9439
+1000          0.9385 0.9418 0.9439
+CV accuracy, sd across the 5 folds (rows n_estimators, columns learning_rate):
+learning_rate   0.25   0.50   1.00
+n_estimators                      
+25            0.0271 0.0311 0.0286
+50            0.0243 0.0387 0.0307
+100           0.0322 0.0336 0.0303
+200           0.0290 0.0323 0.0269
+300           0.0246 0.0270 0.0260
+500           0.0292 0.0299 0.0260
+750           0.0318 0.0232 0.0229
+1000          0.0246 0.0239 0.0256
+training-fold accuracy (for the gap) (rows n_estimators, columns learning_rate):
+learning_rate   0.25   0.50   1.00
+n_estimators                      
+25            0.8611 0.9102 0.9304
+50            0.9051 0.9374 0.9582
+100           0.9299 0.9563 0.9765
+200           0.9504 0.9747 0.9887
+300           0.9601 0.9822 0.9900
+500           0.9744 0.9871 0.9949
+750           0.9849 0.9889 0.9954
+1000          0.9862 0.9906 0.9954
+each curve over every round count:
+  learning_rate 0.25: peak 0.9407 at 702 rounds; within 0.005 of the peak from 351 rounds; at 1000 rounds 0.9385 (training folds 0.9862)
+  learning_rate 0.5: peak 0.9461 at 707 rounds; within 0.005 of the peak from 543 rounds; at 1000 rounds 0.9418 (training folds 0.9906)
+  learning_rate 1: peak 0.9450 at 979 rounds; within 0.005 of the peak from 182 rounds; at 1000 rounds 0.9439 (training folds 0.9954)
+
+SELECTED: learning_rate 0.5, n_estimators 750
+
+AdaBoost (masked text): test accuracy 0.9224, macro F1 0.8905, train accuracy 0.9860, gap 0.0636
+confusion matrix (rows true, columns predicted):
+predicted  FD  Sol  SWE
+true                   
+FD         26    4    3
+Sol         1   49    5
+SWE         3    2  139
+    precision recall     F1  support
+FD     0.8667 0.7879 0.8254       33
+Sol    0.8909 0.8909 0.8909       55
+SWE    0.9456 0.9653 0.9553      144
+
+against tree 4 (gini, depth 12) and the Module 3 masked-text Naive Bayes models, all refitted and matching their published accuracy:
+                          test accuracy macro F1 recall FD recall Sol recall SWE train accuracy    gap correct (of 232)
+AdaBoost (text)                  0.9224   0.8905    0.7879     0.8909     0.9653         0.9860 0.0636              214
+tree 4                           0.8879   0.8571    0.8182     0.8182     0.9306         0.9903 0.1024              206
+MultinomialNB (alpha 0.1)        0.9138   0.8648    0.6970     0.8364     0.9931         0.9698 0.0560              212
+BernoulliNB (alpha 0.5)          0.9353   0.9043    0.7576     0.8909     0.9931         0.9709 0.0355              217
+AdaBoost (text) vs tree 4: 20 test postings separate them; right only by AdaBoost (text) 14, only by tree 4 6; net +8 postings = +3.45 accuracy points (one posting = 0.43); exact McNemar p = 0.115
+  by role family (right only by AdaBoost (text) vs only by tree 4): FD 2 vs 3; Sol 4 vs 0; SWE 8 vs 3
+AdaBoost (text) vs MultinomialNB (alpha 0.1): 14 test postings separate them; right only by AdaBoost (text) 8, only by MultinomialNB (alpha 0.1) 6; net +2 postings = +0.86 accuracy points (one posting = 0.43); exact McNemar p = 0.791
+  by role family (right only by AdaBoost (text) vs only by MultinomialNB (alpha 0.1)): FD 5 vs 2; Sol 3 vs 0; SWE 0 vs 4
+AdaBoost (text) vs BernoulliNB (alpha 0.5): 11 test postings separate them; right only by AdaBoost (text) 4, only by BernoulliNB (alpha 0.5) 7; net -3 postings = -1.29 accuracy points (one posting = 0.43); exact McNemar p = 0.549
+  by role family (right only by AdaBoost (text) vs only by BernoulliNB (alpha 0.5)): FD 3 vs 2; Sol 1 vs 1; SWE 0 vs 4
+tree 4 vs MultinomialNB (alpha 0.1): 20 test postings separate them; right only by tree 4 7, only by MultinomialNB (alpha 0.1) 13; net -6 postings = -2.59 accuracy points (one posting = 0.43); exact McNemar p = 0.263
+  by role family (right only by tree 4 vs only by MultinomialNB (alpha 0.1)): FD 5 vs 1; Sol 2 vs 3; SWE 0 vs 9
+tree 4 vs BernoulliNB (alpha 0.5): 21 test postings separate them; right only by tree 4 5, only by BernoulliNB (alpha 0.5) 16; net -11 postings = -4.74 accuracy points (one posting = 0.43); exact McNemar p = 0.027
+  by role family (right only by tree 4 vs only by BernoulliNB (alpha 0.5)): FD 4 vs 2; Sol 1 vs 5; SWE 0 vs 9
+MultinomialNB (alpha 0.1) vs BernoulliNB (alpha 0.5): 5 test postings separate them; right only by MultinomialNB (alpha 0.1) 0, only by BernoulliNB (alpha 0.5) 5; net -5 postings = -2.16 accuracy points (one posting = 0.43); exact McNemar p = 0.062
+  by role family (right only by MultinomialNB (alpha 0.1) vs only by BernoulliNB (alpha 0.5)): FD 0 vs 2; Sol 0 vs 3; SWE 0 vs 0
+(exact McNemar p: the chance of a split at least this uneven among the postings the two models disagree on, if neither model were better)

@@ -1,0 +1,790 @@
+PAY RANGES READ FROM THE DESCRIPTION TEXT: VALIDATION RECORD
+Recomputed by src/validate_pay_ranges.py from data/module4/pay_ranges.csv and the 3,718 deduplicated
+postings it was read from. Salary field: the job board's structured band, usable when both ends are
+present, it is not suspect and it is in US dollars.
+
+========================================================================================================
+1. THE RANGE READ FROM THE TEXT AGAINST THE SALARY FIELD
+
+Module 3 subset (1,159 postings): 351 have a usable salary field, and 87 of those also state a pay range
+in the text. A value matches when it is within $0.50 of the other, after converting both to a year.
+
+  minimum matches  79 of 87
+  maximum matches  80 of 87
+  both match       79 of 87 (90.8%)
+
+For reference, the full set of 3,718 postings: 251 with both; minimum matches 230, maximum 232, both
+228.
+
+The 8 subset postings where they differ. In each, the extracted range is what the text says; the text
+and the salary field give different bands.
+
+ 1. jobId 1e6c4acf-d98a-46ac-bacb-d609ca1326c1 | Cohere | Senior Director, Solutions Architecture — Americas | United States
+    salary field: 270,000-539,750 USD, interval not given (a year: 270,000-539,750)
+    text range: '$306,000 - $425,000', USD, a year (interval inferred), basis unspecified; neither end
+    matches
+    text: …ine the vision, strategy and operating model for Americas Solutions Architecture, and hold
+    your leaders accountable for delivery and execution against it. | For candidates in the United
+    States, the Compensation Range is : [[$306,000 - $425,000]] USD + bonus | For candidates in Canada,
+    the Compensation Range is : $391,000 - $539,000 CAD + bonus | - Build Rep…
+
+ 2. jobId 8e513820-55f8-4cbd-8bdd-28a67992469c | Harvey | Staff Software Engineer, Full Stack - NYC | New York, NY
+    salary field: 260,000-310,000 USD, interval not given (a year: 260,000-310,000)
+    text range: '$238,000 -$290,000', USD, a year (interval inferred), basis unspecified; neither end
+    matches
+    text: …e building backend platforms that can support multiple product lines. | - Strong programming
+    skills and general Computer Science knowledge. | - Grit - experience working at early-stage startups
+    is a plus. | COMPENSATION RANGE | [[$238,000 -$290,000]] USD | DEPENDING ON YOUR LOCATION, AN
+    APPLICANT PRIVACY NOTICE MAY APPLY TO YOU. YOU CAN FIND ALL OF OUR APPLICA…
+
+ 3. jobId b774c88e-5d8f-48d3-aed7-948f2e4292b7 | Harvey | Staff Software Engineer, Backend - NYC | New York, NY
+    salary field: 238,000-290,000 USD, interval not given (a year: 238,000-290,000)
+    text range: '$231,000 - $340,000', USD, a year (interval inferred), basis unspecified; neither end
+    matches
+    text: …ensible solutions across the stack that can support multiple product lines. | - Strong
+    programming skills and general Computer Science knowledge. | - Grit - experience working at
+    early-stage startups is a plus. | COMPENSATION | [[$231,000 - $340,000]] USD | Harvey is an equal
+    opportunity employer and does not discriminate on the basis of race, gender, sexual or…
+
+ 4. jobId f47e1925-2a89-4264-8a1b-09cd9215f4dd | Harvey | Senior Software Engineer, AI Platform | San Francisco, CA
+    salary field: 185,000-325,000 USD, interval not given (a year: 185,000-325,000)
+    text range: '$220,000 - $300,000', USD, a year (interval inferred), basis unspecified; neither end
+    matches
+    text: …/function-calling architectures, familiarity with legal or other high-stakes professional
+    services domains, or time at early-stage or hyper-growth startups where the underlying technology
+    changes regularly. | COMPENSATION | [[$220,000 - $300,000]] | DEPENDING ON YOUR LOCATION, AN
+    APPLICANT PRIVACY NOTICE MAY APPLY TO YOU. YOU CAN FIND ALL OF OUR APPLICANT P…
+
+ 5. jobId 77fbf383-bb97-4006-9b2d-e5de2d6f79d3 | OpenAI | Software Engineer, API SDK | Seattle, WA
+    salary field: 347,000-445,000 USD, interval not given (a year: 347,000-445,000)
+    text range: '$293K - $385K', USD, a year (interval inferred), basis unspecified; neither end matches
+    text: …environment with ambiguous requirements and goals. | - Are an engineer at heart, but are
+    willing to lean into product decisions. | - Have experience maintaining SDKs or building
+    SDK-generation software. | Compensation Range: [[$293K - $385K]] USD | About OpenAI | OpenAI is an
+    AI research and deployment company dedicated to ensuring that general-purpose a…
+
+ 6. jobId e14fc37c-7ae5-4a6b-ba0d-a36860cf9bb2 | OpenAI | Software Engineer, Delivery / CD | San Francisco, CA
+    salary field: 210,000-490,000 USD, interval not given (a year: 210,000-490,000)
+    text range: '$230K - $490K', USD, a year (interval inferred), basis unspecified; maximum matches
+    text: …om commit to safe production rollout. | - Care deeply about safe production rollouts and
+    minimizing blast radius | - Enjoy building internal platforms that improve developer productivity
+    across the organization | Compensation | [[$230K - $490K]] + Offers Equity | About OpenAI | OpenAI
+    is an AI research and deployment company dedicated to ensuring that gener…
+
+ 7. jobId 220e674a-fc70-439f-bacf-687553ca59c9 | Ramp | Solutions Consultant, Commercial | Remote
+    salary field: 119,000-189,000 USD, interval not given (a year: 119,000-189,000)
+    text range: '$128,000 - $176,000', USD, a year (interval inferred), basis unspecified; neither end
+    matches
+    text: …ing, system design, and technical specification writing | - Proactive mindset, adaptability,
+    and comfort in a fast-paced, high-growth startup environment | For candidates located in NYC or SF,
+    the pay range for this role is [[$128,000 - $176,000]]. For remote candidates located in all other
+    locations, the pay range for this role is $115,000-$159,000. | BENE…
+
+ 8. jobId 29b679a8-9990-48c1-b91e-001c566ced27 | Ramp | Solutions Consultant, Enterprise | New York, NY
+    salary field: 195,000-298,000 USD, interval not given (a year: 195,000-298,000)
+    text range: '$197,000 - $270,000', USD, a year (interval inferred), basis unspecified; neither end
+    matches
+    text: …rms and ETL processes | - Knowledge of cloud infrastructure (AWS, Azure, GCP) | -
+    Understanding of enterprise authentication systems and security protocols | For candidates located
+    in NYC or SF, the pay range for this role is [[$197,000 - $270,000]]. For candidates located in all
+    other locations, the pay range for this role is $177,000-$243,000. | BENEFITS AV…
+
+========================================================================================================
+2. TEXT-ONLY EXTRACTIONS CHECKED BY HAND
+
+Pool: the 1,324 postings in the full set with a pay range in the text and no salary field. Round 1,
+during the validation of the extractor: 30 drawn at random from the pool (pandas sample,
+random_state=42). Round 2, before any model was fitted: 20 Databricks, 20 Anthropic, 10 Scale AI, drawn
+from the 1,294 not in round 1 (random_state=7 within each company).
+
+Each row was read against the text around it. Verdicts, recorded by hand when the rows were read: round
+1, 30 of 30 extracted values match the text. Round 2, 50 of 50 extracted values, currencies and
+intervals match the text.
+
+Recomputed: the extracted range appears word for word in the posting's text in 80 of 80. Notes below
+record the judgement calls: 4 location, 2 basis, 1 excluded.
+
+ROUND 1 (30)
+
+ 1. jobId 8211450002 | Databricks | Sr Software Engineer-Networking | Washington, DC
+    extracted: '$157,000-$213,800', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$157,000-$213,800]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+
+ 2. jobId 7641390002 | Databricks | Senior Manager, Infrastructure Data Science | San Francisco, CA
+    extracted: '$228,600-$314,250', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ge for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Zone 1 Pay Range | [[$228,600-$314,250]] USD | About Databricks | Databricks is the
+    Data and AI company. More than 20,000 organizations worldwide - includ…
+
+ 3. jobId 8127083 | Webflow | Communications Lead | Remote
+    extracted: '$184,000 - $230,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary; several ranges, highest-zone rule
+    text: …etermined by the candidate's geographic location, job-related experience, knowledge,
+    qualifications, and skills. | • United States (all figures cited below are in USD and pertain to
+    workers in the United States) | • Zone A: [[$184,000 - $230,000]] | • Zone B: $172,500 - $216,000 |
+    • Zone C: $161,500 - $202,000 | This role is also eligible to participate in Webf…
+
+ 4. jobId 4727138005 | Scale AI | Program Manager, Sales Enablement | Washington, DC
+    extracted: '$115,200-$144,000', USD, a year (interval inferred), basis base; usable as a salary
+    text: …d development stipend, and generous PTO. Additionally, this role may be eligible for
+    additional benefits such as a commuter stipend. | The base salary range for this full-time position
+    in the location of Washington DC is: | [[$115,200-$144,000]] USD | PLEASE NOTE: Our policy requires
+    a 90-day waiting period before reconsidering candidates for the same rol…
+
+ 5. jobId 5722244004 | Figma | Manager, Software Engineering - Billing | San Francisco, CA
+    extracted: '$258,000-$376,000', USD, a year (interval inferred), basis base; usable as a salary
+    text: …d an annual bonus plan for eligible non-sales roles. All compensation and benefits are
+    subject to applicable plan terms and may be modified by Figma at any time, consistent with
+    applicable law. | Annual Base Salary Range: | [[$258,000-$376,000]] USD | At Figma we celebrate and
+    support our differences. We know employing a team rich in diverse thoughts, exp…
+
+ 6. jobId 8625462002 | Databricks | Sr. Learning Platform Specialist | United States
+    extracted: '$139,000-$191,050', USD, a year (interval inferred), basis unspecified; usable as a
+    salary; several ranges, highest-zone rule
+    text: …ge for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Zone 1 Pay Range | [[$139,000-$191,050]] USD | Zone 2 Pay Range | $125,000-$171,950 USD
+    | Zone 3 Pay Range | $118,100-$162,350 USD | Zone 4 Pay Range | $111,200-$…
+
+ 7. jobId 8590452002 | Amplitude | Web Growth Marketing Manager | San Francisco, CA
+    extracted: '$110,000 - $165,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary; several ranges, highest-zone rule
+    text: …e: $98,000 - $147,000 base salary (inclusive of bonus or commission) | Based on legislation
+    in New York City, the following details are for individuals will work for Amplitude in New York
+    City: New York City salary range: [[$110,000 - $165,000]]base salary (inclusive of bonus or
+    commission) | Based on legislation in California, the following details are f…
+    note (basis): Amplitude lists one range per state. This San Francisco posting was given the New York
+    City range, which is the same $110,000 - $165,000 as its California range. Each range is described
+    as 'base salary (inclusive of bonus or commission)'; that wording lies beyond the 30 characters the
+    extractor checks for OTE, so the range is used. Whether it includes commission is unclear.
+
+ 8. jobId 6147956004 | Vercel | Product Manager, Observability | New York, NY
+    extracted: '$172,000 - $258,000', USD, a year (interval inferred), basis base; usable as a salary
+    text: …build your network and skills. | • Flexible Time Off. | • We will provide you the gear you
+    need to do your role, and a WFH budget for you to outfit your space as needed. | The San Francisco,
+    CA base pay range for this role is [[$172,000 - $258,000]]. Actual salary will be based on
+    job-related skills, experience, and location. Compensation outside of San Fra…
+
+ 9. jobId 8211648002 | Databricks | Senior Software Engineer, Model Serving | San Francisco, CA
+    extracted: '$166,000-$225,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$166,000-$225,000]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+
+10. jobId 5397005008 | Anthropic | Staff+ Software Engineer, Platform Distribution | San Francisco, CA
+    extracted: '$405,000-$485,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$405,000-$485,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+11. jobId 8097669 | Asana | Director of Engineering, AI Platform | San Francisco, CA
+    extracted: '$306,000-$360,000', USD, a year (interval inferred), basis base; usable as a salary
+    text: …ensure pay is fair and not impacted by biases, we're committed to looking at market value
+    which is why we check ourselves and conduct a yearly pay equity audit. | For this role, the
+    estimated base salary range is between [[$306,000-$360,000]]. The actual base salary will vary based
+    on various factors, including market and individual qualifications ob…
+
+12. jobId 5134895008 | Anthropic | Senior Staff Software Engineer, API | San Francisco, CA
+    extracted: '$405,000-$485,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$405,000-$485,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+13. jobId 5289450008 | Anthropic | Staff+ Software Engineer, Enterprise Knowledge Work | San Francisco, CA
+    extracted: '$405,000-$485,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$405,000-$485,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+14. jobId 8641388002 | Databricks | Enterprise Account Executive - QSR | Remote
+    extracted: '$291,800-$401,300', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$291,800-$401,300]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+
+15. jobId 5399162008 | Anthropic | Product Engineer - Manufacturing Operations | Remote
+    extracted: '$320,000-$405,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$320,000-$405,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+16. jobId 6122437004 | Vercel | DevRel Engineer, Agentic Infrastructure | San Francisco, CA
+    extracted: '$168,000 - $252,000', USD, a year (interval inferred), basis base; usable as a salary
+    text: …build your network and skills. | • Flexible Time Off. | • We will provide you the gear you
+    need to do your role, and a WFH budget for you to outfit your space as needed. | The San Francisco,
+    CA base pay range for this role is [[$168,000 - $252,000]]. Actual salary will be based on
+    job-related skills, experience, and location. Compensation outside of San Fra…
+
+17. jobId 8511491002 | Databricks | Delivery Solutions Architect - Retail | Denver, Colorado
+    extracted: '$219,100-$301,300', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$219,100-$301,300]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+
+18. jobId 5311237008 | Anthropic | Safeguards Enforcement Analyst, Child Safety | Remote
+    extracted: '$245,000-$285,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$245,000-$285,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+19. jobId 7069793002 | Databricks | Staff Data Scientist - Infrastructure | San Francisco, CA
+    extracted: '$192,000-$260,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$192,000-$260,000]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+
+20. jobId 6016765004 | Vercel | Growth Marketing Manager, Agent Stack | San Francisco, CA
+    extracted: '$176,000 - $220,000', USD, a year (interval inferred), basis base; usable as a salary
+    text: …build your network and skills. | • Flexible Time Off. | • We will provide you the gear you
+    need to do your role, and a WFH budget for you to outfit your space as needed. | The San Francisco,
+    CA base pay range for this role is [[$176,000 - $220,000]]. Actual salary will be based on
+    job-related skills, experience, and location. Compensation outside of San Fra…
+
+21. jobId 7111068002 | Databricks | Staff Software Engineer - Money Team | Washington, DC
+    extracted: '$182,400-$247,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$182,400-$247,000]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+
+22. jobId 5339199008 | Anthropic | Data Center Architect, CSA | Remote
+    extracted: '$320,000-$405,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$320,000-$405,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+23. jobId 5358122008 | Anthropic | Tax Director, Provision & Compliance | Remote
+    extracted: '$230,000-$300,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$230,000-$300,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+24. jobId 8367019002 | Databricks | Staff Backend Software Engineer- (AI Platform) | San Francisco, CA
+    extracted: '$166,000-$225,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$166,000-$225,000]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+
+25. jobId 4625341005 | Scale AI | Machine Learning Systems Research Engineer/Scientist, Agent Post-training - Enterprise GenAI | San Francisco, CA
+    extracted: '$264,800-$331,000', USD, a year (interval inferred), basis base; usable as a salary
+    text: …ase reference the job posting's subtitle for where this position will be located. For pay
+    transparency purposes, the base salary range for this full-time position in the locations of San
+    Francisco, New York, Seattle is: | [[$264,800-$331,000]] USD | PLEASE NOTE: Our policy requires a
+    90-day waiting period before reconsidering candidates for the same rol…
+
+26. jobId 4662232005 | Scale AI | GTM Architect | San Francisco, CA
+    extracted: '$249,600-$312,000', USD, a year (interval inferred), basis base; usable as a salary
+    text: …ase reference the job posting's subtitle for where this position will be located. For pay
+    transparency purposes, the base salary range for this full-time position in the locations of San
+    Francisco, New York, Seattle is: | [[$249,600-$312,000]] USD | PLEASE NOTE: Our policy requires a
+    90-day waiting period before reconsidering candidates for the same rol…
+
+27. jobId 4727185005 | Scale AI | Program Manager, Compliance | San Francisco, CA
+    extracted: '$164,800-$206,000', USD, a year (interval inferred), basis base; usable as a salary
+    text: …ase reference the job posting's subtitle for where this position will be located. For pay
+    transparency purposes, the base salary range for this full-time position in the locations of San
+    Francisco, New York, Seattle is: | [[$164,800-$206,000]] USD | PLEASE NOTE: Our policy requires a
+    90-day waiting period before reconsidering candidates for the same rol…
+
+28. jobId 5400160008 | Anthropic | Software Engineer, Business Technology | London, UK
+    extracted: '£255,000-£325,000', GBP, a year (interval inferred), basis unspecified; not usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[£255,000-£325,000]] GBP | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+    note (excluded): A GBP range: kept in the file and excluded from the dollar target.
+
+29. jobId 7293607002 | Databricks | Head of Corporate Engineering | San Francisco, CA
+    extracted: '$265,000-$364,300', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ge for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Zone 1 Pay Range | [[$265,000-$364,300]] USD | About Databricks | Databricks is the
+    Data and AI company. More than 20,000 organizations worldwide - includ…
+
+30. jobId 4481921005 | Scale AI | Forward Deployed Software Engineer, Public Sector | Austin, TX
+    extracted: '$184,000-$292,560', USD, a year (interval inferred), basis base; usable as a salary;
+    several ranges, highest-zone rule
+    text: …ase reference the job posting's subtitle for where this position will be located. For pay
+    transparency purposes, the base salary range for this full-time position in the locations of San
+    Francisco, New York, Seattle is: | [[$184,000-$292,560]] USD | The base salary range for this
+    full-time position in the locations of Hawaii, Washington DC, Texas, Color…
+    note (location): An Austin, TX posting given the San Francisco, New York, Seattle band by the
+    highest-zone rule; the text puts Texas in the second band, $165,600-$263,304.
+
+ROUND 2 (50)
+General note: Anthropic quotes its ranges under a note that sales roles are given as on-target earnings,
+without marking which roles those are.
+
+ 1. jobId 8493724002 | Databricks | Principal Product Marketing Manager, AI Governance | San Francisco, CA
+    extracted: '$193,500-$266,100', USD, a year (interval inferred), basis unspecified; usable as a
+    salary; several ranges, highest-zone rule
+    text: …ge for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Zone 1 Pay Range | [[$193,500-$266,100]] USD | Zone 2 Pay Range | $174,200-$239,450 USD
+    | Zone 3 Pay Range | $164,500-$226,150 USD | Zone 4 Pay Range | $154,800-$…
+
+ 2. jobId 8494156002 | Databricks | Sr. Forward Deployed Engineer (FDE) - Manufacturing | Washington, DC
+    extracted: '$182,000-$250,208', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ge for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Zone 1 Pay Range | [[$182,000-$250,208]] USD | Zone 2 Pay Range | $182,000-$250,208 USD
+    | Zone 3 Pay Range | $182,000-$250,208 USD | Zone 4 Pay Range | $182,000-$…
+
+ 3. jobId 8568035002 | Databricks | Sr. Manager, Field Engineering - Financial Services (Banking and Payments) | Illinois
+    extracted: '$192,100-$264,175', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$192,100-$264,175]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+
+ 4. jobId 8508943002 | Databricks | Staff Partner Engineer, Azure | New York, NY
+    extracted: '$150,200-$206,450', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ge for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Zone 1 Pay Range | [[$150,200-$206,450]] USD | Pay Range Transparency | Databricks is
+    committed to fair and equitable compensation practices. The pay rang…
+
+ 5. jobId 8633152002 | Databricks | Strategic Enterprise Account Executive - CMEG | Remote
+    extracted: '$272,000-$374,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$272,000-$374,000]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+
+ 6. jobId 8569606002 | Databricks | Director, Lakebase Sales Specialists - HLS | United States
+    extracted: '$430,400-$591,800', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$430,400-$591,800]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+    note (basis): A sales director. Databricks quotes 'the expected salary range for non-commissionable
+    roles or on-target earnings for commissionable roles' without saying which applies, so this range
+    may be on-target earnings.
+
+ 7. jobId 8569633002 | Databricks | Solutions Architect - Communications, Media, Entertainment and Games | Colorado
+    extracted: '$180,000-$247,500', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ge for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Zone 3 Pay Range | [[$180,000-$247,500]] USD | About Databricks | Databricks is the
+    Data and AI company. More than 20,000 organizations worldwide - includ…
+
+ 8. jobId 8517577002 | Databricks | Sr Production Engineer- Public Sector | Virginia
+    extracted: '$135,500-$186,350', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$135,500-$186,350]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+
+ 9. jobId 8482037002 | Databricks | Systems PhD - Software Engineer | San Francisco, CA
+    extracted: '$150,000-$190,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$150,000-$190,000]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+
+10. jobId 5408888002 | Databricks | Staff Software Engineer - Backend | San Francisco, CA
+    extracted: '$192,000-$260,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$192,000-$260,000]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+
+11. jobId 8548986002 | Databricks | Delivery Solutions Architect - Digital Native Business | Remote
+    extracted: '$180,000-$247,500', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$180,000-$247,500]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+
+12. jobId 8760176002 | Databricks | Staff Software Engineer, Data Collection (Tags & SDKs) | New York, NY
+    extracted: '$190,900-$253,750', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$190,900-$253,750]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+
+13. jobId 6883068002 | Databricks | Product Management Intern (Summer 2027) | Washington, DC
+    extracted: '$54-$56', USD, an hour (interval stated), basis unspecified -> 112,320-116,480 a year;
+    usable as a salary; several ranges, highest-zone rule
+    text: …this position may also include eligibility for annual performance bonus, equity, and the
+    benefits listed above. For more information regarding which range your location is in visit our page
+    here. | SF Bay Area Hourly Rate | [[$54-$56]] USD | Pay Range Transparency | Databricks is committed
+    to fair and equitable compensation practices. The pay rang…
+    note (location): A Washington, DC intern given the SF Bay Area hourly rate by the highest-zone rule.
+
+14. jobId 8220840002 | Databricks | Staff Fullstack Engineer, Agentic Applications | San Francisco, CA
+    extracted: '$192,000-$260,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$192,000-$260,000]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+
+15. jobId 8220814002 | Databricks | Sr Software Engineer, Agentic Applications | San Francisco, CA
+    extracted: '$192,000-$260,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$192,000-$260,000]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+
+16. jobId 8638650002 | Databricks | Sr. Industry Marketing Manager, Startups | United States
+    extracted: '$163,400-$224,750', USD, a year (interval inferred), basis unspecified; usable as a
+    salary; several ranges, highest-zone rule
+    text: …ge for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Zone 1 Pay Range | [[$163,400-$224,750]] USD | Zone 2 Pay Range | $147,100-$202,300 USD
+    | Zone 3 Pay Range | $139,000-$191,050 USD | Zone 4 Pay Range | $130,700-$…
+
+17. jobId 8423310002 | Databricks | Sr. Forward Deployed Engineer (FDE) - Public Sector | Delaware
+    extracted: '$182,000-$250,208', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ge for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Zone 1 Pay Range | [[$182,000-$250,208]] USD | Zone 2 Pay Range | $182,000-$250,208 USD
+    | Zone 3 Pay Range | $182,000-$250,208 USD | Zone 4 Pay Range | $182,000-$…
+
+18. jobId 8661359002 | Databricks | Sr. Staff, Technical Program Management | San Francisco, CA
+    extracted: '$222,500-$305,900', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ge for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Zone 1 Pay Range | [[$222,500-$305,900]] USD | About Databricks | Databricks is the
+    Data and AI company. More than 20,000 organizations worldwide - includ…
+
+19. jobId 8611106002 | Databricks | Sr. Delivery Partner Manager, FDE | Central - United States
+    extracted: '$156,000-$214,500', USD, a year (interval inferred), basis unspecified; usable as a
+    salary; several ranges, highest-zone rule
+    text: …ge for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Zone 1 Pay Range | [[$156,000-$214,500]] USD | Zone 2 Pay Range | $140,400-$193,050 USD
+    | Zone 3 Pay Range | $132,600-$182,400 USD | Zone 4 Pay Range | $124,800-$…
+    note (location): A 'Central - United States' posting given Zone 1 by the highest-zone rule; the text
+    does not say which zone that location is in.
+
+20. jobId 6318503002 | Databricks | Senior Software Engineer - Infrastructure and Tools | San Francisco, CA
+    extracted: '$166,000-$225,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …age for this position may also include eligibility for annual performance bonus, equity, and
+    the benefits listed above. For more information regarding which range your location is in visit our
+    page here. | Local Pay Range | [[$166,000-$225,000]] USD | About Databricks | Databricks is the Data
+    and AI company. More than 20,000 organizations worldwide - includ…
+
+21. jobId 5393526008 | Anthropic | Product Manager, Cybersecurity | San Francisco, CA
+    extracted: '$385,000-$460,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$385,000-$460,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+22. jobId 5238460008 | Anthropic | Data Operations Manager, Human Data | San Francisco, CA
+    extracted: '$270,000-$365,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$270,000-$365,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+23. jobId 5389305008 | Anthropic | Staff Software Engineer, Education | San Francisco, CA
+    extracted: '$320,000-$405,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$320,000-$405,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+24. jobId 5123851008 | Anthropic | Infrastructure Tax Lead | Remote
+    extracted: '$300,000-$385,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$300,000-$385,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+25. jobId 5375371008 | Anthropic | Data Center Electrical Engineer | Remote
+    extracted: '$320,000-$405,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$320,000-$405,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+26. jobId 5287926008 | Anthropic | Manager, Web Engineering | San Francisco, CA
+    extracted: '$405,000-$405,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$405,000-$405,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+27. jobId 5301958008 | Anthropic | Technical Program Manager, Enterprise Commerce | San Francisco, CA
+    extracted: '$290,000-$365,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$290,000-$365,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+28. jobId 5391233008 | Anthropic | Senior Partner Sales Manager, Systems Integrators - EMEA & North | London, UK
+    extracted: '£160,000-£215,000', GBP, a year (interval inferred), basis unspecified; not usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[£160,000-£215,000]] GBP | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+29. jobId 5409008008 | Anthropic | Applied AI Architect, Strategic Enterprise Tech | San Francisco, CA
+    extracted: '$240,000-$315,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$240,000-$315,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+30. jobId 5174755008 | Anthropic | Staff+ Software Engineer, Backend | San Francisco, CA
+    extracted: '$405,000-$485,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$405,000-$485,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+31. jobId 5409299008 | Anthropic | Regulatory Counsel, AI Regulation, US | San Francisco, CA
+    extracted: '$335,000-$385,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$335,000-$385,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+32. jobId 5232055008 | Anthropic | Data Scientist, Policy | New York, NY
+    extracted: '$285,000-$380,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$285,000-$380,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+33. jobId 5231496008 | Anthropic | Staff + Sr. Software Engineer, Cloud Inference | San Francisco, CA
+    extracted: '$320,000-$485,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$320,000-$485,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+34. jobId 5309805008 | Anthropic | Engineering Manager, Connectivity - London | London, UK
+    extracted: '£255,000-£325,000', GBP, a year (interval inferred), basis unspecified; not usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[£255,000-£325,000]] GBP | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+35. jobId 5409569008 | Anthropic | New Product Introduction (NPI) Sourcing Manager, Data Center Power & Cooling | Remote
+    extracted: '$320,000-$405,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$320,000-$405,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+36. jobId 5394887008 | Anthropic | Product Manager, Claude Science | San Francisco, CA
+    extracted: '$305,000-$385,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$305,000-$385,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+37. jobId 5205704008 | Anthropic | Staff+ Software Engineer, Public Sector | Remote
+    extracted: '$405,000-$485,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$405,000-$485,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+38. jobId 5364336008 | Anthropic | Capital Markets - Infrastructure Financing | San Francisco, CA
+    extracted: '$325,000-$425,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$325,000-$425,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+39. jobId 5324349008 | Anthropic | Product Manager, Research (Code) | San Francisco, CA
+    extracted: '$305,000-$385,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$305,000-$385,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+40. jobId 5407337008 | Anthropic | Product Manager, Beneficial Deployments (Labs) | San Francisco, CA
+    extracted: '$385,000-$460,000', USD, a year (interval inferred), basis unspecified; usable as a
+    salary
+    text: …ow. | For sales roles, the range provided is the role's On Target Earnings ("OTE") range,
+    meaning that the range includes both the sales commissions/sales bonuses target and annual base
+    salary for the role. | Annual Salary: | [[$385,000-$460,000]] USD | Logistics | Minimum education:
+    Bachelor's degree or an equivalent combination of education, training, and/o…
+
+41. jobId 4674911005 | Scale AI | Senior Software Engineer, Public Sector | San Francisco, CA
+    extracted: '$216,000-$311,000', USD, a year (interval inferred), basis base; usable as a salary;
+    several ranges, highest-zone rule
+    text: …ase reference the job posting's subtitle for where this position will be located. For pay
+    transparency purposes, the base salary range for this full-time position in the locations of San
+    Francisco, New York, Seattle is: | [[$216,000-$311,000]] USD | The base salary range for this
+    full-time position in the locations of Hawaii, Washington DC, Texas, Color…
+
+42. jobId 4722944005 | Scale AI | Strategic Finance Manager, Corporate | San Francisco, CA
+    extracted: '$177,600-$222,000', USD, a year (interval inferred), basis base; usable as a salary
+    text: …ase reference the job posting's subtitle for where this position will be located. For pay
+    transparency purposes, the base salary range for this full-time position in the locations of San
+    Francisco, New York, Seattle is: | [[$177,600-$222,000]] USD | PLEASE NOTE: Our policy requires a
+    90-day waiting period before reconsidering candidates for the same rol…
+
+43. jobId 4722811005 | Scale AI | Sr. Director, (Applied AI)  Forward Deployed Engineering | New York, NY
+    extracted: '$285,200-$356,500', USD, a year (interval inferred), basis base; usable as a salary
+    text: …ase reference the job posting's subtitle for where this position will be located. For pay
+    transparency purposes, the base salary range for this full-time position in the locations of San
+    Francisco, New York, Seattle is: | [[$285,200-$356,500]] USD | PLEASE NOTE: Our policy requires a
+    90-day waiting period before reconsidering candidates for the same rol…
+
+44. jobId 4717648005 | Scale AI | Field Engineer, Public Sector | Austin, TX
+    extracted: '$180,550-$226,550', USD, a year (interval inferred), basis base; usable as a salary;
+    several ranges, highest-zone rule
+    text: …opment stipend, and generous PTO. Additionally, this role may be eligible for additional
+    benefits such as a commuter stipend. | The base salary range for this full-time position in the
+    location of Washington DC/Hawaii is: | [[$180,550-$226,550]] USD | The base salary range for this
+    full-time position in the location of St. Louis/Suffolk is: | $150,400-$188,…
+    note (location): An Austin, TX posting given the Washington DC/Hawaii band by the highest-zone rule;
+    Texas is not listed.
+
+45. jobId 4711741005 | Scale AI | Security Assurance Lead | Washington, DC
+    extracted: '$213,600-$267,000', USD, a year (interval inferred), basis base; usable as a salary
+    text: …d development stipend, and generous PTO. Additionally, this role may be eligible for
+    additional benefits such as a commuter stipend. | The base salary range for this full-time position
+    in the location of Washington DC is: | [[$213,600-$267,000]] USD | PLEASE NOTE: Our policy requires
+    a 90-day waiting period before reconsidering candidates for the same rol…
+
+46. jobId 4694869005 | Scale AI | Senior Staff Frontier Agents Engineer | San Francisco, CA
+    extracted: '$288,000-$360,000', USD, a year (interval inferred), basis base; usable as a salary
+    text: …ase reference the job posting's subtitle for where this position will be located. For pay
+    transparency purposes, the base salary range for this full-time position in the locations of San
+    Francisco, New York, Seattle is: | [[$288,000-$360,000]] USD | PLEASE NOTE: Our policy requires a
+    90-day waiting period before reconsidering candidates for the same rol…
+
+47. jobId 4720969005 | Scale AI | Program Manager - Growth Operations, Contract | San Francisco, CA
+    extracted: '$60 to $85', USD, an hour (interval stated), basis unspecified -> 124,800-176,800 a
+    year; usable as a salary
+    text: …oop, Gem | • Extreme attention to detail | • AI builder, AI-forward operator, or strong
+    interest in agentic coding and experimenting with AI tooling | The hourly salary range for this
+    contract position in San Francisco, CA is [[$60 to $85]]/hr. This is a hybrid position in San
+    Francisco, CA with occasional travels for onsite growth/recruiting event…
+
+48. jobId 4663481005 | Scale AI | Solutions Engineer (Clearance Required) | Washington, DC
+    extracted: '$186,400-$233,000', USD, a year (interval inferred), basis base; usable as a salary
+    text: …d development stipend, and generous PTO. Additionally, this role may be eligible for
+    additional benefits such as a commuter stipend. | The base salary range for this full-time position
+    in the location of Washington DC is: | [[$186,400-$233,000]] USD | PLEASE NOTE: Our policy requires
+    a 90-day waiting period before reconsidering candidates for the same rol…
+
+49. jobId 4633072005 | Scale AI | Technical Program Manager, Public Sector | Washington, DC
+    extracted: '$173,600-$217,000', USD, a year (interval inferred), basis base; usable as a salary
+    text: …d development stipend, and generous PTO. Additionally, this role may be eligible for
+    additional benefits such as a commuter stipend. | The base salary range for this full-time position
+    in the location of Washington DC is: | [[$173,600-$217,000]] USD | PLEASE NOTE: Our policy requires
+    a 90-day waiting period before reconsidering candidates for the same rol…
+
+50. jobId 4569678005 | Scale AI | Staff Software Engineer, Enterprise GenAI | San Francisco, CA
+    extracted: '$252,000-$315,000', USD, a year (interval inferred), basis base; usable as a salary
+    text: …ase reference the job posting's subtitle for where this position will be located. For pay
+    transparency purposes, the base salary range for this full-time position in the locations of San
+    Francisco, New York, Seattle is: | [[$252,000-$315,000]] USD | PLEASE NOTE: Our policy requires a
+    90-day waiting period before reconsidering candidates for the same rol…
+
+========================================================================================================
+3. SEVERAL RANGES IN ONE POSTING, AND WHAT IS LEFT OUT
+
+Rule: keep the valid ranges (not a placeholder, not suspect), prefer USD, then prefer a range that is
+not on-target earnings, then take the highest yearly midpoint, ties going to the first listed. Employers
+list pay zones from the highest-cost area down (Zone 1, Zone A, 'San Francisco, New York, Seattle'), so
+the highest range is the top-zone band, the band a posting in those cities would quote. The posting's
+own location cannot be matched to a zone for most of these postings, because the zones are defined on
+the employer's website. multi_zone marks the postings where the pick was made among two or more
+different USD base-pay ranges. The rule overstates pay for a posting in a lower-cost zone: the hand
+checks found 4 such picks among the 80 (section 2, notes marked location).
+
+                                                                  full set  subset
+postings                                                             3,718   1,159
+  with a pay range in the text                                       1,579     520
+    more than one distinct valid range                                 145      41
+    multi_zone: picked among two or more different USD base ranges     110      27
+    range picked is not the first one listed                            26      11
+
+Postings whose picked range is left out of the dollar target (first reason that applies):
+  placeholder only (both amounts below $10, such as $1-$1)               4       0
+  outside the clean_ats salary thresholds, or minimum above maximum       3       0
+  currency not USD (GBP, EUR, CAD, AUD and others)                      83      30
+  currency unknown (a bare $ in a posting located outside the US)        3       1
+  on-target earnings (OTE) only                                         67      16
+  hourly, with the interval only inferred from the amount                2       0
+  left out, all reasons                                                162      47
+usable as a yearly US dollar salary (text_usable_usd)                1,417     473
+  of which an hourly rate stated in the text, x 2,080 hours             11       4
+
+The postings left out only because their hourly interval was inferred from the amount:
+  jobId 7872746002 | Databricks | '$170.40-$255.60' under 'Local Pay Range' (would have been
+  354,432-531,648 a year); in the subset: False
+  jobId 7295190002 | Databricks | '$50-$60' under 'Zone 1 Pay Range' (would have been 104,000-124,800 a
+  year); in the subset: False
+
+The salary target of the regression (subset): 351 from the salary field, 386 added from the text, 737 in
+all. Of the text salaries, 25 are multi_zone picks: 22 in the training set and 3 in the test set. How
+much the rule can add to those salaries is in results/regression_report.txt.

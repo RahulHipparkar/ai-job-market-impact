@@ -15,7 +15,8 @@ https://rahulhipparkar.github.io/ai-job-market-impact/
 - Data preparation and exploratory analysis — complete
 - Clustering (k-means and hierarchical) and PCA — complete
 - Naive Bayes (multinomial and Bernoulli) and decision trees — complete
-- Regression, AdaBoost, gradient boosting, XGBoost and the conclusions — to come
+- Regression (linear and logistic) and AdaBoost — complete
+- Gradient boosting, XGBoost and the conclusions — to come
 
 ## Data sources
 
@@ -40,14 +41,17 @@ Issues are flagged in columns rather than dropped. Each cleaning script writes a
 ## Repository layout
 
 ```
-data/       raw, interim and processed tables, plus small committed samples
-src/        fetch and clean scripts, clustering, PCA, Naive Bayes and decision tree modules, figure and sample scripts, and the shared plot style
+data/       raw, interim and processed tables, the pay ranges read from posting text (module4/),
+            plus small committed samples
+src/        fetch and clean scripts, clustering, PCA, Naive Bayes, decision tree, regression and AdaBoost
+            modules, the pay-range extraction, figure and sample scripts, and the shared plot style
 notebooks/  01_data_prep_eda.ipynb, the exploratory pass, 02_clustering_pca.ipynb, clustering and PCA,
-            and 03_naive_bayes_dt.ipynb, Naive Bayes and decision trees
+            03_naive_bayes_dt.ipynb, Naive Bayes and decision trees, and 04_regression_adaboost.ipynb,
+            regression and AdaBoost
 figures/    charts and thumbnails used by the site
 site/       Quarto source for the website
 docs/       rendered site, served by GitHub Pages
-results/    text reports written by the analysis notebooks
+results/    text reports and result tables written by the analysis notebooks and scripts
 ```
 
 ## Running it
@@ -111,9 +115,30 @@ The Module 3 sample tables and explanatory figures on the site come from two mor
 - `src/make_module3_samples.py` — writes samples of the Naive Bayes and decision tree inputs, and of each side of the training and test split, to `data/samples/` and draws them as PNG tables.
 - `src/make_module3_concept_figures.py` — the two explanatory figures on each of the Naive Bayes and Decision Trees pages, drawn from small made-up data.
 
+Module 4 starts by reading pay ranges from the description text, because most postings leave the salary field empty. Run `extract_pay_ranges.py` first, because the other three read the file it writes; those three do not depend on each other:
+
+```
+python src/extract_pay_ranges.py
+python src/validate_pay_ranges.py
+python src/regression_models.py
+python src/role_adaboost.py
+```
+
+- `src/extract_pay_ranges.py` — reads the pay range written in each posting's description, with its currency, interval and basis, turns hourly rates into yearly ones, picks one range when a posting lists several pay zones, and writes `data/module4/pay_ranges.csv`.
+- `src/validate_pay_ranges.py` — compares the pay ranges read from the text with the salary field where a posting has both, draws again the 80 text-only postings that were checked by hand and prints the text around each, counts the postings affected by the multi-zone rule and by each exclusion, and writes `results/pay_range_validation.txt`.
+- `src/regression_models.py` — linear regression on the salary midpoint, taken from the salary field where it is usable and otherwise from `data/module4/pay_ranges.csv`, and logistic regression on forward deployed against the other two role families, with Naive Bayes refitted on the same label. It writes `results/regression_report.txt` and `results/regression_predictions.csv`.
+- `src/role_adaboost.py` — AdaBoost on decision stumps, on the decision tree features of Module 3 and on the masked description text, with the number of rounds and the learning rate tuned together by cross-validation. It writes `results/adaboost_report.txt` and `results/adaboost_cv_curve.csv`. The tuning takes about four and a half minutes.
+
+Then run `notebooks/04_regression_adaboost.ipynb` with the same kernel. It reads `data/module4/pay_ranges.csv` and loads `results/adaboost_cv_curve.csv` instead of repeating the AdaBoost tuning, which sits in its own cell that only runs when switched on. It prints every result and saves the result charts to `figures/`; the two scripts above write the reports.
+
+The Module 4 sample tables and explanatory figures on the site come from two more scripts, which can run any time after `extract_pay_ranges.py`:
+
+- `src/make_module4_samples.py` — writes samples of the linear regression, logistic regression and AdaBoost inputs, and of each side of the training and test split, to `data/samples/` and draws them as PNG tables.
+- `src/make_module4_concept_figures.py` — the two explanatory figures on each of the Regression and AdaBoost pages, drawn from small made-up data.
+
 ## What is not in the repository
 
-`data/raw/` and `data/interim/` are gitignored, along with three processed files that are too large to track: `hn_postings.csv` (125 MB), `hn_clean.csv` (177 MB) and `indeed_metro.csv` (112 MB). The fetch and clean scripts regenerate all of them. Small raw and cleaned samples of every source are committed in `data/samples/`, so the shape of the data can be seen without downloading anything. Among them, `ats_raw_sample.csv` and `indeed_sector_raw_sample.csv` are the 20-row raw samples linked from the Clustering, PCA, Naive Bayes and Decision Trees pages. `clustering_input_sample.csv` and `pca_input_sample.csv` show ten rows of the matrices the clustering and PCA are run on, and `clustering_before_sample.csv` and `pca_before_sample.csv` show the same rows before TF-IDF and standardising. `nb_input_sample.csv`, `nb_train_sample.csv` and `nb_test_sample.csv` show ten rows each of the Naive Bayes input and of its training and test sets, and `dt_input_sample.csv`, `dt_train_sample.csv` and `dt_test_sample.csv` do the same for the decision trees.
+`data/raw/` and `data/interim/` are gitignored, along with three processed files that are too large to track: `hn_postings.csv` (125 MB), `hn_clean.csv` (177 MB) and `indeed_metro.csv` (112 MB). The fetch and clean scripts regenerate all of them. Small raw and cleaned samples of every source are committed in `data/samples/`, so the shape of the data can be seen without downloading anything. Among them, `ats_raw_sample.csv` and `indeed_sector_raw_sample.csv` are the 20-row raw samples linked from the Clustering, PCA, Naive Bayes and Decision Trees pages. `clustering_input_sample.csv` and `pca_input_sample.csv` show ten rows of the matrices the clustering and PCA are run on, and `clustering_before_sample.csv` and `pca_before_sample.csv` show the same rows before TF-IDF and standardising. `nb_input_sample.csv`, `nb_train_sample.csv` and `nb_test_sample.csv` show ten rows each of the Naive Bayes input and of its training and test sets, and `dt_input_sample.csv`, `dt_train_sample.csv` and `dt_test_sample.csv` do the same for the decision trees. `reg_input_sample.csv`, `reg_train_sample.csv` and `reg_test_sample.csv` show ten rows each of the linear regression input and of its training and test sets, and `reg_logistic_sample.csv` ten rows of the logistic regression input. `ab_input_sample.csv` shows the one-hot encoding step for AdaBoost, and `ab_train_sample.csv` and `ab_test_sample.csv` show encoded training and test rows.
 
 ## Course
 

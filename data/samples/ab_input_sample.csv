@@ -1,0 +1,11 @@
+jobId,workplaceType,workplaceType = hybrid,workplaceType = missing,workplaceType = onsite,workplaceType = remote,company_clean,company_clean = Anthropic,company_clean = Databricks,company_clean = Harvey,company_clean = OpenAI,company_clean = Palantir,company_clean = Perplexity
+3d06b4bc-6a7b-4f73-b5c5-4544354e3d0f,onsite,0,0,1,0,Palantir,0,0,0,0,1,0
+1b6f1d82-d459-4dea-8bc2-8d2ffe6f881a,onsite,0,0,1,0,Palantir,0,0,0,0,1,0
+0a838e66-1ab0-4fc4-b4d3-4671c0352278,hybrid,1,0,0,0,Palantir,0,0,0,0,1,0
+5367026008,missing,0,1,0,0,Anthropic,1,0,0,0,0,0
+11c51b12-3ba0-4a7a-a0d2-ed0661324dc3,missing,0,1,0,0,OpenAI,0,0,0,1,0,0
+362a91cc-8e64-4922-a650-68161de60daa,hybrid,1,0,0,0,OpenAI,0,0,0,1,0,0
+8517068002,missing,0,1,0,0,Databricks,0,1,0,0,0,0
+8721003002,missing,0,1,0,0,Databricks,0,1,0,0,0,0
+b774c88e-5d8f-48d3-aed7-948f2e4292b7,hybrid,1,0,0,0,Harvey,0,0,1,0,0,0
+94ccf41e-d3e1-41aa-9569-c3bcbffc4184,missing,0,1,0,0,Perplexity,0,0,0,0,0,1

@@ -1,0 +1,339 @@
+MODULE 4: LINEAR AND LOGISTIC REGRESSION
+Module 3 subset (1,159 postings), Module 3 split (927 training, 232 test); fitted on training rows only, scored once on the test rows.
+Never used as features: title, seniority, is_near_dup; for salary also the description text, which the target is partly taken from.
+
+====================================================================================================
+1. CLEANUPS BEFORE MODELLING
+hourly figures whose interval was only inferred from magnitude, usable before and now dropped:
+  Databricks jobId 7872746002: '$170.40-$255.60' under 'Local Pay Range' (would have been 354,432-531,648); in the subset: False
+  Databricks jobId 7295190002: '$50-$60' under 'Zone 1 Pay Range' (would have been 104,000-124,800); in the subset: False
+stated hourly figures kept: 11 ({'Palantir': 4, 'Scale AI': 4, 'Databricks': 3})
+multi_zone flag: 110 postings in the full set, 27 in the subset; it marks a pick made among two or more different USD base-pay ranges. Only rows whose salary comes from the text use the pick.
+
+50 text-only extractions were read against their surrounding text before modelling: 20 Databricks,
+20 Anthropic and 10 Scale AI, drawn with seed 7 from the 1,294 text-only postings not already checked
+in the validation round.
+  value, currency and interval match the text: 50 of 50
+  picks that quote a band for another location than the posting's own: 3, all multi_zone, all the
+  highest-zone rule (a Databricks intern in Washington, DC given the SF Bay Area hourly rate; a
+  Databricks 'Central - United States' posting given Zone 1; a Scale AI posting in Austin, TX given
+  the Washington DC/Hawaii band)
+  basis that cannot be checked from the text: 1 (a Databricks sales director, $430,400-$591,800,
+  may be on-target earnings; the text does not say). Anthropic's ranges sit under its note that
+  sales roles are quoted as OTE without marking which roles those are.
+  judged wrong: 0 (3 even counting the location picks), so modelling went ahead
+
+====================================================================================================
+2. LINEAR REGRESSION: salary midpoint (dollars)
+rows with a salary: training 585 of 927, test 152 of 232
+  source, training: {'text': 309, 'structured': 276}; test: {'text': 77, 'structured': 75}
+  role family, training: {'software_eng': 433, 'solutions': 91, 'forward_deployed': 61}; test: {'software_eng': 110, 'solutions': 27, 'forward_deployed': 15}
+  multi-zone rows (text salary picked among several zone ranges): training 22, test 3
+  target mean on training rows $279,462, sd $85,111
+reference levels (most common training value): company_clean = OpenAI; department = Engineering; location_clean = San Francisco, CA; workplaceType = missing; role_family = software_eng
+test rows whose category never occurs in training (encoded as the reference): {'company_clean': 0, 'department': 6, 'location_clean': 1, 'workplaceType': 0, 'role_family': 0}
+
+TEST SET (152 rows), each model fitted on training rows only:
+                                          fit  train rows   RMSE    MAE     R2
+                      baseline: training mean         585 73,690 61,671 -0.041
+                                 all features         585 40,356 30,492  0.688
+               without company and department         585 66,911 53,356  0.142
+                                 company only         585 48,731 35,435  0.545
+all features, multi-zone rows out of training         563 43,417 32,192  0.639
+same fits scored on the 149 test rows that are not multi-zone: baseline: training mean R2 -0.034; all features R2 0.684; without company and department R2 0.148; company only R2 0.543; all features, multi-zone rows out of training R2 0.646
+where the multi-zone sensitivity comes from: training rows that are multi-zone, by company (multi-zone / all): Amplitude 2/2, Databricks 7/137, Scale AI 11/34, Webflow 2/2
+  change in test squared error when they are left out, by company (billions of dollars squared; + is worse): Amplitude +16.7, Scale AI +12.3, Webflow +9.0, Harvey +2.6, Discord +0.6, Ramp -0.5, Cohere -0.5, Databricks -2.0
+  departments with at least 3 training rows, half or more of them multi-zone: Scale AI 'Public Sector Engineering' 9/10
+
+MULTI-ZONE RESIDUAL CHECK
+residual = actual minus predicted midpoint, all-features fit; an overstated multi-zone salary shows up as a positive residual (the fit predicts less than the recorded top-zone value)
+  test rows: multi-zone n 3, mean -10,903, median -9,195 | single-zone n 149, mean -3,572, median +763 | difference in means -7,330; Welch t-test p = 0.410, Mann-Whitney p = 0.562, permutation p = 0.735
+  training rows, out of fold (10 x 5-fold): multi-zone n 22, mean -15,538, median -14,443 | single-zone n 563, mean -1,054, median -303 | difference in means -14,484; Welch t-test p = 0.206, Mann-Whitney p = 0.114, permutation p = 0.129
+  training rows, out of fold, text salaries at Amplitude, Databricks, Scale AI, Webflow only: multi-zone n 22, mean -15,538, median -14,443 | single-zone n 153, mean -37, median -842 | difference in means -15,502; Welch t-test p = 0.183, Mann-Whitney p = 0.081, permutation p = 0.064
+    Amplitude text salaries only: too few rows (multi-zone 2, single-zone 0)
+    Databricks text salaries only: multi-zone n 7, mean -10,790, median -11,168 | single-zone n 130, mean -228, median -961 | difference in means -10,563; Welch t-test p = 0.707, Mann-Whitney p = 0.562, permutation p = 0.421
+    Scale AI text salaries only: multi-zone n 11, mean -3,273, median -11,220 | single-zone n 23, mean +1,042, median +4,427 | difference in means -4,315; Welch t-test p = 0.765, Mann-Whitney p = 0.632, permutation p = 0.795
+    Webflow text salaries only: too few rows (multi-zone 2, single-zone 0)
+  multi-zone test rows: Databricks, Central - United States: actual 185,250, residual -23,665; Airtable, San Francisco, CA: actual 237,050, residual +152; Webflow, Remote: actual 194,000, residual -9,195
+how much the rule can add, on the 25 multi-zone rows (picked midpoint minus the midpoints of the zones listed beside it): vs their average, mean +21,552 (9.0%), median +23,869; vs the lowest zone mean +42,998 (17.8%). That is the most the rule can overstate a posting that belongs in a lower zone.
+
+ALL-FEATURES COEFFICIENTS, dollars of salary midpoint per unit; categories are differences from the reference level above, desc_len is dollars per character (x1,000 = -1,611 per 1,000 characters).
+intercept 337,666; 136 encoded columns; rank of the training design with intercept 134 of 137
+  the design is rank-deficient: some departments belong to a single company, so their department and company columns are not separately identified, and least squares splits the effect between them. The role family, work mode, location and desc_len coefficients, and the company-only fit's coefficients, do not have this problem.
+                                                    column  dollars
+                                   department_Early Career -139,984
+                                    company_clean_Palantir -132,411
+                          department_University Recruiting -125,957
+                      department_AI Research & Engineering  125,644
+                                     department_University -116,363
+                                       company_clean_Asana -103,453
+                                    company_clean_Airtable -101,503
+                            department_Business Operations -101,457
+                                  company_clean_Databricks -100,641
+                                        company_clean_Ramp  -99,065
+                                      company_clean_Vercel  -96,877
+                               department_Customer Success  -85,535
+                                   department_Go To Market   84,909
+                                   company_clean_Amplitude  -83,343
+                                      company_clean_Harvey  -80,573
+          department_Software Engineering - Infrastructure   79,820
+                                     company_clean_Webflow  -77,494
+                 department_Engineering & Design - Product   73,922
+                                    company_clean_Scale AI  -71,638
+                   department_Forward Deployed Engineering  -65,157
+                           department_Engineering : Growth  -64,065
+                    department_Safeguards (Trust & Safety)   61,415
+                                      company_clean_Cohere  -61,411
+                      department_Field Engineering - Other   55,985
+                                     company_clean_Discord  -54,213
+                     department_Data, Technology & Systems  -54,001
+                            location_clean_Toronto, Canada  -51,483
+                                        department_Compute   51,099
+            department_Field Engineering - FE Invested DSA   47,531
+                            department_Product Engineering  -47,237
+              department_Applications Platform Engineering  -47,145
+                 department_Field Engineering - Enablement   46,480
+                                  company_clean_Perplexity  -46,013
+       department_Field Engineering - FE Direct Enterprise   45,952
+                          department_Public Sector Product   45,492
+                                        department_Finance  -44,151
+                                     location_clean_Nevada  -43,642
+                                   location_clean_Colorado  -42,253
+        department_Product Management & Program Management  -41,568
+                            department_Engineering & Infra  -40,459
+                                     role_family_solutions  -39,647
+                                     department_Developers  -38,856
+                                         department_People  -38,829
+                                 department_Infrastructure  -38,246
+                                 department_OpenAI for Gov   38,068
+                        department_IT & Corporate Security  -37,309
+                                 location_clean_Boston, MA  -35,903
+                   department_Technical Program Management   33,673
+                                            department_Dev  -33,091
+                             department_Enterprise Product   32,979
+                          department_Professional Services   32,719
+                                     location_clean_Europe  -32,327
+                           department_Business Development  -31,614
+        department_Field Engineering - FE Direct Regulated   29,955
+                                     department_Applied AI   29,890
+                          department_Core Tech Engineering  -29,697
+             department_Public Sector Business Development   28,796
+                          department_AI Research & Systems   27,613
+                                             department_IT  -27,580
+                                       department_Security   27,454
+         department_Field Engineering - FE Direct Emerging   27,181
+                             department_Gen AI Engineering  -27,166
+                            department_Technical Education   27,002
+                           department_Information Security  -26,893
+                         department_Enterprise Engineering   24,446
+                                          department_Legal   23,973
+                                        department_Support  -23,971
+                      department_Platform & Infrastructure   23,415
+                                    department_AI Products   23,343
+department_Integration, Data, Engineering and Applications  -23,245
+                        department_Core Product & Platform   22,617
+                                 department_Safety Systems  -22,197
+                         department_Engineering - Pipeline  -21,963
+                              role_family_forward_deployed  -21,312
+                           location_clean_Denver, Colorado   20,665
+                  department_Delivery Solutions Architects   20,074
+                           location_clean_Atlanta, Georgia   19,456
+                                   location_clean_Illinois   19,415
+                    department_Engineering : AI Foundation  -19,278
+                       location_clean_Berkeley, California   18,915
+                                   department_API Platform   18,801
+                     department_Data Science & Engineering  -18,631
+                    location_clean_Raleigh, North Carolina   18,311
+                 location_clean_Philadelphia, Pennsylvania   18,304
+                                          department_Delta  -18,108
+                                 location_clean_New Jersey  -17,439
+                 location_clean_West Coast - United States  -17,085
+                                      workplaceType_onsite  -17,018
+                               location_clean_Honolulu, HI   16,657
+                                       department_Research   16,644
+                                          department_Sales  -16,528
+                                   company_clean_Anthropic   15,786
+                                    location_clean_Georgia   15,514
+                                        department_Product   15,481
+                            location_clean_Los Angeles, CA  -15,437
+                                location_clean_Seattle, WA   15,200
+                                       company_clean_Figma  -14,928
+                                location_clean_Chicago, IL   14,830
+                                   location_clean_Maryland   14,396
+                  location_clean_Charlotte, North Carolina   14,166
+                                         department_AI GTM   13,924
+                                      workplaceType_remote   13,470
+                                   department_Data Science  -13,410
+               department_Executive Engineering - Pipeline   13,334
+                               department_Enterprise Sales   13,082
+                                   location_clean_Virginia  -11,813
+                                           department_Echo  -11,545
+                               location_clean_New York, NY   11,394
+                                 location_clean_London, UK   11,374
+                            department_Product Development  -11,160
+                                      company_clean_Sierra  -11,114
+                  location_clean_Northeast - United States   10,846
+                                      department_Inference  -10,388
+                    location_clean_Central - United States   10,375
+                              location_clean_United States   10,261
+                             location_clean_Washington, DC   10,227
+                                           department_Data    9,568
+                                department_Horizontals EPD   -9,527
+                               department_Exec Engineering   -9,478
+                                department_User Operations    8,373
+                               department_Consumer Devices    8,158
+                                  department_Public Sector    7,983
+                              location_clean_Dallas, Texas    6,468
+               department_Professional Services Operations   -5,856
+                                    location_clean_Arizona   -5,348
+                                        department_Revenue    5,258
+                                      workplaceType_hybrid   -4,017
+                                        department_Scaling    3,348
+                                   location_clean_Delaware    3,270
+                                 location_clean_Austin, TX   -1,972
+                              department_Field Engineering    1,755
+                      department_Public Sector Engineering    1,659
+                           location_clean_McLean, Virginia     -669
+                                     location_clean_Remote      519
+                        department_Foundations Engineering      140
+                                                  desc_len    -1.61
+
+COMPANY-ONLY COEFFICIENTS (difference from the reference company's mean):
+intercept 335,206
+                  column  dollars
+  company_clean_Palantir -177,955
+ company_clean_Amplitude -134,706
+      company_clean_Ramp -119,299
+     company_clean_Asana -117,326
+company_clean_Databricks -114,943
+  company_clean_Airtable -111,556
+    company_clean_Cohere -108,160
+   company_clean_Discord  -95,206
+    company_clean_Vercel  -94,937
+  company_clean_Scale AI  -93,299
+    company_clean_Harvey  -90,468
+   company_clean_Webflow  -87,831
+ company_clean_Anthropic   61,676
+     company_clean_Figma  -61,128
+    company_clean_Sierra  -46,785
+company_clean_Perplexity  -26,569
+
+DUPLICATE-BAND CAVEAT
+rows identical on the five categorical features and the band:
+  training 585 -> 407 after collapsing; test 152 -> 138; test rows with an identical twin in training: 72
+  all-features CV R2 on training rows (5x20 folds): 0.720 -> 0.605
+  test R2, trained on collapsed rows: full test 0.666; collapsed test 0.649
+rows identical on those and desc_len:
+  training 585 -> 581 after collapsing; test 152 -> 152; test rows with an identical twin in training: 2
+  all-features CV R2 on training rows (5x20 folds): 0.720 -> 0.719
+  test R2, trained on collapsed rows: full test 0.691; collapsed test 0.691
+(the 0.746 -> 0.70 in the Module 4 data check was ridge regression on structured salaries only, so the levels differ; the drop is the comparable part)
+
+====================================================================================================
+3-4. LOGISTIC REGRESSION AND NAIVE BAYES: forward_deployed vs rest
+label: forward_deployed = 1, solutions and software_eng = 0; masked text, Module 3 split
+  training 130 positive / 797 negative; test 33 / 199
+  majority baseline on test (always 0): accuracy 0.8578 (199/232), balanced accuracy 0.500, recall 0, F1 0, AUC 0.500, AP = prevalence 0.142
+  one test positive = 3.0 points of recall; one test posting = 0.43 points of accuracy
+
+C by stratified 5-fold CV on training rows, scored on f1 (class_weight='balanced'):
+        cv_mean  cv_sd
+C                     
+0.01     0.8565 0.0448
+0.03     0.8584 0.0476
+0.10     0.8728 0.0452
+0.30     0.8705 0.0492
+1.00     0.9031 0.0313
+3.00     0.9070 0.0314
+10.00    0.9103 0.0278
+30.00    0.9096 0.0279
+100.00   0.9096 0.0279
+selected C = 10
+
+MultinomialNB alpha by the same CV (f1):
+       cv_mean  cv_sd
+alpha                
+0.01    0.8176 0.0533
+0.05    0.8165 0.0451
+0.10    0.8096 0.0476
+0.50    0.7128 0.0601
+1.00    0.5355 0.0728
+selected alpha = 0.01
+
+BernoulliNB alpha by the same CV (f1):
+       cv_mean  cv_sd
+alpha                
+0.01    0.8228 0.0526
+0.05    0.8288 0.0425
+0.10    0.8306 0.0437
+0.50    0.8190 0.0367
+1.00    0.8044 0.0389
+selected alpha = 0.1
+
+TEST SET (232 postings, 33 forward_deployed); threshold 0.5; majority-baseline accuracy 0.8578
+'unbalanced (default)' is the same C without class weights, so the gap is the effect of balancing.
+                               TP FN FP  TN accuracy balanced_acc precision recall     F1    AUC     AP
+logistic, balanced             29  4  4 195   0.9655       0.9293    0.8788 0.8788 0.8788 0.9878 0.9383
+logistic, unbalanced (default) 26  7  1 198   0.9655       0.8914    0.9630 0.7879 0.8667 0.9883 0.9435
+MultinomialNB, alpha 0.01      21 12  1 198   0.9440       0.8157    0.9545 0.6364 0.7636 0.9796 0.9017
+BernoulliNB, alpha 0.1         23 10  1 198   0.9526       0.8460    0.9583 0.6970 0.8070 0.9670 0.8732
+  logistic, balanced: confusion [[TN 195, FP 4], [FN 4, TP 29]]; recall 29/33, 95% interval 0.727-0.952
+  logistic, unbalanced (default): confusion [[TN 198, FP 1], [FN 7, TP 26]]; recall 26/33, 95% interval 0.622-0.893
+  MultinomialNB, alpha 0.01: confusion [[TN 198, FP 1], [FN 12, TP 21]]; recall 21/33, 95% interval 0.466-0.778
+  BernoulliNB, alpha 0.1: confusion [[TN 198, FP 1], [FN 10, TP 23]]; recall 23/33, 95% interval 0.527-0.826
+
+HOW MANY TEST POSTINGS SEPARATE THE MODELS (exact McNemar test on the postings they disagree on)
+  logistic, balanced vs logistic, unbalanced (default): postings classified differently 6; right only by the first 3, only by the second 3 (p = 1.000); forward_deployed found 29 vs 26 (+3 postings, +9.1 recall points; on the 33 positives alone 3 vs 0 found by only one, p = 0.250); false positives 4 vs 1
+  logistic, balanced vs MultinomialNB, alpha 0.01: postings classified differently 11; right only by the first 8, only by the second 3 (p = 0.227); forward_deployed found 29 vs 21 (+8 postings, +24.2 recall points; on the 33 positives alone 8 vs 0 found by only one, p = 0.008); false positives 4 vs 1
+  logistic, balanced vs BernoulliNB, alpha 0.1: postings classified differently 9; right only by the first 6, only by the second 3 (p = 0.508); forward_deployed found 29 vs 23 (+6 postings, +18.2 recall points; on the 33 positives alone 6 vs 0 found by only one, p = 0.031); false positives 4 vs 1
+  logistic, unbalanced (default) vs MultinomialNB, alpha 0.01: postings classified differently 5; right only by the first 5, only by the second 0 (p = 0.062); forward_deployed found 26 vs 21 (+5 postings, +15.2 recall points; on the 33 positives alone 5 vs 0 found by only one, p = 0.062); false positives 1 vs 1
+  logistic, unbalanced (default) vs BernoulliNB, alpha 0.1: postings classified differently 5; right only by the first 4, only by the second 1 (p = 0.375); forward_deployed found 26 vs 23 (+3 postings, +9.1 recall points; on the 33 positives alone 4 vs 1 found by only one, p = 0.375); false positives 1 vs 1
+  MultinomialNB, alpha 0.01 vs BernoulliNB, alpha 0.1: postings classified differently 4; right only by the first 1, only by the second 3 (p = 0.625); forward_deployed found 21 vs 23 (-2 postings, -6.1 recall points; on the 33 positives alone 1 vs 3 found by only one, p = 0.625); false positives 1 vs 1
+  (p is the exact McNemar test: the chance of a split at least this uneven among the postings the two models disagree on, if neither model were better)
+
+BALANCED LOGISTIC COEFFICIENTS as odds ratios. A TF-IDF weight of 1.0 is the whole posting; the typical weight is the median weight among training postings that use the word, and OR_at_typical is the odds ratio for a posting that uses the word at that weight. Intercept -3.525.
+20 highest (toward forward_deployed):
+       word   coef OR_per_1.0 OR_per_0.1 typical_weight OR_at_typical  in_forward_deployed_of_130  in_rest_of_797
+   customer +4.879        131      1.629          0.074         1.432                         108             406
+ production +3.801       44.7      1.462          0.041         1.167                          89             462
+   delivery +3.757       42.8      1.456          0.074         1.321                          66             141
+engagements +3.343       28.3      1.397          0.055         1.202                          36              70
+     travel +3.220         25      1.380          0.039         1.135                          93             112
+      north +2.722       15.2      1.313          0.136         1.450                          15              17
+  deploying +2.685       14.7      1.308          0.052         1.150                          40              66
+       work +2.591       13.3      1.296          0.043         1.117                         118             602
+         et +2.537       12.6      1.289          0.808         7.763                           2               3
+         en +2.534       12.6      1.288          0.339         2.359                           4               2
+  solutions +2.487         12      1.282          0.037         1.097                         101             382
+    minimal +2.453       11.6      1.278          0.067         1.179                          26              23
+      embed +2.401         11      1.271          0.055         1.143                          48              26
+        end +2.399         11      1.271          0.064         1.167                          92             294
+interacting +2.395         11      1.271          0.093         1.250                           4               6
+   projects +2.378       10.8      1.268          0.039         1.096                          68             274
+         ai +2.377       10.8      1.268          0.056         1.142                          95             581
+engineering +2.373       10.7      1.268          0.046         1.116                         127             589
+         ps +2.276       9.74      1.256          0.120         1.314                           6              19
+    solving +2.248       9.47      1.252          0.044         1.103                          55             120
+20 lowest (toward solutions or software_eng):
+          word   coef OR_per_1.0 OR_per_0.1 typical_weight OR_at_typical  in_forward_deployed_of_130  in_rest_of_797
+infrastructure -2.992     0.0502      0.741          0.062         0.831                          57             514
+      platform -2.623     0.0726      0.769          0.047         0.885                          79             536
+   performance -2.300        0.1      0.795          0.046         0.900                          22             296
+      products -2.026      0.132      0.817          0.047         0.908                          26             360
+        agents -1.925      0.146      0.825          0.080         0.858                          15             150
+     financial -1.910      0.148      0.826          0.098         0.829                           3              72
+     workloads -1.731      0.177      0.841          0.055         0.910                           1             171
+       tooling -1.547      0.213      0.857          0.042         0.938                          14             235
+   experiences -1.519      0.219      0.859          0.064         0.908                           2             121
+      features -1.461      0.232      0.864          0.050         0.930                          10             178
+          deep -1.423      0.241      0.867          0.032         0.956                          47             295
+      adoption -1.414      0.243      0.868          0.045         0.939                          42             203
+       serving -1.373      0.253      0.872          0.051         0.932                           1              94
+      incident -1.370      0.254      0.872          0.056         0.926                           0              72
+      internal -1.363      0.256      0.873          0.039         0.949                          20             259
+      strategy -1.309       0.27      0.877          0.046         0.941                          22             216
+          user -1.291      0.275      0.879          0.044         0.945                          40             237
+          data -1.282      0.277      0.880          0.085         0.896                         110             584
+         cases -1.276      0.279      0.880          0.052         0.936                          14             141
+        design -1.268      0.281      0.881          0.033         0.959                          84             625
+words above used by fewer than 10 training postings in all (a weight resting on a handful of postings): et, en
