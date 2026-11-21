@@ -45,7 +45,7 @@ AdaBoost in scikit-learn, like the decision trees it is built from, only accepts
 ::: {.sample-figure}
 ![](figures/samples/ab_input_sample.png){fig-alt="Table of 10 postings with a shortened job ID, the working arrangement, four 0/1 columns for hybrid, missing, onsite and remote, the company, and six 0/1 columns for Anthropic, Databricks, Harvey, OpenAI, Palantir and Perplexity. Every row has exactly one 1 among the working-arrangement columns and one among the company columns."}
 
-One-hot encoding: ten of the 1,159 postings, with the working arrangement and the company beside the 0/1 columns they become. Each posting has a 1 in the column for its own category and 0 in the others. All four working-arrangement columns are shown, but only 6 of the 19 company columns, the ones these ten postings use. Job IDs are shortened in this image, and the linked file has them in full.
+One-hot encoding: ten of the 1,159 postings, with the working arrangement and the company beside the 0/1 columns they become. Each posting has a 1 in the column for its own category and 0 in the others. All four working-arrangement columns are shown, but only 6 of the 19 company columns, the ones these ten postings use. Job IDs are shortened in this image, and the linked file has them in full. The same ten postings, in the same order, appear before encoding, with all nine of tree 1's features, in the first table on the [Decision Trees](dectrees.qmd) page.
 :::
 
 ::: {.sample-figure}
@@ -64,6 +64,7 @@ Test set: ten of the 232 test postings, encoded with the categories and medians 
 
 - Raw data: job postings collected from company job boards with the [Apify multi-ATS job scraper](https://apify.com/scrapesage/multi-ats-job-scraper), using [fetch_apify.py](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/src/fetch_apify.py). The full raw files are about 64 MB and are not stored in the repository, so a [20-row raw sample](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/ats_raw_sample.csv) is linked instead.
 - Clean data: [ats_final.csv](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/processed/ats_final.csv), the 4,294 cleaned postings this page starts from, before repeated copies are removed and the three role families are selected.
+- Input sample before encoding: [dt_input_sample.csv](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/dt_input_sample.csv), the same ten postings with their role family and the nine features before the categories are encoded and missing values filled, shown in the first table on the Decision Trees page.
 - One-hot encoding sample (before and after): [ab_input_sample.csv](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/ab_input_sample.csv), shown in the first table above.
 - Training set sample: [ab_train_sample.csv](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/ab_train_sample.csv), shown in the second table above.
 - Test set sample: [ab_test_sample.csv](https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/ab_test_sample.csv), shown in the third table above.

@@ -3,7 +3,9 @@
 Regression: ten postings that carry a salary, as the six features before encoding, with the salary
 midpoint the model predicts and where that salary came from (the structured band or the
 description text). Input: ten of the subset's postings with a salary; train and test: ten rows from
-each side of the Module 3 split that carry a salary.
+each side of the Module 3 split that carry a salary. Encoded: the same ten rows as the input sample, after
+the all-features fit's own encoder (the features step of the pipeline regression_models.fit_linear fits on
+the training rows), with every column of the design matrix in the CSV and a readable subset in the PNG.
 
 Logistic regression: the same ten postings as Module 3's nb_input_sample, with role_family, the binary
 forward_deployed (1) vs rest (0) label and the eight masked TF-IDF columns the Module 3 Naive Bayes
@@ -18,7 +20,7 @@ training rows.
 The PNG tables show each jobId cut to its first 8 characters (more if two would look the same);
 the CSVs keep the full identifier. Train and test samples never share a jobId.
 
-Output: data/samples/reg_input_sample.csv, reg_train_sample.csv, reg_test_sample.csv,
+Output: data/samples/reg_input_sample.csv, reg_train_sample.csv, reg_test_sample.csv, reg_encoded_sample.csv,
 reg_logistic_sample.csv, ab_input_sample.csv, ab_train_sample.csv, ab_test_sample.csv, and the matching PNG tables in
 figures/samples/.
 """
@@ -60,6 +62,98 @@ def regression_tables(subset: pd.DataFrame) -> dict[str, tuple[pd.DataFrame, str
                             (f"Regression test set: {N_ROWS} of the {len(te):,} rows with a salary (of 232); "
                              f"{m3.NOT_IN.format('training')}")),
     }
+
+
+REG_ENCODED_BLOCKS = {"role_family": "role", "workplaceType": "work mode", "company_clean": "company"}  # shown in the PNG
+TAB_REFERENCE = {"company_clean": "OpenAI", "department": "Engineering", "location_clean": "San Francisco, CA",
+                 "workplaceType": "missing", "role_family": "software_eng"}  # the reference levels the Regression tab names
+
+
+def regression_encoded(subset: pd.DataFrame, input_sample: pd.DataFrame) -> dict:
+    """The regression input sample, same rows in the same order, after the all-features fit's own encoder.
+
+    The encoder is the features step of the "all features" pipeline that regression_models.fit_linear fits on
+    the training rows that carry a salary, with regression_models.reference_levels as the dropped levels, so the
+    columns are the model's design matrix, named as in the coefficient table of results/regression_report.txt.
+    """
+    df = rm.salary_frame(subset)
+    tr, te = rm.linear_rows(df)
+    refs = rm.reference_levels(tr, rm.CATEGORICAL)
+    fit = rm.fit_linear(tr, te, refs)
+    model = fit["models"]["all features"]
+    features = model.named_steps["features"]
+    names = [n.split("__", 1)[1] for n in features.get_feature_names_out()]
+    Z = features.transform(input_sample[rm.CATEGORICAL + rm.NUMERIC])
+    Z = Z.toarray() if hasattr(Z, "toarray") else np.asarray(Z)
+    assert np.allclose(Z, np.round(Z)), "a design value is not a whole number"
+    design = pd.DataFrame(np.round(Z).astype(int), columns=names)
+    table = pd.concat([input_sample[["jobId"]].reset_index(drop=True), design,
+                       input_sample[["salary_mid"]].reset_index(drop=True)], axis=1)
+
+    def block(col: str) -> list[str]:
+        return [c for c in names if c.startswith(col + "_")]
+
+    shown = ["jobId", *rm.NUMERIC, *block("role_family"), *block("workplaceType"),
+             *[c for c in block("company_clean") if design[c].sum() > 0], "salary_mid"]
+    n_design = len(shown) - 2
+    title = (f"Regression input, one-hot encoded: the same {N_ROWS} postings; the {len(rm.CATEGORICAL + rm.NUMERIC)} "
+             f"features become {len(names)} columns ({n_design} shown), encoder fit on the {len(tr):,} training rows")
+    return {"table": table, "shown": shown, "title": title, "names": names, "model": model, "refs": refs,
+            "scores": fit["table"], "input": input_sample, "n_train": len(tr)}
+
+
+def regression_encoded_checks(enc: dict) -> None:
+    """Print the checks on the encoded sample: rows, column count, one 1 per block, and the dropped levels."""
+    table, names, sample = enc["table"], enc["names"], enc["input"]
+    on_disk = pd.read_csv(SAMPLES_DIR / "reg_input_sample.csv", dtype={"jobId": str})["jobId"].tolist()
+    ids = table["jobId"].tolist()
+    print(f"check a. jobIds equal reg_input_sample.csv, same order: {ids == on_disk} "
+          f"({len(ids)} rows; first {ids[0]}, last {ids[-1]})")
+    n_coef = len(enc["model"].named_steps["ols"].coef_)
+    print(f"check b. design columns {len(names)}; coefficients in the fitted all-features model {n_coef}; "
+          f"equal: {len(names) == n_coef}")
+    encoder = enc["model"].named_steps["features"].named_transformers_["cat"][-1]
+    seen = dict(zip(rm.CATEGORICAL, encoder.categories_))
+    print("check c. one 1 per category block, or all zeros at the block's reference level:")
+    for col in rm.CATEGORICAL:
+        cols = [c for c in names if c.startswith(col + "_")]
+        values = sample[col].fillna("missing").tolist()
+        at_ref, unseen, bad = [], [], []
+        for k, (value, total) in enumerate(zip(values, table[cols].sum(axis=1)), 1):
+            hit = table.loc[k - 1, f"{col}_{value}"] if f"{col}_{value}" in cols else 0
+            if total == 1 and hit == 1:
+                continue
+            if total == 0 and value == enc["refs"][col]:
+                at_ref.append(f"row {k} ({value})")
+            elif total == 0 and value not in seen[col]:
+                unseen.append(f"row {k} ({value})")
+            else:
+                bad.append(f"row {k} ({value}, sum {total})")
+        print(f"   {col}: {len(cols)} columns; rows at the reference level: {', '.join(at_ref) or 'none'}"
+              + (f"; unseen in training, encoded as the reference: {', '.join(unseen)}" if unseen else "")
+              + f"; rows breaking the rule: {', '.join(bad) or 'none'}")
+    print("check d. dropped (reference) level per block, as the encoder reports it, against the tab:")
+    for col, cats, idx in zip(rm.CATEGORICAL, encoder.categories_, encoder.drop_idx_):
+        print(f"   {col}: dropped {cats[idx]!r}; the tab names {TAB_REFERENCE[col]!r}; match: {cats[idx] == TAB_REFERENCE[col]}")
+    row = enc["scores"].set_index("fit").loc["all features"]
+    print(f"   the encoder's model, scored on the test rows: RMSE {row['RMSE']:,.0f}, MAE {row['MAE']:,.0f}, "
+          f"R2 {row['R2']:.3f}; training rows {enc['n_train']}")
+
+
+def write_regression_encoded(subset: pd.DataFrame, input_sample: pd.DataFrame, id_chars: int) -> None:
+    enc = regression_encoded(subset, input_sample)
+    enc["table"].to_csv(SAMPLES_DIR / "reg_encoded_sample.csv", index=False)
+    shown = enc["table"][enc["shown"]].astype(object)
+    shown["jobId"] = [truncate(v, id_chars + 1) for v in shown["jobId"]]
+    for c in [*rm.NUMERIC, "salary_mid"]:
+        shown[c] = enc["table"][c].map(lambda v: f"{v:,.0f}")
+    headers = {"salary_mid": "salary_mid (target)"}
+    for col, short in REG_ENCODED_BLOCKS.items():
+        headers |= {c: f"{short}={c[len(col) + 1:]}" for c in enc["shown"] if c.startswith(col + "_")}
+    shown = shown.rename(columns=headers)
+    print("saved", render(shown, "reg_encoded_sample", enc["title"], list(shown.columns), max_rows=N_ROWS,
+                          max_cols=len(shown.columns)))
+    regression_encoded_checks(enc)
 
 
 def regression_formatted(sample: pd.DataFrame) -> pd.DataFrame:
@@ -164,6 +258,8 @@ def main() -> None:
             shown["jobId"] = [truncate(v, n + 1) for v in shown["jobId"]]
             print("saved", render(shown, name, title, list(shown.columns), max_rows=N_ROWS,
                                   max_cols=len(shown.columns)))
+    reg_ids = m3.id_chars(pd.concat([t["jobId"] for t, _ in reg.values()]))  # same cut as the regression tables
+    write_regression_encoded(subset, reg["reg_input_sample"][0], reg_ids)
     write_logistic(subset)
 
 

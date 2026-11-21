@@ -410,6 +410,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Test set: ten of the 152 test postings with a salary. None of their job IDs is in the training set, and their salaries are only used to score the model’s predictions.</p>
 </div>
 <div class="sample-figure">
+<p><img src="figures/samples/reg_encoded_sample.png" class="img-fluid" alt="Table of the same 10 postings with a shortened job ID, the description length, 0/1 columns for the forward_deployed and solutions role families, for hybrid, onsite and remote work, and for Anthropic, Databricks, Harvey, Palantir and Scale AI, and the salary midpoint. Two postings have a 1 for forward_deployed, the two OpenAI postings have 0 in every company column, and the five postings with no working arrangement have 0 in every work column. Salary midpoints run from 167,500 to 445,000."></p>
+<p>Linear regression input after one-hot encoding: the same ten postings as the first table, in the same order, as the model receives them. Each category becomes its own 0/1 column except the reference level, so a posting at OpenAI, with no working arrangement given or in the software_eng family has 0 in every column of that group. The image shows 11 of the 136 columns: the description length, the two role family columns, the three working-arrangement columns and the five company columns these ten postings use. The linked file has all 136, including the department and location columns, and the encoder was fitted on the 585 training postings.</p>
+</div>
+<div class="sample-figure">
 <p><img src="figures/samples/reg_logistic_sample.png" class="img-fluid" alt="Table of 10 postings with a shortened job ID, the role family, the 0/1 forward_deployed label and TF-IDF weights between 0 and 0.196 for the words work, engineering, design, data, building, ai, product and years. One posting is forward_deployed and labelled 1; the other nine are labelled 0."></p>
 <p>Labelled input for logistic regression: the ten postings shown on the Naive Bayes page, with the 0/1 label, 1 for forward_deployed, and the TF-IDF weights of eight of the 3,631 word columns, the eight words found in the most training postings. A weight of 0 means the posting does not use the word. The vectoriser was fitted on the training postings only.</p>
 </div>
@@ -422,7 +426,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Linear regression input sample: <a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/reg_input_sample.csv">reg_input_sample.csv</a>, shown in the first table above.</li>
 <li>Training set sample: <a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/reg_train_sample.csv">reg_train_sample.csv</a>, shown in the second table above.</li>
 <li>Test set sample: <a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/reg_test_sample.csv">reg_test_sample.csv</a>, shown in the third table above.</li>
-<li>Logistic regression input sample: <a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/reg_logistic_sample.csv">reg_logistic_sample.csv</a>, shown in the fourth table above.</li>
+<li>Encoded input sample: <a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/reg_encoded_sample.csv">reg_encoded_sample.csv</a>, with all 136 columns, shown in part in the fourth table above.</li>
+<li>Logistic regression input sample: <a href="https://github.com/RahulHipparkar/ai-job-market-impact/blob/main/data/samples/reg_logistic_sample.csv">reg_logistic_sample.csv</a>, shown in the fifth table above.</li>
 </ul>
 </section>
 <section id="code" class="level2">
